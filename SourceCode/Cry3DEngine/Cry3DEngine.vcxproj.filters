@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Ini Files">
+      <UniqueIdentifier>{e27572a9-c37f-425c-a7e6-a9161e9fab24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CFGLoader">
+      <UniqueIdentifier>{5a7308d7-1e76-41f2-ab29-3797592c1cd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StatObj">
+      <UniqueIdentifier>{63b406e8-1a09-4772-a9a4-ae5a52420d7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effects">
+      <UniqueIdentifier>{1707a6c8-2ab7-40d1-bb3b-87932f78999f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effects\Decals">
+      <UniqueIdentifier>{fdb67d59-00b6-4f39-9899-c057d6bc3adf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effects\Particles">
+      <UniqueIdentifier>{23e7e1e8-a087-4e12-b3a0-aaa5e01140c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effects\Rain">
+      <UniqueIdentifier>{269b9f7e-4ee8-4296-bb4e-e826f5271e6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effects\Detail Objects">
+      <UniqueIdentifier>{98ba4e80-0a71-4483-8955-bb6373de8b19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Terrain">
+      <UniqueIdentifier>{5747409d-bd2b-4a4f-872a-7d69c70c723f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Terrain\Sector">
+      <UniqueIdentifier>{6cbbbf87-30d6-4c7e-ac57-c0777b31ce82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Water">
+      <UniqueIdentifier>{69fd847d-5e92-4261-a448-6a7dbc11c047}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vegetation">
+      <UniqueIdentifier>{f1f15ea6-e37b-44aa-922e-059157d41492}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Brush">
+      <UniqueIdentifier>{7c89317f-6152-4981-a3ef-b8e649c5f325}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LightMaps">
+      <UniqueIdentifier>{3a03b00d-f64c-4d9c-9033-69355e007e25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ObjManager">
+      <UniqueIdentifier>{235d742a-a2f6-4620-af97-bf1bf0f7bb46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StencilShadows">
+      <UniqueIdentifier>{c44ce170-f9b6-4829-8d85-12d711fc3a2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3DEngine">
+      <UniqueIdentifier>{de83f784-5782-459a-bbc1-19f17640e619}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VisAreas">
+      <UniqueIdentifier>{dad9a7de-fdcd-4725-8452-afa564643060}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CVars">
+      <UniqueIdentifier>{a109dd49-b318-4b51-8e5d-6b42ff7bbef6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CBuffer">
+      <UniqueIdentifier>{24788dc8-43f5-4ec2-b3f0-3af8f1972c08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Containers">
+      <UniqueIdentifier>{28948a33-a53d-41e7-9a58-b09b2cb6571c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interfaces">
+      <UniqueIdentifier>{9876eb14-3744-4bd8-bf98-8a0d908d4279}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BaseObj.h">
+      <Filter>CFGLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="CryStaticModel.h">
+      <Filter>CFGLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="File.h">
+      <Filter>CFGLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="Geom.h">
+      <Filter>CFGLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="Helper.h">
+      <Filter>CFGLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>CFGLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>CFGLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="StatObj.h">
+      <Filter>StatObj</Filter>
+    </ClInclude>
+    <ClInclude Include="DecalManager.h">
+      <Filter>Effects\Decals</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleEffect.h">
+      <Filter>Effects\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleEmitter.h">
+      <Filter>Effects\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="partman.h">
+      <Filter>Effects\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="rain.h">
+      <Filter>Effects\Rain</Filter>
+    </ClInclude>
+    <ClInclude Include="detail_grass.h">
+      <Filter>Effects\Detail Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="terrain.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="terrain_sector.h">
+      <Filter>Terrain\Sector</Filter>
+    </ClInclude>
+    <ClInclude Include="terrain_water.h">
+      <Filter>Water</Filter>
+    </ClInclude>
+    <ClInclude Include="WaterVolumes.h">
+      <Filter>Water</Filter>
+    </ClInclude>
+    <ClInclude Include="Vegetation.h">
+      <Filter>Vegetation</Filter>
+    </ClInclude>
+    <ClInclude Include="Brush.h">
+      <Filter>Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="dds.h">
+      <Filter>LightMaps</Filter>
+    </ClInclude>
+    <ClInclude Include="LMSerializationManager2.h">
+      <Filter>LightMaps</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjMan.h">
+      <Filter>ObjManager</Filter>
+    </ClInclude>
+    <ClInclude Include="IndoorShadowVolumes.h">
+      <Filter>StencilShadows</Filter>
+    </ClInclude>
+    <ClInclude Include="IndoorVolumes.h">
+      <Filter>StencilShadows</Filter>
+    </ClInclude>
+    <ClInclude Include="ShadowVolumeEdge.h">
+      <Filter>StencilShadows</Filter>
+    </ClInclude>
+    <ClInclude Include="StencilShadowConnectivity.h">
+      <Filter>StencilShadows</Filter>
+    </ClInclude>
+    <ClInclude Include="StencilShadowConnectivityBuilder.h">
+      <Filter>StencilShadows</Filter>
+    </ClInclude>
+    <ClInclude Include="StencilShadowEdgeDetector.h">
+      <Filter>StencilShadows</Filter>
+    </ClInclude>
+    <ClInclude Include="3dEngine.h">
+      <Filter>3DEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicArea.h">
+      <Filter>VisAreas</Filter>
+    </ClInclude>
+    <ClInclude Include="VisAreas.h">
+      <Filter>VisAreas</Filter>
+    </ClInclude>
+    <ClInclude Include="cvars.h">
+      <Filter>CVars</Filter>
+    </ClInclude>
+    <ClInclude Include="cbuffer.h">
+      <Filter>CBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Array2d.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="Cry3DEngineBase.h" />
+    <ClInclude Include="StdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CryStaticModel.cpp">
+      <Filter>CFGLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="File.cpp">
+      <Filter>CFGLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="Geom.cpp">
+      <Filter>CFGLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="Helper.cpp">
+      <Filter>CFGLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>CFGLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshidx.cpp">
+      <Filter>CFGLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>CFGLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="StatObjCompiler.cpp">
+      <Filter>StatObj</Filter>
+    </ClCompile>
+    <ClCompile Include="StatObjConstr.cpp">
+      <Filter>StatObj</Filter>
+    </ClCompile>
+    <ClCompile Include="StatObjFar.cpp">
+      <Filter>StatObj</Filter>
+    </ClCompile>
+    <ClCompile Include="StatObjLoad.cpp">
+      <Filter>StatObj</Filter>
+    </ClCompile>
+    <ClCompile Include="StatObjPhys.cpp">
+      <Filter>StatObj</Filter>
+    </ClCompile>
+    <ClCompile Include="StatObjRend.cpp">
+      <Filter>StatObj</Filter>
+    </ClCompile>
+    <ClCompile Include="StatObjSerialize.cpp">
+      <Filter>StatObj</Filter>
+    </ClCompile>
+    <ClCompile Include="StatObjShadow.cpp">
+      <Filter>StatObj</Filter>
+    </ClCompile>
+    <ClCompile Include="StatObjShadowVolumes.cpp">
+      <Filter>StatObj</Filter>
+    </ClCompile>
+    <ClCompile Include="StatObjStream.cpp">
+      <Filter>StatObj</Filter>
+    </ClCompile>
+    <ClCompile Include="Decal.cpp">
+      <Filter>Effects\Decals</Filter>
+    </ClCompile>
+    <ClCompile Include="DecalManager.cpp">
+      <Filter>Effects\Decals</Filter>
+    </ClCompile>
+    <ClCompile Include="particle.cpp">
+      <Filter>Effects\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleEffect.cpp">
+      <Filter>Effects\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleEmitter.cpp">
+      <Filter>Effects\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="partman.cpp">
+      <Filter>Effects\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="partpolygon.cpp">
+      <Filter>Effects\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteManager.cpp">
+      <Filter>Effects\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="rain.cpp">
+      <Filter>Effects\Rain</Filter>
+    </ClCompile>
+    <ClCompile Include="detail_grass.cpp">
+      <Filter>Effects\Detail Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="terrain.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="terrain_damage.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="terrain_det_tex.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="terrain_hmap.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="terrain_init.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="terrain_light.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="terrain_load.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="terrain_render.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="terrain_tex_pool.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="terran_edit.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="terrain_sector.cpp">
+      <Filter>Terrain\Sector</Filter>
+    </ClCompile>
+    <ClCompile Include="terrain_sector_beach.cpp">
+      <Filter>Terrain\Sector</Filter>
+    </ClCompile>
+    <ClCompile Include="terrain_sector_render.cpp">
+      <Filter>Terrain\Sector</Filter>
+    </ClCompile>
+    <ClCompile Include="terrain_sector_tex.cpp">
+      <Filter>Terrain\Sector</Filter>
+    </ClCompile>
+    <ClCompile Include="terrain_water_quad.cpp">
+      <Filter>Water</Filter>
+    </ClCompile>
+    <ClCompile Include="WaterVolumes.cpp">
+      <Filter>Water</Filter>
+    </ClCompile>
+    <ClCompile Include="Vegetation.cpp">
+      <Filter>Vegetation</Filter>
+    </ClCompile>
+    <ClCompile Include="Brush.cpp">
+      <Filter>Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="BrushLM.cpp">
+      <Filter>Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="LMSerializationManager2.cpp">
+      <Filter>LightMaps</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjMan.cpp">
+      <Filter>ObjManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjManDraw.cpp">
+      <Filter>ObjManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjManDrawEntity.cpp">
+      <Filter>ObjManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjManFar.cpp">
+      <Filter>ObjManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjManShadows.cpp">
+      <Filter>ObjManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjManStreaming.cpp">
+      <Filter>ObjManager</Filter>
+    </ClCompile>
+    <ClCompile Include="StencilShadowConnectivityBuilder.cpp">
+      <Filter>StencilShadows</Filter>
+    </ClCompile>
+    <ClCompile Include="StencilShadowEdgeDetector.cpp">
+      <Filter>StencilShadows</Filter>
+    </ClCompile>
+    <ClCompile Include="3dEngine.cpp">
+      <Filter>3DEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="3dEngineLight.cpp">
+      <Filter>3DEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="3dEngineLoad.cpp">
+      <Filter>3DEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="3dEngineRender.cpp">
+      <Filter>3DEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="3dEngineScreenEffects.cpp">
+      <Filter>3DEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="MatMan.cpp">
+      <Filter>3DEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="BasicArea.cpp">
+      <Filter>VisAreas</Filter>
+    </ClCompile>
+    <ClCompile Include="VisAreaMan.cpp">
+      <Filter>VisAreas</Filter>
+    </ClCompile>
+    <ClCompile Include="VisAreas.cpp">
+      <Filter>VisAreas</Filter>
+    </ClCompile>
+    <ClCompile Include="cvars.cpp">
+      <Filter>CVars</Filter>
+    </ClCompile>
+    <ClCompile Include="cbuffer.cpp">
+      <Filter>CBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Cry3DEngine.cpp" />
+    <ClCompile Include="LightMan.cpp" />
+    <ClCompile Include="StdAfx.cpp" />
+  </ItemGroup>
+</Project>

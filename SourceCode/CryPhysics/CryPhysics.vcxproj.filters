@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Dynamics">
+      <UniqueIdentifier>{bcffde22-0ca0-47d6-85b8-4c6945d7c084}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{4a50c979-d975-46ed-9fa3-7119b117a5ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Collisions">
+      <UniqueIdentifier>{2293728c-d974-4e97-ba67-375890054426}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="articulatedentity.cpp">
+      <Filter>Dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="livingentity.cpp">
+      <Filter>Dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="particleentity.cpp">
+      <Filter>Dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="physicalentity.cpp">
+      <Filter>Dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="physicalplaceholder.cpp">
+      <Filter>Dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="physicalworld.cpp">
+      <Filter>Dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="rigidbody.cpp">
+      <Filter>Dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="rigidentity.cpp">
+      <Filter>Dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="ropeentity.cpp">
+      <Filter>Dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="softentity.cpp">
+      <Filter>Dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="wheeledvehicleentity.cpp">
+      <Filter>Dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="boolean2d.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="matrixnm.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="qhull.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="aabbtree.cpp">
+      <Filter>Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="boxgeom.cpp">
+      <Filter>Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="cylindergeom.cpp">
+      <Filter>Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="geoman.cpp">
+      <Filter>Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry.cpp">
+      <Filter>Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="heightfieldbv.cpp">
+      <Filter>Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="heightfieldgeom.cpp">
+      <Filter>Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="intersectionchecks.cpp">
+      <Filter>Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="linunprojectionchecks.cpp">
+      <Filter>Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="obbtree.cpp">
+      <Filter>Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="overlapchecks.cpp">
+      <Filter>Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="raybv.cpp">
+      <Filter>Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="raygeom.cpp">
+      <Filter>Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="rotunprojectionchecks.cpp">
+      <Filter>Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="singleboxtree.cpp">
+      <Filter>Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="spheregeom.cpp">
+      <Filter>Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="trimesh.cpp">
+      <Filter>Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="CryPhysics.cpp" />
+    <ClCompile Include="StdAfx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="articulatedentity.h">
+      <Filter>Dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="livingentity.h">
+      <Filter>Dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="particleentity.h">
+      <Filter>Dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="physicalentity.h">
+      <Filter>Dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="physicalplaceholder.h">
+      <Filter>Dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="physicalworld.h">
+      <Filter>Dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="rigidbody.h">
+      <Filter>Dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="rigidentity.h">
+      <Filter>Dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="ropeentity.h">
+      <Filter>Dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="softentity.h">
+      <Filter>Dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="wheeledvehicleentity.h">
+      <Filter>Dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="matrixnm.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="polynomial.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="quotient.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="vectorn.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="aabbtree.h">
+      <Filter>Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="boxgeom.h">
+      <Filter>Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="bvtree.h">
+      <Filter>Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="cylindergeom.h">
+      <Filter>Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="geoman.h">
+      <Filter>Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="geometries.h">
+      <Filter>Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry.h">
+      <Filter>Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="heightfieldbv.h">
+      <Filter>Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="heightfieldgeom.h">
+      <Filter>Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="intersectionchecks.h">
+      <Filter>Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="obbtree.h">
+      <Filter>Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="overlapchecks.h">
+      <Filter>Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="raybv.h">
+      <Filter>Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="raygeom.h">
+      <Filter>Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="singleboxtree.h">
+      <Filter>Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="spheregeom.h">
+      <Filter>Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="trimesh.h">
+      <Filter>Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="unprojectionchecks.h">
+      <Filter>Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="IPhysics.h" />
+    <ClInclude Include="StdAfx.h" />
+  </ItemGroup>
+</Project>

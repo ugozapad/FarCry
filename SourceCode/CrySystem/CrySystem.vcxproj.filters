@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{aa71c06c-056e-4614-ab51-51b37b4c89a1}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{98e89c77-ebe4-4988-9ca0-e21590c7b0fe}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{af09c910-dca1-44ed-820a-66fec24c3a70}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="MemoryManager">
+      <UniqueIdentifier>{090f4999-e60e-4fb9-91bc-0eb1b45df106}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LuaDebugger">
+      <UniqueIdentifier>{0ccc65bc-a960-4d3b-88d0-541ad0041cb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StreamEngine">
+      <UniqueIdentifier>{fe537930-4380-40be-b3b2-570ee0609d76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML">
+      <UniqueIdentifier>{542f6126-dc2b-4aad-8a32-fc9a126f6881}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML\Expat">
+      <UniqueIdentifier>{e24449f6-c716-434d-ba87-9346e06ff39b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ScriptObjects">
+      <UniqueIdentifier>{53864450-14b1-456a-bf61-3cf27d421fe6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zlib">
+      <UniqueIdentifier>{2bc18d2f-c42e-4f62-8240-c676882d815e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ZipDir">
+      <UniqueIdentifier>{c7a29548-9bc8-4e71-a7b9-ed3c5b5174c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HTTPDownloader">
+      <UniqueIdentifier>{dffdee5a-d69f-49c2-8fb8-edc970a4613d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CheatProtection">
+      <UniqueIdentifier>{2b704826-6fb7-4fdc-bca0-cbc9007adbb0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ApplicationHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CompressedFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CPUDetect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CryPak.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CrySizerImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CrySizerStats.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugCallStack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DllMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameProfileRender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameProfileSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="getdxver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mailer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptBinding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptSink.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceSafeHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="System.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemCFG.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemInit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemRender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemWin32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="XConsole.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="XConsoleVariable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CryMemoryManager.cpp">
+      <Filter>MemoryManager</Filter>
+    </ClCompile>
+    <ClCompile Include="MTSafeAllocator.cpp">
+      <Filter>MemoryManager</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaDebugger\FileTree.cpp">
+      <Filter>LuaDebugger</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaDebugger\LUADBG.cpp">
+      <Filter>LuaDebugger</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaDebugger\LuaDbgInterface.cpp">
+      <Filter>LuaDebugger</Filter>
+    </ClCompile>
+    <ClCompile Include="RefReadStream.cpp">
+      <Filter>StreamEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="RefReadStreamProxy.cpp">
+      <Filter>StreamEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="RefStreamEngine.cpp">
+      <Filter>StreamEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="StreamEngine.cpp">
+      <Filter>StreamEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\_XMLDOMParserImpl.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\xml.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\XMLDOMDocumentImpl.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\XMLDOMNodeImpl.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\XMLDOMNodeListImpl.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\Expat\xmlparse.c">
+      <Filter>XML\Expat</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\Expat\xmlrole.c">
+      <Filter>XML\Expat</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\Expat\xmltok.c">
+      <Filter>XML\Expat</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\Expat\xmltok_impl.c">
+      <Filter>XML\Expat</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\Expat\xmltok_ns.c">
+      <Filter>XML\Expat</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptObjectAnimation.cpp">
+      <Filter>ScriptObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptObjectEntity.cpp">
+      <Filter>ScriptObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptObjectMovie.cpp">
+      <Filter>ScriptObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptObjectParticle.cpp">
+      <Filter>ScriptObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptObjectScript.cpp">
+      <Filter>ScriptObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptObjectSound.cpp">
+      <Filter>ScriptObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptObjectSystem.cpp">
+      <Filter>ScriptObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\adler32.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\compress.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\crc32.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\deflate.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\gzio.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\infblock.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\infcodes.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\inffast.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\inflate.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\inftrees.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\infutil.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\trees.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\uncompr.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\zutil.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipDirCache.cpp">
+      <Filter>ZipDir</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipDirCacheFactory.cpp">
+      <Filter>ZipDir</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipDirCacheRW.cpp">
+      <Filter>ZipDir</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipDirFind.cpp">
+      <Filter>ZipDir</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipDirFindRW.cpp">
+      <Filter>ZipDir</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipDirList.cpp">
+      <Filter>ZipDir</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipDirStructures.cpp">
+      <Filter>ZipDir</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipDirTree.cpp">
+      <Filter>ZipDir</Filter>
+    </ClCompile>
+    <ClCompile Include="DownloadManager.cpp">
+      <Filter>HTTPDownloader</Filter>
+    </ClCompile>
+    <ClCompile Include="HTTPDownloader.cpp">
+      <Filter>HTTPDownloader</Filter>
+    </ClCompile>
+    <ClCompile Include="DataProbe.cpp">
+      <Filter>CheatProtection</Filter>
+    </ClCompile>
+    <ClCompile Include="md5.c">
+      <Filter>CheatProtection</Filter>
+    </ClCompile>
+    <ClCompile Include="RandGen.cpp">
+      <Filter>CheatProtection</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DxDiag.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplicationHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CPUDetect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CryPak.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CrySizerImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CrySizerStats.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CryWaterMark.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugCallStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameProfileSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mailer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PakVars.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptSink.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceSafeHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="System.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemCFG.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Validator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XConsole.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XConsoleVariable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MTSafeAllocator.h">
+      <Filter>MemoryManager</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaDebugger\_TinyBrowseFolder.h">
+      <Filter>LuaDebugger</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaDebugger\_TinyCaptionWindow.h">
+      <Filter>LuaDebugger</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaDebugger\_TinyCoolEdit.h">
+      <Filter>LuaDebugger</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaDebugger\_TinyFileEnum.h">
+      <Filter>LuaDebugger</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaDebugger\_TinyImageList.h">
+      <Filter>LuaDebugger</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaDebugger\_TinyMain.h">
+      <Filter>LuaDebugger</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaDebugger\_TinyRegistry.h">
+      <Filter>LuaDebugger</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaDebugger\_TinySplitter.h">
+      <Filter>LuaDebugger</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaDebugger\_TinyStatusBar.h">
+      <Filter>LuaDebugger</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaDebugger\_TinyTreeList.h">
+      <Filter>LuaDebugger</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaDebugger\_TinyWindow.h">
+      <Filter>LuaDebugger</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaDebugger\AboutWnd.h">
+      <Filter>LuaDebugger</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaDebugger\FileTree.h">
+      <Filter>LuaDebugger</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaDebugger\LUADBG.h">
+      <Filter>LuaDebugger</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaDebugger\LuaDbgInterface.h">
+      <Filter>LuaDebugger</Filter>
+    </ClInclude>
+    <ClInclude Include="CritSection.h">
+      <Filter>StreamEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CryCommon\IStreamEngine.h">
+      <Filter>StreamEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="RefReadStream.h">
+      <Filter>StreamEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="RefReadStreamProxy.h">
+      <Filter>StreamEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="RefStreamEngine.h">
+      <Filter>StreamEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="StreamEngine.h">
+      <Filter>StreamEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\_XMLDOMParserImpl.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\nanoxml.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\xml.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\xml_string.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\XMLDOMDocumentImpl.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\XMLDOMNodeImpl.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\XMLDOMNodeListImpl.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\Expat\ascii.h">
+      <Filter>XML\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\Expat\asciitab.h">
+      <Filter>XML\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\Expat\config.h">
+      <Filter>XML\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\Expat\expat.h">
+      <Filter>XML\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\Expat\iasciitab.h">
+      <Filter>XML\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\Expat\latin1tab.h">
+      <Filter>XML\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\Expat\nametab.h">
+      <Filter>XML\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\Expat\utf8tab.h">
+      <Filter>XML\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\Expat\winconfig.h">
+      <Filter>XML\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\Expat\xmlrole.h">
+      <Filter>XML\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\Expat\xmltok.h">
+      <Filter>XML\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\Expat\xmltok_impl.h">
+      <Filter>XML\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptObjectAnimation.h">
+      <Filter>ScriptObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptObjectEntity.h">
+      <Filter>ScriptObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptObjectMovie.h">
+      <Filter>ScriptObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptObjectParticle.h">
+      <Filter>ScriptObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptObjectScript.h">
+      <Filter>ScriptObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptObjectSound.h">
+      <Filter>ScriptObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptObjectSystem.h">
+      <Filter>ScriptObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\deflate.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\infblock.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\infcodes.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\inffast.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\inffixed.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\inftrees.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\infutil.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\trees.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\zconf.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\zlib.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\zutil.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipDir.h">
+      <Filter>ZipDir</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipDirCache.h">
+      <Filter>ZipDir</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipDirCacheFactory.h">
+      <Filter>ZipDir</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipDirCacheRW.h">
+      <Filter>ZipDir</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipDirFind.h">
+      <Filter>ZipDir</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipDirFindRW.h">
+      <Filter>ZipDir</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipDirList.h">
+      <Filter>ZipDir</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipDirStructures.h">
+      <Filter>ZipDir</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipDirTree.h">
+      <Filter>ZipDir</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipFile.h">
+      <Filter>ZipDir</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipFileFormat.h">
+      <Filter>ZipDir</Filter>
+    </ClInclude>
+    <ClInclude Include="DownloadManager.h">
+      <Filter>HTTPDownloader</Filter>
+    </ClInclude>
+    <ClInclude Include="HTTPDownloader.h">
+      <Filter>HTTPDownloader</Filter>
+    </ClInclude>
+    <ClInclude Include="DataProbe.h">
+      <Filter>CheatProtection</Filter>
+    </ClInclude>
+    <ClInclude Include="md5.h">
+      <Filter>CheatProtection</Filter>
+    </ClInclude>
+    <ClInclude Include="RandGen.h">
+      <Filter>CheatProtection</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CrySystem.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="LuaDebugger\LUADBG.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="LuaDebugger\small.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="LuaDebugger\res\toolbar1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="LuaDebugger\res\TreeView.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Model">
+      <UniqueIdentifier>{9bdfc399-fe5b-4395-9a61-1975aaba0d65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model\Skin">
+      <UniqueIdentifier>{9f35825a-1ca5-446f-ac95-fbeb7cd261a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model\Shadow Volume">
+      <UniqueIdentifier>{faf4546c-ce44-4ed9-a9a6-e034fb11e368}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bones">
+      <UniqueIdentifier>{0a5bb251-62ae-469b-b2bf-ddd60d8cb9b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Front-End">
+      <UniqueIdentifier>{42374831-ac7d-4983-9898-431001f8d2f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TCB-Spline">
+      <UniqueIdentifier>{ed2166b0-9f81-4327-8466-3b65bd2f2e8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B-Splines">
+      <UniqueIdentifier>{ca7b4253-bc07-41a6-8efa-50bc84ed5180}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CVars">
+      <UniqueIdentifier>{e350c7e1-a458-4c6a-b317-c5bae8cc46e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decals">
+      <UniqueIdentifier>{e4fb8aa6-4930-41c3-a0fe-13bb7013f394}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chunk Files">
+      <UniqueIdentifier>{91daac69-a3ee-4459-b747-6572070dc86a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{4ac7e6ca-306d-4c80-8280-7acb24976129}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controllers">
+      <UniqueIdentifier>{061d6af7-e3a3-4ee9-a9e3-a451d9462126}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Animation">
+      <UniqueIdentifier>{1887795d-1885-42b8-be39-adf4d9dd211c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AnimObject">
+      <UniqueIdentifier>{93da3c3a-b95b-4272-a799-79b7e0b4773e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Other">
+      <UniqueIdentifier>{ba3646f8-e1ad-46d6-afe2-4aed145804ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Particles">
+      <UniqueIdentifier>{c843116c-cf9a-415f-9d8a-1a533611d830}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fx">
+      <UniqueIdentifier>{3da86fd5-76f6-4357-9b92-ba2f2a6e9163}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CryGeometryInfo.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="CryGeomMorphTarget.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="CryModel-Data.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="CryModel.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="CryModelAnimationContainer.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="CryModelArrays.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="CryModelGeometryLoader.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="CryModelLoader.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="CryModelShadowVolume.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="CryModelState.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="CryModelStatePhys.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="CryModelSubmesh.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="CrySkinBase.cpp">
+      <Filter>Model\Skin</Filter>
+    </ClCompile>
+    <ClCompile Include="CrySkinBasisBuilder.cpp">
+      <Filter>Model\Skin</Filter>
+    </ClCompile>
+    <ClCompile Include="CrySkinBuilder.cpp">
+      <Filter>Model\Skin</Filter>
+    </ClCompile>
+    <ClCompile Include="CrySkinBuilderBase.cpp">
+      <Filter>Model\Skin</Filter>
+    </ClCompile>
+    <ClCompile Include="CrySkinFull.cpp">
+      <Filter>Model\Skin</Filter>
+    </ClCompile>
+    <ClCompile Include="CrySkinMorph.cpp">
+      <Filter>Model\Skin</Filter>
+    </ClCompile>
+    <ClCompile Include="CrySkinMorphBuilder.cpp">
+      <Filter>Model\Skin</Filter>
+    </ClCompile>
+    <ClCompile Include="CrySkinRigidBasis.cpp">
+      <Filter>Model\Skin</Filter>
+    </ClCompile>
+    <ClCompile Include="CryCharReShadowManager.cpp">
+      <Filter>Model\Shadow Volume</Filter>
+    </ClCompile>
+    <ClCompile Include="CryCharReShadowVolume.cpp">
+      <Filter>Model\Shadow Volume</Filter>
+    </ClCompile>
+    <ClCompile Include="BoneLightBindInfo.cpp">
+      <Filter>Bones</Filter>
+    </ClCompile>
+    <ClCompile Include="BoneLightDynamicBind.cpp">
+      <Filter>Bones</Filter>
+    </ClCompile>
+    <ClCompile Include="CryBone.cpp">
+      <Filter>Bones</Filter>
+    </ClCompile>
+    <ClCompile Include="CryBoneDesc.cpp">
+      <Filter>Bones</Filter>
+    </ClCompile>
+    <ClCompile Include="CryBoneHierarchyLoader.cpp">
+      <Filter>Bones</Filter>
+    </ClCompile>
+    <ClCompile Include="CryBoneInfo.cpp">
+      <Filter>Bones</Filter>
+    </ClCompile>
+    <ClCompile Include="CryAnimationBase.cpp">
+      <Filter>Front-End</Filter>
+    </ClCompile>
+    <ClCompile Include="CryCharBody.cpp">
+      <Filter>Front-End</Filter>
+    </ClCompile>
+    <ClCompile Include="CryCharInstance.cpp">
+      <Filter>Front-End</Filter>
+    </ClCompile>
+    <ClCompile Include="CryCharManager.cpp">
+      <Filter>Front-End</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Front-End</Filter>
+    </ClCompile>
+    <ClCompile Include="ControllerTCB.cpp">
+      <Filter>TCB-Spline</Filter>
+    </ClCompile>
+    <ClCompile Include="BSplineKnots.cpp">
+      <Filter>B-Splines</Filter>
+    </ClCompile>
+    <ClCompile Include="BSplineOpen.cpp">
+      <Filter>B-Splines</Filter>
+    </ClCompile>
+    <ClCompile Include="BSplineVec3dPacked.cpp">
+      <Filter>B-Splines</Filter>
+    </ClCompile>
+    <ClCompile Include="cvars.cpp">
+      <Filter>CVars</Filter>
+    </ClCompile>
+    <ClCompile Include="CryCharDecal.cpp">
+      <Filter>Decals</Filter>
+    </ClCompile>
+    <ClCompile Include="CryCharDecalBuilder.cpp">
+      <Filter>Decals</Filter>
+    </ClCompile>
+    <ClCompile Include="CryCharDecalManager.cpp">
+      <Filter>Decals</Filter>
+    </ClCompile>
+    <ClCompile Include="ChunkFileReader.cpp">
+      <Filter>Chunk Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileMapping.cpp">
+      <Filter>Chunk Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CgfUtils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="CryCharRenderElement.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="CryKeyInterpolation.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugUtils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="drand.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="IncContHeap.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="makepath.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="MathUtils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="QuaternionExponentX87.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderUtils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="splitpath.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="SSEUtils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexBufferArrayDrivers.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller.cpp">
+      <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="ControllerCryBone.cpp">
+      <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="ControllerManager.cpp">
+      <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="ControllerPackedBSpline.cpp">
+      <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="CryModEffAnimation.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="CryModEffIKSolver.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="CryModEffMorph.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="CryVertexBinding.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimObject.cpp">
+      <Filter>AnimObject</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimObjectLoader.cpp">
+      <Filter>AnimObject</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimObjectManager.cpp">
+      <Filter>AnimObject</Filter>
+    </ClCompile>
+    <ClCompile Include="XBoxExport.cpp">
+      <Filter>Other</Filter>
+    </ClCompile>
+    <ClCompile Include="CryCharParticleManager.cpp">
+      <Filter>Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="CryCharFxTrail.cpp">
+      <Filter>fx</Filter>
+    </ClCompile>
+    <ClCompile Include="CryCharInstanceRenderParams.cpp">
+      <Filter>fx</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CryGeometryInfo.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="CryGeomMorphTarget.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="CryModel.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="CryModelAnimationContainer.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="CryModelGeometryLoader.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="CryModelLoader.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="CryModelState.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="CryModelSubmesh.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="CrySkinBase.h">
+      <Filter>Model\Skin</Filter>
+    </ClInclude>
+    <ClInclude Include="CrySkinBasisBuilder.h">
+      <Filter>Model\Skin</Filter>
+    </ClInclude>
+    <ClInclude Include="CrySkinBuilder.h">
+      <Filter>Model\Skin</Filter>
+    </ClInclude>
+    <ClInclude Include="CrySkinBuilderBase.h">
+      <Filter>Model\Skin</Filter>
+    </ClInclude>
+    <ClInclude Include="CrySkinFull.h">
+      <Filter>Model\Skin</Filter>
+    </ClInclude>
+    <ClInclude Include="CrySkinMorph.h">
+      <Filter>Model\Skin</Filter>
+    </ClInclude>
+    <ClInclude Include="CrySkinMorphBuilder.h">
+      <Filter>Model\Skin</Filter>
+    </ClInclude>
+    <ClInclude Include="CrySkinRigidBasis.h">
+      <Filter>Model\Skin</Filter>
+    </ClInclude>
+    <ClInclude Include="CrySkinTypes.h">
+      <Filter>Model\Skin</Filter>
+    </ClInclude>
+    <ClInclude Include="CryCharReShadowManager.h">
+      <Filter>Model\Shadow Volume</Filter>
+    </ClInclude>
+    <ClInclude Include="CryCharReShadowVolume.h">
+      <Filter>Model\Shadow Volume</Filter>
+    </ClInclude>
+    <ClInclude Include="BoneLightBindInfo.h">
+      <Filter>Bones</Filter>
+    </ClInclude>
+    <ClInclude Include="BoneLightDynamicBind.h">
+      <Filter>Bones</Filter>
+    </ClInclude>
+    <ClInclude Include="CryBone.h">
+      <Filter>Bones</Filter>
+    </ClInclude>
+    <ClInclude Include="CryBoneDesc.h">
+      <Filter>Bones</Filter>
+    </ClInclude>
+    <ClInclude Include="CryBoneHierarchyLoader.h">
+      <Filter>Bones</Filter>
+    </ClInclude>
+    <ClInclude Include="CryBoneInfo.h">
+      <Filter>Bones</Filter>
+    </ClInclude>
+    <ClInclude Include="CryAnimationBase.h">
+      <Filter>Front-End</Filter>
+    </ClInclude>
+    <ClInclude Include="CryCharBody.h">
+      <Filter>Front-End</Filter>
+    </ClInclude>
+    <ClInclude Include="CryCharInstance.h">
+      <Filter>Front-End</Filter>
+    </ClInclude>
+    <ClInclude Include="CryCharManager.h">
+      <Filter>Front-End</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Front-End</Filter>
+    </ClInclude>
+    <ClInclude Include="ControllerTCB.h">
+      <Filter>TCB-Spline</Filter>
+    </ClInclude>
+    <ClInclude Include="TCBSpline.h">
+      <Filter>TCB-Spline</Filter>
+    </ClInclude>
+    <ClInclude Include="BSplineKnots.h">
+      <Filter>B-Splines</Filter>
+    </ClInclude>
+    <ClInclude Include="BSplineOpen.h">
+      <Filter>B-Splines</Filter>
+    </ClInclude>
+    <ClInclude Include="BSplineVec3dPacked.h">
+      <Filter>B-Splines</Filter>
+    </ClInclude>
+    <ClInclude Include="cvars-list.h">
+      <Filter>CVars</Filter>
+    </ClInclude>
+    <ClInclude Include="cvars.h">
+      <Filter>CVars</Filter>
+    </ClInclude>
+    <ClInclude Include="CryCharDecal.h">
+      <Filter>Decals</Filter>
+    </ClInclude>
+    <ClInclude Include="CryCharDecalBuilder.h">
+      <Filter>Decals</Filter>
+    </ClInclude>
+    <ClInclude Include="CryCharDecalCommon.h">
+      <Filter>Decals</Filter>
+    </ClInclude>
+    <ClInclude Include="CryCharDecalManager.h">
+      <Filter>Decals</Filter>
+    </ClInclude>
+    <ClInclude Include="ChunkFileReader.h">
+      <Filter>Chunk Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileMapping.h">
+      <Filter>Chunk Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CgfUtils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="CryCharRenderElement.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="CryKeyInterpolation.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugUtils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="drand.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="GeomCommon.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="IncContHeap.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="makepath.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="MathUtils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="QuaternionExponentX87.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderUtils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="SparseArrayDriver.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="splitpath.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="SSEUtils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="TFace.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Vec3a16.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexBufferArrayDrivers.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="ControllerCryBone.h">
+      <Filter>Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="ControllerManager.h">
+      <Filter>Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="ControllerPackedBSpline.h">
+      <Filter>Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationLayerInfo.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="CryAnimationInfo.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="CryModEffAnimation.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="CryModEffector.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="CryModEffIKSolver.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="CryModEffMorph.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="CryVertexBinding.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimObject.h">
+      <Filter>AnimObject</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimObjectLoader.h">
+      <Filter>AnimObject</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimObjectManager.h">
+      <Filter>AnimObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CryCharParticleManager.h">
+      <Filter>Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="CryCharFxTrail.h">
+      <Filter>fx</Filter>
+    </ClInclude>
+    <ClInclude Include="CryCharInstanceRenderParams.h">
+      <Filter>fx</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Changes.txt">
+      <Filter>Other</Filter>
+    </Text>
+    <Text Include="Notes.txt">
+      <Filter>Other</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CrySkinAMD64.asm">
+      <Filter>Model\Skin</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

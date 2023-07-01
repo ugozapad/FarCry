@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug64|Win32">
+      <Configuration>Debug64</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile|Win32">
+      <Configuration>Profile</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release64|Win32">
+      <Configuration>Release64</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{4C5F1B66-2962-439A-AECF-D727FDDBCD48}</ProjectGuid>
+    <SccProjectName>Perforce Project</SccProjectName>
+    <SccAuxPath />
+    <SccLocalPath>..</SccLocalPath>
+    <SccProvider>MSSCCI:Perforce SCM</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.33516.290</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>D:\Games\FC\Bin32\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+    <OutDir>D:\Games\FC\Bin32\</OutDir>
+    <IntDir>Profile\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>D:\Games\FC\Bin32\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'">
+    <OutDir>D:\Games\FC\Bin32\</OutDir>
+    <IntDir>Debug64\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'">
+    <OutDir>D:\Games\FC\Bin32\</OutDir>
+    <IntDir>Release64\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <AdditionalIncludeDirectories>..\..\;..\..\FarCry;..\..\CryNetwork;..\..\CryCommon;..\..\CryCommon\Stl;..\..\CryPhysics;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_RELEASE;COMP_VC;DO_ASM;OPENGL;OS_WIN32;PROC_INTEL;WIN32;NDEBUG;_WINDOWS;_USRDLL;XRENDEROGL_EXPORTS;_RENDERER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>RenderPCH.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/XRenderOGL.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>Glu32.lib;OpenGL32.lib;Winmm.lib;cg.lib;cgGL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)XRenderOGL.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>.\Release/XRenderOGL.pdb</ProgramDatabaseFile>
+      <ImportLibrary>.\Release/XRenderOGL.lib</ImportLibrary>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/XRenderOGL.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <AdditionalIncludeDirectories>..\..\;..\..\FarCry;..\..\CryNetwork;..\..\CryCommon;..\..\CryCommon\Stl;..\..\CryPhysics;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ENABLE_FRAME_PROFILER;COMP_VC;DO_ASM;OPENGL;OS_WIN32;PROC_INTEL;WIN32;NDEBUG;_WINDOWS;_USRDLL;XRENDEROGL_EXPORTS;DO_RENDERLOG;DO_RENDERSTATS;_RENDERER; USE_3DC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>RenderPCH.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Profile/XRenderOGL.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Profile/</AssemblerListingLocation>
+      <ObjectFileName>.\Profile/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Profile/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>glu32.lib;OpenGL32.lib;Winmm.lib;cg.lib;cgGL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <BaseAddress>0x38000000</BaseAddress>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>C:\MasterCD/XRenderOGL.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\CryCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ENABLE_FRAME_PROFILER;COMP_VC;DO_ASM;OPENGL;OS_WIN32;PROC_INTEL;WIN32;_DEBUG;_WINDOWS;_USRDLL;XRENDEROGL_EXPORTS;DO_RENDERLOG;DO_RENDERSTATS;_RENDERER;USE_3DC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>RenderPCH.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/XRenderOGL.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>glu32.lib;OpenGL32.lib;Winmm.lib;cg.lib;cgGL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/XRenderOGL.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\CryCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_AMD64_;WIN64;ENABLE_FRAME_PROFILER;COMP_VC;OPENGL;OS_WIN32;WIN32;_DEBUG;_WINDOWS;_USRDLL;XRENDEROGL_EXPORTS;DO_RENDERLOG;DO_RENDERSTATS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>RenderPCH.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:AMD64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>glu32.lib;OpenGL32.lib;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ImportLibrary>$(OutDir)$(ProjectName).lib</ImportLibrary>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/XRenderOGL.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\CryCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ENABLE_FRAME_PROFILER;_RELEASE;NDEBUG;WIN64;WIN32;_AMD64_;ENABLE_FRAME_PROFILER;COMP_VC;OPENGL;OS_WIN32;_WINDOWS;_USRDLL;XRENDEROGL_EXPORTS;DO_RENDERLOG;DO_RENDERSTATS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>RenderPCH.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:AMD64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>glu32.lib;OpenGL32.lib;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
+      <ImportLibrary>$(OutDir)$(ProjectName).lib</ImportLibrary>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/XRenderOGL.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\3DUtils.cpp" />
+    <ClCompile Include="..\Common\CRT.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Common\EvalFuncs_C.cpp" />
+    <ClCompile Include="..\Common\EvalFuncs_RE.cpp" />
+    <ClCompile Include="..\Common\LeafBufferCreate.cpp" />
+    <ClCompile Include="..\Common\LeafBufferRender.cpp" />
+    <ClCompile Include="..\Common\LeafBufferSerialize.cpp" />
+    <ClCompile Include="..\Common\LightMaterial.cpp" />
+    <ClCompile Include="..\Common\Names.cpp" />
+    <ClCompile Include="..\Common\NvTriStrip\NvTriStrip.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Common\NvTriStrip\NvTriStripObjects.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Common\pip_addons.cpp" />
+    <ClCompile Include="..\Common\RendElements\CRE2DQuad.cpp" />
+    <ClCompile Include="..\Common\RendElements\CREBeam.cpp" />
+    <ClCompile Include="..\Common\RendElements\CREClientPoly.cpp" />
+    <ClCompile Include="..\Common\RendElements\CREClientPoly2D.cpp" />
+    <ClCompile Include="..\Common\RendElements\CREDummy.cpp" />
+    <ClCompile Include="..\Common\RendElements\CREFlares.cpp" />
+    <ClCompile Include="..\Common\RendElements\CREFlashBang.cpp" />
+    <ClCompile Include="..\Common\RendElements\CREGlare.cpp" />
+    <ClCompile Include="..\Common\RendElements\CREHDRProcess.cpp" />
+    <ClCompile Include="..\Common\RendElements\CREOcean.cpp" />
+    <ClCompile Include="..\Common\RendElements\CREOcLeaf.cpp">
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AssemblyAndSourceCode</AssemblerOutput>
+    </ClCompile>
+    <ClCompile Include="..\Common\RendElements\CREOclusionQuery.cpp" />
+    <ClCompile Include="..\Common\RendElements\CREParticleSpray.cpp" />
+    <ClCompile Include="..\Common\RendElements\CREPolyBlend.cpp" />
+    <ClCompile Include="..\Common\RendElements\CREPolyMesh.cpp" />
+    <ClCompile Include="..\Common\RendElements\CREPrefabGeom.cpp" />
+    <ClCompile Include="..\Common\RendElements\CREScreenProcess.cpp" />
+    <ClCompile Include="..\Common\RendElements\CRESky.cpp" />
+    <ClCompile Include="..\Common\RendElements\CRETempMesh.cpp" />
+    <ClCompile Include="..\Common\RendElements\CRETerrainSector.cpp" />
+    <ClCompile Include="..\Common\RendElements\CRETriMeshAdditionalShadow.cpp" />
+    <ClCompile Include="..\Common\RendElements\CRETriMeshShadow.cpp" />
+    <ClCompile Include="..\Common\RendElements\FFT_SSE.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Common\RendElements\RendElement.cpp" />
+    <ClCompile Include="..\Common\Renderer.cpp">
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </AssemblerOutput>
+    </ClCompile>
+    <ClCompile Include="..\Common\ResFile.cpp" />
+    <ClCompile Include="..\Common\Shaders\Parser.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\Common\Shaders\ShaderComponents.cpp" />
+    <ClCompile Include="..\Common\Shaders\ShaderCore.cpp" />
+    <ClCompile Include="..\Common\Shaders\ShaderParse.cpp" />
+    <ClCompile Include="..\Common\Shaders\ShaderScript.cpp" />
+    <ClCompile Include="..\Common\Shaders\ShaderTemplate.cpp" />
+    <ClCompile Include="..\Common\Textures\Image\BmpImage.cpp" />
+    <ClCompile Include="..\Common\Textures\Image\CImage.cpp">
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </AssemblerOutput>
+    </ClCompile>
+    <ClCompile Include="..\Common\Textures\Image\DDSImage.cpp" />
+    <ClCompile Include="..\Common\Textures\Image\inv_cmap.cpp" />
+    <ClCompile Include="..\Common\Textures\Image\JpgImage.cpp" />
+    <ClCompile Include="..\Common\Textures\Image\PcxImage.cpp" />
+    <ClCompile Include="..\Common\Textures\Image\Quantize.cpp" />
+    <ClCompile Include="..\Common\Textures\Image\TgaImage.cpp" />
+    <ClCompile Include="..\Common\Textures\TexMan.cpp">
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AssemblyAndSourceCode</AssemblerOutput>
+    </ClCompile>
+    <ClCompile Include="..\Common\Textures\TexManShadows.cpp" />
+    <ClCompile Include="..\Common\Textures\TexManStreaming.cpp" />
+    <ClCompile Include="..\RenderPCH.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="GLCGPShader.cpp" />
+    <ClCompile Include="GLCGVProgram.cpp" />
+    <ClCompile Include="GLFont.cpp" />
+    <ClCompile Include="GLHelper.cpp" />
+    <ClCompile Include="GLLog.cpp" />
+    <ClCompile Include="GLObjSprites.cpp" />
+    <ClCompile Include="GLPBuffer.cpp" />
+    <ClCompile Include="GLRendPipeline.cpp">
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AssemblyAndSourceCode</AssemblerOutput>
+    </ClCompile>
+    <ClCompile Include="GLREOcean.cpp">
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </AssemblerOutput>
+    </ClCompile>
+    <ClCompile Include="GLRERender.cpp" />
+    <ClCompile Include="GLREShadowVolume.cpp" />
+    <ClCompile Include="GLScreenRender.cpp" />
+    <ClCompile Include="GLShaders.cpp" />
+    <ClCompile Include="GLSystem.cpp" />
+    <ClCompile Include="GLTextures.cpp">
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AssemblyAndSourceCode</AssemblerOutput>
+    </ClCompile>
+    <ClCompile Include="GLTexturesStreaming.cpp" />
+    <ClCompile Include="GL_Renderer.cpp">
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'">AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'">AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </AssemblerOutput>
+    </ClCompile>
+    <ClCompile Include="GL_Shadows.cpp" />
+    <ClCompile Include="GL_Textures.cpp">
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'">AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'">AssemblyAndSourceCode</AssemblerOutput>
+    </ClCompile>
+    <ClCompile Include="GL_VertBuffer.cpp" />
+    <ClCompile Include="NVParse\nvparse.cpp" />
+    <ClCompile Include="NVParse\nvparse_errors.cpp" />
+    <ClCompile Include="NVParse\ps1.0_program.cpp" />
+    <ClCompile Include="NVParse\rc1.0_combiners.cpp" />
+    <ClCompile Include="NVParse\rc1.0_final.cpp" />
+    <ClCompile Include="NVParse\rc1.0_general.cpp" />
+    <ClCompile Include="NVParse\ts1.0_inst.cpp" />
+    <ClCompile Include="NVParse\ts1.0_inst_list.cpp" />
+    <ClCompile Include="NVParse\vcp1.0_impl.cpp" />
+    <ClCompile Include="NVParse\vp1.0_impl.cpp" />
+    <ClCompile Include="NVParse\vs1.0_inst.cpp" />
+    <ClCompile Include="NVParse\vs1.0_inst_list.cpp" />
+    <ClCompile Include="NVParse\vsp1.0_impl.cpp" />
+    <ClCompile Include="NVParse\_ps1.0_lexer.cpp" />
+    <ClCompile Include="NVParse\_ps1.0_parser.cpp" />
+    <ClCompile Include="NVParse\_rc1.0_lexer.cpp" />
+    <ClCompile Include="NVParse\_rc1.0_parser.cpp" />
+    <ClCompile Include="NVParse\_ts1.0_lexer.cpp" />
+    <ClCompile Include="NVParse\_ts1.0_parser.cpp" />
+    <ClCompile Include="NVParse\_vs1.0_lexer.cpp" />
+    <ClCompile Include="NVParse\_vs1.0_parser.cpp" />
+    <ClCompile Include="state_to_nvparse_text.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\3Dc\CompressorLib.h" />
+    <ClInclude Include="..\Common\3DUtils.h" />
+    <ClInclude Include="..\Common\CommonRender.h" />
+    <ClInclude Include="..\Common\Defs.h" />
+    <ClInclude Include="..\Common\EvalFuncs.h" />
+    <ClInclude Include="..\Common\LZSS.H" />
+    <ClInclude Include="..\Common\NvTriStrip\NvTriStrip.h" />
+    <ClInclude Include="..\Common\NvTriStrip\NvTriStripObjects.h" />
+    <ClInclude Include="..\Common\NvTriStrip\VertexCache.h" />
+    <ClInclude Include="..\Common\RendElements\CREBeam.h" />
+    <ClInclude Include="..\Common\RendElements\CREClientPoly.h" />
+    <ClInclude Include="..\Common\RendElements\CREClientPoly2D.h" />
+    <ClInclude Include="..\Common\RendElements\CREFlares.h" />
+    <ClInclude Include="..\Common\RendElements\CREGlare.h" />
+    <ClInclude Include="..\Common\RendElements\CREHDRProcess.h" />
+    <ClInclude Include="..\Common\RendElements\CREOcean.h" />
+    <ClInclude Include="..\Common\RendElements\CREParticleSpray.h" />
+    <ClInclude Include="..\Common\RendElements\CREPolyBlend.h" />
+    <ClInclude Include="..\Common\RendElements\CREPrefabGeom.h" />
+    <ClInclude Include="..\Common\RendElements\CREScreenCommon.h" />
+    <ClInclude Include="..\Common\RendElements\CRESkyZone.h" />
+    <ClInclude Include="..\Common\RendElements\CRETempMesh.h" />
+    <ClInclude Include="..\Common\Renderer.h" />
+    <ClInclude Include="..\Common\RenderPipeline.h" />
+    <ClInclude Include="..\Common\ResFile.h" />
+    <ClInclude Include="..\Common\Shaders\CShader.h" />
+    <ClInclude Include="..\Common\Shaders\Parser.h" />
+    <ClInclude Include="..\Common\Shaders\Shader.h" />
+    <ClInclude Include="..\Common\Shadow_Renderer.h" />
+    <ClInclude Include="..\Common\SimpleFrameProfiler.h" />
+    <ClInclude Include="..\Common\Textures\dxtlib.h" />
+    <ClInclude Include="..\Common\Textures\Image\BmpImage.h" />
+    <ClInclude Include="..\Common\Textures\Image\CImage.h" />
+    <ClInclude Include="..\Common\Textures\Image\dds.h" />
+    <ClInclude Include="..\Common\Textures\Image\DDSImage.h" />
+    <ClInclude Include="..\Common\Textures\Image\GifImage.h" />
+    <ClInclude Include="..\Common\Textures\Image\inv_cmap.h" />
+    <ClInclude Include="..\Common\Textures\Image\JpgImage.h" />
+    <ClInclude Include="..\Common\Textures\Image\PcxImage.h" />
+    <ClInclude Include="..\Common\Textures\Image\Quantize.h" />
+    <ClInclude Include="..\Common\Textures\Image\SHendian.h" />
+    <ClInclude Include="..\Common\Textures\Image\TgaImage.h" />
+    <ClInclude Include="..\Common\Textures\TexMan.h" />
+    <ClInclude Include="..\CrtOverrides.h" />
+    <ClInclude Include="..\RenderPCH.h" />
+    <ClInclude Include="CG\cg.h" />
+    <ClInclude Include="CG\cgGL.h" />
+    <ClInclude Include="CG\cgGL_profiles.h" />
+    <ClInclude Include="CG\cg_bindlocations.h" />
+    <ClInclude Include="CG\cg_datatypes.h" />
+    <ClInclude Include="Cg\cg_enums.h" />
+    <ClInclude Include="CG\cg_errors.h" />
+    <ClInclude Include="CG\cg_profiles.h" />
+    <ClInclude Include="GLCGPShader.h" />
+    <ClInclude Include="GLCGVProgram.h" />
+    <ClInclude Include="GLCubeMaps.h" />
+    <ClInclude Include="GLFuncs.h" />
+    <ClInclude Include="GLPBuffer.h" />
+    <ClInclude Include="GL_Renderer.h" />
+    <ClInclude Include="Mygl.h" />
+    <ClInclude Include="MyGlu.h" />
+    <ClInclude Include="NVParse\macro.h" />
+    <ClInclude Include="NVParse\nvparse.h" />
+    <ClInclude Include="NVParse\nvparse_errors.h" />
+    <ClInclude Include="NVParse\nvparse_externs.h" />
+    <ClInclude Include="NVParse\ps1.0_program.h" />
+    <ClInclude Include="NVParse\rc1.0_combiners.h" />
+    <ClInclude Include="NVParse\rc1.0_final.h" />
+    <ClInclude Include="NVParse\rc1.0_general.h" />
+    <ClInclude Include="NVParse\rc1.0_register.h" />
+    <ClInclude Include="NVParse\ts1.0_inst.h" />
+    <ClInclude Include="NVParse\ts1.0_inst_list.h" />
+    <ClInclude Include="NVParse\unistd.h" />
+    <ClInclude Include="NVParse\vs1.0_inst.h" />
+    <ClInclude Include="NVParse\vs1.0_inst_list.h" />
+    <ClInclude Include="NVParse\_ps1.0_parser.h" />
+    <ClInclude Include="NVParse\_rc1.0_parser.h" />
+    <ClInclude Include="NVParse\_ts1.0_parser.h" />
+    <ClInclude Include="NVParse\_vs1.0_parser.h" />
+    <ClInclude Include="state_to_nvparse_text.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Common\Names.int" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Libraries\ijl15.lib" />
+    <Library Include="Libraries\nvDXTlib.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Workarounds.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

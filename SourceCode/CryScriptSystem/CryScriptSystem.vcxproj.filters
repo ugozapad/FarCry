@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{a00f7261-906b-44ee-9959-ca60c0377848}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\LUA">
+      <UniqueIdentifier>{edc2a9ed-fbc6-4a7e-8027-6e9230fb46fd}</UniqueIdentifier>
+      <Extensions>c</Extensions>
+    </Filter>
+    <Filter Include="Source Files\LUA\LuaCryPak">
+      <UniqueIdentifier>{c759c635-d346-4f52-a2ed-5b479685b541}</UniqueIdentifier>
+      <Extensions>cpp;h</Extensions>
+    </Filter>
+    <Filter Include="Source Files\LUA\Source Files">
+      <UniqueIdentifier>{ebd8871f-bccd-42c3-82f3-d2a480b18221}</UniqueIdentifier>
+      <Extensions>c</Extensions>
+    </Filter>
+    <Filter Include="Source Files\LUA\Header Files">
+      <UniqueIdentifier>{adba60df-6d87-477b-9ef6-02d4441cc506}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{26c3a1e0-2cf8-4538-9ccc-493e2d768654}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{bf6eb495-0cd1-4748-b4fc-bd79c965ee04}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CryScriptSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MemStats.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RecycleAllocator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaCryPakIO.cpp">
+      <Filter>Source Files\LUA\LuaCryPak</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\lapi.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\lib\lauxlib.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\lib\lbaselib.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\lib\lbitlib.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\lcode.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\lib\ldblib.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\ldebug.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\ldo.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\lfunc.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\lgc.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\lib\liolib.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\llex.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\lib\lmathlib.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\lmem.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\lobject.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\lopcodes.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\lparser.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\lstate.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\lstring.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\lib\lstrlib.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\ltable.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\ltests.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\ltm.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\lundump.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\lvm.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LUA\lzio.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vectorlib.c">
+      <Filter>Source Files\LUA\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LuaCryPakIO.h">
+      <Filter>Source Files\LUA\LuaCryPak</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\lapi.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\lauxlib.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\lcode.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\ldebug.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\ldo.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\lfunc.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\lgc.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\llex.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\llimits.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\lmem.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\lobject.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\lopcodes.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\lparser.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\lstate.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\lstring.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\ltable.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\ltm.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\lua.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\luadebug.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\lualib.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\lundump.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\lvm.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUA\lzio.h">
+      <Filter>Source Files\LUA\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FunctionHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RecycleAllocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StackGuard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

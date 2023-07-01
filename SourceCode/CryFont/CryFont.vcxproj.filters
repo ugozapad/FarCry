@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{e4140c61-1744-45ab-8f63-3edd911d09b5}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{1b7d8b19-82da-43a5-b993-f04aa46c2618}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="FreeType 2">
+      <UniqueIdentifier>{af34042f-5155-40ee-b23c-376e8256767c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CryFont.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CryPakIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FFont.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FFontXML.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FontRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FontTexture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GlyphBitmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GlyphCache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ICryFont.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeType2\src\autohint\autohint.c">
+      <Filter>FreeType 2</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeType2\src\base\ftbase.c">
+      <Filter>FreeType 2</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeType2\src\base\ftbbox.c">
+      <Filter>FreeType 2</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeType2\src\base\ftbdf.c">
+      <Filter>FreeType 2</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeType2\src\cache\ftcache.c">
+      <Filter>FreeType 2</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeType2\src\base\ftdebug.c">
+      <Filter>FreeType 2</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeType2\src\base\ftglyph.c">
+      <Filter>FreeType 2</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeType2\src\base\ftinit.c">
+      <Filter>FreeType 2</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeType2\src\base\ftmm.c">
+      <Filter>FreeType 2</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeType2\src\base\ftpfr.c">
+      <Filter>FreeType 2</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeType2\src\base\ftsystem.c">
+      <Filter>FreeType 2</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeType2\src\base\ftwinfnt.c">
+      <Filter>FreeType 2</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeType2\src\psaux\psaux.c">
+      <Filter>FreeType 2</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeType2\src\pshinter\pshinter.c">
+      <Filter>FreeType 2</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeType2\src\psnames\psnames.c">
+      <Filter>FreeType 2</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeType2\src\raster\raster.c">
+      <Filter>FreeType 2</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeType2\src\sfnt\sfnt.c">
+      <Filter>FreeType 2</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeType2\src\smooth\smooth.c">
+      <Filter>FreeType 2</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeType2\src\truetype\truetype.c">
+      <Filter>FreeType 2</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeType2\src\winfonts\winfnt.c">
+      <Filter>FreeType 2</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CryFont.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CryPakIO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FFont.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FontRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FontTexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GlyphBitmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GlyphCache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

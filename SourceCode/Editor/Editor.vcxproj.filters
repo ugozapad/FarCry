@@ -1,0 +1,2741 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{cdeee0d2-ac6c-4eb7-b9c6-dea844641b16}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{41169809-eb89-4b9c-9fb9-37950f956349}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{47ded994-83db-4e81-9e29-b2e40f18a88a}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Layout">
+      <UniqueIdentifier>{046287dc-63cd-490c-bd01-6eb57272a55f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialogs">
+      <UniqueIdentifier>{fbf5f120-7e1e-41e8-8db0-e1a0c8e8d8b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controls">
+      <UniqueIdentifier>{9d0fc483-5b01-483b-9e45-3c4b67b7ed85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controls\SizingControlBar">
+      <UniqueIdentifier>{11404bb9-06b9-4a8e-bc5f-2d63eacbca43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controls\PropertyCtrl">
+      <UniqueIdentifier>{710395a7-1057-467e-879d-2a2ae5754cc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{11471a85-a2cd-4f7b-a5fd-fa879bec8273}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ModelView">
+      <UniqueIdentifier>{4c885813-c25f-4bbc-a923-cce2d3fca4cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{e2fd2929-3a90-407b-932e-b7b4362a0f14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Gizmo">
+      <UniqueIdentifier>{fb0cd68b-e6fb-4f0c-bf9f-7e3f6c779b86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Xml">
+      <UniqueIdentifier>{bca81152-5ea3-4ce1-accb-bb4895be708d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Xml\Expat">
+      <UniqueIdentifier>{96a1b8f2-b947-444c-ae99-49f5a9b01899}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Panels">
+      <UniqueIdentifier>{52e3bea9-a377-40be-82fe-416b6fd81e04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{1527ca4e-78ab-49fc-b4d7-c53bed4d2d36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Images">
+      <UniqueIdentifier>{b3a44c5b-1e0c-4a1a-8eea-6e96bb881d54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Math">
+      <UniqueIdentifier>{081478b7-7ac0-4513-8a79-966c6fc249c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\FileChangeMonitor">
+      <UniqueIdentifier>{8d63a03d-2e13-4637-a589-0274252e51d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\zlib">
+      <UniqueIdentifier>{a5ea7bd9-16d4-4e20-9329-2c55e38047de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\zlib\Source Files">
+      <UniqueIdentifier>{6117eedc-8e37-4651-be9d-fd812da7ed98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\zlib\Header Files">
+      <UniqueIdentifier>{e95d873d-0470-4be7-80b5-91726592b978}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditTools">
+      <UniqueIdentifier>{8fcee42f-0759-4d88-adcc-17e8f18505a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditTools\Texture">
+      <UniqueIdentifier>{5d719d91-f59e-4bcc-b144-16bb9fdc7e97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditTools\Clone">
+      <UniqueIdentifier>{e7b457a8-a3aa-4bda-86f4-4ade56ca2508}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditTools\Create">
+      <UniqueIdentifier>{9ace1104-214f-49a8-a504-fd1bfdd31707}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditTools\Pick">
+      <UniqueIdentifier>{bfc644cf-b320-40da-a1a6-70c316b15c73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditTools\LinkTool">
+      <UniqueIdentifier>{62ab3f17-3fc4-4e1e-8b51-abf3dc54fff6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditTools\AlignTool">
+      <UniqueIdentifier>{fe44c7e0-0704-460b-80ae-86a928f8c59d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TerrainTools">
+      <UniqueIdentifier>{20e8335d-82b2-4224-af41-4ce98c80c252}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TerrainTools\Hole">
+      <UniqueIdentifier>{333a0ceb-f021-49f2-916b-d40b8ed403f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TerrainTools\Modify">
+      <UniqueIdentifier>{6e370353-a36e-4383-af6b-b4146a6f978c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TerrainTools\Environment">
+      <UniqueIdentifier>{a352c0f9-e88f-419a-8339-1ff3087322df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TerrainTools\TexturePainter">
+      <UniqueIdentifier>{0fe1e57e-ee20-43a2-923e-f957263c5dec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TerrainTools\Move">
+      <UniqueIdentifier>{d5192b89-8c9c-4172-9a04-c3a19d9e0b57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Undo">
+      <UniqueIdentifier>{2c17e199-d058-4ff4-a41d-390527009c11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MaterialTools">
+      <UniqueIdentifier>{a30baedc-dfd8-4f42-a0f5-8ad6c0f781f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vegetation">
+      <UniqueIdentifier>{b195181d-8848-4bf4-952c-c7ff3f2f85cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AI">
+      <UniqueIdentifier>{aac66ea7-a691-424d-88a4-485dbfae8e9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TrackView">
+      <UniqueIdentifier>{e7fd9d20-f89c-4191-a3b0-ed632ef63d37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Animation">
+      <UniqueIdentifier>{dee99987-ec25-4a08-9199-39a761039589}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EquipPack">
+      <UniqueIdentifier>{b3cdef6d-4101-466e-82dc-05bdcc6ced5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commands">
+      <UniqueIdentifier>{2fa0931f-cb9e-4f37-a157-1c50efd72392}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Brush">
+      <UniqueIdentifier>{62b188ae-c7f9-4a96-aae8-27bae7073b25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mission">
+      <UniqueIdentifier>{8d478318-57b1-4a70-94d6-5ef1108db94f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries">
+      <UniqueIdentifier>{d770926e-c324-453f-9b83-3828e979beae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Terrain">
+      <UniqueIdentifier>{e7a66c46-5d4b-4797-9b21-7bbfb2dbb57b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Terrain\Sky Accessiblity">
+      <UniqueIdentifier>{4ee41251-9888-4aa2-b6e8-373a58d36e3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameExport">
+      <UniqueIdentifier>{dbefab24-b2e1-49a9-a52d-8ab83d2f5e60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LightmapCompiler">
+      <UniqueIdentifier>{e7d13bd1-19b1-4373-8dab-2c501ea62aa9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataBase">
+      <UniqueIdentifier>{e413cf66-f123-44a7-9ee7-d5f7729de8da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataBase\EntityArchetype">
+      <UniqueIdentifier>{df2ad2cc-c632-46b4-891f-d2194571f627}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataBase\ParticlesEditor">
+      <UniqueIdentifier>{3ab289e3-286d-4c26-9a5a-ba89fc38c847}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataBase\MusicEditor">
+      <UniqueIdentifier>{1813fe77-ead1-4779-b326-a009f9e96aab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataBase\PrefabsEditor">
+      <UniqueIdentifier>{3598704a-2730-4099-b846-71ebbe5f0980}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Material">
+      <UniqueIdentifier>{91e0d427-f4f0-4495-8c1e-ea14cd51ee53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Presets">
+      <UniqueIdentifier>{f4028272-05c6-4fbd-a04d-4dfe047231da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Presets\EAXPresets">
+      <UniqueIdentifier>{88981baf-196a-4315-bafb-0f1aa5f781f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Presets\SoundPresets">
+      <UniqueIdentifier>{d596f975-c16c-4f84-aba2-a30aed7cd620}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{3ad46055-6caf-4241-ba11-d5ea1e13a589}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CrtDebug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CryEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CryEditDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CurveObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EdMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileTypeUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IEditorImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LightmapGen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LMCompDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LogFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Plugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PluginManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LightmapCompiler\TexelSampler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThumbnailGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UsedResources.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="2DViewport.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="Grid.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="LayoutWnd.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderViewport.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainViewport.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="TopRendererWnd.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewManager.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewPane.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewport.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="ZViewport.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="AIAnchorsDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="AICharactersDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="AIDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckOutDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="CurveWnd.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomColorDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomFileDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="DimensionsDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawWnd.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicHelpDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="EAXPresetsDlg.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="EquipPackDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrorReportDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="GridSettingsDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="InfoBar.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="InfoBarHolder.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="InfoProgressBar.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="LayersSelectDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="LayoutConfigDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadingDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadingScreen.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="MissionProps.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="MissionSelectDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicInfoDlg.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="NewLevelDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberDlg.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectBrowserDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectLayerPropsDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="PanelPreview.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="PreferencesDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="PreferencesPropertyPage.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="PreferencesStdPages.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="PropertiesDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectEAXPresetDlg.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectEntityClsDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectFileDlg.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectObjectDlg.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectSoundPresetDlg.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="SetHeightDlg.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="ShadersDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="SizeDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="SkyDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundPresetsDlg.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="SrcSafeSettingsDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="StartupDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="StartupLogoDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="StringDlg.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="SurfaceTypesDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainCurve.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainFormulaDlg.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainLighting.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainTexture.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="TipDlg.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolbarDialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolsConfigPage.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UndoDropDown.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponProps.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\AnimationToolBar.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\AnimSequences.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\ColorCheckBox.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\ConsoleSCB.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\DLGBARS.CPP">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\EditModeToolBar.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\FileTree.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\LayersListBox.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\MltiTree.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\NumberCtrl.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\NumberCtrlEdit.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\PickObjectButton.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\PreviewModelCtrl.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\RollupBar.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\RollupCtrl.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\SelectionCombo.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\SplitterWndEx.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\SyntaxColorizer.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\TextEditorCtrl.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\ToolBarContainer.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\ToolBarTab.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\ToolButton.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\TreeCtrlEx.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\scbarcf.cpp">
+      <Filter>Controls\SizingControlBar</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\scbarg.cpp">
+      <Filter>Controls\SizingControlBar</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\sizecbar.cpp">
+      <Filter>Controls\SizingControlBar</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\DropListBox.cpp">
+      <Filter>Controls\PropertyCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\DropScrollBar.cpp">
+      <Filter>Controls\PropertyCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\DropWnd.cpp">
+      <Filter>Controls\PropertyCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\InPlaceButton.cpp">
+      <Filter>Controls\PropertyCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\InPlaceComboBox.cpp">
+      <Filter>Controls\PropertyCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\InPlaceEdit.cpp">
+      <Filter>Controls\PropertyCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\PropertyCtrl.cpp">
+      <Filter>Controls\PropertyCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\PropertyItem.cpp">
+      <Filter>Controls\PropertyCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="DisplaySettings.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrorReport.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="ExternalTools.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="IconManager.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelInfo.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Mailer.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="MaterialEnum.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessInfo.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderEnum.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="unzip.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelViewPanel.cpp">
+      <Filter>ModelView</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelViewport.cpp">
+      <Filter>ModelView</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelViewSubmeshPanel.cpp">
+      <Filter>ModelView</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\AIAnchor.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\AiPoint.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\AreaBox.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\AreaSphere.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\BaseObject.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\BrushObject.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\CameraObject.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\DisplayContext.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Entity.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\EntityScript.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Group.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\ObjectLayer.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\ObjectLayerManager.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\ObjectLoader.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\ObjectManager.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\PrefabObject.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\ProtEntityObject.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\SafeObjectsArray.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\SelectionGroup.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\ShapeObject.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\SoundObject.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\TagComment.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\TagPoint.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\VisAreaShapeObject.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Volume.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\WaterShapeObject.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\AxisGizmo.cpp">
+      <Filter>Objects\Gizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Gizmo.cpp">
+      <Filter>Objects\Gizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\GizmoManager.cpp">
+      <Filter>Objects\Gizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\LineGizmo.cpp">
+      <Filter>Objects\Gizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\TrackGizmo.cpp">
+      <Filter>Objects\Gizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\xml.cpp">
+      <Filter>Xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\Expat\xmlparse.c">
+      <Filter>Xml\Expat</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\Expat\xmlrole.c">
+      <Filter>Xml\Expat</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\Expat\xmltok.c">
+      <Filter>Xml\Expat</Filter>
+    </ClCompile>
+    <ClCompile Include="AIPointPanel.cpp">
+      <Filter>Panels</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityPanel.cpp">
+      <Filter>Panels</Filter>
+    </ClCompile>
+    <ClCompile Include="MainTools.cpp">
+      <Filter>Panels</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectPanel.cpp">
+      <Filter>Panels</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectTypeBrowser.cpp">
+      <Filter>Panels</Filter>
+    </ClCompile>
+    <ClCompile Include="PanelDisplayHide.cpp">
+      <Filter>Panels</Filter>
+    </ClCompile>
+    <ClCompile Include="PanelDisplayLayer.cpp">
+      <Filter>Panels</Filter>
+    </ClCompile>
+    <ClCompile Include="PanelDisplayRender.cpp">
+      <Filter>Panels</Filter>
+    </ClCompile>
+    <ClCompile Include="PanelTreeBrowser.cpp">
+      <Filter>Panels</Filter>
+    </ClCompile>
+    <ClCompile Include="PickEntitiesPanel.cpp">
+      <Filter>Panels</Filter>
+    </ClCompile>
+    <ClCompile Include="PrefabPanel.cpp">
+      <Filter>Panels</Filter>
+    </ClCompile>
+    <ClCompile Include="PropertiesPanel.cpp">
+      <Filter>Panels</Filter>
+    </ClCompile>
+    <ClCompile Include="ShapePanel.cpp">
+      <Filter>Panels</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundObjectPanel.cpp">
+      <Filter>Panels</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainPanel.cpp">
+      <Filter>Panels</Filter>
+    </ClCompile>
+    <ClCompile Include="VolumePanel.cpp">
+      <Filter>Panels</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\AffineParts.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\AVI_Writer.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\AVIGenerator.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\ChunkFile.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Clipboard.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\crc32.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\DynamicArray2D.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\EditorUtils.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\FileEnum.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\FileUtil.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\GuidUtil.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\MemoryBlock.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\NamedData.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\PakFile.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Thread.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Triangulate.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Variable.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="WaitProgress.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\XmlArchive.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\XmlTemplate.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Image.cpp">
+      <Filter>Util\Images</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Image_DXTC.cpp">
+      <Filter>Util\Images</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\ImageGif.cpp">
+      <Filter>Util\Images</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\ImagePainter.cpp">
+      <Filter>Util\Images</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\ImageUtil.cpp">
+      <Filter>Util\Images</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\BBox.cpp">
+      <Filter>Util\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\FileChangeMonitor.cpp">
+      <Filter>Util\FileChangeMonitor</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\adler32.c">
+      <Filter>Util\zlib\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\compress.c">
+      <Filter>Util\zlib\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\crc32.c">
+      <Filter>Util\zlib\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\deflate.c">
+      <Filter>Util\zlib\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\gzio.c">
+      <Filter>Util\zlib\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\infblock.c">
+      <Filter>Util\zlib\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\infcodes.c">
+      <Filter>Util\zlib\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\inffast.c">
+      <Filter>Util\zlib\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\inflate.c">
+      <Filter>Util\zlib\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\inftrees.c">
+      <Filter>Util\zlib\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\infutil.c">
+      <Filter>Util\zlib\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\trees.c">
+      <Filter>Util\zlib\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\uncompr.c">
+      <Filter>Util\zlib\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\zutil.c">
+      <Filter>Util\zlib\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EditTool.cpp">
+      <Filter>EditTools</Filter>
+    </ClCompile>
+    <ClCompile Include="TexturePanel.cpp">
+      <Filter>EditTools\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureTool.cpp">
+      <Filter>EditTools\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectCloneTool.cpp">
+      <Filter>EditTools\Clone</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectCreateTool.cpp">
+      <Filter>EditTools\Create</Filter>
+    </ClCompile>
+    <ClCompile Include="PickObjectTool.cpp">
+      <Filter>EditTools\Pick</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkTool.cpp">
+      <Filter>EditTools\LinkTool</Filter>
+    </ClCompile>
+    <ClCompile Include="UnlinkTool.cpp">
+      <Filter>EditTools\LinkTool</Filter>
+    </ClCompile>
+    <ClCompile Include="AlignTool.cpp">
+      <Filter>EditTools\AlignTool</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainHolePanel.cpp">
+      <Filter>TerrainTools\Hole</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainHoleTool.cpp">
+      <Filter>TerrainTools\Hole</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainModifyPanel.cpp">
+      <Filter>TerrainTools\Modify</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainModifyTool.cpp">
+      <Filter>TerrainTools\Modify</Filter>
+    </ClCompile>
+    <ClCompile Include="EnvironmentPanel.cpp">
+      <Filter>TerrainTools\Environment</Filter>
+    </ClCompile>
+    <ClCompile Include="EnvironmentTool.cpp">
+      <Filter>TerrainTools\Environment</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainPainterPanel.cpp">
+      <Filter>TerrainTools\TexturePainter</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainTexturePainter.cpp">
+      <Filter>TerrainTools\TexturePainter</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainMoveTool.cpp">
+      <Filter>TerrainTools\Move</Filter>
+    </ClCompile>
+    <ClCompile Include="Undo\Undo.cpp">
+      <Filter>Undo</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderTemplatePanel.cpp">
+      <Filter>MaterialTools</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderTemplateTool.cpp">
+      <Filter>MaterialTools</Filter>
+    </ClCompile>
+    <ClCompile Include="VegetationBrush.cpp">
+      <Filter>Vegetation</Filter>
+    </ClCompile>
+    <ClCompile Include="VegetationMap.cpp">
+      <Filter>Vegetation</Filter>
+    </ClCompile>
+    <ClCompile Include="VegetationObject.cpp">
+      <Filter>Vegetation</Filter>
+    </ClCompile>
+    <ClCompile Include="VegetationPanel.cpp">
+      <Filter>Vegetation</Filter>
+    </ClCompile>
+    <ClCompile Include="VegetationTool.cpp">
+      <Filter>Vegetation</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\AiBehavior.cpp">
+      <Filter>AI</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\AiBehaviorLibrary.cpp">
+      <Filter>AI</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\AiGoal.cpp">
+      <Filter>AI</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\AiGoalLibrary.cpp">
+      <Filter>AI</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\AIManager.cpp">
+      <Filter>AI</Filter>
+    </ClCompile>
+    <ClCompile Include="IKeyDlg.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="TcbKeyDialog.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="TcbPreviewCtrl.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackViewControlBar.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackViewDialog.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackViewGraph.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackViewKeyList.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackViewKeys.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackViewNodes.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackViewSpline.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackViewSplitter.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackViewTimeBar.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackViewUndo.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="TVCharacterKeyDialog.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="TVConsoleKeyDialog.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="TVEventKeyDialog.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="TVExprKeyDialog.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="TVMusicKeyDialog.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="TVSelectKeyDialog.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="TVSequenceProps.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="TVSoundKeyDialog.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="TVTrackPropsDialog.cpp">
+      <Filter>TrackView</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationContext.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationSerializer.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="EquipPack.cpp">
+      <Filter>EquipPack</Filter>
+    </ClCompile>
+    <ClCompile Include="EquipPackLib.cpp">
+      <Filter>EquipPack</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\Command.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\CommandManager.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Brush\Brush.cpp">
+      <Filter>Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Brush\BrushExporter.cpp">
+      <Filter>Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Brush\BrushFace.cpp">
+      <Filter>Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Brush\BrushMtl.cpp">
+      <Filter>Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Brush\BrushMtlLib.cpp">
+      <Filter>Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Brush\BrushPanel.cpp">
+      <Filter>Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Brush\BrushPlane.cpp">
+      <Filter>Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Brush\BrushPoly.cpp">
+      <Filter>Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Brush\BrushTool.cpp">
+      <Filter>Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="Mission.cpp">
+      <Filter>Mission</Filter>
+    </ClCompile>
+    <ClCompile Include="MissionScript.cpp">
+      <Filter>Mission</Filter>
+    </ClCompile>
+    <ClCompile Include="Clouds.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="GenerationParam.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Heightmap.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Layer.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Noise.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="SurfaceType.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainBeachGen.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainGrid.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainTexGen.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureCompression.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="GameExporter.cpp">
+      <Filter>GameExport</Filter>
+    </ClCompile>
+    <ClCompile Include="GameResourcesExporter.cpp">
+      <Filter>GameExport</Filter>
+    </ClCompile>
+    <ClCompile Include="OBJExporter1.cpp">
+      <Filter>GameExport</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleExporter.cpp">
+      <Filter>GameExport</Filter>
+    </ClCompile>
+    <ClCompile Include="LightmapCompiler\GLMInfo.cpp">
+      <Filter>LightmapCompiler</Filter>
+    </ClCompile>
+    <ClCompile Include="LightmapCompiler\IndoorPatches.cpp">
+      <Filter>LightmapCompiler</Filter>
+    </ClCompile>
+    <ClCompile Include="LightmapCompiler\IndoorPatchLights.cpp">
+      <Filter>LightmapCompiler</Filter>
+    </ClCompile>
+    <ClCompile Include="LightmapCompiler\RadMesh.cpp">
+      <Filter>LightmapCompiler</Filter>
+    </ClCompile>
+    <ClCompile Include="LightmapCompiler\SimpleTriangleRasterizer.cpp">
+      <Filter>LightmapCompiler</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseLibrary.cpp">
+      <Filter>DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseLibraryDialog.cpp">
+      <Filter>DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseLibraryItem.cpp">
+      <Filter>DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseLibraryManager.cpp">
+      <Filter>DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBaseDialog.cpp">
+      <Filter>DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityProtLibDialog.cpp">
+      <Filter>DataBase\EntityArchetype</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityPrototype.cpp">
+      <Filter>DataBase\EntityArchetype</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityPrototypeLibrary.cpp">
+      <Filter>DataBase\EntityArchetype</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityPrototypeManager.cpp">
+      <Filter>DataBase\EntityArchetype</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityScriptDialog.cpp">
+      <Filter>DataBase\EntityArchetype</Filter>
+    </ClCompile>
+    <ClCompile Include="Particles\ParticleDialog.cpp">
+      <Filter>DataBase\ParticlesEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="Particles\ParticleItem.cpp">
+      <Filter>DataBase\ParticlesEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="Particles\ParticleLibrary.cpp">
+      <Filter>DataBase\ParticlesEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="Particles\ParticleManager.cpp">
+      <Filter>DataBase\ParticlesEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="Music\MusicEditorDialog.cpp">
+      <Filter>DataBase\MusicEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="Music\MusicManager.cpp">
+      <Filter>DataBase\MusicEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="Music\MusicThemeLibItem.cpp">
+      <Filter>DataBase\MusicEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="Music\MusicThemeLibrary.cpp">
+      <Filter>DataBase\MusicEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="Prefabs\PrefabDialog.cpp">
+      <Filter>DataBase\PrefabsEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="Prefabs\PrefabItem.cpp">
+      <Filter>DataBase\PrefabsEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="Prefabs\PrefabLibrary.cpp">
+      <Filter>DataBase\PrefabsEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="Prefabs\PrefabManager.cpp">
+      <Filter>DataBase\PrefabsEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="Material\Material.cpp">
+      <Filter>Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Material\MaterialDialog.cpp">
+      <Filter>Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Material\MaterialLibrary.cpp">
+      <Filter>Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Material\MaterialManager.cpp">
+      <Filter>Material</Filter>
+    </ClCompile>
+    <ClCompile Include="EAXPresetMgr.cpp">
+      <Filter>Presets\EAXPresets</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundPresetMgr.cpp">
+      <Filter>Presets\SoundPresets</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EditorDefs.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EdMesh.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEngine.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IEditor.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IEditorImpl.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LightmapGen.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Plugin.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThumbnailGenerator.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UsedResources.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CryEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CryEditDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CurveObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CurveObjectDef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileTypeUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LMCompDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LogFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MFC_AMD64_Fix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PluginManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TestDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LightmapCompiler\TexelSampler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="2DViewport.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="LayoutWnd.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderViewport.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainViewport.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="TopRendererWnd.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewManager.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewPane.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewport.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="ZViewport.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="AIAnchorsDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="AICharactersDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="AIDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckOutDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="CurveWnd.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomColorDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomFileDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="DimensionsDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawWnd.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicHelpDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="EAXPresetsDlg.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="EquipPackDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorReportDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="GridSettingsDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="InfoBar.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="InfoBarHolder.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="InfoProgressBar.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="LayersSelectDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="LayoutConfigDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadingDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadingScreen.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="MissionProps.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="MissionSelectDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicInfoDlg.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="NewLevelDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="NumberDlg.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectBrowserDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectLayerPropsDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="PanelPreview.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="PreferencesDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="PreferencesPropertyPage.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="PreferencesStdPages.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertiesDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectEAXPresetDlg.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectEntityClsDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectFileDlg.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectObjectDlg.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectSoundPresetDlg.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="SetHeightDlg.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="ShadersDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="SizeDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="SkyDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundPresetsDlg.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="SrcSafeSettingsDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="StartupDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="StartupLogoDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="StringDlg.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="SurfaceTypesDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainCurve.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainFormulaDlg.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainLighting.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainTexture.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="TipDlg.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolbarDialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolsConfigPage.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UndoDropDown.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponProps.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\AnimationToolBar.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\AnimSequences.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\ColorCheckBox.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\ColorCtrl.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\ConsoleSCB.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\CustomComboBoxEx.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\DLGBARS.H">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\EditModeToolBar.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\FileTree.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\LayersListBox.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\MemDC.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\MltiTree.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\NumberCtrl.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\NumberCtrlEdit.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\PickObjectButton.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\PreviewModelCtrl.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\RollupBar.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\RollupCtrl.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\SelectionCombo.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\SplitterWndEx.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\SyntaxColorizer.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\TemplDef.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\TextEditorCtrl.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\ToolBarContainer.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\ToolBarTab.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\ToolButton.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\TreeCtrlEx.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\scbarcf.h">
+      <Filter>Controls\SizingControlBar</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\scbarg.h">
+      <Filter>Controls\SizingControlBar</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\sizecbar.h">
+      <Filter>Controls\SizingControlBar</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\DropListBox.h">
+      <Filter>Controls\PropertyCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\DropScrollBar.h">
+      <Filter>Controls\PropertyCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\DropWnd.h">
+      <Filter>Controls\PropertyCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\InPlaceButton.h">
+      <Filter>Controls\PropertyCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\InPlaceComboBox.h">
+      <Filter>Controls\PropertyCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\InPlaceEdit.h">
+      <Filter>Controls\PropertyCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\PropertyCtrl.h">
+      <Filter>Controls\PropertyCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\PropertyItem.h">
+      <Filter>Controls\PropertyCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="DisplaySettings.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorReport.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="ExternalTools.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="IconManager.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelInfo.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Mailer.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="MaterialEnum.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessInfo.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderEnum.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="unzip.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelViewPanel.h">
+      <Filter>ModelView</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelViewport.h">
+      <Filter>ModelView</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelViewSubmeshPanel.h">
+      <Filter>ModelView</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\AIAnchor.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\AiPoint.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\AreaBox.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\AreaSphere.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\BaseObject.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\BrushObject.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\CameraObject.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\ClassDesc.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\DisplayContext.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Entity.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\EntityScript.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Group.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\ObjectLayer.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\ObjectLayerManager.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\ObjectLoader.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\ObjectManager.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\PrefabObject.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\ProtEntityObject.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\SafeObjectsArray.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\SelectionGroup.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\ShapeObject.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\SoundObject.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\TagComment.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\TagPoint.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\VisAreaShapeObject.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Volume.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\WaterShapeObject.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\AxisGizmo.h">
+      <Filter>Objects\Gizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Gizmo.h">
+      <Filter>Objects\Gizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\GizmoManager.h">
+      <Filter>Objects\Gizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\LineGizmo.h">
+      <Filter>Objects\Gizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\TrackGizmo.h">
+      <Filter>Objects\Gizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\xml.h">
+      <Filter>Xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\Expat\ascii.h">
+      <Filter>Xml\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\Expat\asciitab.h">
+      <Filter>Xml\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\Expat\config.h">
+      <Filter>Xml\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\Expat\expat.h">
+      <Filter>Xml\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\Expat\iasciitab.h">
+      <Filter>Xml\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\Expat\latin1tab.h">
+      <Filter>Xml\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\Expat\nametab.h">
+      <Filter>Xml\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\Expat\utf8tab.h">
+      <Filter>Xml\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\Expat\xmlrole.h">
+      <Filter>Xml\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\Expat\xmltok.h">
+      <Filter>Xml\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\Expat\xmltok_impl.h">
+      <Filter>Xml\Expat</Filter>
+    </ClInclude>
+    <ClInclude Include="AIPointPanel.h">
+      <Filter>Panels</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityPanel.h">
+      <Filter>Panels</Filter>
+    </ClInclude>
+    <ClInclude Include="MainTools.h">
+      <Filter>Panels</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectPanel.h">
+      <Filter>Panels</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectTypeBrowser.h">
+      <Filter>Panels</Filter>
+    </ClInclude>
+    <ClInclude Include="PanelDisplayHide.h">
+      <Filter>Panels</Filter>
+    </ClInclude>
+    <ClInclude Include="PanelDisplayLayer.h">
+      <Filter>Panels</Filter>
+    </ClInclude>
+    <ClInclude Include="PanelDisplayRender.h">
+      <Filter>Panels</Filter>
+    </ClInclude>
+    <ClInclude Include="PanelTreeBrowser.h">
+      <Filter>Panels</Filter>
+    </ClInclude>
+    <ClInclude Include="PickEntitiesPanel.h">
+      <Filter>Panels</Filter>
+    </ClInclude>
+    <ClInclude Include="PrefabPanel.h">
+      <Filter>Panels</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertiesPanel.h">
+      <Filter>Panels</Filter>
+    </ClInclude>
+    <ClInclude Include="ShapePanel.h">
+      <Filter>Panels</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundObjectPanel.h">
+      <Filter>Panels</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainPanel.h">
+      <Filter>Panels</Filter>
+    </ClInclude>
+    <ClInclude Include="VolumePanel.h">
+      <Filter>Panels</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\AffineParts.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\AVI_Writer.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\AVIGenerator.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\bitarray.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\ChunkFile.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Clipboard.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\crc32.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\dds.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\DynamicArray2D.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\EditorUtils.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\fastlib.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\FileEnum.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\FileUtil.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\functor.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\FunctorMulticaster.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\GuidUtil.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\MemoryBlock.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\NamedData.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\PakFile.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\PathUtil.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\RefCountBase.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\smartptr.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Thread.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\ThreadWin32.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Triangulate.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Variable.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="WaitProgress.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\XmlArchive.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\XmlTemplate.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\IJL.H">
+      <Filter>Util\Images</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Image.h">
+      <Filter>Util\Images</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Image_DXTC.h">
+      <Filter>Util\Images</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\ImageGif.h">
+      <Filter>Util\Images</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\ImagePainter.h">
+      <Filter>Util\Images</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\ImageUtil.h">
+      <Filter>Util\Images</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\BBox.h">
+      <Filter>Util\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Math.h">
+      <Filter>Util\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\FileChangeMonitor.h">
+      <Filter>Util\FileChangeMonitor</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\deflate.h">
+      <Filter>Util\zlib\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\infblock.h">
+      <Filter>Util\zlib\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\infcodes.h">
+      <Filter>Util\zlib\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\inffast.h">
+      <Filter>Util\zlib\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\inffixed.h">
+      <Filter>Util\zlib\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\inftrees.h">
+      <Filter>Util\zlib\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\infutil.h">
+      <Filter>Util\zlib\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\trees.h">
+      <Filter>Util\zlib\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\zconf.h">
+      <Filter>Util\zlib\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\zlib.h">
+      <Filter>Util\zlib\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\zutil.h">
+      <Filter>Util\zlib\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditTool.h">
+      <Filter>EditTools</Filter>
+    </ClInclude>
+    <ClInclude Include="TexturePanel.h">
+      <Filter>EditTools\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureTool.h">
+      <Filter>EditTools\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectCloneTool.h">
+      <Filter>EditTools\Clone</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectCreateTool.h">
+      <Filter>EditTools\Create</Filter>
+    </ClInclude>
+    <ClInclude Include="PickObjectTool.h">
+      <Filter>EditTools\Pick</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkTool.h">
+      <Filter>EditTools\LinkTool</Filter>
+    </ClInclude>
+    <ClInclude Include="UnlinkTool.h">
+      <Filter>EditTools\LinkTool</Filter>
+    </ClInclude>
+    <ClInclude Include="AlignTool.h">
+      <Filter>EditTools\AlignTool</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainHolePanel.h">
+      <Filter>TerrainTools\Hole</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainHoleTool.h">
+      <Filter>TerrainTools\Hole</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainModifyPanel.h">
+      <Filter>TerrainTools\Modify</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainModifyTool.h">
+      <Filter>TerrainTools\Modify</Filter>
+    </ClInclude>
+    <ClInclude Include="EnvironmentPanel.h">
+      <Filter>TerrainTools\Environment</Filter>
+    </ClInclude>
+    <ClInclude Include="EnvironmentTool.h">
+      <Filter>TerrainTools\Environment</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainPainterPanel.h">
+      <Filter>TerrainTools\TexturePainter</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainTexturePainter.h">
+      <Filter>TerrainTools\TexturePainter</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainMoveTool.h">
+      <Filter>TerrainTools\Move</Filter>
+    </ClInclude>
+    <ClInclude Include="Undo\IUndoObject.h">
+      <Filter>Undo</Filter>
+    </ClInclude>
+    <ClInclude Include="Undo\Undo.h">
+      <Filter>Undo</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderTemplatePanel.h">
+      <Filter>MaterialTools</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderTemplateTool.h">
+      <Filter>MaterialTools</Filter>
+    </ClInclude>
+    <ClInclude Include="VegetationBrush.h">
+      <Filter>Vegetation</Filter>
+    </ClInclude>
+    <ClInclude Include="VegetationMap.h">
+      <Filter>Vegetation</Filter>
+    </ClInclude>
+    <ClInclude Include="VegetationObject.h">
+      <Filter>Vegetation</Filter>
+    </ClInclude>
+    <ClInclude Include="VegetationPanel.h">
+      <Filter>Vegetation</Filter>
+    </ClInclude>
+    <ClInclude Include="VegetationTool.h">
+      <Filter>Vegetation</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\AiBehavior.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\AiBehaviorLibrary.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\AiGoal.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\AiGoalLibrary.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\AIManager.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="IKeyDlg.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="TcbKeyDialog.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="TcbPreviewCtrl.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackViewControlBar.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackViewDialog.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackViewGraph.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackViewKeyList.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackViewKeys.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackViewNodes.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackViewSpline.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackViewSplitter.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackViewTimeBar.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackViewUndo.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="TVCharacterKeyDialog.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="TVConsoleKeyDialog.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="TVEventKeyDialog.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="TVExprKeyDialog.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="TVMusicKeyDialog.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="TVSelectKeyDialog.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="TVSequenceProps.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="TVSoundKeyDialog.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="TVTrackPropsDialog.h">
+      <Filter>TrackView</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationContext.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationSerializer.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="EquipPack.h">
+      <Filter>EquipPack</Filter>
+    </ClInclude>
+    <ClInclude Include="EquipPackLib.h">
+      <Filter>EquipPack</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\Command.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\CommandManager.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Brush\Brush.h">
+      <Filter>Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Brush\BrushExporter.h">
+      <Filter>Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Brush\BrushFace.h">
+      <Filter>Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Brush\BrushMtl.h">
+      <Filter>Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Brush\BrushMtlLib.h">
+      <Filter>Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Brush\BrushPanel.h">
+      <Filter>Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Brush\BrushPlane.h">
+      <Filter>Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Brush\BrushPoly.h">
+      <Filter>Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Brush\BrushTool.h">
+      <Filter>Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="Mission.h">
+      <Filter>Mission</Filter>
+    </ClInclude>
+    <ClInclude Include="MissionScript.h">
+      <Filter>Mission</Filter>
+    </ClInclude>
+    <ClInclude Include="Clouds.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="GenerationParam.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Heightmap.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Layer.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Noise.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="SurfaceType.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainBeachGen.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainGrid.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainTexGen.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureCompression.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="HeightmapAccessibility.h">
+      <Filter>Terrain\Sky Accessiblity</Filter>
+    </ClInclude>
+    <ClInclude Include="HorizonTracker.h">
+      <Filter>Terrain\Sky Accessiblity</Filter>
+    </ClInclude>
+    <ClInclude Include="GameExporter.h">
+      <Filter>GameExport</Filter>
+    </ClInclude>
+    <ClInclude Include="GameResourcesExporter.h">
+      <Filter>GameExport</Filter>
+    </ClInclude>
+    <ClInclude Include="OBJExporter1.h">
+      <Filter>GameExport</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleExporter.h">
+      <Filter>GameExport</Filter>
+    </ClInclude>
+    <ClInclude Include="LightmapCompiler\GLMInfo.h">
+      <Filter>LightmapCompiler</Filter>
+    </ClInclude>
+    <ClInclude Include="LightmapCompiler\IndoorLightPatches.h">
+      <Filter>LightmapCompiler</Filter>
+    </ClInclude>
+    <ClInclude Include="LightmapCompiler\LMCompCommon.h">
+      <Filter>LightmapCompiler</Filter>
+    </ClInclude>
+    <ClInclude Include="LightmapCompiler\LMLightCollection.h">
+      <Filter>LightmapCompiler</Filter>
+    </ClInclude>
+    <ClInclude Include="LightmapCompiler\RasterCube.h">
+      <Filter>LightmapCompiler</Filter>
+    </ClInclude>
+    <ClInclude Include="LightmapCompiler\RasterTable.h">
+      <Filter>LightmapCompiler</Filter>
+    </ClInclude>
+    <ClInclude Include="LightmapCompiler\SimpleTriangleRasterizer.h">
+      <Filter>LightmapCompiler</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseLibrary.h">
+      <Filter>DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseLibraryDialog.h">
+      <Filter>DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseLibraryItem.h">
+      <Filter>DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseLibraryManager.h">
+      <Filter>DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="DataBaseDialog.h">
+      <Filter>DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityProtLibDialog.h">
+      <Filter>DataBase\EntityArchetype</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityPrototype.h">
+      <Filter>DataBase\EntityArchetype</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityPrototypeLibrary.h">
+      <Filter>DataBase\EntityArchetype</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityPrototypeManager.h">
+      <Filter>DataBase\EntityArchetype</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityScriptDialog.h">
+      <Filter>DataBase\EntityArchetype</Filter>
+    </ClInclude>
+    <ClInclude Include="Particles\ParticleDialog.h">
+      <Filter>DataBase\ParticlesEditor</Filter>
+    </ClInclude>
+    <ClInclude Include="Particles\ParticleItem.h">
+      <Filter>DataBase\ParticlesEditor</Filter>
+    </ClInclude>
+    <ClInclude Include="Particles\ParticleLibrary.h">
+      <Filter>DataBase\ParticlesEditor</Filter>
+    </ClInclude>
+    <ClInclude Include="Particles\ParticleManager.h">
+      <Filter>DataBase\ParticlesEditor</Filter>
+    </ClInclude>
+    <ClInclude Include="Music\MusicEditorDialog.h">
+      <Filter>DataBase\MusicEditor</Filter>
+    </ClInclude>
+    <ClInclude Include="Music\MusicEditorUI.h">
+      <Filter>DataBase\MusicEditor</Filter>
+    </ClInclude>
+    <ClInclude Include="Music\MusicManager.h">
+      <Filter>DataBase\MusicEditor</Filter>
+    </ClInclude>
+    <ClInclude Include="Music\MusicThemeLibItem.h">
+      <Filter>DataBase\MusicEditor</Filter>
+    </ClInclude>
+    <ClInclude Include="Music\MusicThemeLibrary.h">
+      <Filter>DataBase\MusicEditor</Filter>
+    </ClInclude>
+    <ClInclude Include="Prefabs\PrefabDialog.h">
+      <Filter>DataBase\PrefabsEditor</Filter>
+    </ClInclude>
+    <ClInclude Include="Prefabs\PrefabItem.h">
+      <Filter>DataBase\PrefabsEditor</Filter>
+    </ClInclude>
+    <ClInclude Include="Prefabs\PrefabLibrary.h">
+      <Filter>DataBase\PrefabsEditor</Filter>
+    </ClInclude>
+    <ClInclude Include="Prefabs\PrefabManager.h">
+      <Filter>DataBase\PrefabsEditor</Filter>
+    </ClInclude>
+    <ClInclude Include="Material\Material.h">
+      <Filter>Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Material\MaterialDialog.h">
+      <Filter>Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Material\MaterialLibrary.h">
+      <Filter>Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Material\MaterialManager.h">
+      <Filter>Material</Filter>
+    </ClInclude>
+    <ClInclude Include="EAXPresetMgr.h">
+      <Filter>Presets\EAXPresets</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundPresetMgr.h">
+      <Filter>Presets\SoundPresets</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\IDataBaseItem.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\IDataBaseLibrary.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\IDataBaseManager.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\IGizmoManager.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\IObjectManager.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\IPreferencesPage.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ObjectEvent.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\anim.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\arhitype_tree.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\AVI_Recorder.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00005.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00006.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00007.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00008.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00009.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00010.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00011.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00012.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00013.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00014.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00015.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00016.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00017.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00018.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00019.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00020.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\brush24bpp.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\clone.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CryEdit.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CryEditDoc.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\db_music.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\db_prefab.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\down_arrow.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\dynamichelp.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\edit_mod.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\editor_icon.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\editor_icon.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\editor_icon16.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\entitybar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\error_report.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\file_browse.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\filesimage.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\folder.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\fopen_back.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\fopen_up.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\grid.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon_delete.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon_export.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon_import.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon_layers.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon_lock.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon_new.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon_question.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon_question.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon_tcoll.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\idb_.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\layer_buttons.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\layouts.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\litebulb.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\lock_sel.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\locksele.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\logo.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\mainfram.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\materialbar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\minus.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\mission_.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\musictree.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\objectsbrowser.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\panel_veg.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\particles_tree.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\pick.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\plus.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\prefabs_tree.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Preferences.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\properties.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\rename.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\replace.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\sandbox.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\selectobj.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\soundfiles.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\soundpre.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TabPanel.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\toolbar1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\toolbar2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\trackview.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\trackview_keys.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\trackview_nodes.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\tree_vie.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TreeView.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\up_arrow.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\vegetati.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\vegtree.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\water.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\arr_addkey.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="arrow.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="arrowcop.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\CryEdit.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cur00001.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cur00002.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cur00003.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cur00004.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cur00005.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cursor1.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Cursor_2.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\hit.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\leftright.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="nodrop.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\object_move.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\object_rotate.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\object_scale.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\pick_cursor.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\pointer_flatten.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="pointer_getheight.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\pointer_link.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\pointer_linknow.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\pointer_minus.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\pointer_plus.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\pointer_smooth.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\pointerHit.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="AIPointPanel.htm">
+      <Filter>Panels</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CryEdit.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Lib\IJL15.LIB">
+      <Filter>Libraries</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="TODO.txt">
+      <Filter>LightmapCompiler</Filter>
+    </Text>
+    <Text Include="changes.txt" />
+  </ItemGroup>
+</Project>

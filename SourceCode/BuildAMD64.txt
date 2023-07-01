@@ -1,0 +1,18 @@
+How to build AMD64 version (WinXP-64 bit)
+-----------------------------------------
+
+These steps are necessary to build FC for the retail of WinXP-64 using VS 2005 beta 2.With the final release of VS 2005 this should be somewhat easier (first two step could be omitted). Feel free to ask for help if you have problems setting up the build environment (CarstenW).
+
+1) Install latest Platform SDK (was 1289 at the time of we built FC 1.32 v1385)
+
+2) Merge "Visual Studio 7.1 64 SDK" into it, replacing the old MS STL & MFC (7.1 64-bit, instead of 8.0 coming with the PSDK). Otherwise you get editor crash due to passing of containers over DLL boundaries). The XT lib in the project was build to use MFC 7.1 (64-bit). Or see item 6)
+
+3) Copy over the project files from "AMD64_ProjectFiles_VS2005". These are VS 2005 compiliant and have proper settings to build all projects (working around some compiler/optimizer issues)
+
+4) PGO settings for 3D engine & DX9 renderer are set to PGO optimize. See properties->linker->command line. Switch to instrument/update when doing a manual PGO step or you want to update release binaries with previously gathered profile data; or turn them off for debugging)
+
+5) Don't try to build the OpenGL, it's deprecated.
+
+6) Source code FMOD version 3.74, XT Lib, and PSDK 1289 with merged 7.1 runtime libs (including STL & MFC) is kept under ## TBD ##. Code for CompressATI3.dll is in Perforce.
+
+For the PSDK there's a develop64_w.bat file you can use to launch the IDE which sets up the include/lib/exe directories (adjust as you see fit).

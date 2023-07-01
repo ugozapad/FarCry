@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug64|Win32">
+      <Configuration>Debug64</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile|Win32">
+      <Configuration>Profile</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release64|Win32">
+      <Configuration>Release64</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{7BB11400-AFC9-4439-89B3-A00122B44850}</ProjectGuid>
+    <SccProjectName>Perforce Project</SccProjectName>
+    <SccAuxPath />
+    <SccLocalPath>.</SccLocalPath>
+    <SccProvider>MSSCCI:Perforce SCM</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.33516.290</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>D:\Games\FC\Bin32\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+    <OutDir>D:\Games\FC\Bin32\</OutDir>
+    <IntDir>Profile\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>D:\Games\FC\Bin32\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'">
+    <OutDir>D:\Games\FC\Bin32\</OutDir>
+    <IntDir>Debug64\</IntDir>
+    <LinkIncremental />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'">
+    <OutDir>D:\Games\FC\Bin32\</OutDir>
+    <IntDir>Release64\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <AdditionalIncludeDirectories>..\CryCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_RELEASE;COMP_VC;DO_ASM;OS_WIN32;PROC_INTEL;WIN32;NDEBUG;_WINDOWS;_USRDLL;CRYANIMATION_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/CryAnimation.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <BrowseInformation />
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>Glu32.lib;Winmm.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\Release/CryAnimation.pdb</ProgramDatabaseFile>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/CryAnimation.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <AdditionalIncludeDirectories>..\CryCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;COMP_VC;DO_ASM;OS_WIN32;PROC_INTEL;WIN32;NDEBUG;_WINDOWS;_USRDLL;CRYANIMATION_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AssemblerListingLocation>.\Profile/</AssemblerListingLocation>
+      <ObjectFileName>.\Profile/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Profile/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>glu32.lib;Winmm.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <BaseAddress>0x31500000</BaseAddress>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>C:\MasterCD/CryAnimation.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\CryCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;COMP_VC;DO_ASM;OS_WIN32;PROC_INTEL;WIN32;_DEBUG;_WINDOWS;_USRDLL;CRYANIMATION_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/CryAnimation.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>glu32.lib;Winmm.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/CryAnimation.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\CryCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;COMP_VC;OS_WIN64;PROC_AMD64;_AMD64_;_DEBUG;_WINDOWS;_USRDLL;CRYANIMATION_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)CryAnimation.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation />
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:AMD64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>../CryCommon/fSinCos64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ShowProgress>LinkVerbose</ShowProgress>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ImportLibrary>$(OutDir)$(ProjectName).lib</ImportLibrary>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/CryAnimation.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/fp:fast /GL %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>..\CryCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_RELEASE;NDEBUG;WIN64;WIN32;_AMD64_;COMP_VC;OS_WIN64;PROC_AMD64;NDEBUG;_WINDOWS;_USRDLL;CRYANIMATION_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)CryAnimation.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation />
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>../CryCommon/fSinCos64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ShowProgress>NotSet</ShowProgress>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ImportLibrary>$(OutDir)$(ProjectName).lib</ImportLibrary>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/CryAnimation.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AnimObject.cpp" />
+    <ClCompile Include="AnimObjectLoader.cpp" />
+    <ClCompile Include="AnimObjectManager.cpp" />
+    <ClCompile Include="BoneLightBindInfo.cpp" />
+    <ClCompile Include="BoneLightDynamicBind.cpp" />
+    <ClCompile Include="BSplineKnots.cpp" />
+    <ClCompile Include="BSplineOpen.cpp" />
+    <ClCompile Include="BSplineVec3dPacked.cpp" />
+    <ClCompile Include="CgfUtils.cpp" />
+    <ClCompile Include="ChunkFileReader.cpp" />
+    <ClCompile Include="Controller.cpp" />
+    <ClCompile Include="ControllerCryBone.cpp" />
+    <ClCompile Include="ControllerManager.cpp" />
+    <ClCompile Include="ControllerPackedBSpline.cpp" />
+    <ClCompile Include="ControllerTCB.cpp" />
+    <ClCompile Include="CryAnimationBase.cpp" />
+    <ClCompile Include="CryBone.cpp" />
+    <ClCompile Include="CryBoneDesc.cpp" />
+    <ClCompile Include="CryBoneHierarchyLoader.cpp" />
+    <ClCompile Include="CryBoneInfo.cpp" />
+    <ClCompile Include="CryCharBody.cpp" />
+    <ClCompile Include="CryCharDecal.cpp" />
+    <ClCompile Include="CryCharDecalBuilder.cpp" />
+    <ClCompile Include="CryCharDecalManager.cpp" />
+    <ClCompile Include="CryCharFxTrail.cpp" />
+    <ClCompile Include="CryCharInstance.cpp" />
+    <ClCompile Include="CryCharInstanceRenderParams.cpp" />
+    <ClCompile Include="CryCharManager.cpp" />
+    <ClCompile Include="CryCharParticleManager.cpp" />
+    <ClCompile Include="CryCharRenderElement.cpp" />
+    <ClCompile Include="CryCharReShadowManager.cpp" />
+    <ClCompile Include="CryCharReShadowVolume.cpp" />
+    <ClCompile Include="CryGeometryInfo.cpp" />
+    <ClCompile Include="CryGeomMorphTarget.cpp" />
+    <ClCompile Include="CryKeyInterpolation.cpp" />
+    <ClCompile Include="CryModEffAnimation.cpp" />
+    <ClCompile Include="CryModEffIKSolver.cpp" />
+    <ClCompile Include="CryModEffMorph.cpp" />
+    <ClCompile Include="CryModel-Data.cpp" />
+    <ClCompile Include="CryModel.cpp" />
+    <ClCompile Include="CryModelAnimationContainer.cpp" />
+    <ClCompile Include="CryModelArrays.cpp" />
+    <ClCompile Include="CryModelGeometryLoader.cpp" />
+    <ClCompile Include="CryModelLoader.cpp" />
+    <ClCompile Include="CryModelShadowVolume.cpp" />
+    <ClCompile Include="CryModelState.cpp" />
+    <ClCompile Include="CryModelStatePhys.cpp" />
+    <ClCompile Include="CryModelSubmesh.cpp" />
+    <ClCompile Include="CrySkinBase.cpp" />
+    <ClCompile Include="CrySkinBasisBuilder.cpp" />
+    <ClCompile Include="CrySkinBuilder.cpp" />
+    <ClCompile Include="CrySkinBuilderBase.cpp" />
+    <ClCompile Include="CrySkinFull.cpp" />
+    <ClCompile Include="CrySkinMorph.cpp" />
+    <ClCompile Include="CrySkinMorphBuilder.cpp" />
+    <ClCompile Include="CrySkinRigidBasis.cpp" />
+    <ClCompile Include="CryVertexBinding.cpp" />
+    <ClCompile Include="cvars.cpp" />
+    <ClCompile Include="DebugUtils.cpp" />
+    <ClCompile Include="drand.cpp" />
+    <ClCompile Include="FileMapping.cpp" />
+    <ClCompile Include="IncContHeap.cpp" />
+    <ClCompile Include="makepath.cpp" />
+    <ClCompile Include="MathUtils.cpp" />
+    <ClCompile Include="QuaternionExponentX87.cpp" />
+    <ClCompile Include="RenderUtils.cpp" />
+    <ClCompile Include="splitpath.cpp" />
+    <ClCompile Include="SSEUtils.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="VertexBufferArrayDrivers.cpp" />
+    <ClCompile Include="XBoxExport.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AnimationLayerInfo.h" />
+    <ClInclude Include="AnimObject.h" />
+    <ClInclude Include="AnimObjectLoader.h" />
+    <ClInclude Include="AnimObjectManager.h" />
+    <ClInclude Include="BoneLightBindInfo.h" />
+    <ClInclude Include="BoneLightDynamicBind.h" />
+    <ClInclude Include="BSplineKnots.h" />
+    <ClInclude Include="BSplineOpen.h" />
+    <ClInclude Include="BSplineVec3dPacked.h" />
+    <ClInclude Include="CgfUtils.h" />
+    <ClInclude Include="ChunkFileReader.h" />
+    <ClInclude Include="Controller.h" />
+    <ClInclude Include="ControllerCryBone.h" />
+    <ClInclude Include="ControllerManager.h" />
+    <ClInclude Include="ControllerPackedBSpline.h" />
+    <ClInclude Include="ControllerTCB.h" />
+    <ClInclude Include="CryAnimationBase.h" />
+    <ClInclude Include="CryAnimationInfo.h" />
+    <ClInclude Include="CryBone.h" />
+    <ClInclude Include="CryBoneDesc.h" />
+    <ClInclude Include="CryBoneHierarchyLoader.h" />
+    <ClInclude Include="CryBoneInfo.h" />
+    <ClInclude Include="CryCharBody.h" />
+    <ClInclude Include="CryCharDecal.h" />
+    <ClInclude Include="CryCharDecalBuilder.h" />
+    <ClInclude Include="CryCharDecalCommon.h" />
+    <ClInclude Include="CryCharDecalManager.h" />
+    <ClInclude Include="CryCharFxTrail.h" />
+    <ClInclude Include="CryCharInstance.h" />
+    <ClInclude Include="CryCharInstanceRenderParams.h" />
+    <ClInclude Include="CryCharManager.h" />
+    <ClInclude Include="CryCharParticleManager.h" />
+    <ClInclude Include="CryCharRenderElement.h" />
+    <ClInclude Include="CryCharReShadowManager.h" />
+    <ClInclude Include="CryCharReShadowVolume.h" />
+    <ClInclude Include="CryGeometryInfo.h" />
+    <ClInclude Include="CryGeomMorphTarget.h" />
+    <ClInclude Include="CryKeyInterpolation.h" />
+    <ClInclude Include="CryModEffAnimation.h" />
+    <ClInclude Include="CryModEffector.h" />
+    <ClInclude Include="CryModEffIKSolver.h" />
+    <ClInclude Include="CryModEffMorph.h" />
+    <ClInclude Include="CryModel.h" />
+    <ClInclude Include="CryModelAnimationContainer.h" />
+    <ClInclude Include="CryModelGeometryLoader.h" />
+    <ClInclude Include="CryModelLoader.h" />
+    <ClInclude Include="CryModelState.h" />
+    <ClInclude Include="CryModelSubmesh.h" />
+    <ClInclude Include="CrySkinBase.h" />
+    <ClInclude Include="CrySkinBasisBuilder.h" />
+    <ClInclude Include="CrySkinBuilder.h" />
+    <ClInclude Include="CrySkinBuilderBase.h" />
+    <ClInclude Include="CrySkinFull.h" />
+    <ClInclude Include="CrySkinMorph.h" />
+    <ClInclude Include="CrySkinMorphBuilder.h" />
+    <ClInclude Include="CrySkinRigidBasis.h" />
+    <ClInclude Include="CrySkinTypes.h" />
+    <ClInclude Include="CryVertexBinding.h" />
+    <ClInclude Include="cvars-list.h" />
+    <ClInclude Include="cvars.h" />
+    <ClInclude Include="DebugUtils.h" />
+    <ClInclude Include="drand.h" />
+    <ClInclude Include="FileMapping.h" />
+    <ClInclude Include="GeomCommon.h" />
+    <ClInclude Include="IncContHeap.h" />
+    <ClInclude Include="makepath.h" />
+    <ClInclude Include="MathUtils.h" />
+    <ClInclude Include="QuaternionExponentX87.h" />
+    <ClInclude Include="RenderUtils.h" />
+    <ClInclude Include="SparseArrayDriver.h" />
+    <ClInclude Include="splitpath.h" />
+    <ClInclude Include="SSEUtils.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TCBSpline.h" />
+    <ClInclude Include="TFace.h" />
+    <ClInclude Include="Vec3a16.h" />
+    <ClInclude Include="VertexBufferArrayDrivers.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CrySkinAMD64.asm">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'">Compiling %(Filename)</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'">ml64 /nologo /c /Fl"$(OutDir)%(Filename).cod" /Fo"$(OutDir)%(Filename).obj" /Zi %(FullPath)
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">true</ExcludedFromBuild>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'">Compiling %(Filename)</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'">ml64 /nologo /c /Fl"$(OutDir)%(Filename).cod" /Fo"$(OutDir)%(Filename).obj" /Zi %(FullPath)
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Changes.txt" />
+    <Text Include="Notes.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
