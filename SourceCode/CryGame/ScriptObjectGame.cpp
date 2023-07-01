@@ -2714,10 +2714,8 @@ int CScriptObjectGame::GetSaveGameList(IFunctionHandler *pH)
 		CDefaultStreamAllocator sa;
 		CStream stm(300, &sa); 
 
-		//int bitslen = m_pSystem->GetCompressedFileSize((char *)szSaveFilename.c_str());
-		int bitslen = 0;
-
-		if (bitslen)
+		int bitslen = m_pSystem->GetCompressedFileSize((char *)szSaveFilename.c_str());
+		if (bitslen > 1)
 		{
 			stm.Resize(bitslen);
 

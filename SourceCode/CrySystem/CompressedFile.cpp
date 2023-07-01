@@ -14,7 +14,7 @@
 
 #include <fcntl.h>
 
-#define USE_COMPRESSION
+//#define USE_COMPRESSION
 
 bool CSystem::WriteCompressedFile(char *filename, void *data, unsigned int bitlen)
 {
@@ -41,7 +41,8 @@ unsigned int CSystem::GetCompressedFileSize(char *filename)
 	FILE *pFile=fxopen(filename, "rb");
 	if (!pFile) 
 		return 0;
-	
+
+#ifdef USE_COMPRESSION
 	fseek(pFile,0,SEEK_END);
 	long nLen=ftell(pFile);
 	fseek(pFile,0,SEEK_SET);
@@ -62,6 +63,22 @@ unsigned int CSystem::GetCompressedFileSize(char *filename)
 	gzread(f, &bitlen, sizeof(int));
 	gzclose(f);
 	fclose(pFile);
+#else
+	fseek(pFile, 0, SEEK_END);
+	long nLen = ftell(pFile);
+	fseek(pFile, 0, SEEK_SET);
+
+	if (nLen <= 0)
+	{
+		fclose(pFile);
+		return (0);
+	}
+
+	unsigned int bitlen;
+	fread(&bitlen, sizeof(int), 1, pFile);
+	fclose(pFile);
+#endif
+
 	return bitlen;
 }
 
@@ -87,9 +104,9 @@ unsigned int CSystem::ReadCompressedFile(char *filename, void *data, unsigned in
 	gzclose(f);
 	fclose(pFile);
 #else	
-	fread(pFile, &bitlen, sizeof(int));
+	fread(&bitlen, sizeof(int), 1, pFile);
 	assert(bitlen<=maxbitlen);  // FIXME: nicer if caller doesn't need to know buffer size in advance
-	fread(pFile, data, BITS2BYTES(bitlen));
+	fread(data, BITS2BYTES(bitlen), 1, pFile);
 	fclose(pFile);
 #endif
 
