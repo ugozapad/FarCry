@@ -179,7 +179,7 @@
     <Link>
       <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>Shlwapi.lib;wininet.lib;Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>.\Release/CryGame.dll</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\BinkSDK;..\CryNetwork\Release;.\..\ubisoft.com\GSServices\sdks/gs-sdk-regserver/lib_win32;.\..\ubisoft.com\GSServices\sdks/gs-sdk-msclient/lib_win32;.\..\ubisoft.com\GSServices\sdks/gs-sdk-common/lib_win32;.\..\ubisoft.com\GSServices\sdks/gs-sdk-base/lib_win32;..\ubisoft.com\GSServices\sdks\gs-sdk-cdkey\lib_win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>.\Release/CryGame.pdb</ProgramDatabaseFile>
@@ -271,7 +271,7 @@
     <Link>
       <AdditionalOptions>/MACHINE:AMD64 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>Shlwapi.lib;wininet.lib;Ws2_32.lib;../CryCommon/fSinCos64.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreSpecificDefaultLibraries>libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -317,7 +317,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>Shlwapi.lib;wininet.lib;Ws2_32.lib;../CryCommon/fSinCos64.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreSpecificDefaultLibraries>libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>

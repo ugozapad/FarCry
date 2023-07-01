@@ -25,9 +25,9 @@ static char THIS_FILE[] = __FILE__;
 //=======================================================================
 
 // init memory pool usage
-#ifndef PS2
- _ACCESS_POOL;
-#endif
+//#ifndef PS2
+// _ACCESS_POOL;
+//#endif
 
 vec4_t CCGPShader_D3D::m_CurParams[32];
 

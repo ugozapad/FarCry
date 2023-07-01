@@ -62,6 +62,8 @@ typedef void *EVENT_HANDLE;
 #include <Win32specific.h>
 
 #define RC_EXECUTABLE "rc.exe"
+
+#pragma warning(disable:4996)
 #endif
 
 #if defined(WIN64)
