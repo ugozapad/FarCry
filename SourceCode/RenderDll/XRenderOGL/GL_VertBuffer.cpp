@@ -1306,6 +1306,7 @@ void CGLRenderer::GenerateVBLog(const char *szName)
   int SizeLB = 0;
   int SizeGR = 0;
   const char *szLast = NULL;
+  int i;
   for (i=0; i<LVs.Num(); i++)
   {
     if (!szLast)

@@ -2879,7 +2879,8 @@ void CGLTexMan::CreateBufRegion(int Width, int Height)
 {
   if (SUPPORTS_WGL_ARB_buffer_region)
   {
-    for (int i=0; i<m_BufRegions.Num(); i++)
+    int i;
+    for (i=0; i<m_BufRegions.Num(); i++)
     {
       SBufRegion *br = &m_BufRegions[i];
       if (br->m_Width == Width && br->m_Height == Height)
@@ -2944,7 +2945,8 @@ void CGLTexMan::ClearBuffer(int Width, int Height, bool bEnd,STexPic *pImage, in
   SBufRegion *br = NULL;
   if (SUPPORTS_WGL_ARB_buffer_region)
   {
-    for (int i=0; i<m_BufRegions.Num(); i++)
+    int i;
+    for (i=0; i<m_BufRegions.Num(); i++)
     {
       br = &m_BufRegions[i];
       if (br->m_Width == Width && br->m_Height == Height)

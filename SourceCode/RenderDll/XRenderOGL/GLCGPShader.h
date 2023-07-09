@@ -55,8 +55,8 @@ class CCGPShader_GL : public CPShader
     TArray<SCGParam4f> *m_ParamsNoObj;
     TArray<SCGParam4f> *m_ParamsObj;
     TArray<SCGMatrix> *m_MatrixObj;
-    uint m_dwHandle;
-    uint m_dwHandleExt;
+    unsigned int m_dwHandle;
+    unsigned int m_dwHandleExt;
     TArray<SCGBindConst> *m_BindConstants;
     TArray<SCGBind> *m_BindVars;
     int m_nCacheID;
@@ -538,7 +538,8 @@ public:
       {
         char sLine[4][128];
         int n = 8;
-        for (int i=0; i<4; i++)
+        int i;
+        for (i=0; i<4; i++)
         {
           int m = 0;
           while (sStr[n] != 0xa)
