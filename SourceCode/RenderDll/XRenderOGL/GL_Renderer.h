@@ -29,6 +29,8 @@ The GLRenderer interface Class
 #include "Mygl.h"
 #include "Myglu.h"
 
+#include "map"
+
 // GL functions declare.
 #define GL_EXT(name) extern byte SUPPORTS##name;
 #define GL_PROC(ext,ret,func,parms) extern ret (__stdcall *func)parms;
@@ -1409,7 +1411,7 @@ public:
   static int GetTexDstFormat(ETEX_Format eTF);
   static void CalcMipsAndSize(STexPic *ti);
   static ETEX_Format GetTexFormat(int GLFormat);
-  static BindNULL(int From)
+  static void BindNULL(int From)
   {
     int n = CTexMan::m_nCurStages;
     CTexMan::m_nCurStages = From;
