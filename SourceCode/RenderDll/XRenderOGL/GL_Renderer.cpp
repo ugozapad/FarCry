@@ -3271,3 +3271,11 @@ void DoneCrt() {
 // Autoinit CRT.
 //struct __autoinit_crt { __autoinit_crt() { InitCrt(); }; ~__autoinit_crt() { DoneCrt(); } } __autoinit_crt_var;
 #endif // CRTDBG_MAP_ALLOC
+
+namespace ATL
+{
+    int __cdecl _AtlInitializeCriticalSectionEx(struct _RTL_CRITICAL_SECTION*, unsigned long, unsigned long)
+    {
+        return 0;
+    }
+}
