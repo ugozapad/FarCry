@@ -2,6 +2,7 @@
 #define STAT_CGF_COMPILER
 
 #include "IConvertor.h"
+#include "list2.h"
 
 struct ConvertContext;
 class CStatCFGCompiler : public IConvertor

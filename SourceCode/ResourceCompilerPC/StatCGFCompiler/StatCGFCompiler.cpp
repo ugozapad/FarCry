@@ -24,6 +24,7 @@
 #define ISystem IRCLog
 #include "meshidx.h"
 #include "statcgfshadvol.h"
+#include "../ResourceCompilerPC.h"
 
 CStatCFGCompiler::CStatCFGCompiler(void)
 {
