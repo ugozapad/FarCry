@@ -33,13 +33,12 @@ jobs:
         arch: ${{ matrix.arch }}
     - name: Configure and build
       run: |
-        cd SourceCode
         cmake --preset=ninja-${{ matrix.arch }}
         cmake --build --preset=${{ matrix.configuration }}
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
         name: farcry.${{ matrix.configuration }}
-        path: SourceCode/bin/${{ matrix.configuration }}
+        path: bin/${{ matrix.configuration }}
 
 permissions: write-all
