@@ -3,6 +3,7 @@ cmake_policy(VERSION 3.12)
 
 project(farcry LANGUAGES CXX)
 
+message("CMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/bin")
 
 if (MSVC)

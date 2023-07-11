@@ -7,24 +7,40 @@
   },
   "configurePresets": [
     {
-      "name": "ninja-x86",
+      "name": "ninja-x86-debug",
       "generator": "Ninja Multi-Config",
       "architecture": {
         "value": "x86",
         "strategy": "external"
       },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      },
+      "binaryDir": "${sourceDir}/build/${presetName}"
+    },
+    {
+      "name": "ninja-x86-release",
+      "generator": "Ninja Multi-Config",
+      "architecture": {
+        "value": "x86",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      },
       "binaryDir": "${sourceDir}/build/${presetName}"
     }
+
   ],
   "buildPresets": [
     {
       "name": "debug",
-      "configurePreset": "ninja-x86",
+      "configurePreset": "ninja-x86-debug",
       "configuration": "Debug"
     },
     {
       "name": "release",
-      "configurePreset": "ninja-x86",
+      "configurePreset": "ninja-x86-release",
       "configuration": "Release"
     }
   ]
