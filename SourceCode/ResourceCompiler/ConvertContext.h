@@ -18,10 +18,10 @@
 #pragma once
 
 #include "PathUtil.h"
+#include "IResCompiler.h"
+#include "IRCLog.h"
 
-struct IResourceCompiler;
 struct IConfig;
-struct IRCLog;
 struct ICfgFile;
 
 /** Enumeration of supported platforms.

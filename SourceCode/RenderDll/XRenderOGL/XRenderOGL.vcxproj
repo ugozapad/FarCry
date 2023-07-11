@@ -118,7 +118,7 @@
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <OmitFramePointers>true</OmitFramePointers>
       <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
-      <AdditionalIncludeDirectories>..\..\;..\..\FarCry;..\..\CryNetwork;..\..\CryCommon;..\..\CryCommon\Stl;..\..\CryPhysics;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Common\Shaders;..\..\CryCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_RELEASE;COMP_VC;DO_ASM;OPENGL;OS_WIN32;PROC_INTEL;WIN32;NDEBUG;_WINDOWS;_USRDLL;XRENDEROGL_EXPORTS;_RENDERER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -143,6 +143,8 @@
       <AdditionalLibraryDirectories>Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>.\Release/XRenderOGL.pdb</ProgramDatabaseFile>
       <ImportLibrary>.\Release/XRenderOGL.lib</ImportLibrary>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;LIBC.lib</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Midl>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -205,7 +207,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>C:\Users\James\source\repos\FarCry\SourceCode\RenderDll;C:\Users\James\source\repos\FarCry\SourceCode\RenderDll\Common\Shaders;C:\Users\James\source\repos\FarCry\SourceCode\RenderDll\Common;..\..\CryCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Common\Shaders;..\..\CryCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>ENABLE_FRAME_PROFILER;COMP_VC;DO_ASM;OPENGL;OS_WIN32;PROC_INTEL;WIN32;_DEBUG;_WINDOWS;_USRDLL;XRENDEROGL_EXPORTS;DO_RENDERLOG;DO_RENDERSTATS;_RENDERER;USE_3DC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -229,8 +231,8 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <IgnoreSpecificDefaultLibraries>libcp.lib;LIBC.lib</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Midl>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>

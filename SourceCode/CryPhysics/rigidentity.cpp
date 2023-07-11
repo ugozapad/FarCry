@@ -1996,7 +1996,7 @@ int CRigidEntity::RegisterContacts(float time_interval,int nMaxPlaneContacts)
 	vectorf sz = m_BBox[1]-m_BBox[0],n;
 	float mindim=min(sz.x,min(sz.y,sz.z)), mindim1,dist,friction,penetration;
 	masktype contact_mask;
-	entity_contact *pContactLin,*pContactAng;
+	entity_contact *pContactLin = nullptr,*pContactAng;
 	RigidBody *pbody;
 	m_body.Fcollision.zero();
 	m_body.Tcollision.zero();
