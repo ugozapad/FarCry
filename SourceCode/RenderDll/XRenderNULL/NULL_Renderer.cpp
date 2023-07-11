@@ -411,5 +411,13 @@ void CNULLRenderer::MakeMatrix(const Vec3d & pos, const Vec3d & angles,const Vec
 {
 }
 
+namespace ATL
+{
+    int __cdecl _AtlInitializeCriticalSectionEx(struct _RTL_CRITICAL_SECTION*, unsigned long, unsigned long)
+    {
+        return 0;
+    }
+}
+
 //=========================================================================================
 

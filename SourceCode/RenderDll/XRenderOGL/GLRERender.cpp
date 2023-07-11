@@ -21,6 +21,8 @@
 #undef THIS_FILE
 static char THIS_FILE[] = __FILE__;
 
+int (WINAPIV* __vsnprintf)(char*, size_t, const char*, va_list) = _vsnprintf;
+
 //=======================================================================
 
 void CREFlareGeom::mfCheckVis(CFColor &col, CCObject *obj)

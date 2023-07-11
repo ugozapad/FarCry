@@ -1,0 +1,44 @@
+name: CI Windows
+
+on: [push, pull_request]
+
+jobs:
+  pre_job:
+    runs-on: ubuntu-latest
+    outputs:
+      should_skip: ${{ steps.skip_check.outputs.should_skip }}
+    steps:
+      - id: skip_check
+        uses: fkirc/skip-duplicate-actions@v5
+        with:
+          concurrent_skipping: 'same_content'
+          do_not_skip: '["pull_request", "release", "workflow_dispatch", "schedule"]'
+
+  build-windows:
+    needs: pre_job
+    if: ${{ needs.pre_job.outputs.should_skip != 'true' }}
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        configuration: [debug, release]
+        arch: [x86]
+    name: 'Windows [${{ matrix.arch }}, ${{ matrix.configuration }}]'
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        submodules: 'recursive'
+    - uses: ilammy/msvc-dev-cmd@v1
+      with:
+        arch: ${{ matrix.arch }}
+    - name: Configure and build
+      run: |
+        cmake --preset=ninja-${{ matrix.arch }}-${{ matrix.configuration }}
+        cmake --build --preset=${{ matrix.configuration }}
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: farcry.${{ matrix.configuration }}
+        path: bin/${{ matrix.configuration }}
+
+permissions: write-all
