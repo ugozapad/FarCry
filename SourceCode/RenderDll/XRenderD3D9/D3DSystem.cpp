@@ -19,31 +19,33 @@ static char THIS_FILE[] = __FILE__;
 
 void CD3D9Renderer::DisplaySplash()
 {
-#ifdef GAME_IS_FARCRY
-	HBITMAP hImage = (HBITMAP)LoadImage(GetModuleHandle(0), "fcsplash.bmp", IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
-#else
-	HBITMAP hImage = (HBITMAP)LoadImage(GetModuleHandle(0), "splash.bmp", IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
-#endif
-
-	if (hImage != INVALID_HANDLE_VALUE)
-	{
-		RECT rect;
-		HDC hDC = GetDC(m_hWnd);
-		HDC hDCBitmap = CreateCompatibleDC(hDC);
-		BITMAP bm;
-
-		GetClientRect(m_hWnd, &rect);
-		GetObject(hImage, sizeof(bm), &bm);
-		SelectObject(hDCBitmap, hImage);
-
-		DWORD x = rect.left + (((rect.right-rect.left)-bm.bmWidth) >> 1);
-		DWORD y = rect.top + (((rect.bottom-rect.top)-bm.bmHeight) >> 1);
-
-		BitBlt(hDC, x, y, bm.bmWidth, bm.bmHeight, hDCBitmap, 0, 0, SRCCOPY);
-
-		DeleteObject(hImage);
-		DeleteDC(hDCBitmap);
-	}
+    return;
+//
+//#ifdef GAME_IS_FARCRY
+//	HBITMAP hImage = (HBITMAP)LoadImage(GetModuleHandle(0), "fcsplash.bmp", IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+//#else
+//	HBITMAP hImage = (HBITMAP)LoadImage(GetModuleHandle(0), "splash.bmp", IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+//#endif
+//
+//	if (hImage != INVALID_HANDLE_VALUE)
+//	{
+//		RECT rect;
+//		HDC hDC = GetDC(m_hWnd);
+//		HDC hDCBitmap = CreateCompatibleDC(hDC);
+//		BITMAP bm;
+//
+//		GetClientRect(m_hWnd, &rect);
+//		GetObject(hImage, sizeof(bm), &bm);
+//		SelectObject(hDCBitmap, hImage);
+//
+//		DWORD x = rect.left + (((rect.right-rect.left)-bm.bmWidth) >> 1);
+//		DWORD y = rect.top + (((rect.bottom-rect.top)-bm.bmHeight) >> 1);
+//
+//		BitBlt(hDC, x, y, bm.bmWidth, bm.bmHeight, hDCBitmap, 0, 0, SRCCOPY);
+//
+//		DeleteObject(hImage);
+//		DeleteDC(hDCBitmap);
+//	}
 }
 
 void CD3D9Renderer::UnSetRes()
@@ -78,7 +80,7 @@ void CD3D9Renderer::DestroyWindow(void)
 {
   if (m_hWnd)
   {
-    ::DestroyWindow(m_hWnd);
+    SDL_DestroyWindow(m_hWnd);
     m_hWnd = NULL;
   }
 }
@@ -631,77 +633,95 @@ void CD3D9Renderer::ShutDown(bool bReInit)
 
 bool CD3D9Renderer::SetWindow(int width, int height, bool fullscreen, WIN_HWND hWnd)
 {
-  HWND temp = GetDesktopWindow();
-  RECT trect;
+//  HWND temp = GetDesktopWindow();
+//  RECT trect;
+//
+//  GetWindowRect(temp, &trect);
+//
+//  m_deskwidth =trect.right-trect.left;
+//  m_deskheight=trect.bottom-trect.top;
+//
+//  DWORD style, exstyle;
+//  int x, y, wdt, hgt;
+//
+//  if (width < 640)
+//    width = 640;
+//  if (height < 480)
+//    height = 480;
+//
+//  m_dwWindowStyle = WS_VISIBLE | WS_CAPTION | WS_MINIMIZEBOX | WS_SYSMENU | WS_OVERLAPPED;
+//
+//  if (fullscreen)
+//  {
+//#ifdef _DEBUG
+//    exstyle = 0;
+//#else
+//    exstyle = WS_EX_TOPMOST;
+//#endif
+//    style = WS_POPUP | WS_VISIBLE;
+//  }
+//  else
+//  {
+//    exstyle = WS_EX_APPWINDOW;
+//    style = m_dwWindowStyle;
+//  }
+//
+//  x = (GetSystemMetrics(SM_CXFULLSCREEN)-width)/2;
+//  y = (GetSystemMetrics(SM_CYFULLSCREEN)-height)/2;
+//  wdt = GetSystemMetrics(SM_CXDLGFRAME)*2 + width;
+//  hgt = GetSystemMetrics(SM_CYCAPTION) + GetSystemMetrics(SM_CXDLGFRAME)*2 + height;
+//
+//  if (!hWnd)
+//  {
+//    m_hWnd = CreateWindowEx(exstyle,
+//                          "CryENGINE",
+//                          m_WinTitle,
+//                          style,
+//                          x,
+//                          y,
+//                          wdt,
+//                          hgt,
+//                          NULL,
+//                          NULL,
+//                          m_hInst,
+//                          NULL);
+//  }
+//  else
+//    m_hWnd = (HWND)hWnd;
+//
+//  if (!m_hWnd)
+//    iConsole->Exit("Couldn't create window\n");
+//
+//  if (!hWnd)
+//  {
+//    if (fullscreen)
+//    {
+//      // Hide the cursor
+//      SetCursor(NULL);
+//      ShowCursor(FALSE);
+//    }
+//
+//  }
+//
+//  return true;
 
-  GetWindowRect(temp, &trect);
-
-  m_deskwidth =trect.right-trect.left;
-  m_deskheight=trect.bottom-trect.top;
-
-  DWORD style, exstyle;
-  int x, y, wdt, hgt;
-
-  if (width < 640)
-    width = 640;
-  if (height < 480)
-    height = 480;
-
-  m_dwWindowStyle = WS_VISIBLE | WS_CAPTION | WS_MINIMIZEBOX | WS_SYSMENU | WS_OVERLAPPED;
-
-  if (fullscreen)
-  {
-#ifdef _DEBUG
-    exstyle = 0;
-#else
-    exstyle = WS_EX_TOPMOST;
-#endif
-    style = WS_POPUP | WS_VISIBLE;
-  }
-  else
-  {
-    exstyle = WS_EX_APPWINDOW;
-    style = m_dwWindowStyle;
-  }
-
-  x = (GetSystemMetrics(SM_CXFULLSCREEN)-width)/2;
-  y = (GetSystemMetrics(SM_CYFULLSCREEN)-height)/2;
-  wdt = GetSystemMetrics(SM_CXDLGFRAME)*2 + width;
-  hgt = GetSystemMetrics(SM_CYCAPTION) + GetSystemMetrics(SM_CXDLGFRAME)*2 + height;
-
-  if (!hWnd)
-  {
-    m_hWnd = CreateWindowEx(exstyle,
-                          "CryENGINE",
-                          m_WinTitle,
-                          style,
-                          x,
-                          y,
-                          wdt,
-                          hgt,
-                          NULL,
-                          NULL,
-                          m_hInst,
-                          NULL);
-  }
-  else
-    m_hWnd = (HWND)hWnd;
-
-  if (!m_hWnd)
-    iConsole->Exit("Couldn't create window\n");
-
-  if (!hWnd)
-  {
+    Uint32 windowFlags = SDL_WINDOW_SHOWN;
     if (fullscreen)
+        windowFlags |= SDL_WINDOW_FULLSCREEN;
+
+    if (!hWnd)
     {
-      // Hide the cursor
-      SetCursor(NULL);
-      ShowCursor(FALSE);
+        m_hWnd = SDL_CreateWindow(m_WinTitle,
+            SDL_WINDOWPOS_CENTERED,
+            SDL_WINDOWPOS_CENTERED,
+            width,
+            height,
+            windowFlags);
     }
-
-  }
-
-  return true;
+    else
+    {
+        m_hWnd = (SDL_Window*)hWnd;
+    }
 }
 
 #ifdef USE_3DC
