@@ -18,7 +18,7 @@
 #ifndef PS2
 #ifndef _XBOX
 //#if !defined(LINUX)
-_ACCESS_POOL;
+//_ACCESS_POOL;
 //#endif
 #endif
 #endif

@@ -28,7 +28,7 @@ CPShader *CPShader::m_CurRC;
 // init memory pool usage
 #ifndef PS2
 #ifndef _XBOX
- _ACCESS_POOL;
+//_ACCESS_POOL;
 #endif
 #endif
 
