@@ -367,7 +367,7 @@ void CGLRenderer::EF_AllocateBuffers()
 void CGLRenderer::EF_PipelineInit()
 {
   bool nv = 0;
-
+  int i;
   m_RP.m_pCurFuncs = NULL;
   m_RP.m_MaxVerts = CV_gl_rb_verts;
   m_RP.m_MaxTris = CV_gl_rb_tris;
@@ -384,7 +384,7 @@ void CGLRenderer::EF_PipelineInit()
     m_RP.m_IBDynSize = m_RP.m_MaxTris*3*sizeof(ushort);
 
     int nVerts = m_RP.m_MaxVerts;
-    for (int i=0; i<MAX_DYNVBS; i++)
+    for (i=0; i<MAX_DYNVBS; i++)
     {
       if (m_RP.m_VidBufs[i].m_pVBDyn)
         ReleaseBuffer(m_RP.m_VidBufs[i].m_pVBDyn);
@@ -419,7 +419,7 @@ void CGLRenderer::EF_PipelineInit()
   EF_InitEvalFuncs(0);
   EF_InitFogVolumes();
 
-  for (int i=0; i<VERTEX_FORMAT_NUMS; i++)
+  for (i=0; i<VERTEX_FORMAT_NUMS; i++)
   {
     for (int j=0; j<VERTEX_FORMAT_NUMS; j++)
     {
@@ -452,7 +452,7 @@ void CGLRenderer::EF_PipelineInit()
     SAFE_DELETE_ARRAY(m_RP.m_ObjectsPool);
     m_RP.m_nNumObjectsInPool = 512;
     m_RP.m_ObjectsPool = new CCObject[m_RP.m_nNumObjectsInPool];
-    for (int i=0; i<m_RP.m_nNumObjectsInPool; i++)
+    for (i=0; i<m_RP.m_nNumObjectsInPool; i++)
     {
       m_RP.m_TempObjects[i] = &m_RP.m_ObjectsPool[i];
       m_RP.m_TempObjects[i]->Init();
@@ -466,7 +466,6 @@ void CGLRenderer::EF_PipelineInit()
     m_RP.m_VisObjects[0] = &m_RP.m_ObjectsPool[0];
   }
 
-  int i;
   for (i=0; i<eSHP_MAX; i++)
   {
     if (i == eSHP_DiffuseLight || i == eSHP_SpecularLight)
