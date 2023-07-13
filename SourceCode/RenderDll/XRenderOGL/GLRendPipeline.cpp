@@ -466,6 +466,7 @@ void CGLRenderer::EF_PipelineInit()
     m_RP.m_VisObjects[0] = &m_RP.m_ObjectsPool[0];
   }
 
+  int i;
   for (i=0; i<eSHP_MAX; i++)
   {
     if (i == eSHP_DiffuseLight || i == eSHP_SpecularLight)
@@ -759,7 +760,8 @@ void CGLRenderer::EF_PreRender(int Stage)
     if (Stage == 1)
       CCGVProgram_GL::mfSetGlobalParams();
 
-    for (int i=0; i<m_RP.m_DLights[SRendItem::m_RecurseLevel].Num(); i++)
+    int i;
+    for (i=0; i<m_RP.m_DLights[SRendItem::m_RecurseLevel].Num(); i++)
     {
       CDLight *dl = m_RP.m_DLights[SRendItem::m_RecurseLevel][i];
       if (dl->m_Flags & DLF_FAKE)
