@@ -1,6 +1,9 @@
 project(CryPhysics)
 
-add_definitions(-D_USRDLL -DPHYSICS_EXPORTS -DPIII_SSE -DENTITY_PROFILER_ENABLED)
+add_definitions(-D_USRDLL -DPHYSICS_EXPORTS -DENTITY_PROFILER_ENABLED)
+if (${ARCH_TYPE} STREQUAL "x86")
+    add_definitions(-DPIII_SSE)
+endif()
 
 set(SRC_FILES
     "aabbtree.cpp"

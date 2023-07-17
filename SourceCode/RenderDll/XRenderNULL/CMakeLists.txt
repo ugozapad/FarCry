@@ -1,6 +1,9 @@
 project(XRenderNULL)
 
-add_definitions(-DDO_ASM -DNULL_RENDERER)
+add_definitions(-DNULL_RENDERER)
+if (${ARCH_TYPE} STREQUAL "x86")
+    add_definitions(-DDO_ASM)
+endif()
 
 set(SRC_FILES
     "../Common/3DUtils.cpp"
@@ -72,6 +75,35 @@ set(SRC_FILES
     "NULL_VertBuffer.cpp"
 )
 
+if (${ARCH_TYPE} STREQUAL "x86")
+    set(ARCH_LIBS ijl15.lib)
+else() #x64
+    set(ARCH_LIBS)
+    list(APPEND SRC_FILES
+    "../Common/Textures/Image/jpeg6/jcomapi.cpp"
+    "../Common/Textures/Image/jpeg6/jdapimin.cpp"
+    "../Common/Textures/Image/jpeg6/jdapistd.cpp"
+    "../Common/Textures/Image/jpeg6/jdatasrc.cpp"
+    "../Common/Textures/Image/jpeg6/jdcoefct.cpp"
+    "../Common/Textures/Image/jpeg6/jdcolor.cpp"
+    "../Common/Textures/Image/jpeg6/jddctmgr.cpp"
+    "../Common/Textures/Image/jpeg6/jdhuff.cpp"
+    "../Common/Textures/Image/jpeg6/jdinput.cpp"
+    "../Common/Textures/Image/jpeg6/jdmainct.cpp"
+    "../Common/Textures/Image/jpeg6/jdmarker.cpp"
+    "../Common/Textures/Image/jpeg6/jdmaster.cpp"
+    "../Common/Textures/Image/jpeg6/jdpostct.cpp"
+    "../Common/Textures/Image/jpeg6/jdsample.cpp"
+    "../Common/Textures/Image/jpeg6/jdtrans.cpp"
+    "../Common/Textures/Image/jpeg6/jerror.cpp"
+    "../Common/Textures/Image/jpeg6/jfdctflt.cpp"
+    "../Common/Textures/Image/jpeg6/jidctflt.cpp"
+    "../Common/Textures/Image/jpeg6/jmemmgr.cpp"
+    "../Common/Textures/Image/jpeg6/jmemnobs.cpp"
+    "../Common/Textures/Image/jpeg6/jutils.cpp"
+    )
+endif()
+
 add_library(${PROJECT_NAME} SHARED ${SRC_FILES})
 
 target_include_directories(${PROJECT_NAME} PRIVATE
@@ -86,7 +118,7 @@ target_link_directories(${PROJECT_NAME} PRIVATE
 set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} /NODEFAULTLIB:libcp.lib /NODEFAULTLIB:LIBC.lib")
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
-    ijl15.lib
+    ${ARCH_LIBS}
     nvDXTlib.lib
     legacy_stdio_definitions.lib
 )

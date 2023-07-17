@@ -86,14 +86,10 @@ const real sqrt3	= (real)1.7320508075688772935274463415059;
 #if defined(WIN64) &&  defined(_CPU_AMD64) && !defined(LINUX)
 #define ILINE __forceinline
 
-extern "C" void fastsincosf(float x, float * sincosfx);
-extern "C" float fastsinf(float x);
-extern "C" float fastcosf(float x);
-
-ILINE void cry_sincosf (float angle, float* pCosSin) {	fastsincosf(angle,pCosSin);	}
+ILINE void cry_sincosf(float angle, float* pCosSin) { pCosSin[0] = cos(angle); pCosSin[1] = sin(angle); }
 ILINE void cry_sincos  (double angle, double* pCosSin) {	pCosSin[0] = cos(angle);	pCosSin[1] = sin(angle); }
-ILINE float cry_sinf(float x) {return fastsinf(x); }
-ILINE float cry_cosf(float x) {return fastcosf(x); }
+ILINE float cry_sinf(float x) {return sinf(x); }
+ILINE float cry_cosf(float x) {return cosf(x); }
 
 ILINE float cry_fmod(float x, float y) {return (float)fmod((double)x,(double)y);}
 
