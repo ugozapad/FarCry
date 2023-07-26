@@ -12,9 +12,7 @@
 #include <windows.h>
 #include <stdio.h>
 #include <tchar.h>
-#ifndef WIN64
 #include "dxdiag.h"
-#endif
 
 HRESULT GetDirectXVersionViaDxDiag( DWORD* pdwDirectXVersionMajor, DWORD* pdwDirectXVersionMinor, TCHAR* pcDirectXVersionLetter );
 HRESULT GetDirectXVerionViaFileVersions( DWORD* pdwDirectXVersionMajor, DWORD* pdwDirectXVersionMinor, TCHAR* pcDirectXVersionLetter );
@@ -134,7 +132,6 @@ HRESULT GetDirectXVersionViaDxDiag( DWORD* pdwDirectXVersionMajor,
                                     DWORD* pdwDirectXVersionMinor, 
                                     TCHAR* pcDirectXVersionLetter )
 {
-#ifndef WIN64
     HRESULT hr;
     bool bCleanupCOM = false;
 
@@ -240,12 +237,6 @@ HRESULT GetDirectXVersionViaDxDiag( DWORD* pdwDirectXVersionMajor,
         return S_OK;
     else
 			return E_FAIL;
-#else
-	*pdwDirectXVersionMajor = 9;
-	*pdwDirectXVersionMinor = 1;
-	strcpy(pcDirectXVersionLetter, "DirectX9.1 beta AMD64 build");
-	return S_OK;
-#endif
 }
 
 
