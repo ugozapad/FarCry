@@ -38,6 +38,11 @@
 
 #include <ITimer.h>
 #include <IInput.h>
+
+#include <SDL.h>
+
+#define ENABLE_SDL_INPUT
+
 // TODO: reference additional headers your program requires here
 
 //{{AFX_INSERT_LOCATION}}

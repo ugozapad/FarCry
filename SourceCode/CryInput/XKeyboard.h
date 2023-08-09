@@ -165,4 +165,36 @@ private:
 
 };
 
+// SDL Implementation of IKeyboard
+class CSDLKeyboard : public IKeyboard
+{
+public:
+	CSDLKeyboard();
+	~CSDLKeyboard();
+
+	void	Init(ISystem* pSystem);
+	void	ShutDown() override;
+	bool	KeyDown(int p_key) override;
+	bool	KeyPressed(int p_key) override;
+	bool	KeyReleased(int p_key) override;
+	void	ClearKey(int p_key) override;
+
+	int				GetKeyPressedCode() override;
+	const char*		GetKeyPressedName() override;
+	int				GetKeyDownCode() override;
+	const char*		GetKeyDownName() override;
+
+	void	SetExclusive(bool value, void* hwnd = 0) override;
+	void	WaitForKey() override;
+	void	ClearKeyState() override;
+
+private:
+	static unsigned short SCANCODE2XKEY(unsigned char cCode);
+
+private:
+	ISystem*	m_pSystem;
+	ILog*		m_pLog;
+	
+};
+
 #endif // !defined(AFX_XKEYBOARD_H__9C0FD463_ECC8_42DA_8019_378651B00771__INCLUDED_)

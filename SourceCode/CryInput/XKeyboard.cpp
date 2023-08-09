@@ -1546,3 +1546,216 @@ unsigned char CXKeyboard::GetKeyState(int nKey)
 		return m_cKeysState[nKey];
 	return 0;
 }
+
+//////////////////////////////////////////////////////////////////////////
+// Too lazy to rewrite CXKeyboard so I write from scratch
+
+CSDLKeyboard::CSDLKeyboard() :
+	m_pSystem(nullptr), m_pLog(nullptr)
+{
+}
+
+CSDLKeyboard::~CSDLKeyboard()
+{
+}
+
+void CSDLKeyboard::Init(ISystem* pSystem)
+{
+	m_pSystem	= pSystem;
+	m_pLog		= m_pSystem->GetILog();
+	
+	m_pLog->LogToFile("Initializing SDL Keyboard\n");
+
+	/*m_cvBufferedKeys = m_pSystem->GetIConsole()->CreateVariable("i_bufferedkeys", "1", 0,
+		"Toggles key buffering.\n"
+		"Usage: i_bufferedkeys [0/1]\n"
+		"Default is 0 (off). Set to 1 to process buffered key strokes.");*/
+}
+
+void CSDLKeyboard::ShutDown()
+{
+}
+
+bool CSDLKeyboard::KeyDown(int p_key)
+{
+	return false;
+}
+
+bool CSDLKeyboard::KeyPressed(int p_key)
+{
+	return false;
+}
+
+bool CSDLKeyboard::KeyReleased(int p_key)
+{
+	return false;
+}
+
+void CSDLKeyboard::ClearKey(int p_key)
+{
+}
+
+int CSDLKeyboard::GetKeyPressedCode()
+{
+	return 0;
+}
+
+const char* CSDLKeyboard::GetKeyPressedName()
+{
+	return nullptr;
+}
+
+int CSDLKeyboard::GetKeyDownCode()
+{
+	return 0;
+}
+
+const char* CSDLKeyboard::GetKeyDownName()
+{
+	return nullptr;
+}
+
+void CSDLKeyboard::SetExclusive(bool value, void* hwnd)
+{
+	// SDL don't support exclusive mode
+	return;
+}
+
+void CSDLKeyboard::WaitForKey()
+{
+}
+
+void CSDLKeyboard::ClearKeyState()
+{
+}
+
+unsigned short CSDLKeyboard::SCANCODE2XKEY(unsigned char cCode)
+{
+	switch (cCode)
+	{
+	case SDL_SCANCODE_ESCAPE:        return XKEY_ESCAPE;
+	case SDL_SCANCODE_1:             return XKEY_1;
+	case SDL_SCANCODE_2:             return XKEY_2;
+	case SDL_SCANCODE_3:             return XKEY_3;
+	case SDL_SCANCODE_4:             return XKEY_4;
+	case SDL_SCANCODE_5:             return XKEY_5;
+	case SDL_SCANCODE_6:             return XKEY_6;
+	case SDL_SCANCODE_7:             return XKEY_7;
+	case SDL_SCANCODE_8:             return XKEY_8;
+	case SDL_SCANCODE_9:             return XKEY_9;
+	case SDL_SCANCODE_0:             return XKEY_0;
+	case SDL_SCANCODE_MINUS:         return XKEY_MINUS;
+	case SDL_SCANCODE_EQUALS:        return XKEY_EQUALS;
+	case SDL_SCANCODE_BACKSPACE:     return XKEY_BACKSPACE;
+	case SDL_SCANCODE_TAB:           return XKEY_TAB;
+	case SDL_SCANCODE_Q:             return XKEY_Q;
+	case SDL_SCANCODE_W:             return XKEY_W;
+	case SDL_SCANCODE_E:             return XKEY_E;
+	case SDL_SCANCODE_R:             return XKEY_R;
+	case SDL_SCANCODE_T:             return XKEY_T;
+	case SDL_SCANCODE_Y:             return XKEY_Y;
+	case SDL_SCANCODE_U:             return XKEY_U;
+	case SDL_SCANCODE_I:             return XKEY_I;
+	case SDL_SCANCODE_O:             return XKEY_O;
+	case SDL_SCANCODE_P:             return XKEY_P;
+	//case SDL_SCANCODE_LBRACKET:      return XKEY_LBRACKET;
+	//case SDL_SCANCODE_RBRACKET:      return XKEY_RBRACKET;
+	case SDL_SCANCODE_RETURN:        return XKEY_RETURN;
+	//case SDL_SCANCODE_LCONTROL:      return XKEY_LCONTROL;
+	case SDL_SCANCODE_A:             return XKEY_A;
+	case SDL_SCANCODE_S:             return XKEY_S;
+	case SDL_SCANCODE_D:             return XKEY_D;
+	case SDL_SCANCODE_F:             return XKEY_F;
+	case SDL_SCANCODE_G:             return XKEY_G;
+	case SDL_SCANCODE_H:             return XKEY_H;
+	case SDL_SCANCODE_J:             return XKEY_J;
+	case SDL_SCANCODE_K:             return XKEY_K;
+	case SDL_SCANCODE_L:             return XKEY_L;
+	case SDL_SCANCODE_SEMICOLON:     return XKEY_SEMICOLON;
+	case SDL_SCANCODE_APOSTROPHE:    return XKEY_APOSTROPHE;
+	case SDL_SCANCODE_GRAVE:         return XKEY_TILDE;
+	case SDL_SCANCODE_LSHIFT:        return XKEY_LSHIFT;
+	case SDL_SCANCODE_BACKSLASH:     return XKEY_BACKSLASH;
+	case SDL_SCANCODE_Z:             return XKEY_Z;
+	case SDL_SCANCODE_X:             return XKEY_X;
+	case SDL_SCANCODE_C:             return XKEY_C;
+	case SDL_SCANCODE_V:             return XKEY_V;
+	case SDL_SCANCODE_B:             return XKEY_B;
+	case SDL_SCANCODE_N:             return XKEY_N;
+	case SDL_SCANCODE_M:             return XKEY_M;
+	case SDL_SCANCODE_COMMA:         return XKEY_COMMA;
+	case SDL_SCANCODE_PERIOD:        return XKEY_PERIOD;
+	case SDL_SCANCODE_SLASH:         return XKEY_SLASH;
+	case SDL_SCANCODE_RSHIFT:        return XKEY_RSHIFT;
+	case SDL_SCANCODE_KP_MULTIPLY:   return XKEY_MULTIPLY;
+	case SDL_SCANCODE_LALT:          return XKEY_LALT;
+	case SDL_SCANCODE_SPACE:         return XKEY_SPACE;
+	case SDL_SCANCODE_CAPSLOCK:      return XKEY_CAPSLOCK;
+	case SDL_SCANCODE_F1:            return XKEY_F1;
+	case SDL_SCANCODE_F2:            return XKEY_F2;
+	case SDL_SCANCODE_F3:            return XKEY_F3;
+	case SDL_SCANCODE_F4:            return XKEY_F4;
+	case SDL_SCANCODE_F5:            return XKEY_F5;
+	case SDL_SCANCODE_F6:            return XKEY_F6;
+	case SDL_SCANCODE_F7:            return XKEY_F7;
+	case SDL_SCANCODE_F8:            return XKEY_F8;
+	case SDL_SCANCODE_F9:            return XKEY_F9;
+	case SDL_SCANCODE_F10:           return XKEY_F10;
+	case SDL_SCANCODE_NUMLOCKCLEAR:  return XKEY_NUMLOCK;
+	case SDL_SCANCODE_SCROLLLOCK:    return XKEY_SCROLLLOCK;
+	case SDL_SCANCODE_KP_7:       return XKEY_NUMPAD7;
+	case SDL_SCANCODE_KP_8:       return XKEY_NUMPAD8;
+	case SDL_SCANCODE_KP_9:       return XKEY_NUMPAD9;
+	//case SDL_SCANCODE_KP_SUBTRACT:      return XKEY_SUBTRACT;
+	case SDL_SCANCODE_KP_4:       return XKEY_NUMPAD4;
+	case SDL_SCANCODE_KP_5:       return XKEY_NUMPAD5;
+	case SDL_SCANCODE_KP_6:       return XKEY_NUMPAD6;
+	//case SDL_SCANCODE_KP_ADD:           return XKEY_ADD;
+	case SDL_SCANCODE_KP_1:       return XKEY_NUMPAD1;
+	case SDL_SCANCODE_KP_2:       return XKEY_NUMPAD2;
+	case SDL_SCANCODE_KP_3:       return XKEY_NUMPAD3;
+	case SDL_SCANCODE_KP_0:       return XKEY_NUMPAD0;
+	case SDL_SCANCODE_KP_DECIMAL:       return XKEY_DECIMAL;
+	case SDL_SCANCODE_F11:           return XKEY_F11;
+	case SDL_SCANCODE_F12:           return XKEY_F12;
+	case SDL_SCANCODE_F13:           return XKEY_F13;
+	case SDL_SCANCODE_F14:           return XKEY_F14;
+	case SDL_SCANCODE_F15:           return XKEY_F15;
+	//case SDL_SCANCODE_KANA:          return 0;
+	//case SDL_SCANCODE_CONVERT:       return 0;
+	//case SDL_SCANCODE_NOCONVERT:     return 0;
+	//case SDL_SCANCODE_YEN:           return 0;
+	//case SDL_SCANCODE_NUMPADEQUALS:  return 0;
+	//case SDL_SCANCODE_CIRCUMFLEX:    return 0;
+	//case SDL_SCANCODE_AT:            return 0;
+	//case SDL_SCANCODE_COLON:         return 0;
+	//case SDL_SCANCODE_UNDERLINE:     return 0;
+	//case SDL_SCANCODE_KANJI:         return 0;
+	case SDL_SCANCODE_STOP:          return 0;
+	//case SDL_SCANCODE_AX:            return 0;
+	//case SDL_SCANCODE_UNLABELED:     return 0;
+	//case SDL_SCANCODE_NUMPADENTER:   return XKEY_NUMPADENTER;
+	//case SDL_SCANCODE_RCONTROL:      return XKEY_RCONTROL;
+	//case SDL_SCANCODE_NUMPADCOMMA:   return XKEY_SEPARATOR;
+	//case SDL_SCANCODE_DIVIDE:        return XKEY_DIVIDE;
+	//case SDL_SCANCODE_SYSRQ:         return XKEY_PRINT;
+	case SDL_SCANCODE_RALT:          return XKEY_RALT;
+	case SDL_SCANCODE_PAUSE:         return XKEY_PAUSE;
+	case SDL_SCANCODE_HOME:          return XKEY_HOME;
+	case SDL_SCANCODE_UP:            return XKEY_UP;
+	case SDL_SCANCODE_PAGEUP:        return XKEY_PAGE_UP;
+	case SDL_SCANCODE_LEFT:          return XKEY_LEFT;
+	case SDL_SCANCODE_RIGHT:         return XKEY_RIGHT;
+	case SDL_SCANCODE_END:           return XKEY_END;
+	case SDL_SCANCODE_DOWN:          return XKEY_DOWN;
+	case SDL_SCANCODE_PAGEDOWN:      return XKEY_PAGE_DOWN;
+	case SDL_SCANCODE_INSERT:        return XKEY_INSERT;
+	case SDL_SCANCODE_DELETE:        return XKEY_DELETE;
+	//case SDL_SCANCODE_LWIN:          return XKEY_WIN_LWINDOW;
+	//case SDL_SCANCODE_RWIN:          return XKEY_WIN_RWINDOW;
+	//case SDL_SCANCODE_APPS:          return XKEY_WIN_APPS;
+	//case SDL_SCANCODE_OEM_102:       return XKEY_OEM_102;
+	}
+
+	return 0;
+}
