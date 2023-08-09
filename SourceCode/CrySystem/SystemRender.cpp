@@ -58,7 +58,7 @@ int CSystem::AutoDetectRenderer(char *Vendor, char *Device)
   typedef HRESULT (WINAPI *DD_ENUM_FUNC  )(LPDDENUMCALLBACKEXA lpCallback,void* lpContext,DWORD dwFlags);
   DD_CREATE_FUNC ddCreateFunc;
   DD_ENUM_FUNC ddEnumFunc;
-  hDDInstance = CryLoadLibrary(_T("ddraw.dll"));
+  hDDInstance = LoadLibrary(_T("ddraw.dll"));
   if( hDDInstance == NULL )
     return nRenderer;
   ddCreateFunc = (DD_CREATE_FUNC)GetProcAddress( hDDInstance, "DirectDrawCreateEx"     );

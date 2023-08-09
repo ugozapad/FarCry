@@ -23,6 +23,8 @@
 #include <xtl.h>
 #endif
 
+#include <SDL.h>
+
 #include <INetwork.h>
 #include <I3DEngine.h>
 #include <IAISystem.h>
@@ -992,11 +994,11 @@ bool CSystem::InitAnimationSystem()
 void CSystem::InitVTuneProfiler()
 {
 #ifdef PROFILE_WITH_VTUNE
-	HMODULE hModule = CryLoadLibrary( "VTuneApi.dll" );
+	HMODULE hModule = LoadLibrary( "VTuneApi.dll" );
 	if (hModule)
 	{
-		VTPause = (VTuneFunction) CryGetProcAddress( hModule, "VTPause");
-		VTResume = (VTuneFunction) CryGetProcAddress( hModule, "VTResume");
+		VTPause = (VTuneFunction)	GetProcAddress( hModule, "VTPause");
+		VTResume = (VTuneFunction)	GetProcAddress( hModule, "VTResume");
 	}
 #endif //PROFILE_WITH_VTUNE
 }
@@ -1078,14 +1080,18 @@ public:
 };
 
 
-
-
 // System initialization
 /////////////////////////////////////////////////////////////////////////////////
 // INIT
 /////////////////////////////////////////////////////////////////////////////////
 bool CSystem::Init( const SSystemInitParams &params )
 {
+	const Uint32 flags = SDL_INIT_EVERYTHING ^ SDL_INIT_SENSOR;
+
+	// Initialize SDL
+	if (!SDL_WasInit(flags))
+		SDL_Init(flags);
+
 	// parse command line arguments minus e.g. "-IP:23.34.2.2" "-DEVMODE"
 	CCommandLineSink_EarlyCommands CmdlineSink(*this);
 

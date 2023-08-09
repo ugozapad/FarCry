@@ -41,7 +41,8 @@
 #endif	
 
 #ifdef WIN32
-typedef HMODULE WIN_HMODULE;
+//typedef HMODULE WIN_HMODULE;
+typedef void* WIN_HMODULE;
 #else
 typedef void* WIN_HMODULE;
 #endif
@@ -276,7 +277,7 @@ private:
 #if defined(LINUX)
 	void FreeLib(HMODULE hLibModule);
 #else
-	void FreeLib(IN OUT HMODULE hLibModule);
+	void FreeLib(IN OUT WIN_HMODULE hLibModule);
 #endif
 	void QueryVersionInfo();
 	void LogVersion();

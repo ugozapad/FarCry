@@ -95,7 +95,7 @@ void CSystem::SetAffinity()
 		if (nAffinity)
 		{
 			typedef BOOL (WINAPI *FnSetProcessAffinityMask)(IN HANDLE hProcess,IN DWORD_PTR dwProcessAffinityMask);
-			HMODULE hKernel = CryLoadLibrary ("kernel32.dll");
+			HMODULE hKernel = LoadLibrary ("kernel32.dll");
 			if (hKernel)
 			{
 				FnSetProcessAffinityMask SetProcessAffinityMask = (FnSetProcessAffinityMask)GetProcAddress(hKernel, "SetProcessAffinityMask");
@@ -323,7 +323,7 @@ int CSystem::DumpMMStats(bool log)
 struct CryDbgModule
 {
 	HANDLE heap;
-	WIN_HMODULE handle;
+	HMODULE handle;
 	string name;
 	DWORD dwSize;
 };
@@ -464,7 +464,7 @@ void CSystem::DebugStats(bool checkpoint, bool leaks)
 	//////////////////////////////////////////////////////////////////////////
 	typedef BOOL (WINAPI *FUNC_HeapQueryInformation)( HANDLE,HEAP_INFORMATION_CLASS,PVOID,SIZE_T,PSIZE_T );
 	FUNC_HeapQueryInformation pFnHeapQueryInformation = NULL;
-	HMODULE hKernelInstance = CryLoadLibrary(_T("Kernel32.dll"));
+	HMODULE hKernelInstance = LoadLibrary(_T("Kernel32.dll"));
 	if (hKernelInstance)
 	{
 		pFnHeapQueryInformation = (FUNC_HeapQueryInformation)(::GetProcAddress(hKernelInstance,"HeapQueryInformation" ));

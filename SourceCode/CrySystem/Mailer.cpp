@@ -18,10 +18,9 @@
 
 #ifdef WIN32
 
-#define WIN32_LEAN_AND_MEAN
+//#define WIN32_LEAN_AND_MEAN
 #include <windows.h>
-#include <mapi.h>
-#include "mailer.h"
+//#include <mapi.h>
 
 bool CMailer::SendMessage(const char *subject, 
 													const char *messageBody,
@@ -29,6 +28,7 @@ bool CMailer::SendMessage(const char *subject,
 													const std::vector<const char*> &_attachments, 
 													bool bShowDialog)
 {
+#if 0
 	// Preserve directory, (Can be changed if attachment specified)
 	char dir[MAX_PATH];
 	GetCurrentDirectory( sizeof(dir),dir );
@@ -138,7 +138,7 @@ bool CMailer::SendMessage(const char *subject,
 
 	if (err != SUCCESS_SUCCESS )
 		return false;
-
+#endif
 	return true;
 }
 

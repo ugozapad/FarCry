@@ -647,7 +647,8 @@ InvokeExternalConfigTool()
 //////////////////////////////////////////////////////////////////////////
 bool RunGame(HINSTANCE hInstance,const char *sCmdLine)
 {
-	SDL_Init(SDL_INIT_EVERYTHING);
+	const Uint32 flags = SDL_INIT_EVERYTHING ^ SDL_INIT_SENSOR;
+	SDL_Init(flags);
 
 //	InvokeExternalConfigTool();
 

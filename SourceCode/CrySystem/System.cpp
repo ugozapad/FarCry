@@ -263,7 +263,7 @@ void CSystem::Release()
 }
 
 //////////////////////////////////////////////////////////////////////////
-void CSystem::FreeLib(IN OUT HMODULE hLibModule)
+void CSystem::FreeLib(IN OUT WIN_HMODULE hLibModule)
 {
 	if (hLibModule) 
 	{ 
