@@ -26,4 +26,5 @@ if (MSVC)
     add_compile_options(/W3) # Warning level
 endif()
 
+add_subdirectory(Externals)
 add_subdirectory(SourceCode)

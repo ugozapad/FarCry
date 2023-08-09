@@ -364,7 +364,7 @@ protected:
 // Windows context
   char      m_WinTitle[80];
   HINSTANCE m_hInst;            
-  HWND      m_hWnd;              // The main app window
+  SDL_Window*      m_hWnd;              // The main app window
   HWND      m_hWndDesktop;       // The desktop window
 
 #ifdef USE_3DC

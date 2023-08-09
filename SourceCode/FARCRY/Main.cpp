@@ -13,6 +13,8 @@
 
 #define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS
 
+#include <SDL.h>
+
 #ifdef WIN32
 #include <windows.h>
 #include <process.h>
@@ -96,7 +98,7 @@ static bool g_bSystemRelaunch = false;
 static char szMasterCDFolder[_MAX_PATH];
 
 #ifdef WIN32
-static HMODULE g_hSystemHandle=NULL;
+static void* g_hSystemHandle=NULL;
 #define DLL_SYSTEM "CrySystem.dll"
 #define DLL_GAME	 "CryGame.dll"
 #endif
@@ -645,7 +647,9 @@ InvokeExternalConfigTool()
 //////////////////////////////////////////////////////////////////////////
 bool RunGame(HINSTANCE hInstance,const char *sCmdLine)
 {
-	InvokeExternalConfigTool();
+	SDL_Init(SDL_INIT_EVERYTHING);
+
+//	InvokeExternalConfigTool();
 
 	HWND hWnd=NULL;
 	// initialize the system
@@ -673,26 +677,27 @@ bool RunGame(HINSTANCE hInstance,const char *sCmdLine)
 #ifndef _XBOX
 		/////////////////////////////////////////////////////
 		/////////////////////////////////////////////////////
-		if (!hWnd && !RegisterWindow(hInstance))
-		{
-			if (!hWnd && RegisterWindow(hInstance))
-			{
-				MessageBox(0, "Cannot Register Window\n", "Error", MB_OK | MB_DEFAULT_DESKTOP_ONLY);
-				return false;
-			}
-		}
+		//if (!hWnd && !RegisterWindow(hInstance))
+		//{
+		//	if (!hWnd && RegisterWindow(hInstance))
+		//	{
+		//		MessageBox(0, "Cannot Register Window\n", "Error", MB_OK | MB_DEFAULT_DESKTOP_ONLY);
+		//		return false;
+		//	}
+		//}
 
-		g_hSystemHandle = LoadLibrary(DLL_SYSTEM);
+		g_hSystemHandle = SDL_LoadObject(DLL_SYSTEM);
 		if (!g_hSystemHandle)
 		{
-			DWORD dwLastError = GetLastError();
+			string errorStr = "CrySystem.dll Loading Failed:\n";
+			errorStr += SDL_GetError();
 
-			MessageBox( NULL,("CrySystem.dll Loading Failed:\n" + TryFormatWinError(dwLastError)).c_str(),"FarCry Error",MB_OK|MB_ICONERROR );
+			SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "FarCry Error", errorStr.c_str(), nullptr);
+
 			return false;
 		}
 
-		PFNCREATESYSTEMINTERFACE pfnCreateSystemInterface =
-			(PFNCREATESYSTEMINTERFACE)::GetProcAddress( g_hSystemHandle,"CreateSystemInterface" );
+		PFNCREATESYSTEMINTERFACE pfnCreateSystemInterface = (PFNCREATESYSTEMINTERFACE)SDL_LoadFunction( g_hSystemHandle,"CreateSystemInterface" );
 
 		// Initialize with instance and window handles.
 		sip.hInstance = hInstance;
@@ -704,7 +709,7 @@ bool RunGame(HINSTANCE hInstance,const char *sCmdLine)
 		g_pISystem = pfnCreateSystemInterface( sip );
 		if (!g_pISystem)
 		{
-			MessageBox( NULL,"CreateSystemInterface Failed","FarCry Error",MB_OK|MB_ICONERROR );
+			SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "FarCry Error", "CreateSystemInterface Failed", nullptr);
 			return false;
 		}
 #else
@@ -746,7 +751,7 @@ bool RunGame(HINSTANCE hInstance,const char *sCmdLine)
 
 			if (!g_pISystem->CreateGame( ip ))
 			{
-				MessageBox( NULL,"CreateGame Failed: CryGame.dll","FarCry Error",MB_OK|MB_ICONERROR );
+				SDL_ShowSimpleMessageBox( SDL_MESSAGEBOX_ERROR, "FarCry Error", "CreateGame Failed: CryGame.dll", nullptr);
 				return false;
 			}
 
@@ -848,7 +853,8 @@ bool RunGame(HINSTANCE hInstance,const char *sCmdLine)
 		*/
 
 		if (!bRelaunch)
-			::FreeLibrary(g_hSystemHandle);
+			SDL_UnloadObject(g_hSystemHandle);
+
 		g_hSystemHandle= NULL;
 
 		if (hWnd)

@@ -122,6 +122,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/SourceCode/CryCommon
     ${CMAKE_SOURCE_DIR}/SourceCode/RenderDll
     ${CMAKE_SOURCE_DIR}/SourceCode/RenderDll/Dx9Sdk/Include
+    ${CMAKE_SOURCE_DIR}/Externals/SDL/include
 )
 
 target_link_directories(${PROJECT_NAME} PRIVATE
@@ -139,4 +140,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     cgD3D9.lib
     ${ARCH_LIBS}
     winmm.lib
+
+    SDL2
 )
