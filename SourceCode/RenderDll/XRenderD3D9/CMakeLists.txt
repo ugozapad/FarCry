@@ -1,6 +1,9 @@
 project(XRenderD3D9)
 
-add_definitions(-DENABLE_FRAME_PROFILER -DDO_ASM -DPROC_INTEL -DDIRECT3D9 -D_USRDLL -DXRENDERD3D9_EXPORTS -DDO_RENDERLOG -DDO_RENDERSTATS -D_RENDERER)
+add_definitions(-DENABLE_FRAME_PROFILER -DPROC_INTEL -DDIRECT3D9 -D_USRDLL -DXRENDERD3D9_EXPORTS -DDO_RENDERLOG -DDO_RENDERSTATS -D_RENDERER)
+if (${ARCH_TYPE} STREQUAL "x86")
+    add_definitions(-DDO_ASM)
+endif()
 
 set(SRC_FILES
     "../Common/3DUtils.cpp"
@@ -79,6 +82,40 @@ set(SRC_FILES
     "DriverD3D9.cpp"
 )
 
+if (${ARCH_TYPE} STREQUAL "x86")
+    set(ARCH_LIBS
+        ijl15.lib
+        nvDXTlib.lib
+    )
+    set(DXLIB_PATH ${CMAKE_SOURCE_DIR}/SourceCode/RenderDll/Dx9Sdk/Lib)
+else() #x64
+    set(ARCH_LIBS)
+    set(DXLIB_PATH ${CMAKE_SOURCE_DIR}/SourceCode/RenderDll/Dx9Sdk/Lib64)
+    list(APPEND SRC_FILES
+    "../Common/Textures/Image/jpeg6/jcomapi.cpp"
+    "../Common/Textures/Image/jpeg6/jdapimin.cpp"
+    "../Common/Textures/Image/jpeg6/jdapistd.cpp"
+    "../Common/Textures/Image/jpeg6/jdatasrc.cpp"
+    "../Common/Textures/Image/jpeg6/jdcoefct.cpp"
+    "../Common/Textures/Image/jpeg6/jdcolor.cpp"
+    "../Common/Textures/Image/jpeg6/jddctmgr.cpp"
+    "../Common/Textures/Image/jpeg6/jdhuff.cpp"
+    "../Common/Textures/Image/jpeg6/jdinput.cpp"
+    "../Common/Textures/Image/jpeg6/jdmainct.cpp"
+    "../Common/Textures/Image/jpeg6/jdmarker.cpp"
+    "../Common/Textures/Image/jpeg6/jdmaster.cpp"
+    "../Common/Textures/Image/jpeg6/jdpostct.cpp"
+    "../Common/Textures/Image/jpeg6/jdsample.cpp"
+    "../Common/Textures/Image/jpeg6/jdtrans.cpp"
+    "../Common/Textures/Image/jpeg6/jerror.cpp"
+    "../Common/Textures/Image/jpeg6/jfdctflt.cpp"
+    "../Common/Textures/Image/jpeg6/jidctflt.cpp"
+    "../Common/Textures/Image/jpeg6/jmemmgr.cpp"
+    "../Common/Textures/Image/jpeg6/jmemnobs.cpp"
+    "../Common/Textures/Image/jpeg6/jutils.cpp"
+    )
+endif()
+
 add_library(${PROJECT_NAME} SHARED ${SRC_FILES})
 
 target_include_directories(${PROJECT_NAME} PRIVATE
@@ -89,7 +126,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE
 )
 
 target_link_directories(${PROJECT_NAME} PRIVATE
-    ${CMAKE_SOURCE_DIR}/SourceCode/RenderDll/Dx9Sdk/Lib
+    ${DXLIB_PATH}
     Libraries
 )
 
@@ -101,8 +138,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     DXErr.lib
     cg.lib
     cgD3D9.lib
-    ijl15.lib
-    nvDXTlib.lib
+    ${ARCH_LIBS}
     winmm.lib
 
     SDL2

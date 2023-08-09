@@ -72,16 +72,16 @@ Amd64Skinner	PROC	FRAME
 							push		rCX
 							push		rDX
               
-              movdqa  var6,xmm6
-              movdqa  var7,xmm7
-              movdqa  var8,xmm8
-              movdqa  var9,xmm9
-              movdqa  var10,xmm10
-              movdqa  var11,xmm11
-              movdqa  var12,xmm12
-              movdqa  var13,xmm13
-              movdqa  var14,xmm14
-              movdqa  var15,xmm15
+              movdqa  xmmword ptr [var6],xmm6
+              movdqa  xmmword ptr [var7],xmm7
+              movdqa  xmmword ptr [var8],xmm8
+              movdqa  xmmword ptr [var9],xmm9
+              movdqa  xmmword ptr [var10],xmm10
+              movdqa  xmmword ptr [var11],xmm11
+              movdqa  xmmword ptr [var12],xmm12
+              movdqa  xmmword ptr [var13],xmm13
+              movdqa  xmmword ptr [var14],xmm14
+              movdqa  xmmword ptr [var15],xmm15
 
 							             
 ; For debug, I will copy the parameters into the same registers which Crytek used in the inline assembler.
@@ -97,12 +97,12 @@ startLoop:
 							jz endLoop
 
 							; load the current matrix; we don't need the move component
-							movss		xmm9,  [r9+X00]  
-							movss		xmm10, [r9+Y01]
-							movss		xmm11, [r9+X10]
-							movss		xmm12, [r9+Y11]
-							movss		xmm13, [r9+X20]
-							movss		xmm14, [r9+Y21]
+							movss		xmm9,  DWORD PTR [r9+X00]
+							movss		xmm10, DWORD PTR [r9+Y01]
+							movss		xmm11, DWORD PTR [r9+X10]
+							movss		xmm12, DWORD PTR [r9+Y11]
+							movss		xmm13, DWORD PTR [r9+X20]
+							movss		xmm14, DWORD PTR [r9+Y21]
 
 							; load the counter for the number of non-flipped tangets for this bone
 							xor		rCX,rCX
@@ -120,11 +120,11 @@ startLoop:
 
 							prefetch  [rSI+140h]
 
-							movss  xmm0, [rSI+00h]	;x
+							movss  xmm0, DWORD PTR [rSI+00h]	;x
 							movss  xmm3, xmm0
-							movss  xmm1, [rSI+04h]	;y
+							movss  xmm1, DWORD PTR [rSI+04h]	;y
 							movss  xmm4, xmm1
-							movss  xmm2, [rSI+08h]	;z
+							movss  xmm2, DWORD PTR [rSI+08h]	;z
 							movss  xmm5, xmm2
 
 							prefetchw [rDI+rax*8+40h]
@@ -135,29 +135,29 @@ startLoop:
 
 							mulss  xmm0, xmm13					;x*M20
 							mulss  xmm1, xmm14          ;y*M21
-							mulss  xmm2, [r9+Z22]      ;z*M22
-							addss  xmm0, [r9+TransZ]
+							mulss  xmm2, DWORD PTR [r9+Z22]      ;z*M22
+							addss  xmm0, DWORD PTR [r9+TransZ]
 							addss  xmm1, xmm2
 							addss  xmm0, xmm1
 
 
 							mulss  xmm3, xmm9           ;x*M00
 							mulss  xmm4, xmm10          ;y*M01
-							mulss  xmm5, [r9+Z02]      ;z*M02
-							addss  xmm3, [r9+TransX]
+							mulss  xmm5, DWORD PTR [r9+Z02]      ;z*M02
+							addss  xmm3, DWORD PTR [r9+TransX]
 							addss  xmm4, xmm5
 							addss  xmm3, xmm4
 
 							mulss  xmm6, xmm11          ;x*M10
 							mulss  xmm7, xmm12          ;y*M11
-							mulss  xmm8, [r9+Z12]      ;z*M12
-							addss  xmm6, [r9+TransY] 
+							mulss  xmm8, DWORD PTR [r9+Z12]      ;z*M12
+							addss  xmm6, DWORD PTR [r9+TransY]
 							addss  xmm7, xmm8
 							addss  xmm6, xmm7
 
-							movss  [rDI+rAX*8+08h], xmm0
-							movss  [rDI+rAX*8+00h], xmm3
-							movss  [rDI+rAX*8+04h], xmm6
+							movss  DWORD PTR [rDI+rAX*8+08h], xmm0
+							movss  DWORD PTR [rDI+rAX*8+00h], xmm3
+							movss  DWORD PTR [rDI+rAX*8+04h], xmm6
 
 							add			rSI,	010h					; rdi+rax*8 (EDI+EAX*8) points to the destination vector now
 							dec	eCX
@@ -170,12 +170,12 @@ endLoopRigid:
 ;// Smooth-1 loop
 ;/////////////////////////////////////////////////////////
 
-							movss		xmm9,  [r9+X00]  
-							movss		xmm10, [r9+Y01]
-							movss		xmm11, [r9+X10]
-							movss		xmm12, [r9+Y11]
-							movss		xmm13, [r9+X20]
-							movss		xmm14, [r9+Y21]
+							movss		xmm9,  DWORD PTR [r9+X00]
+							movss		xmm10, DWORD PTR [r9+Y01]
+							movss		xmm11, DWORD PTR [r9+X10]
+							movss		xmm12, DWORD PTR [r9+Y11]
+							movss		xmm13, DWORD PTR [r9+X20]
+							movss		xmm14, DWORD PTR [r9+Y21]
 
 
 							; load the counter for the number of smooth vertices met for the first time
@@ -197,13 +197,13 @@ startLoopSmooth1:
 
 							prefetch  [rSI+140h]
 
-							movss  xmm0, [rSI+00h]	;x
+							movss  xmm0, DWORD PTR [rSI+00h]	;x
 							movss  xmm3, xmm0
-							movss  xmm1, [rSI+04h]	;y
+							movss  xmm1, DWORD PTR [rSI+04h]	;y
 							movss  xmm4, xmm1
-							movss  xmm2, [rSI+08h]	;z
+							movss  xmm2, DWORD PTR [rSI+08h]	;z
 							movss  xmm5, xmm2
-							movss  xmm15, [rSI+0ch]	;w
+							movss  xmm15, DWORD PTR [rSI+0ch]	;w
 
 							prefetchw [rDI+rax*8+40h]
 
@@ -213,22 +213,22 @@ startLoopSmooth1:
 
 							mulss  xmm0, xmm13					;x*M20
 							mulss  xmm1, xmm14          ;y*M21
-							mulss  xmm2, [r9+Z22]				;z*M22
-							addss  xmm0, [r9+TransZ]
+							mulss  xmm2, DWORD PTR [r9+Z22]				;z*M22
+							addss  xmm0, DWORD PTR [r9+TransZ]
 							addss  xmm1, xmm2
 							addss  xmm0, xmm1
 
 							mulss  xmm3, xmm9           ;x*M00
 							mulss  xmm4, xmm10          ;y*M01
-							mulss  xmm5, [r9+Z02]				;z*M02
-							addss  xmm3, [r9+TransX]
+							mulss  xmm5, DWORD PTR [r9+Z02]				;z*M02
+							addss  xmm3, DWORD PTR [r9+TransX]
 							addss  xmm4, xmm5
 							addss  xmm3, xmm4
 
 							mulss  xmm6, xmm11          ;x*M10
 							mulss  xmm7, xmm12          ;y*M11
-							mulss  xmm8, [r9+Z12]				;z*M12
-							addss  xmm6, [r9+TransY] 
+							mulss  xmm8, DWORD PTR [r9+Z12]				;z*M12
+							addss  xmm6, DWORD PTR [r9+TransY]
 							addss  xmm7, xmm8
 							addss  xmm6, xmm7
 
@@ -239,9 +239,9 @@ startLoopSmooth1:
 							add		rSI, 010h				
 							dec		eCX
 							
-							movss  [rDI+rAX*8+08h], xmm0
-							movss  [rDI+rAX*8+00h], xmm3
-							movss  [rDI+rAX*8+04h], xmm6
+							movss  DWORD PTR [rDI+rAX*8+08h], xmm0
+							movss  DWORD PTR [rDI+rAX*8+00h], xmm3
+							movss  DWORD PTR [rDI+rAX*8+04h], xmm6
 
 							jnz		startLoopSmooth1
 endLoopSmooth1:
@@ -253,12 +253,12 @@ endLoopSmooth1:
 ;//		       Smooth-2 loop
 ;//////////////////////////////////////////////////////////////////
 
-							movss		xmm9,  [r9+X00]  
-							movss		xmm10, [r9+Y01]
-							movss		xmm11, [r9+X10]
-							movss		xmm12, [r9+Y11]
-							movss		xmm13, [r9+X20]
-							movss		xmm14, [r9+Y21]
+							movss		xmm9,  DWORD PTR [r9+X00]
+							movss		xmm10, DWORD PTR [r9+Y01]
+							movss		xmm11, DWORD PTR [r9+X10]
+							movss		xmm12, DWORD PTR [r9+Y11]
+							movss		xmm13, DWORD PTR [r9+X20]
+							movss		xmm14, DWORD PTR [r9+Y21]
 
 
 						;// load the counter for the number of smooth vertices met for the second time
@@ -278,13 +278,13 @@ endLoopSmooth1:
 
 							prefetch  [rSI+140h]
 
-							movss  xmm0, [rSI+00h]	;x
+							movss  xmm0, DWORD PTR [rSI+00h]	;x
 							movss  xmm3, xmm0
-							movss  xmm1, [rSI+04h]	;y
+							movss  xmm1, DWORD PTR [rSI+04h]	;y
 							movss  xmm4, xmm1
-							movss  xmm2, [rSI+08h]	;z
+							movss  xmm2, DWORD PTR [rSI+08h]	;z
 							movss  xmm5, xmm2
-							movss  xmm15, [rSI+0ch]	;w
+							movss  xmm15, DWORD PTR [rSI+0ch]	;w
 
 							prefetchw [rDI+rAX+40h]
 
@@ -294,22 +294,22 @@ endLoopSmooth1:
 
 							mulss  xmm0, xmm13					;x*M20
 							mulss  xmm1, xmm14          ;y*M21
-							mulss  xmm2, [r9+Z22]				;z*M22
-							addss  xmm0, [r9+TransZ]
+							mulss  xmm2, DWORD PTR [r9+Z22]				;z*M22
+							addss  xmm0, DWORD PTR [r9+TransZ]
 							addss  xmm1, xmm2
 							addss  xmm0, xmm1
 
 							mulss  xmm3, xmm9           ;x*M00
 							mulss  xmm4, xmm10          ;y*M01
-							mulss  xmm5, [r9+Z02]				;z*M02
-							addss  xmm3, [r9+TransX]
+							mulss  xmm5, DWORD PTR [r9+Z02]				;z*M02
+							addss  xmm3, DWORD PTR [r9+TransX]
 							addss  xmm4, xmm5
 							addss  xmm3, xmm4
 
 							mulss  xmm6, xmm11          ;x*M10
 							mulss  xmm7, xmm12          ;y*M11
-							mulss  xmm8, [r9+Z12]				;z*M12
-							addss  xmm6, [r9+TransY] 
+							mulss  xmm8, DWORD PTR [r9+Z12]				;z*M12
+							addss  xmm6, DWORD PTR [r9+TransY]
 							addss  xmm7, xmm8
 							addss  xmm6, xmm7
 
@@ -320,13 +320,13 @@ endLoopSmooth1:
 							add		rSI, 010h				
 							dec		eCX
 
-							addss  xmm0,[rDI+rAX+08h]
-							addss  xmm3,[rDI+rAX+00h]
-							addss  xmm6,[rDI+rAX+04h]
+							addss  xmm0,DWORD PTR [rDI+rAX+08h]
+							addss  xmm3,DWORD PTR [rDI+rAX+00h]
+							addss  xmm6,DWORD PTR [rDI+rAX+04h]
 							
-							movss  [rDI+rAX+08h], xmm0
-							movss  [rDI+rAX+00h], xmm3
-							movss  [rDI+rAX+04h], xmm6
+							movss  DWORD PTR [rDI+rAX+08h], xmm0
+							movss  DWORD PTR [rDI+rAX+00h], xmm3
+							movss  DWORD PTR [rDI+rAX+04h], xmm6
 
 							jnz			startLoopSmooth2
 		
@@ -337,16 +337,16 @@ endLoopSmooth1:
 				endLoop:
 
 
-              movdqa  xmm6, var6
-              movdqa  xmm7, var7
-              movdqa  xmm8, var8
-              movdqa  xmm9, var9
-              movdqa  xmm10, var10
-              movdqa  xmm11, var11
-              movdqa  xmm12, var12
-              movdqa  xmm13, var13
-              movdqa  xmm14, var14
-              movdqa  xmm15, var15
+              movdqa  xmm6, xmmword ptr [var6]
+              movdqa  xmm7, xmmword ptr [var7]
+              movdqa  xmm8, xmmword ptr [var8]
+              movdqa  xmm9, xmmword ptr [var9]
+              movdqa  xmm10, xmmword ptr [var10]
+              movdqa  xmm11, xmmword ptr [var11]
+              movdqa  xmm12, xmmword ptr [var12]
+              movdqa  xmm13, xmmword ptr [var13]
+              movdqa  xmm14, xmmword ptr [var14]
+              movdqa  xmm15, xmmword ptr [var15]
 	
 							pop		rDX
 							pop		rCX

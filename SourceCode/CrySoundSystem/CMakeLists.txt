@@ -29,9 +29,29 @@ target_link_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
+if (${ARCH_TYPE} STREQUAL "x86")
+    set(CRYSOUND_LIB crysound.lib)
+    set(OGG_STATIC_LIB ogg_static.lib)
+    set(VORBIS_STATIC_LIB vorbis_static.lib)
+    set(VORBISFILE_STATIC_LIB vorbisfile_static.lib)
+else() #x64
+    if (CMAKE_BUILD_TYPE STREQUAL "Release")
+        set(CRYSOUND_LIB crysound64.lib)
+        set(OGG_STATIC_LIB ogg_static_r64.lib)
+        set(VORBIS_STATIC_LIB vorbis_static_r64.lib)
+        set(VORBISFILE_STATIC_LIB vorbisfile_static_r64.lib)
+    else()
+        set(CRYSOUND_LIB crysound64d.lib)
+        set(OGG_STATIC_LIB ogg_static_d64.lib)
+        set(VORBIS_STATIC_LIB vorbis_static_d64.lib)
+        set(VORBISFILE_STATIC_LIB vorbisfile_static_d64.lib)
+    endif()
+endif()
+
 target_link_libraries(${PROJECT_NAME} PRIVATE
-    crysound.lib
-    ogg_static.lib
-    vorbis_static.lib
-    vorbisfile_static.lib
+    ${CRYSOUND_LIB}
+    ${OGG_STATIC_LIB}
+    ${VORBIS_STATIC_LIB}
+    ${VORBISFILE_STATIC_LIB}
+    legacy_stdio_definitions.lib
 )

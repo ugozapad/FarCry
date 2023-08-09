@@ -22,7 +22,7 @@ jobs:
       fail-fast: false
       matrix:
         configuration: [debug, release]
-        arch: [x86]
+        arch: [x64, x86]
     name: 'Windows [${{ matrix.arch }}, ${{ matrix.configuration }}]'
     steps:
     - uses: actions/checkout@v3
@@ -34,11 +34,11 @@ jobs:
     - name: Configure and build
       run: |
         cmake --preset=ninja-${{ matrix.arch }}-${{ matrix.configuration }}
-        cmake --build --preset=${{ matrix.configuration }}
+        cmake --build --preset=${{ matrix.arch }}-${{ matrix.configuration }}
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
-        name: farcry.${{ matrix.configuration }}
-        path: bin/${{ matrix.configuration }}
+        name: farcry.${{ matrix.arch }}-${{ matrix.configuration }}
+        path: bin/${{ matrix.arch }}-${{ matrix.configuration }}
 
 permissions: write-all

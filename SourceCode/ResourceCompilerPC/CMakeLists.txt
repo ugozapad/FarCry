@@ -1,4 +1,4 @@
-project(ResourceCompilerPC)
+project(ResourceCompilerPC LANGUAGES CXX ASM_MASM)
 
 add_definitions(-D_USRDLL -DRESOURCECOMPILERPC_EXPORTS)
 
@@ -40,6 +40,10 @@ set(SRC_FILES
     "stdafx.cpp"
     "StencilShadowConnectivityBuilder.cpp"
 )
+
+if (${ARCH_TYPE} STREQUAL "x64")
+    list(APPEND SRC_FILES "CrySkinAMD64.asm")
+endif()
 
 add_library(${PROJECT_NAME} SHARED ${SRC_FILES})
 

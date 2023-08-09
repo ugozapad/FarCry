@@ -29,18 +29,52 @@
         "CMAKE_BUILD_TYPE": "Release"
       },
       "binaryDir": "${sourceDir}/build/${presetName}"
+    },
+    {
+      "name": "ninja-x64-debug",
+      "generator": "Ninja Multi-Config",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      },
+      "binaryDir": "${sourceDir}/build/${presetName}"
+    },
+    {
+      "name": "ninja-x64-release",
+      "generator": "Ninja Multi-Config",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      },
+      "binaryDir": "${sourceDir}/build/${presetName}"
     }
 
   ],
   "buildPresets": [
     {
-      "name": "debug",
+      "name": "x86-debug",
       "configurePreset": "ninja-x86-debug",
       "configuration": "Debug"
     },
     {
-      "name": "release",
+      "name": "x86-release",
       "configurePreset": "ninja-x86-release",
+      "configuration": "Release"
+    },
+    {
+      "name": "x64-debug",
+      "configurePreset": "ninja-x64-debug",
+      "configuration": "Debug"
+    },
+    {
+      "name": "x64-release",
+      "configurePreset": "ninja-x64-release",
       "configuration": "Release"
     }
   ]

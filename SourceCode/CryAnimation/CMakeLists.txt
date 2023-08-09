@@ -1,4 +1,4 @@
-project(CryAnimation)
+project(CryAnimation LANGUAGES CXX ASM_MASM)
 
 add_definitions(-DDO_ASM -DPROC_INTEL -D_USRDLL -DCRYANIMATION_EXPORTS)
 
@@ -75,6 +75,10 @@ set(SRC_FILES
     "VertexBufferArrayDrivers.cpp"
     "XBoxExport.cpp"
 )
+
+if (${ARCH_TYPE} STREQUAL "x64")
+    list(APPEND SRC_FILES "CrySkinAMD64.asm")
+endif()
 
 add_library(${PROJECT_NAME} SHARED ${SRC_FILES})
 
