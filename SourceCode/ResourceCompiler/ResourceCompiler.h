@@ -110,7 +110,7 @@ private:
 	};
 		
 	// helper to get order for CMatDep
-	struct CMatDepOrder: public std::binary_function< CMatDep, CMatDep, bool>
+	struct CMatDepOrder
 	{
 		bool operator() ( const CMatDep &a, const CMatDep &b ) const
 		{

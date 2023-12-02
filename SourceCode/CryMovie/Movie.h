@@ -32,7 +32,7 @@ struct PlayingSequence
 	float time;
 };
 
-struct string_less : public std::binary_function<string,string,bool> 
+struct string_less
 {
 	bool operator()( const string &s1,const string &s2 ) const
 	{

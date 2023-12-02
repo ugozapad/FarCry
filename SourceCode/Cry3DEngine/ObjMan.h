@@ -104,7 +104,7 @@ public:
   list2<CStatObjInst*> m_lstFarObjects[2];
 
 protected:
-	struct string_less : public std::binary_function<CStatObj*,CStatObj*,bool> 
+	struct string_less
 	{
 		bool operator()( CStatObj *s1,CStatObj *s2 ) const
 		{
