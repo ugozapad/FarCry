@@ -1100,7 +1100,7 @@ void CXConsole::DumpCommandsVars(char *prefix)
 	if(!f) return;
 	
 	fprintf(f," CHEAT: stays in the default value if cheats are not disabled\n");
-	fprintf(f," REQUIRE_NET_SYNC: cannot be changed on client and when connecting it´s sent to the client\n");
+	fprintf(f," REQUIRE_NET_SYNC: cannot be changed on client and when connecting it's sent to the client\n");
 	fprintf(f," SAVEGAME: stored when saving a savegame\n");
 	fprintf(f," READONLY: can not be changed by the user\n");
 	fprintf(f,"-------------------------\n");

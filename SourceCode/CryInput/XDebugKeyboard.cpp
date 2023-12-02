@@ -534,7 +534,7 @@ unsigned char CXDebugKeyboard::XKEY2ASCII(unsigned short nCode)
   {
     switch(nCode)
     {
-      case XKEY_TILDE       :dik = '¬' ;break;
+      case XKEY_TILDE       :dik = '~' ;break;
       case XKEY_EQUALS      :dik = '+' ;break;
       case XKEY_LBRACKET    :dik = '{' ;break;
       case XKEY_RBRACKET    :dik = '}' ;break;
@@ -834,7 +834,7 @@ void CXDebugKeyboard::Update()
         case '.' :dik = XKEY_DECIMAL     ;break;
         case '/' :dik = XKEY_SLASH       ;break;
 
-        case '¬' :dik = XKEY_TILDE       ;break;
+        case '~' :dik = XKEY_TILDE       ;break;
         case '+' :dik = XKEY_EQUALS      ;break;
         case '{' :dik = XKEY_LBRACKET    ;break;
         case '}' :dik = XKEY_RBRACKET    ;break;

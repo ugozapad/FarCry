@@ -8,7 +8,7 @@
 //  Description: UI Video Panel Manager
 //
 //  History:
-//  - [9/7/2003]: File created by Márcio Martins
+//  - [9/7/2003]: File created by Marcio Martins
 //	- February 2005: Modified by Marco Corbetta for SDK release
 //
 //////////////////////////////////////////////////////////////////////

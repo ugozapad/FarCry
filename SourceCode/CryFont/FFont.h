@@ -7,7 +7,7 @@
 //
 //  History:
 //  - August 20, 2001: Created by Alberto Demichelis
-//	- January 29, 2004: Refactored by Márcio Martins
+//	- January 29, 2004: Refactored by Marcio Martins
 //
 //////////////////////////////////////////////////////////////////////
 

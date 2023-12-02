@@ -20,7 +20,7 @@
 class CryModel; 
 
 //////////////////////////////////////////////////////////////////////////
-// The bone class contains bone matrices and pointers to it parent and child’s.
+// The bone class contains bone matrices and pointers to it parent and child's.
 // Also every bone has pointer to array of controllers for this bone.
 // Bone uses controller to get position and orientation of bone for current animation frame.
 class CryBone : public ICryBone

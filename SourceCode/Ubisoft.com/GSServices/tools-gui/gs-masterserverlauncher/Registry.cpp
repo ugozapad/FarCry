@@ -30,7 +30,7 @@ static GSchar THIS_FILE[]=__FILE__;
 //	Parameters:	none.
 //
 //	RetValue:	n/a
-///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montréal/
+///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montreal/
 CRegistry::CRegistry()
 {
 	m_hRootKey = HKEY_LOCAL_MACHINE;
@@ -100,7 +100,7 @@ CRegistry::CRegistry()
 //										is KEY_ALL_ACCESS
 //
 //	RetValue:	n/a
-///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montréal/
+///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montreal/
 CRegistry::CRegistry(HKEY hRootKey, LPCTSTR lpszPath, GSbool bShouldCreateKeyIfNotExist, REGSAM samSecurity)
 {
 	m_hRootKey = hRootKey;
@@ -121,7 +121,7 @@ CRegistry::CRegistry(HKEY hRootKey, LPCTSTR lpszPath, GSbool bShouldCreateKeyIfN
 //	Parameters:	none.
 //
 //	RetValue:	n/a
-///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montréal/
+///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montreal/
 CRegistry::~CRegistry()
 {
 	if(m_bKeyOpen)
@@ -143,7 +143,7 @@ CRegistry::~CRegistry()
 //					On success.
 //				GS_FALSE
 //					On failure.
-///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montréal/
+///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montreal/
 GSbool CRegistry::CreateKey(DWORD dwOptions)
 {
 	DWORD dwDisposition;
@@ -182,7 +182,7 @@ GSbool CRegistry::CreateKey(DWORD dwOptions)
 //					On success.
 //				GS_FALSE
 //					On failure.
-///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montréal/
+///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montreal/
 GSbool CRegistry::DeleteKey()
 {
 	GSbool bKeyWasAlreadyOpen = m_bKeyOpen;
@@ -300,7 +300,7 @@ GSbool CRegistry::DeleteKey()
 //					On success.
 //				GS_FALSE
 //					On failure.
-///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montréal/
+///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montreal/
 GSbool CRegistry::OpenKey()
 {
 	if(m_bKeyOpen)
@@ -368,7 +368,7 @@ hell:
 //					On success.
 //				GS_FALSE
 //					On failure.
-///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montréal/
+///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montreal/
 GSbool CRegistry::CloseKey()
 {
 	if(!m_bKeyOpen)
@@ -394,7 +394,7 @@ GSbool CRegistry::CloseKey()
 //					"Yes!".
 //				GS_FALSE
 //					"No!".
-///////////////////Created/1999/02/08/by/Jean-Pierre/Martineau/UbiSoft/Montréal/
+///////////////////Created/1999/02/08/by/Jean-Pierre/Martineau/UbiSoft/Montreal/
 GSbool CRegistry::DoesKeyExist()
 {
 	GSbool bOldShouldCreate = m_bShouldCreateKeyIfNotExist;
@@ -450,7 +450,7 @@ GSbool CRegistry::DoesKeyExist()
 //										is HKEY_LOCAL_MACHINE.
 //
 //	RetValue:	The old root key value.
-///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montréal/
+///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montreal/
 HKEY CRegistry::SetRootKey(HKEY hRootKey)
 {
 	HKEY oldRootKey = m_hRootKey;
@@ -491,7 +491,7 @@ HKEY CRegistry::SetRootKey(HKEY hRootKey)
 //										the end of the path. "Software\\bla\\bobo"
 //
 //	RetValue:	The old path value.
-///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montréal/
+///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montreal/
 CString CRegistry::SetPath(LPCTSTR lpszPath /* = "" */)
 {
 	CString oldPath(m_csPath);
@@ -562,7 +562,7 @@ CString CRegistry::SetPath(LPCTSTR lpszPath /* = "" */)
 //										value is not modified.
 //
 //	RetValue:	The old security value.
-///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montréal/
+///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montreal/
 REGSAM CRegistry::SetSecurity(REGSAM samSecurity)
 {
 	REGSAM oldSecurity = m_samSecurity;
@@ -587,7 +587,7 @@ REGSAM CRegistry::SetSecurity(REGSAM samSecurity)
 //							Indicates if you want to ...
 //
 //	RetValue:	none.
-///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montréal/
+///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montreal/
 GSvoid CRegistry::SetShouldCreateKeyIfNotExist(GSbool bShouldCreateKeyIfNotExist)
 {
 	m_bShouldCreateKeyIfNotExist = bShouldCreateKeyIfNotExist;
@@ -626,7 +626,7 @@ GSvoid CRegistry::SetShouldCreateKeyIfNotExist(GSbool bShouldCreateKeyIfNotExist
 //					On success.
 //				GS_FALSE
 //					On failure.
-///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montréal/
+///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montreal/
 GSbool CRegistry::ReadBinary(LPCTSTR lpszValueName, LPVOID lpBuffer,GSuint uiBufferSize)
 {
 	GSbool bKeyWasAlreadyOpen = m_bKeyOpen;
@@ -675,7 +675,7 @@ GSbool CRegistry::ReadBinary(LPCTSTR lpszValueName, LPVOID lpBuffer,GSuint uiBuf
 //					On success.
 //				GS_FALSE
 //					On failure.
-///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montréal/
+///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montreal/
 GSbool CRegistry::ReadDWord(LPCTSTR lpszValueName, LPDWORD lpBuffer)
 {
 	GSbool bKeyWasAlreadyOpen = m_bKeyOpen;
@@ -725,7 +725,7 @@ GSbool CRegistry::ReadDWord(LPCTSTR lpszValueName, LPDWORD lpBuffer)
 //					On success.
 //				GS_FALSE
 //					On failure.
-///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montréal/
+///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montreal/
 GSbool CRegistry::ReadString(LPCTSTR lpszValueName, CString* pcsBuffer)
 {
 	GSbool bKeyWasAlreadyOpen = m_bKeyOpen;
@@ -765,7 +765,7 @@ GSbool CRegistry::ReadString(LPCTSTR lpszValueName, CString* pcsBuffer)
 //                On success.
 //             GS_FALSE
 //                On failure.
-///////////////////Created/1999/09/23/by/Antoine/Boivin/Filion/UbiSoft/Montréal/
+///////////////////Created/1999/09/23/by/Antoine/Boivin/Filion/UbiSoft/Montreal/
 GSbool CRegistry::EnumKeys(CStringList* pcslKeys)
 {
 	GSbool bKeyWasAlreadyOpen = m_bKeyOpen;
@@ -851,7 +851,7 @@ end:
 //					On success.
 //				GS_FALSE
 //					On failure.
-///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montréal/
+///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montreal/
 GSbool CRegistry::WriteBinary(LPCTSTR lpszValueName, LPVOID lpBuffer,GSuint uiBufferSize)
 {
 	GSbool bKeyWasAlreadyOpen = m_bKeyOpen;
@@ -901,7 +901,7 @@ GSbool CRegistry::WriteBinary(LPCTSTR lpszValueName, LPVOID lpBuffer,GSuint uiBu
 //					On success.
 //				GS_FALSE
 //					On failure.
-///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montréal/
+///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montreal/
 GSbool CRegistry::WriteDWord(LPCTSTR lpszValueName, DWORD dwBuffer)
 {
 	GSbool bKeyWasAlreadyOpen = m_bKeyOpen;
@@ -950,7 +950,7 @@ GSbool CRegistry::WriteDWord(LPCTSTR lpszValueName, DWORD dwBuffer)
 //					On success.
 //				GS_FALSE
 //					On failure.
-///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montréal/
+///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montreal/
 GSbool CRegistry::WriteString(LPCTSTR lpszValueName, LPCTSTR lpszBuffer)
 {
 	GSbool bKeyWasAlreadyOpen = m_bKeyOpen;
@@ -989,7 +989,7 @@ GSbool CRegistry::WriteString(LPCTSTR lpszValueName, LPCTSTR lpszBuffer)
 //					On success.
 //				GS_FALSE
 //					On failure.
-///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montréal/
+///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montreal/
 GSbool CRegistry::DeleteValue(LPCTSTR lpszValueName)
 {
 	GSbool bKeyWasAlreadyOpen = m_bKeyOpen;
@@ -1023,7 +1023,7 @@ GSbool CRegistry::DeleteValue(LPCTSTR lpszValueName)
 //					On success.
 //				GS_FALSE
 //					On failure.
-///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montréal/
+///////////////////Created/1999/01/28/by/Jean-Pierre/Martineau/UbiSoft/Montreal/
 GSbool CRegistry::DeleteKeyValues()
 {
 	GSbool bKeyWasAlreadyOpen = m_bKeyOpen;

@@ -132,7 +132,7 @@ enum FeaturesEnum
 	// DS Debug Store. The processor supports the ability to write debug information into a
 	// memory resident buffer. This feature is used by the branch trace store (BTS) and
 	// precise event-based sampling (PEBS) facilities (see Chapter 15, Debugging and
-	// Performance Monitoring, in the IA-32 Intel Architecture Software Developer’s
+	// Performance Monitoring, in the IA-32 Intel Architecture Software Developer's
 	// Manual, Volume 3).
 	g_featureDS   = 1 << 21,
 

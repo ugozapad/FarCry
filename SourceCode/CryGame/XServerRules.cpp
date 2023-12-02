@@ -292,7 +292,7 @@ void CXServerRules::OnClientMsgText(EntityId sender, TextMessage &tm)
 {
 	const char *szMessageType=0;
 
-	// Modified by Márcio
+	// Modified by Marcio
 	//------------------------------------------------------------------------------------------------- 
 	// TODO:
 	// 

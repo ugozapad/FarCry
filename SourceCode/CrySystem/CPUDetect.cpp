@@ -168,7 +168,7 @@ static unsigned long __stdcall DetectProcessor( void *arg )
     jne check_80286     /* go check for 80286 */
     push sp         /* double check with push sp */
     pop dx          /* if value pushed was different */
-    cmp dx, sp        /* means it’s really an 8086 */
+    cmp dx, sp        /* means it's really an 8086 */
     jne end_cpu_type    /* jump if processor is 8086/8088 */
     mov cpu_type, 010h    /* indicate unknown processor */
     jmp end_cpu_type
@@ -207,7 +207,7 @@ check_80286:
     popfd         /* replace current EFLAGS value */
     pushfd          /* get new EFLAGS */
     pop eax         /* store new EFLAGS in EAX */
-    cmp eax, ebx      /* can’t toggle AC bit, processor=80386 */
+    cmp eax, ebx      /* can't toggle AC bit, processor=80386 */
     jz end_cpu_type     /* jump if 80386 processor */
     push ebx
     popfd         /* restore AC bit in EFLAGS */

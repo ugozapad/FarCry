@@ -4,7 +4,7 @@
 
   Revision history:
     * Created by Honitch Andrey
-	* Modified by Márcio Martins
+    * Modified by Marcio Martins
 
 =============================================================================*/
 

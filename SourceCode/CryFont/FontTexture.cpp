@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------------------
-// Author: Márcio Martins
+// Author: Marcio Martins
 //
 // Purpose:
 //  - Create and update a texture with the most recently used glyphs
@@ -483,4 +483,4 @@ int CFontTexture::UpdateSlot(int iSlot, unsigned int dwUsage, wchar_t cChar)
 	return 1;
 }
 
-//------------------------------------------------------------------------------------------------- 
+//-------------------------------------------------------------------------------------------------

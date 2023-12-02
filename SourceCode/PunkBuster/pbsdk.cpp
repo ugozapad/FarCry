@@ -3,7 +3,7 @@
 //
 // PunkBuster / Game Integration SDK
 //
-// © Copyright 2003-2004 Even Balance, Inc. All Rights Reserved.
+// (c) Copyright 2003-2004 Even Balance, Inc. All Rights Reserved.
 //
 // This Software Development Kit (SDK) is proprietary and confidential. It may not be used,
 // transferred, displayed or otherwise distributed in any manner except by express written 
