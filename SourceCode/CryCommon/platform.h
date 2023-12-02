@@ -255,7 +255,7 @@ static int64 GetTicks()
 
 #if defined(LINUX)
 	#define RC_EXECUTABLE "rc"
-	#include <WinBase.h>
+//	#include <WinBase.h>
 #endif
 
 #endif // _PLATFORM_H_

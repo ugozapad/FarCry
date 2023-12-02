@@ -329,9 +329,13 @@ typedef Vec3_f64 vectorr;
 typedef Vec3_tpl<int>		vectori;
 
 
+template <>
 inline Vec3_tpl<f32>::Vec3_tpl(type_min) { x=y=z=-3.3E38f; }
+template <>
 inline Vec3_tpl<f32>::Vec3_tpl(type_max) { x=y=z=3.3E38f; }
+template <>
 inline Vec3_tpl<f64>::Vec3_tpl(type_min) { x=y=z=-1.7E308; }
+template <>
 inline Vec3_tpl<f64>::Vec3_tpl(type_max) { x=y=z=1.7E308; }
 
 template<class F> 

@@ -26,6 +26,8 @@
 #include "Cry_Geo.h"
 //DOC-IGNORE-END
 
+Plane GetPlane(const Vec3 &v0, const Vec3 &v1, const Vec3 &v2);
+
 #ifdef WIN64
 #include "Cry_XOptimise.h" // workaround for Amd64 compiler
 #endif
@@ -983,7 +985,7 @@ inline Matrix44	ViewMatrix(const Ang3 &angle)	{
 	Matrix33 ViewMatZ=Matrix33::CreateRotationZ(-angle.x);
 	Matrix33 ViewMatX=Matrix33::CreateRotationX(-angle.y);
 	Matrix33 ViewMatY=Matrix33::CreateRotationY(+angle.z);
-	return GetTransposed44( ViewMatX*ViewMatY*ViewMatZ);
+	return GetTransposed44(Matrix44(ViewMatX*ViewMatY*ViewMatZ));
 }
 
 //ZXY

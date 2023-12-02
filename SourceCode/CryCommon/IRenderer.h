@@ -14,14 +14,14 @@
 #ifndef _IRENDERER_H
 #define _IRENDERER_H
 
-#if defined(LINUX)
-	#include "Splash.h"
-#else
+//#if defined(LINUX)
+//	#include "Splash.h"
+//#else
 	enum eSplashType
 	{
 		EST_Water,
 	};
-#endif
+//#endif
 
 
 typedef HRESULT (*MIPDXTcallback)(void * data, int miplevel, DWORD size, int width, int height, void * user_data);
@@ -98,7 +98,7 @@ template	<class T> class list2;
 
 //DOC-IGNORE-BEGIN
 #include "ColorDefs.h"
-#include "TArray.h"
+#include "Tarray.h"
 
 #include <IFont.h>
 //DOC-IGNORE-END

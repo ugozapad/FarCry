@@ -30,8 +30,8 @@
 
 // !!! Do not add any headers here !!!
 #include <IProcess.h>
-#include <CryEngineDecalInfo.h> 
-#include "IStatobj.h"
+#include <CryEngineDecalInfo.h>
+#include "IStatObj.h"
 // !!! Do not add any headers here !!!
 
 struct ISystem;
@@ -44,9 +44,9 @@ struct RenderLMData;
 struct AnimTexInfo;
 template <class T> class list2;
 
-#if defined(LINUX)
-	#include "Splash.h"
-#endif
+//#if defined(LINUX)
+//	#include "Splash.h"
+//#endif
 
 
 /*! SVariationValue used to specify value, which can have random variance.
@@ -74,6 +74,7 @@ private:
 };
 
 // Specialation for vectors.
+template<>
 inline Vec3 SVariationValue<Vec3>::GetVariantValue() const
 {
 	Vec3 v;
