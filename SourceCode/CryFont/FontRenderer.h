@@ -14,7 +14,7 @@
 #include <string>
 
 #include "GlyphBitmap.h"
-#include "FreeType2/include/FreeType/FreeType.h"
+#include "FreeType2/include/freetype/freetype.h"
 
 
 

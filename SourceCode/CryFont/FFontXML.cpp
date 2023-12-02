@@ -10,7 +10,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "FFont.h"
 #include <XmlStream.h>
 #include <Cry_Math.h>
