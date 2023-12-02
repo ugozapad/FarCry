@@ -1726,7 +1726,6 @@ exr:
     rc->m_hDC = GetDC((HWND)Glhwnd);
   }
   rc->m_Glhwnd = (HWND)Glhwnd;
-  m_CurrContext = rc;
 
   // Find functions.
   SUPPORTS_GL = 1;
@@ -1759,7 +1758,7 @@ exr:
   iLog->Log("GL_VERSION: %s\n", m_VersionName);
   m_ExtensionsName = glGetString(GL_EXTENSIONS);
   iLog->LogToFile("GL_EXTENSIONS:\n");
-  char ext[8192];
+  char ext[16384];
   char *token;
   strcpy(ext, (char *)m_ExtensionsName);
   token = strtok(ext, " ");
