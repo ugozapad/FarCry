@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 
 #ifndef NOT_USE_UBICOM_SDK
 

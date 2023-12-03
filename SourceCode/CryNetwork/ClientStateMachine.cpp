@@ -11,7 +11,7 @@
 //////////////////////////////////////////////////////////////////////
 
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "ClientStateMachine.h"
 
 #ifdef _DEBUG

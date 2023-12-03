@@ -1,5 +1,5 @@
-#include "stdafx.h"
-#include "ctpendpointgnb.h"
+#include "StdAfx.h"
+#include "CTPEndpointGNB.h"
 #include <IDataProbe.h>
 
 #define PACKET_SIZE_COMPRESSION_LIMIT 100

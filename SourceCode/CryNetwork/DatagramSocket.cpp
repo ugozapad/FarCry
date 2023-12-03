@@ -12,7 +12,7 @@
 
 
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <IPAddress.h>
 #include "DatagramSocket.h"
 #include "Network.h"

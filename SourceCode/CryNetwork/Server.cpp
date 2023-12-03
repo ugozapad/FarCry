@@ -11,7 +11,7 @@
 //////////////////////////////////////////////////////////////////////
 
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "Network.h"
 #include "CNP.h"
 #include "Server.h"

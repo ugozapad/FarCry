@@ -1,5 +1,5 @@
-#include "stdafx.h"
-#include "rconsystem.h"			// CRConSystem
+#include "StdAfx.h"
+#include "RConSystem.h"			// CRConSystem
 #include "Network.h"				// CNetwork
 #include "CNP.h"						// CQPRConCommand
 #include "IConsole.h"				// IConsole

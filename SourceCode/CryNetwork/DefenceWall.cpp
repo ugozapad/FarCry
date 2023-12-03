@@ -22,6 +22,7 @@
 #include "ServerSlot.h"
 
 #include "ICryPak.h"
+#include <algorithm>
 
 //#define LOGEVENTS							// don't use in public release
 

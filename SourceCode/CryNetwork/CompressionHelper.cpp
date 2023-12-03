@@ -1,6 +1,6 @@
-#include "stdafx.h"
-#include "compressionhelper.h"
-#include "stream.h"								// CStream
+#include "StdAfx.h"
+#include "CompressionHelper.h"
+#include "Stream.h"								// CStream
 
 
 CCompressionHelper::CCompressionHelper()
