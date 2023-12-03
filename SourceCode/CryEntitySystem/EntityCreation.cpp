@@ -12,7 +12,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
 #include "EntitySystem.h"
 #include <string.h>

@@ -1,7 +1,7 @@
 #ifndef __CNAME_H__
 #define __CNAME_H__
 
-#include <TArray.h>
+#include <Tarray.h>
 
 #define MAX_SNAME_LEN 256
 

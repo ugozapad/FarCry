@@ -1,7 +1,7 @@
 // CryEntityDLL.cpp : Defines the entry point for the DLL application.
 //
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #if !defined(_XBOX) && !defined(LINUX)
 #include <windows.h>
 #else

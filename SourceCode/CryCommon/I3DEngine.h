@@ -44,9 +44,10 @@ struct RenderLMData;
 struct AnimTexInfo;
 template <class T> class list2;
 
-//#if defined(LINUX)
+#if defined(LINUX)
 //	#include "Splash.h"
-//#endif
+	#include "IRenderer.h"
+#endif
 
 
 /*! SVariationValue used to specify value, which can have random variance.

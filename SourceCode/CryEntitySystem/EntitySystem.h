@@ -41,7 +41,7 @@ class CEntityClonesMgr;
 #else
 #if defined(LINUX)
 #include <ext/hash_map>
-#include "ientityrenderstate.h"
+#include "IEntityRenderState.h"
 #else
 #include <hash_map>
 #endif
