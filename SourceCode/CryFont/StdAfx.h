@@ -59,7 +59,7 @@
 #include <map>	
 //#include <xdebug>
 
-#ifdef _DEBUG
+#if defined(WIN32) && defined(_DEBUG)
 
 #include <crtdbg.h>
 #define DEBUG_NEW_NORMAL_CLIENTBLOCK(file, line) new(_NORMAL_BLOCK, file, line)
