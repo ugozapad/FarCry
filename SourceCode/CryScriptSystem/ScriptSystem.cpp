@@ -2,7 +2,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <string.h>
 #include <stdio.h>
 #include "ScriptSystem.h"
@@ -31,7 +31,7 @@ extern "C"
 #define new DEBUG_CLIENTBLOCK
 #endif
 
-#include "LuaCryPakIo.h"
+#include "LuaCryPakIO.h"
 
 //#ifndef WIN64 // experimental
 #define USE_RAW_CALL
