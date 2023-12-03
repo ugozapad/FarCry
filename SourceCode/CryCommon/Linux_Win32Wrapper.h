@@ -3,6 +3,16 @@
 #define __Linux_Win32Wrapper_h__
 #pragma once
 
+#define RemoveCRLF(...) //TODO: Add real function or delete RemoveCRLF from code
+
+#define DebugBreak() do { __asm__ volatile ("int $3"); } while(0)
+
+//////////////////////////////////////////////////////////////////////////
+extern char*    _fullpath(char* absPath, const char* relPath, size_t maxLength);
+extern intptr_t _findfirst64(const char* filespec, struct __finddata64_t* fileinfo);
+extern int      _findnext64(intptr_t handle, struct __finddata64_t* fileinfo);
+extern int      _findclose(intptr_t handle);
+
 extern "C" char* strlwr(char* str);
 extern "C" char* strupr(char* str);
 
@@ -11,7 +21,6 @@ extern void _splitpath(const char* inpath, char* drv, char* dir, char* fname, ch
 
 extern bool QueryPerformanceCounter(LARGE_INTEGER* counter);
 extern bool QueryPerformanceFrequency(LARGE_INTEGER* frequency);
-#ifdef __cplusplus
 inline uint32 GetTickCount()
 {
 	LARGE_INTEGER count, freq;
@@ -19,7 +28,6 @@ inline uint32 GetTickCount()
 	QueryPerformanceFrequency(&freq);
 	return uint32(count.QuadPart * 1000 / freq.QuadPart);
 }
-#endif
 
 //begin--------------------------------findfirst/-next declaration/implementation----------------------------------------------------
 
@@ -76,5 +84,7 @@ extern intptr_t _findfirst64(const char* pFileName, __finddata64_t* pFindData);
 extern bool IsBadReadPtr(void* ptr, unsigned int size);
 void OutputDebugString(const char*);
 extern BOOL SetFileAttributes(LPCSTR, DWORD attributes);
+
+bool MakeSureDirectoryPathExists(const char* path);
 
 #endif // __Linux_Win32Wrapper_h__

@@ -114,6 +114,9 @@ typedef int 						HRESULT;
 #define _MAX_PATH MAX_PATH
 #endif
 
+#define _A_RDONLY (0x01)
+#define _A_SUBDIR (0x10)
+#define _A_HIDDEN (0x02)
 
 //-------------------------------------socket stuff------------------------------------------
 #define SOCKET int
