@@ -1889,8 +1889,8 @@ int CScriptObjectGame::GetEntitiesScreenSpace(IFunctionHandler *pH)
 
 							Matrix44 m;
 							m.SetIdentity();
-							m=GetTranslationMat(pEnt->GetPos())*m;
-							m=Matrix44::CreateRotationZYX(-pEnt->GetAngles()*gf_DEGTORAD)*m; //NOTE: angles in radians and negated 
+							m = Matrix44::GetTranslationMat(pEnt->GetPos())*m;
+							m = Matrix44::CreateRotationZYX(-pEnt->GetAngles()*gf_DEGTORAD)*m; //NOTE: angles in radians and negated
 
 
 

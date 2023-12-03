@@ -3851,8 +3851,8 @@ void SParamComp_PlantsTMoving::mfGet4f(vec4_t v)
     {
       m_LastAX = ax;
       m_LastAY = ay;
-			SParamComp_PlantsTMoving::m_Matrix	=	GetTranslationMat(Vec3d(0.5f, 1.0f, 0))*Matrix33::CreateRotationZ(ax / 180.0f * PI)*Matrix33::CreateRotationY( -ay / 180.0f * PI ); //IMPORTANT: radian-angle must be negated ;
-			SParamComp_PlantsTMoving::m_Matrix	=	GetTranslationMat(Vec3d(-0.5f, -1.0f, 0))*SParamComp_PlantsTMoving::m_Matrix;
+			SParamComp_PlantsTMoving::m_Matrix = Matrix44::GetTranslationMat(Vec3d(0.5f, 1.0f, 0))*Matrix33::CreateRotationZ(ax / 180.0f * PI)*Matrix33::CreateRotationY( -ay / 180.0f * PI ); //IMPORTANT: radian-angle must be negated ;
+			SParamComp_PlantsTMoving::m_Matrix = Matrix44::GetTranslationMat(Vec3d(-0.5f, -1.0f, 0))*SParamComp_PlantsTMoving::m_Matrix;
 		}
   }
   int j = (m_Offs >> 4) & 0xf;

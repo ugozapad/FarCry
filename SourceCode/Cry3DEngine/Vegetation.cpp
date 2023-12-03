@@ -324,15 +324,15 @@ bool CStatObjInst::DrawEntity(const struct SRendParams & _EntDrawParams)
       float fAngle2 = cry_atanf(DZ/fDistance)*gf_RADTODEG*(1.f-fLodSwitchCountDown);
 
       objMatrix.SetIdentity();
-      objMatrix=GetTranslationMat(rParms.vPos+pBodyLow->GetCenter()*m_fScale)*objMatrix;
+      objMatrix = Matrix44::GetTranslationMat(rParms.vPos+pBodyLow->GetCenter()*m_fScale)*objMatrix;
 
       objMatrix=Matrix44::CreateRotationZYX(-gf_DEGTORAD*Vec3d(0,0,-fRealAngle))*objMatrix; //NOTE: angles in radians and negated 
       objMatrix=Matrix44::CreateRotationZYX(-gf_DEGTORAD*Vec3d(fAngle2,0,0))*objMatrix; //NOTE: angles in radians and negated 
       objMatrix=Matrix44::CreateRotationZYX( gf_DEGTORAD*Vec3d(0,0,-fRealAngle))*objMatrix; //NOTE: angles in radians and negated 
 
 
-      objMatrix	=	Matrix44::CreateRotationZYX(-gf_DEGTORAD*Vec3d(0,0,fAngle1))*objMatrix; //NOTE: angles in radians and negated 
-      objMatrix	=	GetTranslationMat(-pBodyLow->GetCenter()*m_fScale)*objMatrix;
+      objMatrix	= Matrix44::CreateRotationZYX(-gf_DEGTORAD*Vec3d(0,0,fAngle1))*objMatrix; //NOTE: angles in radians and negated
+      objMatrix	= Matrix44::GetTranslationMat(-pBodyLow->GetCenter()*m_fScale)*objMatrix;
       objMatrix = Matrix33::CreateScale( Vec3d(rParms.fScale,rParms.fScale,rParms.fScale) )*objMatrix;
       rParms.pMatrix = &objMatrix;
       rParms.dwFObjFlags |= FOB_TRANS_MASK;
