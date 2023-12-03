@@ -27,7 +27,7 @@
 #include <ISound.h>
 // <<FIXME>> look above
 #include "I3DEngine.h"
-#include <crycharanimationparams.h>
+#include <CryCharAnimationParams.h>
 
 
 // to use _isnan()

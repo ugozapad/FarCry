@@ -8,7 +8,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "XSurfaceMgr.h"
 #include <ICryPak.h>
 

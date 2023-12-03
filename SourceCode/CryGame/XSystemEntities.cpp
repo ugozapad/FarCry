@@ -6,7 +6,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
 #include <IEntitySystem.h>
 #include "XSystemBase.h"

@@ -14,7 +14,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "ScriptObjectAI.h"
 #include "ScriptObjectVector.h"
 #include <IAISystem.h>

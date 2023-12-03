@@ -10,7 +10,7 @@
 //	
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h" 
+#include "StdAfx.h"
 
 #include "Game.h"
 #include "XNetwork.h"
@@ -273,7 +273,7 @@ bool CXGame::SaveToStream(CStream &stm, Vec3d *pos, Vec3d *angles,string sFilena
 	stm.Write(szLowerCaseStr);
 
 	// write current time and date
-	SYSTEMTIME pSystemTime;		
+	SYSTEMTIME pSystemTime;
 	GetLocalTime(&pSystemTime);	// FIX: this should be moved to crysystem
 
 	stm.Write((unsigned char)pSystemTime.wHour);	// hour

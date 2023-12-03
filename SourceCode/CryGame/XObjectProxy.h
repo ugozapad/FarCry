@@ -7,7 +7,7 @@
 //////////////////////////////////////////////////////////////////////
 
 #pragma once
-#include <iagent.h>
+#include <IAgent.h>
 
 class CXObjectProxy :	public IUnknownProxy
 {

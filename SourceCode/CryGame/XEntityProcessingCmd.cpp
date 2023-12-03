@@ -10,7 +10,7 @@
 //
 //////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "XEntityProcessingCmd.h"
 
 #define NO_QUANTIZED_ANGLES

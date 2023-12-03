@@ -8,8 +8,8 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
-#include "synchedrandomseed.h"
+#include "StdAfx.h"
+#include "SynchedRandomSeed.h"
 #include "XPlayer.h"								// CPlayer
 
 

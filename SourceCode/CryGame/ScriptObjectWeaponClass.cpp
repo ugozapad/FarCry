@@ -14,7 +14,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "ScriptObjectWeaponClass.h"
 #include "ScriptObjectVector.h"
 #include "WeaponClass.h"

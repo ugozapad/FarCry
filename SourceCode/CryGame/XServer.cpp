@@ -10,9 +10,9 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "XSystemServer.h"
-#include <I3dengine.h>
+#include <I3DEngine.h>
 
 #include <IEntitySystem.h>
 
@@ -27,9 +27,9 @@
 #include "TagPoint.h"
 #include <IRenderer.h>
 
-#if defined(LINUX)
-	#include "WinBase.h"
-#endif
+//#if defined(LINUX)
+//	#include "WinBase.h"
+//#endif
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////

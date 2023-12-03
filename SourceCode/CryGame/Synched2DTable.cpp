@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <IEntitySystem.h>
 #include "Game.h"
 #include "Synched2DTable.h"									// CSynched2DTable

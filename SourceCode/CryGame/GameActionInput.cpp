@@ -11,7 +11,7 @@
 //	
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h" 
+#include "StdAfx.h"
 
 #include "Game.h"
 #include "XNetwork.h"

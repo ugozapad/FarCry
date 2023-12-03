@@ -6,7 +6,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "IXSystem.h"
 #include "ScriptObjectServer.h"
 #include "ScriptObjectVector.h"

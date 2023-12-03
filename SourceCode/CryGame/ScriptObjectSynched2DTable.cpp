@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "ScriptObjectSynched2DTable.h"		// CScriptObjectSynched2DTable
 #include "Synched2DTable.h"								// CSynched2DTable
 

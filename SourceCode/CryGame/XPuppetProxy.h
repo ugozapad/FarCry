@@ -17,7 +17,7 @@
 #include <IAgent.h>
 #include <string>
 
-#include "aihandler.h"
+#include "AIHandler.h"
 
 
 struct IPuppet;

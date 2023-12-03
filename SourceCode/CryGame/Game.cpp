@@ -10,7 +10,7 @@
 //
 //////////////////////////////////////////////////////////////////////
  
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <IStreamEngine.h>
 #include <ICryPak.h>
 #include "Game.h"

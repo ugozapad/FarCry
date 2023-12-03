@@ -6,8 +6,8 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
-#include <crysizer.h>
+#include "StdAfx.h"
+#include <CrySizer.h>
 #include "Game.h" 
 #include "TagPoint.h"
 #include "XSurfaceMgr.h"

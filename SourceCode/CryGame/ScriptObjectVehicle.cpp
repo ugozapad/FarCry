@@ -8,10 +8,10 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "XPlayer.h"
 #include "ScriptObjectVehicle.h"
-#include "xvehicle.h"
+#include "XVehicle.h"
 #include "ScriptObjectVector.h"
 #include "IAgent.h"
 

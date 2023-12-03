@@ -11,7 +11,7 @@
 
 #include "GameObject.h"
 #include <IEntitySystem.h>
-#include "xarea.h"
+#include "XArea.h"
 
 class CXGame;
 

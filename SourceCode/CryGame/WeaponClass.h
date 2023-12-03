@@ -17,7 +17,7 @@
 
 #include "ScriptObjectVector.h"
 #include "FireType.h"
-#include "xplayer.h"
+#include "XPlayer.h"
 
 #include <string>
 #include <vector>

@@ -10,7 +10,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "XClient.h"
 #include "XPlayer.h"
 
@@ -19,7 +19,7 @@
 #include "XSystemDummy.h"
 #include "IngameDialog.h"
 
-#include <I3dengine.h>
+#include <I3DEngine.h>
 
 #include <IEntitySystem.h>
 #include <IMovieSystem.h>

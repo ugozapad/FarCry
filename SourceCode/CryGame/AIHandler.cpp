@@ -10,8 +10,8 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
-#include "aihandler.h"
+#include "StdAfx.h"
+#include "AIHandler.h"
 #include <ISound.h>
 #include <IAISystem.h>
 #include <ILipSync.h>
