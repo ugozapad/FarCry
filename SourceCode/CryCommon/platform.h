@@ -256,6 +256,72 @@ static int64 GetTicks()
 #if defined(LINUX)
 	#define RC_EXECUTABLE "rc"
 //	#include <WinBase.h>
+
+	inline void OutputDebugString(const char* outputString)
+	{
+		#if _DEBUG
+		// There is no such thing as a debug console on XCode
+		fprintf(stderr, "debug: %s\n", outputString);
+		#endif
+	}
+
+	inline bool IsBadReadPtr(void* ptr, unsigned int size)
+	{
+		//too complicated to really support it
+		return ptr? false : true;
+	}
+
+	inline BOOL SetFileAttributes(LPCSTR lpFileName, DWORD dwFileAttributes)
+	{
+		//TODO: implement
+		printf("SetFileAttributes not properly implemented yet, should not matter\n");
+		return TRUE;
+	}
+
+	inline char* strlwr(char* str)
+	{
+		char* cp;               /* traverses string for C locale conversion */
+
+		for (cp = str; *cp; ++cp)
+		{
+		if ('A' <= *cp && *cp <= 'Z')
+			*cp += 'a' - 'A';
+		}
+		return str;
+	}
+
+	inline void _makepath(char* path, const char* drive, const char* dir, const char* filename, const char* ext)
+	{
+		char ch;
+		char tmp[MAX_PATH];
+		if (!path)
+		return;
+		tmp[0] = '\0';
+		if (drive && drive[0])
+		{
+		tmp[0] = drive[0];
+		tmp[1] = ':';
+		tmp[2] = 0;
+		}
+		if (dir && dir[0])
+		{
+		strcat(tmp, dir);
+		ch = tmp[strlen(tmp) - 1];
+		if (ch != '/' && ch != '\\')
+			strcat(tmp, "\\");
+		}
+		if (filename && filename[0])
+		{
+		strcat(tmp, filename);
+		if (ext && ext[0])
+		{
+			if (ext[0] != '.')
+				strcat(tmp, ".");
+			strcat(tmp, ext);
+		}
+		}
+		strcpy(path, tmp);
+	}
 #endif
 
 #endif // _PLATFORM_H_
