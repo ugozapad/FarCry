@@ -7,6 +7,8 @@
 
 #define DebugBreak() do { __asm__ volatile ("int $3"); } while(0)
 
+extern DWORD GetCurrentDirectory(DWORD nBufferLength, char* lpBuffer);
+
 //////////////////////////////////////////////////////////////////////////
 extern char*    _fullpath(char* absPath, const char* relPath, size_t maxLength);
 extern intptr_t _findfirst64(const char* filespec, struct __finddata64_t* fileinfo);
