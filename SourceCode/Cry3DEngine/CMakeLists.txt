@@ -14,7 +14,7 @@ set(SRC_FILES
     "cbuffer.cpp"
     "Cry3DEngine.cpp"
     "CryStaticModel.cpp"
-    "cvars.cpp"
+    "CVars.cpp"
     "Decal.cpp"
     "DecalManager.cpp"
     "detail_grass.cpp"

@@ -182,7 +182,7 @@ struct IEntityRender;
 #include "TArrays.h"
 #include "list2.h"
 #include "terrain.h"
-#include "cvars.h"
+#include "CVars.h"
 #include "CrySizer.h"
 #include "StlUtils.h"
 
