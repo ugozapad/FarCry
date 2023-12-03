@@ -39,6 +39,12 @@
 #define USE_NEWPOOL
 #include <CryMemoryManager.h>
 
+#if defined(LINUX)
+	#include <unistd.h>
+	#include <fcntl.h>
+	static inline int closesocket(int s) { return ::close(s); }
+	static inline int WSAGetLastError() { return errno; }
+#endif
 
 #include <map>
 #include <INetwork.h>
