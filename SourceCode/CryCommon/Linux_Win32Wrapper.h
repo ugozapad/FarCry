@@ -15,11 +15,14 @@ extern intptr_t _findfirst64(const char* filespec, struct __finddata64_t* filein
 extern int      _findnext64(intptr_t handle, struct __finddata64_t* fileinfo);
 extern int      _findclose(intptr_t handle);
 
-extern "C" char* strlwr(char* str);
-extern "C" char* strupr(char* str);
+extern char* strlwr(char* str);
+extern char* strupr(char* str);
 
 extern void _makepath(char* path, const char* drive, const char* dir, const char* filename, const char* ext);
 extern void _splitpath(const char* inpath, char* drv, char* dir, char* fname, char* ext);
+
+#ifdef __cplusplus
+extern bool IsBadReadPtr(void* ptr, unsigned int size);
 
 extern bool QueryPerformanceCounter(LARGE_INTEGER* counter);
 extern bool QueryPerformanceFrequency(LARGE_INTEGER* frequency);
@@ -80,13 +83,13 @@ typedef struct _finddata_t : public __finddata64_t
 
 extern int      _findnext64(intptr_t last, __finddata64_t* pFindData);
 extern intptr_t _findfirst64(const char* pFileName, __finddata64_t* pFindData);
+#endif
 
 //end--------------------------------findfirst/-next declaration/implementation----------------------------------------------------
 
-extern bool IsBadReadPtr(void* ptr, unsigned int size);
 void OutputDebugString(const char*);
 extern BOOL SetFileAttributes(LPCSTR, DWORD attributes);
 
-bool MakeSureDirectoryPathExists(const char* path);
+extern BOOL MakeSureDirectoryPathExists(PCSTR DirPath);
 
 #endif // __Linux_Win32Wrapper_h__

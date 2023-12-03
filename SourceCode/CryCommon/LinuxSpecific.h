@@ -15,7 +15,7 @@
 #ifndef _CRY_COMMON_LINUX_SPECIFIC_HDR_
 #define _CRY_COMMON_LINUX_SPECIFIC_HDR_
 
-#include <cstdint>
+#include <stdint.h>
 #include <pthread.h>
 #include <math.h>
 #include <string.h>
