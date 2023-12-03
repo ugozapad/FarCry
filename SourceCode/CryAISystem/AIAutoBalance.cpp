@@ -1,10 +1,10 @@
-#include "stdafx.h"
-#include "aiautobalance.h"
-#include "caisystem.h"
-#include <irenderer.h>
-#include <isystem.h>
-#include <itimer.h>
-#include <iconsole.h>
+#include "StdAfx.h"
+#include "AIAutoBalance.h"
+#include "CAISystem.h"
+#include <IRenderer.h>
+#include <ISystem.h>
+#include <ITimer.h>
+#include <IConsole.h>
 
 CAIAutoBalance::CAIAutoBalance(void)
 {

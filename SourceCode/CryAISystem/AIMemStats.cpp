@@ -1,12 +1,12 @@
-#include "stdafx.h"
-#include <crysizer.h>
+#include "StdAfx.h"
+#include <CrySizer.h>
 #include "CAISystem.h"
 #include "Puppet.h"
 #include "AIVehicle.h"
 #include "AIPlayer.h"
 #include "GoalPipe.h"
 #include "GoalOp.h"
-#include "aiautobalance.h"
+#include "AIAutoBalance.h"
 
 
 

@@ -1,9 +1,9 @@
 	// CryAISystem.cpp : Defines the entry point for the DLL application.
 //
 
-#include "stdafx.h"
-#include "cryaisystem.h"
-#include "caisystem.h"
+#include "StdAfx.h"
+#include "CryAISystem.h"
+#include "CAISystem.h"
 #include <ISystem.h>
 
 #if defined(WIN32) && defined(_DEBUG) 

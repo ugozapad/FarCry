@@ -1,5 +1,5 @@
-#include "stdafx.h"
-#include "vertexlist.h"
+#include "StdAfx.h"
+#include "VertexList.h"
 #include <ISystem.h>
 #include <CryFile.h>
 

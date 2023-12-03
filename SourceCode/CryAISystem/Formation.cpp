@@ -1,5 +1,5 @@
-#include "stdafx.h"
-#include "formation.h"
+#include "StdAfx.h"
+#include "Formation.h"
 #include "AIObject.h"
 #include "CAISystem.h"
 #include <Cry_Math.h>

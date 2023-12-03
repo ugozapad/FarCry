@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <IPhysics.h>
 
 #if !defined(LINUX)
@@ -25,19 +25,19 @@
 #include <ILog.h>
 
 // important stuff
-#include "graph.h"
+#include "Graph.h"
 #include <ITimer.h>
 #include <IConsole.h>
 
 #include "Puppet.h"
 #include "AIVehicle.h"
-#include "aiattribute.h"
+#include "AIAttribute.h"
 #include "GoalPipe.h"
 #include "GoalOp.h"
 #include "AIPlayer.h"
 #include <algorithm>
 #include "PipeUser.h"
-#include "aiautobalance.h"
+#include "AIAutoBalance.h"
 
 
 #if defined(WIN32) && defined(_DEBUG) 

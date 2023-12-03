@@ -1,7 +1,7 @@
 #ifndef _AI_VEHICLE_
 #define _AI_VEHICLE_
 
-//#include "aiobject.h"
+//#include "AIObject.h"
 #include "Puppet.h"
 
 #include "CAISystem.h"

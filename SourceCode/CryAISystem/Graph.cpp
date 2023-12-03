@@ -2,7 +2,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "Graph.h"
 #include "Heuristic.h"
 #include "CAISystem.h"

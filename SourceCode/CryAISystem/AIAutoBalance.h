@@ -1,7 +1,7 @@
 #ifndef _AI_AUTOBALANCE_
 #define _AI_AUTOBALANCE_
 
-#include <iaisystem.h>
+#include <IAISystem.h>
 #include <vector>
 
 typedef std::vector<float> VectorOfFloats;

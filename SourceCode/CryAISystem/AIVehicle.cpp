@@ -1,5 +1,5 @@
-#include "stdafx.h"
-#include "aivehicle.h"
+#include "StdAfx.h"
+#include "AIVehicle.h"
 
 //#include <algorithm>
 #include "GoalOp.h"
@@ -13,7 +13,7 @@
 #include <ITimer.h>
 #include <IConsole.h>
 #include "VertexList.h"
-#include <stream.h>
+#include <Stream.h>
 
 
 CAIVehicle::CAIVehicle(void)
