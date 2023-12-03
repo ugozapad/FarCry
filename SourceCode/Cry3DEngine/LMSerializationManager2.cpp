@@ -1,7 +1,7 @@
 #define NO_GDI
-	#include "stdafx.h"
+	#include "StdAfx.h"
 #undef NO_GDI
-#include "Cry3dEngineBase.h"
+#include "Cry3DEngineBase.h"
 //#include <d3d8types.h>
 #include "dds.h"
 #include "LMSerializationManager2.h"

@@ -13,9 +13,9 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
-#include "3dEngine.h"
+#include "3DEngine.h"
 #include "CryStaticModel.h" 
 #include "statobj.h"
 #include "MeshIdx.h"

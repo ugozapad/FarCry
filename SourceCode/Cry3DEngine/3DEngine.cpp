@@ -13,11 +13,11 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
-#include "3dEngine.h"
-#include "visareas.h"
-#include "objman.h"
+#include "3DEngine.h"
+#include "VisAreas.h"
+#include "ObjMan.h"
 #include "terrain_water.h"
 #include "CryStaticModel.h"
 
@@ -25,16 +25,16 @@
 #include "DecalManager.h"
 #include "bflyes.h"
 #include "rain.h"
-#include "meshidx.h"
+#include "MeshIdx.h"
 #include "detail_grass.h"
 #include "StencilShadowEdgeDetector.h"						// CStencilShadowEdgeDetector
 #include "StencilShadowConnectivityBuilder.h"			// CStencilShadowConnectivityBuilder
-#include "watervolumes.h"
+#include "WaterVolumes.h"
 
 #include "LMCompStructures.h"
 #include "LMSerializationManager2.h"
 
-#include "brush.h"
+#include "Brush.h"
 
 ISystem * Cry3DEngineBase::m_pSys=0;
 IRenderer * Cry3DEngineBase::m_pRenderer=0;

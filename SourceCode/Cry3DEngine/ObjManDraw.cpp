@@ -13,13 +13,13 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
 #include "StatObj.h"
-#include "objman.h"
-#include "visareas.h"
+#include "ObjMan.h"
+#include "VisAreas.h"
 #include "terrain_sector.h"
-#include "3dengine.h"
+#include "3DEngine.h"
 #include "cbuffer.h"
 
 bool CObjManager::IsBoxOccluded( const Vec3d & vBoxMin, const Vec3d & vBoxMax, float fDistance, OcclusionTestClient * pOcclTestVars )

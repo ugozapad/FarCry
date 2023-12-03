@@ -29,8 +29,8 @@ class CCObject;
 struct CStatObjSV;
 struct ItShadowVolume;
 
-#include "istatobj.h"
-#include "istreamengine.h"
+#include "IStatObj.h"
+#include "IStreamEngine.h"
 
 #define STATOBJ_EFT_PLANT             (EFT_USER_FIRST+1)
 #define STATOBJ_EFT_PLANT_IN_SHADOW   (EFT_USER_FIRST+2)

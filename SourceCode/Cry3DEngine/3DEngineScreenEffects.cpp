@@ -12,9 +12,9 @@ TODO:
 =====================================================================
 */
 
-#include "stdafx.h"
-#include "3dEngine.h"
-#include "objman.h"
+#include "StdAfx.h"
+#include "3DEngine.h"
+#include "ObjMan.h"
 #include "../RenderDll/Common/RendElements/CREScreenCommon.h"
 
 // some helper macros

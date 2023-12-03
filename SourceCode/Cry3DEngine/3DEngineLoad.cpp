@@ -13,11 +13,11 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
-#include "3dEngine.h"
-#include "objman.h"
-#include "visareas.h"
+#include "3DEngine.h"
+#include "ObjMan.h"
+#include "VisAreas.h"
 #include "terrain_water.h"
 #include "CryStaticModel.h"
 #include "partman.h"
@@ -26,8 +26,8 @@
 #include "detail_grass.h"
 #include "rain.h"
 #include <IXMLDOM.h>
-#include "watervolumes.h"
-#include "brush.h"
+#include "WaterVolumes.h"
+#include "Brush.h"
 #include "LMCompStructures.h"
 
 #define LEVEL_DATA_FILE "LevelData.xml"

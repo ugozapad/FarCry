@@ -13,17 +13,17 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
 #include "CryStaticModel.h"
 
-#include "baseobj.h"
-#include "node.h"
-#include "geom.h"
-#include "helper.h"
-#include "light.h"
+#include "BaseObj.h"
+#include "Node.h"
+#include "Geom.h"
+#include "Helper.h"
+#include "Light.h"
 
-#include "file.h"
+#include "File.h"
 
 CryStaticModel::CryStaticModel()
 {

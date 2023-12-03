@@ -13,12 +13,12 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "terrain_sector.h"
-#include "objman.h"
+#include "ObjMan.h"
 #include "detail_grass.h"
 #include "terrain_water.h"
-#include "3dengine.h"
+#include "3DEngine.h"
 
 #ifdef PS2
 #include "File.h"

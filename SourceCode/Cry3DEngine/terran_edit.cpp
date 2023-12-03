@@ -13,13 +13,13 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
 #include "terrain_sector.h"
 #include "StatObj.h"
-#include "objman.h"
+#include "ObjMan.h"
 #include "detail_grass.h"
-#include "3dengine.h"
+#include "3DEngine.h"
 
 bool CTerrain::AddStaticObject(int nObjectID, const Vec3d & vPos, const float fScale, CObjManager * pObjManager, uchar ucBright)
 {

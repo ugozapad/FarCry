@@ -13,9 +13,9 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
-#include "statobj.h"
+#include "StatObj.h"
 #include "detail_grass.h"
 
 #include <IXMLDOM.h>

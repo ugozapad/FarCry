@@ -1,4 +1,4 @@
-#include "stdafx.h"																				// precompiled header
+#include "StdAfx.h"
 #include "StencilShadowConnectivity.h"
 #include "StencilShadowConnectivityBuilder.h"
 

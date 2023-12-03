@@ -17,7 +17,7 @@
 #define CObjManager_H
 
 #include "StatObj.h"
-#include "../RenderDll/Common/shadow_renderer.h"
+#include "../RenderDll/Common/Shadow_Renderer.h"
 #include "terrain_sector.h"
 
 #define   ENTITY_MAX_DIST_FACTOR 100

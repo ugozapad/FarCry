@@ -13,11 +13,11 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
-#include "watervolumes.h"
-#include "visareas.h"
-#include "3dengine.h"
+#include "WaterVolumes.h"
+#include "VisAreas.h"
+#include "3DEngine.h"
 
 // Shader params ids.
 enum {

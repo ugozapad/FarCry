@@ -13,10 +13,10 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "terrain_sector.h"
 #include "terrain.h"
-#include "objman.h"
+#include "ObjMan.h"
 
 // set texture for sector
 void CSectorInfo::SetTextures(bool bMakeUncompressedForEditing)

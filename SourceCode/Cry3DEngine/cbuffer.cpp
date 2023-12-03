@@ -13,7 +13,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "cbuffer.h"
 
 void CCoverageBuffer::TransformPoint(float out[4], const float m[16], const float in[4])

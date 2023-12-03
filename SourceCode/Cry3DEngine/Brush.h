@@ -1,7 +1,7 @@
 #ifndef _3DENGINE_BRUSH_H_
 #define _3DENGINE_BRUSH_H_
 
-#include "ObjMan.H"
+#include "ObjMan.h"
 
 #if defined(LINUX)
 #include "LMCompStructures.h"

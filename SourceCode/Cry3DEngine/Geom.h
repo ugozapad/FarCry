@@ -20,7 +20,7 @@
 #pragma once
 #endif // _MSC_VER > 1000
 
-#include "baseobj.h"
+#include "BaseObj.h"
 
 class CGeom  : public CBaseObj
 {

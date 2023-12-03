@@ -13,11 +13,11 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
 #include "StatObj.h"
 #include "MeshIdx.h"
-#include "irenderer.h"
+#include "IRenderer.h"
 
 #ifdef WIN64
 #pragma warning( push )									//AMD Port

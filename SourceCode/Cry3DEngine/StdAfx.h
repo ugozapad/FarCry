@@ -145,8 +145,8 @@ inline int __cdecl strnicmp (const char * first, const char * last, size_t count
 #include <IEntityRenderState.h>
 #include <I3DEngine.h>
 #include <IGame.h>
-#include <icryanimation.h>
-#include <icrypak.h>
+#include <ICryAnimation.h>
+#include <ICryPak.h>
 #include <CryFile.h>
 
 class  IPhysicalWorld;
@@ -176,14 +176,14 @@ struct IEntityRender;
 #include "CryHeaders.h"
 
 #include "Cry3DEngineBase.h"
-#include "file.h"
+#include "File.h"
 #include <float.h>
 
 #include "TArrays.h"
 #include "list2.h"
 #include "terrain.h"
 #include "cvars.h"
-#include "crysizer.h"
+#include "CrySizer.h"
 #include "StlUtils.h"
 
 inline float L1Distance2D(const Vec3 &v0, const Vec3 &v1)	{	return max(Ffabs(v0.x-v1.x),Ffabs(v0.y-v1.y));	}	
