@@ -3,11 +3,11 @@ project(Cry3DEngine)
 add_definitions(-D_USRDLL -DCRY3DENGINE_EXPORTS)
 
 set(SRC_FILES
-    "3dEngine.cpp"
-    "3dEngineLight.cpp"
-    "3dEngineLoad.cpp"
-    "3dEngineRender.cpp"
-    "3dEngineScreenEffects.cpp"
+    "3DEngine.cpp"
+    "3DEngineLight.cpp"
+    "3DEngineLoad.cpp"
+    "3DEngineRender.cpp"
+    "3DEngineScreenEffects.cpp"
     "BasicArea.cpp"
     "Brush.cpp"
     "BrushLM.cpp"
