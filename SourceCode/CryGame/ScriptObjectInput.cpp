@@ -111,7 +111,7 @@ int CScriptObjectInput::BindCommandToKey(IFunctionHandler *pH)
 		return pH->EndFunction();
 	 
 	char sTemp[256];strcpy(sTemp,sRes);
-	m_pConsole->CreateKeyBind(sCmd,_strlwr(sTemp),nCex?true:false);
+	m_pConsole->CreateKeyBind(sCmd, strlwr(sTemp), nCex?true:false);
 	
 	return pH->EndFunction();
 }

@@ -4853,7 +4853,7 @@ int CUISystem::ConvertToWString(wstring &szWString, IFunctionHandler *pH, int iP
 
 		pH->GetParam(iParam, iValue);
 
-		itoa(iValue, szValue, 10);
+		sprintf(szValue, "%d", iValue);
 		szString = szValue;
 	}
 

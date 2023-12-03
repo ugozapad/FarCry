@@ -18,6 +18,10 @@
 #include <CryFile.h>
 #include "Game.h"
 
+#ifdef LINUX
+	#include <limits.h>
+#endif
+
 #if defined(WIN32) && !defined(WIN64)
 //#include "Psapi.h"								// PSAPI is not supported on windows9x
 //#pragma comment(lib,"Psapi.lib")	// PSAPI is not supported on windows9x

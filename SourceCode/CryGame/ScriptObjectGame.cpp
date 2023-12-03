@@ -1126,7 +1126,8 @@ int CScriptObjectGame::GetLevelList (IFunctionHandler* pH)
 			for(int i = 0; i < (int)arrMissions.size(); i++)
 			{
 				static char szIndex[4];
-				pMissionObj->SetValue(itoa(i+1, szIndex, 10), arrMissions[i].c_str());
+				sprintf(szIndex, "%d", i+1);
+				pMissionObj->SetValue(szIndex, arrMissions[i].c_str());
 			}
 
 			pLevelObj->SetValue("MissionList", pMissionObj);
