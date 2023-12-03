@@ -60,7 +60,7 @@ set(SRC_FILES
     "CrySkinMorphBuilder.cpp"
     "CrySkinRigidBasis.cpp"
     "CryVertexBinding.cpp"
-    "cvars.cpp"
+    "CVars.cpp"
     "DebugUtils.cpp"
     "drand.cpp"
     "FileMapping.cpp"
@@ -71,12 +71,12 @@ set(SRC_FILES
     "RenderUtils.cpp"
     "splitpath.cpp"
     "SSEUtils.cpp"
-    "stdafx.cpp"
+    "StdAfx.cpp"
     "VertexBufferArrayDrivers.cpp"
     "XBoxExport.cpp"
 )
 
-if (${ARCH_TYPE} STREQUAL "x64")
+if (MSVC AND ${ARCH_TYPE} STREQUAL "x64")
     list(APPEND SRC_FILES "CrySkinAMD64.asm")
 endif()
 
