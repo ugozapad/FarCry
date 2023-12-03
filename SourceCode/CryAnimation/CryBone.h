@@ -17,7 +17,8 @@
 #include "AnimationLayerInfo.h"
 #include "CryBoneInfo.h"
 
-class CryModel; 
+class CryModel;
+class CryModelState;
 
 //////////////////////////////////////////////////////////////////////////
 // The bone class contains bone matrices and pointers to it parent and child's.

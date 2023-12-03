@@ -106,9 +106,9 @@ void CryCharReShadowVolume::submit (const SRendParams *rParams, IShader* pShadow
 //  pObj->m_nScissorY2 = rParams->nScissorY2;
 
 	pObj->m_DynLMMask = rParams->nDLightMask; // used for scissor test
-  Matrix34 t				= Matrix34::CreateTranslationMat(rParams->vPos);
-  Matrix33 r33			=	Matrix33::CreateRotationXYZ( Deg2Rad(Ang3(rParams->vAngles[0],-rParams->vAngles[1],rParams->vAngles[2])));	
-  pObj->m_Matrix    = GetTransposed44(t*r33);
+  Matrix34 t        = Matrix34::CreateTranslationMat(rParams->vPos);
+  Matrix33 r33      = Matrix33::CreateRotationXYZ( Deg2Rad(Ang3(rParams->vAngles[0],-rParams->vAngles[1],rParams->vAngles[2])));
+  pObj->m_Matrix    = GetTransposed44(Matrix44(t*r33));
   pObj->m_ObjFlags |= FOB_TRANS_MASK;
 
 //  m_pMesh->mfCheckUpdate(0);

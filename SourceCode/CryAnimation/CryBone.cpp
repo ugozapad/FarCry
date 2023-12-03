@@ -234,7 +234,7 @@ CryQuat CryBone::GetParentWQuat ()
 
 		//Q2M_CHANGED_BY_IVO
 		//qResult.GetMatrix(matTest);
-		matTest=GetTransposed44(Matrix33(qResult));
+		matTest = GetTransposed44(Matrix44(qResult));
 
 		for (int i = 0; i < 3; i++)
 			for (int j = 0; j < 3; ++j)
