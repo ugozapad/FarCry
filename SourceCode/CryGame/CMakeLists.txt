@@ -107,6 +107,8 @@ target_link_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/SourceCode/BinkSDK
 )
 
+if (MSVC)
 target_link_libraries(${PROJECT_NAME} PRIVATE
     Wsock32.lib
 )
+endif()
