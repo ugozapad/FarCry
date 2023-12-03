@@ -56,7 +56,7 @@ void CFormation::Create(FormationDescriptor & desc)
 
 		m_vPoints.push_back(pos);
 		m_vWorldPoints.push_back(pFormationDummy);
-		m_vReservations.push_back(false);
+		m_vReservations.push_back(0);
 	}
 
 }
