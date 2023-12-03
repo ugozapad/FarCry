@@ -307,7 +307,7 @@ extern float g_costab[SINCOSTABSZ],g_sintab[SINCOSTABSZ];
 #endif
 
 #if defined LINUX
-	#include "validator.h"
+//	#include "validator.h"
 #else
 	#define VALIDATOR_LOG(pLog,str) pLog->Log(str) //OutputDebugString(str)
 	#define VALIDATORS_START bool validate( const char *strSource, ILog *pLog, const vectorf &pt,\
