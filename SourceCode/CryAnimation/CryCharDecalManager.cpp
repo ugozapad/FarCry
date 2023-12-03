@@ -3,7 +3,7 @@
 // it can accept a fake pointer (like something on stack) for vertex array pointer.
 // UpdateIndices() actually just copies the indices into the vertex buffer structure
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <StlUtils.h>
 #include "CryGeometryInfo.h"
 #include "CryEngineDecalInfo.h"

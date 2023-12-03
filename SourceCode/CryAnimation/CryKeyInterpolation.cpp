@@ -1,7 +1,7 @@
 // Actually, the following files might have been made static methods of corresponding
 // key structures; but the key structures are declared in a common interface file for now.
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "CryKeyInterpolation.h"
 
 

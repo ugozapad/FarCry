@@ -1,5 +1,5 @@
 #include "StdAfx.h"
-#include "bsplineopen.h"
+#include "BSplineOpen.h"
 
 //////////////////////////////////////////////////////////////////////////
 // retrives the boundaries of the influence of the given control point, in time:

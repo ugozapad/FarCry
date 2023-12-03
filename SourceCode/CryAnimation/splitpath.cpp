@@ -7,7 +7,7 @@
 *       arbitrary path name
 *
 *******************************************************************************/
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <stdlib.h>
 
 #if !defined(LINUX)

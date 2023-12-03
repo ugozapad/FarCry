@@ -10,14 +10,14 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <IGame.h> // to examine whether we're in dedicated server mode
 #include "CryCharDecal.h"
 #include "CryCharInstance.h"
 #include "CryCharManager.h"
 #include "CryModelState.h"
 #include "ControllerManager.h"
-#include "cvars.h"
+#include "CVars.h"
 #include "CryCharBody.h"
 #include "StringUtils.h"
 #include "CryModEffAnimation.h"

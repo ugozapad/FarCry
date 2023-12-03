@@ -1,6 +1,6 @@
 #include "StdAfx.h"
 #include "FileMapping.h"
-#include "chunkfilereader.h"
+#include "ChunkFileReader.h"
 
 #ifdef _DEBUG
 #undef THIS_FILE

@@ -1,5 +1,5 @@
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "CryBone.h"
 #include "CryBoneInfo.h"
 #include "CryModelState.h"

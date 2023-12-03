@@ -12,7 +12,7 @@
 
 #define DECAL_USE_HELPERS 0
 
-#include <TArray.h>
+#include <Tarray.h>
 #include "SparseArrayDriver.h"
 #include "CryCharDecalCommon.h"
 

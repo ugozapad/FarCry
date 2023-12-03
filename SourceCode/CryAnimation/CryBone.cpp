@@ -9,7 +9,7 @@
 //  Single bone implementation
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <float.h>
 #include <StlUtils.h>
 #include "CryModel.h"
@@ -17,7 +17,7 @@
 #include "CryModelState.h"
 #include "ControllerManager.h"
 #include "ChunkFileReader.h"
-#include "STringUtils.h"
+#include "StringUtils.h"
 #include "CVars.h"
 
 

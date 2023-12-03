@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 //#include "CryAnimation.h"
 #include "CVars.h"
 #include "RenderUtils.h"

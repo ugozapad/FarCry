@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <Cry_Camera.h>
 #include <CryCharMorphParams.h>
 #include <StlUtils.h>

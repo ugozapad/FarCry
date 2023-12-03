@@ -9,7 +9,7 @@
 //	August 16, 2002: Created by Sergiy Migdalskiy <sergiy@crytek.de>
 //
 //////////////////////////////////////////////////////////////////////
-#include "stdafx.h"
+#include "StdAfx.h"
 //#include "CryAnimation.h"
 #include <CryAnimationScriptCommands.h>
 #include <Cry_Camera.h>
@@ -20,7 +20,7 @@
 #include "CryCharInstance.h"
 #include "CryCharManager.h"
 #include "ControllerManager.h"
-#include "cvars.h"
+#include "CVars.h"
 #include "CryCharBody.h"
 #include "StringUtils.h"
 #include "DebugUtils.h"

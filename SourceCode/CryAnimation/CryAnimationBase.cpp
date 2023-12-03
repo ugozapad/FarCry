@@ -13,7 +13,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <stdarg.h>
 #include "CVars.h"
 #include "CryCharManager.h"

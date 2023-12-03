@@ -12,7 +12,7 @@
 //     normals, tangents, whatever in the video memory), and these classes are just used to initialize them.
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "VertexBufferArrayDrivers.h"
 
 CVertexBufferPosArrayDriver::CVertexBufferPosArrayDriver (CLeafBuffer* pVertexBuffer, int nId, bool bSystemMemory)

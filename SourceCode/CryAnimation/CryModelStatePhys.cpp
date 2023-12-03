@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "CryModel.h"
 #include "CryModelState.h"
 #include "CVars.h"
