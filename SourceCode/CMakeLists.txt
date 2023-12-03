@@ -1,5 +1,5 @@
-if (MSVC)
 add_subdirectory(Cry3DEngine)
+if (MSVC)
 add_subdirectory(CryAISystem)
 add_subdirectory(CryAnimation)
 add_subdirectory(CryEntitySystem)
