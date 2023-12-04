@@ -21,6 +21,30 @@ extern char* strupr(char* str);
 extern void _makepath(char* path, const char* drive, const char* dir, const char* filename, const char* ext);
 extern void _splitpath(const char* inpath, char* drv, char* dir, char* fname, char* ext);
 
+//critical section stuff
+typedef pthread_mutex_t CRITICAL_SECTION;
+#ifdef __cplusplus
+inline void InitializeCriticalSection(CRITICAL_SECTION *lpCriticalSection)
+{
+	pthread_mutexattr_t pthread_mutexattr_def;
+	pthread_mutexattr_settype(&pthread_mutexattr_def, PTHREAD_MUTEX_RECURSIVE_NP);
+	pthread_mutex_init(lpCriticalSection, &pthread_mutexattr_def);
+}
+inline void EnterCriticalSection(CRITICAL_SECTION *lpCriticalSection){pthread_mutex_lock(lpCriticalSection);}
+inline void LeaveCriticalSection(CRITICAL_SECTION *lpCriticalSection){pthread_mutex_unlock(lpCriticalSection);}
+inline void DeleteCriticalSection(CRITICAL_SECTION *lpCriticalSection){}
+#else
+static void InitializeCriticalSection(CRITICAL_SECTION *lpCriticalSection)
+{
+	pthread_mutexattr_t pthread_mutexattr_def;
+	pthread_mutexattr_settype(&pthread_mutexattr_def, PTHREAD_MUTEX_RECURSIVE_NP);
+	pthread_mutex_init(lpCriticalSection, &pthread_mutexattr_def);
+}
+static void EnterCriticalSection(CRITICAL_SECTION *lpCriticalSection){pthread_mutex_lock(lpCriticalSection);}
+static void LeaveCriticalSection(CRITICAL_SECTION *lpCriticalSection){pthread_mutex_unlock(lpCriticalSection);}
+static void DeleteCriticalSection(CRITICAL_SECTION *lpCriticalSection){}
+#endif
+
 #ifdef __cplusplus
 extern bool IsBadReadPtr(void* ptr, unsigned int size);
 
