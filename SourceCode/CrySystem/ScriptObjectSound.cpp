@@ -9,7 +9,7 @@
 #include <IConsole.h>
 #include <ILog.h>
 #include <ISound.h>
-#ifdef WIN64
+#if defined(WIN64) || defined(LINUX64)
 #include <CrySound64.h>
 #else
 #include <CrySound.h>
