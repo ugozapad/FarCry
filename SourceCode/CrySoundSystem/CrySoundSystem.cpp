@@ -1,7 +1,7 @@
 // CrySoundSystem.cpp : Defines the entry point for the DLL application.
 //
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
 #ifdef USING_CRY_MEMORY_MANAGER
 #ifndef _XBOX

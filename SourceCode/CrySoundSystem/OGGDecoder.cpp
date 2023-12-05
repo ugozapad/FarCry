@@ -3,7 +3,7 @@
 #include <ISound.h>
 #include <ISystem.h>
 #include <ICryPak.h>
-#include "oggdecoder.h"
+#include "OGGDecoder.h"
 #include "MusicSystem.h"
 
 COGGDecoder::COGGDecoder(IMusicSystem *pMusicSystem)

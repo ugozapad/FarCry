@@ -1,5 +1,5 @@
 #include "StdAfx.h"
-#include "musicsystem.h"
+#include "MusicSystem.h"
 #include <CrySizer.h>
 #include <ISystem.h>
 #include "PatternDecoder.h"

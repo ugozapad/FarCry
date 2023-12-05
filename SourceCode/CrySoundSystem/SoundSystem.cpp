@@ -13,7 +13,7 @@
 //////////////////////////////////////////////////////////////////////
 
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #ifndef _XBOX
 #include <ISystem.h>
 #include <CrySizer.h>
@@ -26,7 +26,7 @@
 #include "SoundSystem.h"
 #include "MusicSystem.h"
 #include "Sound.h"
-#include <I3dEngine.h> //needed to check if the listener is in indoor or outdoor
+#include <I3DEngine.h> //needed to check if the listener is in indoor or outdoor
 #include <ICryPak.h> //needed to check if the listener is in indoor or outdoor
 
 //#define CS_BUFFERSIZE   10         /* millisecond value for FMOD buffersize. */

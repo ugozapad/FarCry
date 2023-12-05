@@ -3,7 +3,7 @@
 #include <ISound.h>
 #include <ISystem.h>
 #include <ICryPak.h>
-#include "AdpcmDecoder.h"
+#include "ADPCMDecoder.h"
 
 template< typename T, typename S > 
 inline void lsbshortldi( T& x, S& p )

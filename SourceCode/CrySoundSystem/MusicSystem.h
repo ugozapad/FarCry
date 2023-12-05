@@ -1,9 +1,9 @@
 #pragma once
 
 #include <vector>
-#include <isound.h>
-#include <itimer.h>
-#include <SmartPtr.h>
+#include <ISound.h>
+#include <ITimer.h>
+#include <smartptr.h>
 #include "MusicPattern.h"
 #include "RandGen.h"
 
