@@ -48,6 +48,7 @@ else() #x64
     endif()
 endif()
 
+if (MSVC)
 target_link_libraries(${PROJECT_NAME} PRIVATE
     ${CRYSOUND_LIB}
     ${OGG_STATIC_LIB}
@@ -55,3 +56,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     ${VORBISFILE_STATIC_LIB}
     legacy_stdio_definitions.lib
 )
+else() #TODO: remove this stub
+target_link_libraries(${PROJECT_NAME} PRIVATE)
+endif()
