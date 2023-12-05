@@ -24,13 +24,15 @@ void getTicks(int64* pnTime)
 {
 #ifdef WIN64
 	*pnTime = __rdtsc();
-#else
+#elif defined(WIN32)
 	__asm {
 		mov ebx, pnTime
 		rdtsc
 		mov [ebx], eax
 		mov [ebx+4], edx
 	}
+#else
+	*pnTime = GetTicks();
 #endif
 }
 

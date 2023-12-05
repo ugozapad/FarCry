@@ -12,7 +12,11 @@
 #ifdef TRACE_MUSIC
 #define MTRACE TRACE
 #else
+#ifdef LINUX
+#define MTRACE do {} while (0);
+#else
 #define MTRACE __noop
+#endif //LINUX
 #endif
 
 #define PATTERNSET_CHANGE_FADETIME	2.0

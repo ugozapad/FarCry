@@ -24,7 +24,7 @@ CSoundBuffer::CSoundBuffer(CSoundSystem *pSoundSystem, SSoundBufferProps &Props)
 
 CSoundBuffer::~CSoundBuffer()
 {
-	if (m_pReadStream!=NULL)
+	if (m_pReadStream)
 	{
 		m_pReadStream->Abort();
 		m_pReadStream=NULL;
@@ -311,7 +311,7 @@ bool CSoundBuffer::WaitForLoad()
 //////////////////////////////////////////////////////////////////////////
 void CSoundBuffer::AbortLoading()
 {
-	if (m_pReadStream!=NULL)
+	if (m_pReadStream)
 	{
 		m_pReadStream->Abort();
 		m_pReadStream=NULL;
