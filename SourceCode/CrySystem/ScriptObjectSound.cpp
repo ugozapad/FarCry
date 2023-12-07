@@ -2,7 +2,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "ScriptObjectSound.h"
 #include <ScriptObjectVector.h>
 #include <ISystem.h>

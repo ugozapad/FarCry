@@ -1,5 +1,5 @@
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "System.h"
 #include <time.h>
 //#include "ini_vars.h"

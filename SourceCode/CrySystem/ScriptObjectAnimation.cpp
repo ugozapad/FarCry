@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "ScriptObjectAnimation.h"
 #include "CryAnimationScriptCommands.h"
 #include <ISystem.h>

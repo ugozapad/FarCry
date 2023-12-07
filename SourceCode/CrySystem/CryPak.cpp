@@ -11,13 +11,13 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <time.h>
 #include "CryPak.h"
-#include <ilog.h>
+#include <ILog.h>
 #include <StringUtils.h>
 
 /////////////////////////////////////////////////////

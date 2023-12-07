@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 #define XMLPARSEAPI(type) type
-#include "expat\expat.h"
+#include "Expat/expat.h"
 #include "xml.h"
 #include <string>
 

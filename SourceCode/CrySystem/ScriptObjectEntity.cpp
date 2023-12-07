@@ -2,7 +2,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <ISystem.h>
 #include <ILog.h>
 #include <IEntitySystem.h>
@@ -23,7 +23,7 @@
 //#include "XPuppetProxy.h"
 //#include "XVehicleProxy.h"
 //#include "XObjectProxy.h"
-#include "i3dengine.h"
+#include "I3DEngine.h"
 //#include "TeamMgr.h"
 //#include "XPlayer.h"
 

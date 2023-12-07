@@ -3,7 +3,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "ScriptObjectParticle.h"
 #include "ScriptObjectVector.h"
 #include <ISystem.h>

@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "System.h"
 #include "ScriptObjectSystem.h"
 #include "ScriptObjectParticle.h"

@@ -2,7 +2,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "System.h"
 #include "ScriptObjectSystem.h"
 #include <ICryAnimation.h>
@@ -334,14 +334,14 @@ int CScriptObjectSystem::CreateDownload(IFunctionHandler *pH)
 {
 	// this cast is a hack, because i don't want to change the ISystem interface at this point
 	CSystem *pSystem = static_cast<CSystem *>(m_pSystem);
-//#if !defined(LINUX)
+#if !defined(LINUX)
 	if (pSystem)
 	{
 		CHTTPDownloader *pDL = pSystem->m_pDownloadManager->CreateDownload();
 
 		return pH->EndFunction(pDL->GetScriptObject());
 	}
-//#endif
+#endif
 	return pH->EndFunctionNull();
 }
 

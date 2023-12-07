@@ -10,7 +10,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "System.h"
 #include "CryLibrary.h"
 
@@ -41,7 +41,7 @@
 #include "ScriptSink.h"
 #include "Font.h"
 #include "Log.h"
-#include "XML\Xml.h"
+#include "XML/xml.h"
 #include "DataProbe.h"
 #include "ApplicationHelper.h"				// CApplicationHelper
 

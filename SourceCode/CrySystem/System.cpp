@@ -11,7 +11,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "System.h"
 #include <time.h>
 //#include "ini_vars.h"
@@ -48,7 +48,7 @@
 #include "CrySizerImpl.h"
 #include "DownloadManager.h"
 
-#include "XML\Xml.h"
+#include "XML/xml.h"
 #include "DataProbe.h"
 #include "ApplicationHelper.h"			// CApplicationHelper
 

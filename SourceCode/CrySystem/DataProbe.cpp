@@ -25,7 +25,7 @@
 #endif
 
 #include "DataProbe.h"
-#include "zlib\zlib.h"
+#include "zlib/zlib.h"
 #include "ISystem.h"
 #include "CryFile.h"
 

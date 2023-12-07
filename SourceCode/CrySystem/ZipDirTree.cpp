@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "MTSafeAllocator.h"
 #include "ZipFileFormat.h"
 #include "ZipDirStructures.h"

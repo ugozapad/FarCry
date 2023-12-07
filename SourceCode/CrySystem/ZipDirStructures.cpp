@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "MTSafeAllocator.h"
 #include "smartptr.h"
 #include "zlib/zlib.h"

@@ -13,7 +13,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "FrameProfileSystem.h"
 #include <ILog.h>
 #include <IRenderer.h>

@@ -1,9 +1,9 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "HTTPDownloader.h"
 #include "DownloadManager.h"
 #include <ILog.h>
 
-//#ifndef LINUX
+#ifndef LINUX
 
 _DECLARE_SCRIPTABLEEX(CHTTPDownloader)
 
@@ -351,4 +351,4 @@ int CHTTPDownloader::GetFileName(IFunctionHandler *pH)
 	return pH->EndFunction(CHTTPDownloader::GetDstFileName().c_str());
 }
 
-//#endif //LINUX
+#endif //LINUX

@@ -2,9 +2,9 @@
 #define _CRY_SYSTEM_MT_SAFE_ALLOCATOR_HDR_
 
 #include <stdexcept>
-#if defined( LINUX )
-#	include "WinBase.h"
-#endif
+//#if defined( LINUX )
+//#	include "WinBase.h"
+//#endif
 
 class CMTSafeHeap
 {
