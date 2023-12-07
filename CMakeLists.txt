@@ -20,7 +20,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_DEBUG ${CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG}
 
 if (MSVC)
     if (${ARCH_TYPE} STREQUAL "x64")
-        add_definitions(-DWIN64 -D_AMD64_ -DOS_WIN64 -DPROC_AMD64)
+        add_definitions(-DWIN64 -D_AMD64_)
     endif()
     # Always generate PDBs
     add_compile_options(/Zi)
@@ -30,7 +30,7 @@ if (MSVC)
 else()
     add_definitions(-DLINUX -fpermissive)
     if (${ARCH_TYPE} STREQUAL "x64")
-        add_definitions(-DLINUX64)
+        add_definitions(-DLINUX64 -D_AMD64_)
     endif()
 
     # Verbose output
