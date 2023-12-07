@@ -6,29 +6,91 @@
 #define RemoveCRLF(...) //TODO: Add real function or delete RemoveCRLF from code
 
 #define DebugBreak() do { __asm__ volatile ("int $3"); } while(0)
+#define Int32x32To64(a, b) ((uint64)((uint64)(a)) * (uint64)((uint64)(b)))
 
+extern HANDLE CreateFile(const char* lpFileName,DWORD dwDesiredAccess,DWORD dwShareMode,void* lpSecurityAttributes,DWORD dwCreationDisposition,DWORD dwFlagsAndAttributes,HANDLE hTemplateFile);
+extern BOOL CloseHandle(HANDLE hObject);
+extern BOOL CancelIo(HANDLE hFile);
+extern BOOL RemoveDirectory(LPCSTR lpPathName);
+extern BOOL DeleteFile(LPCSTR lpFileName);
+extern DWORD GetFileSize(HANDLE hFile, DWORD *lpFileSizeHigh);
+extern BOOL ReadFile(
+    HANDLE hFile,
+    LPVOID lpBuffer,
+    DWORD nNumberOfBytesToRead,
+    LPDWORD lpNumberOfBytesRead,
+    LPOVERLAPPED lpOverlapped
+    );
+extern BOOL ReadFileEx(
+    HANDLE hFile,
+    LPVOID lpBuffer,
+    DWORD nNumberOfBytesToRead,
+    LPOVERLAPPED lpOverlapped,
+    LPOVERLAPPED_COMPLETION_ROUTINE lpCompletionRoutine
+);
+extern DWORD SetFilePointer(
+    HANDLE hFile,
+    LONG lDistanceToMove,
+    PLONG lpDistanceToMoveHigh,
+    DWORD dwMoveMethod
+    );
 extern DWORD GetCurrentDirectory(DWORD nBufferLength, char* lpBuffer);
+extern BOOL SetFileAttributes(LPCSTR, DWORD attributes);
+extern BOOL MakeSureDirectoryPathExists(PCSTR DirPath);
+extern int _mkdir(const char *dirname);
+
+extern uint64_t __rdtsc();
+
+extern HRESULT GetOverlappedResult(HANDLE hFile, void* lpOverlapped, LPDWORD lpNumberOfBytesTransferred, BOOL bWait);
+
+extern const BOOL compareTextFileStrings(const char* cpReadFromFile, const char* cpToCompareWith);
+extern unsigned long timeGetTime(void);
+
+
+typedef struct _MEMORYSTATUS
+{
+    DWORD dwLength;
+    DWORD dwMemoryLoad;
+    SIZE_T dwTotalPhys;
+    SIZE_T dwAvailPhys;
+    SIZE_T dwTotalPageFile;
+    SIZE_T dwAvailPageFile;
+    SIZE_T dwTotalVirtual;
+    SIZE_T dwAvailVirtual;
+} MEMORYSTATUS, * LPMEMORYSTATUS;
+
+extern void GlobalMemoryStatus(LPMEMORYSTATUS lpmem);
+
+
+typedef struct _SYSTEMTIME
+{
+    WORD wYear;
+    WORD wMonth;
+    WORD wDayOfWeek;
+    WORD wDay;
+    WORD wHour;
+    WORD wMinute;
+    WORD wSecond;
+    WORD wMilliseconds;
+} SYSTEMTIME, * PSYSTEMTIME, * LPSYSTEMTIME;
 
 //////////////////////////////////////////////////////////////////////////
-extern char*    _fullpath(char* absPath, const char* relPath, size_t maxLength);
-extern intptr_t _findfirst64(const char* filespec, struct __finddata64_t* fileinfo);
-extern int      _findnext64(intptr_t handle, struct __finddata64_t* fileinfo);
-extern int      _findclose(intptr_t handle);
+extern BOOL SystemTimeToFileTime(const SYSTEMTIME* syst, LPFILETIME ft);
+//Win32API function declarations actually used
+extern bool IsBadReadPtr(void* ptr, unsigned int size);
 
-extern char* strlwr(char* str);
-extern char* strupr(char* str);
+// Defined in the launcher.
+void OutputDebugString(const char*);
 
-extern void _makepath(char* path, const char* drive, const char* dir, const char* filename, const char* ext);
-extern void _splitpath(const char* inpath, char* drv, char* dir, char* fname, char* ext);
 
 //critical section stuff
 typedef pthread_mutex_t CRITICAL_SECTION;
 #ifdef __cplusplus
 inline void InitializeCriticalSection(CRITICAL_SECTION *lpCriticalSection)
 {
-	pthread_mutexattr_t pthread_mutexattr_def;
-	pthread_mutexattr_settype(&pthread_mutexattr_def, PTHREAD_MUTEX_RECURSIVE_NP);
-	pthread_mutex_init(lpCriticalSection, &pthread_mutexattr_def);
+    pthread_mutexattr_t pthread_mutexattr_def;
+    pthread_mutexattr_settype(&pthread_mutexattr_def, PTHREAD_MUTEX_RECURSIVE_NP);
+    pthread_mutex_init(lpCriticalSection, &pthread_mutexattr_def);
 }
 inline void EnterCriticalSection(CRITICAL_SECTION *lpCriticalSection){pthread_mutex_lock(lpCriticalSection);}
 inline void LeaveCriticalSection(CRITICAL_SECTION *lpCriticalSection){pthread_mutex_unlock(lpCriticalSection);}
@@ -36,84 +98,185 @@ inline void DeleteCriticalSection(CRITICAL_SECTION *lpCriticalSection){}
 #else
 static void InitializeCriticalSection(CRITICAL_SECTION *lpCriticalSection)
 {
-	pthread_mutexattr_t pthread_mutexattr_def;
-	pthread_mutexattr_settype(&pthread_mutexattr_def, PTHREAD_MUTEX_RECURSIVE_NP);
-	pthread_mutex_init(lpCriticalSection, &pthread_mutexattr_def);
+    pthread_mutexattr_t pthread_mutexattr_def;
+    pthread_mutexattr_settype(&pthread_mutexattr_def, PTHREAD_MUTEX_RECURSIVE_NP);
+    pthread_mutex_init(lpCriticalSection, &pthread_mutexattr_def);
 }
 static void EnterCriticalSection(CRITICAL_SECTION *lpCriticalSection){pthread_mutex_lock(lpCriticalSection);}
 static void LeaveCriticalSection(CRITICAL_SECTION *lpCriticalSection){pthread_mutex_unlock(lpCriticalSection);}
 static void DeleteCriticalSection(CRITICAL_SECTION *lpCriticalSection){}
 #endif
 
-#ifdef __cplusplus
-extern bool IsBadReadPtr(void* ptr, unsigned int size);
 
 extern bool QueryPerformanceCounter(LARGE_INTEGER* counter);
 extern bool QueryPerformanceFrequency(LARGE_INTEGER* frequency);
+#ifdef __cplusplus
+
 inline uint32 GetTickCount()
 {
-	LARGE_INTEGER count, freq;
-	QueryPerformanceCounter(&count);
-	QueryPerformanceFrequency(&freq);
-	return uint32(count.QuadPart * 1000 / freq.QuadPart);
+    LARGE_INTEGER count, freq;
+    QueryPerformanceCounter(&count);
+    QueryPerformanceFrequency(&freq);
+    return uint32(count.QuadPart * 1000 / freq.QuadPart);
 }
 
-//begin--------------------------------findfirst/-next declaration/implementation----------------------------------------------------
+#define IGNORE              0       // Ignore signal
+#define INFINITE            0xFFFFFFFF  // Infinite timeout
+#endif
 
 #include <dirent.h>
 
 typedef int64 __time64_t;     /* 64-bit time value */
 
-//! < Atributes set by find request.
 typedef struct __finddata64_t
 {
-	unsigned int attrib;            //!< Attributes, only directory and readonly flag actually set.
-	__time64_t   time_create;       //!< Creation time, cannot parse under linux, last modification time is used instead (game does nowhere makes decision based on this values).
-	__time64_t   time_access;       //!< Last access time.
-	__time64_t   time_write;        //!< Last modification time.
-	__time64_t   size;              //!< File size (for a directory it will be the block size).
-	char         name[256];         //!< File/directory name.
+    //!< atributes set by find request
+    unsigned    int attrib;         //!< attributes, only directory and readonly flag actually set
+    int64  time_create;        //!< creation time, cannot parse under linux, last modification time is used instead (game does nowhere makes decision based on this values)
+    int64  time_access;        //!< last access time
+    int64  time_write;         //!< last modification time
+    int64  size;                       //!< file size (for a directory it will be the block size)
+    char        name[256];          //!< file/directory name
 
 private:
-	int                 m_LastIndex;          //!< Last index for findnext.
-	char                m_DirectoryName[260]; //!< Directory name, needed when getting file attributes on the fly.
-	char                m_ToMatch[260];       //!< Pattern to match with.
-	DIR*                m_Dir;                //!< Directory handle.
-	std::vector<string> m_Entries;            //!< All file entries in the current directories.
+    int                                 m_LastIndex;                    //!< last index for findnext
+    char                                m_DirectoryName[260];           //!< directory name, needed when getting file attributes on the fly
+    char                                m_ToMatch[260];                     //!< pattern to match with
+    DIR*                                m_Dir;                                  //!< directory handle
+    std::vector<string> m_Entries;                      //!< all file entries in the current directories
 public:
 
-	inline __finddata64_t() :
-		attrib(0), time_create(0), time_access(0), time_write(0),
-		size(0), m_LastIndex(-1), m_Dir(NULL)
-	{
-		memset(name, '0', 256);
-	}
-	~__finddata64_t();
+    inline __finddata64_t()
+        : attrib(0)
+        , time_create(0)
+        , time_access(0)
+        , time_write(0)
+        , size(0)
+        , m_LastIndex(-1)
+        , m_Dir(NULL)
+    {
+        memset(name, '0', 256);
+    }
+    ~__finddata64_t();
 
-	//! Copies and retrieves the data for an actual match (to not waste any effort retrioeving data for unused files).
-	void CopyFoundData(const char* rMatchedFileName);
+    //!< copies and retrieves the data for an actual match (to not waste any effort retrioeving data for unused files)
+    void CopyFoundData(const char* rMatchedFileName);
 
 public:
-	//! Global _findfirst64 function using struct above, can't be a member function due to required semantic match.
-	friend intptr_t _findfirst64(const char* pFileName, __finddata64_t* pFindData);
-
-	//! Global _findnext64 function using struct above, can't be a member function due to required semantic match.
-	friend int _findnext64(intptr_t last, __finddata64_t* pFindData);
+    //!< global _findfirst64 function using struct above, can't be a member function due to required semantic match
+    friend intptr_t _findfirst64(const char* pFileName, __finddata64_t* pFindData);
+    //!< global _findnext64 function using struct above, can't be a member function due to required semantic match
+    friend int _findnext64(intptr_t last, __finddata64_t* pFindData);
 }__finddata64_t;
 
-//! Need inheritance since in many places it get used as struct _finddata_t.
-typedef struct _finddata_t : public __finddata64_t
-{}_finddata_t;
-
-extern int      _findnext64(intptr_t last, __finddata64_t* pFindData);
+typedef struct _finddata_t
+    : public __finddata64_t
+{}_finddata_t;//!< need inheritance since in many places it get used as struct _finddata_t
+extern int _findnext64(intptr_t last, __finddata64_t* pFindData);
 extern intptr_t _findfirst64(const char* pFileName, __finddata64_t* pFindData);
-#endif
+extern int _findclose(intptr_t handle);
 
-//end--------------------------------findfirst/-next declaration/implementation----------------------------------------------------
+extern DWORD GetFileAttributes(LPCSTR lpFileName);
 
-void OutputDebugString(const char*);
-extern BOOL SetFileAttributes(LPCSTR, DWORD attributes);
+extern const bool GetFilenameNoCase(const char* file, char*, const bool cCreateNew = false);
 
-extern BOOL MakeSureDirectoryPathExists(PCSTR DirPath);
+extern BOOL GetUserName(LPSTR lpBuffer, LPDWORD nSize);
+
+//error code stuff
+//not thread specific, just a coarse implementation for the main thread
+inline DWORD GetLastError() { return errno; }
+inline void SetLastError(DWORD dwErrCode) { errno = dwErrCode; }
+
+//////////////////////////////////////////////////////////////////////////
+#define GENERIC_READ                     (0x80000000L)
+#define GENERIC_WRITE                    (0x40000000L)
+#define GENERIC_EXECUTE                  (0x20000000L)
+#define GENERIC_ALL                      (0x10000000L)
+
+#define CREATE_NEW          1
+#define CREATE_ALWAYS       2
+#define OPEN_EXISTING       3
+#define OPEN_ALWAYS         4
+#define TRUNCATE_EXISTING   5
+
+#define FILE_SHARE_READ                     0x00000001
+#define FILE_SHARE_WRITE                    0x00000002
+#define OPEN_EXISTING                           3
+#define FILE_FLAG_OVERLAPPED            0x40000000
+#define INVALID_FILE_SIZE                   ((DWORD)0xFFFFFFFFl)
+#define FILE_BEGIN                              0
+#define FILE_CURRENT                            1
+#define FILE_END                                    2
+#define ERROR_NO_SYSTEM_RESOURCES 1450L
+
+//////////////////////////////////////////////////////////////////////////
+extern threadID GetCurrentThreadId();
+
+//////////////////////////////////////////////////////////////////////////
+extern HANDLE CreateEvent(
+    LPSECURITY_ATTRIBUTES lpEventAttributes,
+    BOOL bManualReset,
+    BOOL bInitialState,
+    LPCSTR lpName
+    );
+
+
+//////////////////////////////////////////////////////////////////////////
+extern DWORD Sleep(DWORD dwMilliseconds);
+
+//////////////////////////////////////////////////////////////////////////
+extern DWORD SleepEx(DWORD dwMilliseconds, BOOL bAlertable);
+
+//////////////////////////////////////////////////////////////////////////
+extern DWORD WaitForSingleObjectEx(
+    HANDLE hHandle,
+    DWORD dwMilliseconds,
+    BOOL bAlertable);
+
+//////////////////////////////////////////////////////////////////////////
+extern DWORD WaitForSingleObject(HANDLE hHandle, DWORD dwMilliseconds);
+
+//////////////////////////////////////////////////////////////////////////
+extern BOOL SetEvent(HANDLE hEvent);
+
+//////////////////////////////////////////////////////////////////////////
+extern BOOL ResetEvent(HANDLE hEvent);
+
+//////////////////////////////////////////////////////////////////////////
+typedef DWORD (* PTHREAD_START_ROUTINE)(LPVOID lpThreadParameter);
+typedef PTHREAD_START_ROUTINE LPTHREAD_START_ROUTINE;
+
+//////////////////////////////////////////////////////////////////////////
+extern HANDLE CreateThread(
+    LPSECURITY_ATTRIBUTES lpThreadAttributes,
+    SIZE_T dwStackSize,
+    LPTHREAD_START_ROUTINE lpStartAddress,
+    LPVOID lpParameter,
+    DWORD dwCreationFlags,
+    LPDWORD lpThreadId
+    );
+
+//////////////////////////////////////////////////////////////////////////
+#ifdef __cplusplus
+
+//helper function
+extern void adaptFilenameToLinux(string& rAdjustedFilename);
+extern const int comparePathNames(const char* cpFirst, const char* cpSecond, unsigned int len);//returns 0 if identical
+extern void replaceDoublePathFilename(char* szFileName);//removes "\.\" to "\" and "/./" to "/"
+
+//////////////////////////////////////////////////////////////////////////
+extern char* _fullpath(char* absPath, const char* relPath, size_t maxLength);
+//////////////////////////////////////////////////////////////////////////
+extern void _makepath(char* path, const char* drive, const char* dir, const char* filename, const char* ext);
+
+extern void _splitpath(const char* inpath, char* drv, char* dir, char* fname, char* ext);
+
+//////////////////////////////////////////////////////////////////////////
+extern int memicmp(LPCSTR s1, LPCSTR s2, DWORD len);
+
+extern "C" char* strlwr (char* str);
+extern "C" char* strupr(char* str);
+
+#endif //__cplusplus
 
 #endif // __Linux_Win32Wrapper_h__

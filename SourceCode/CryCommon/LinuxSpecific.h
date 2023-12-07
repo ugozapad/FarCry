@@ -103,6 +103,7 @@ typedef int							LONG;
 typedef unsigned int 		ULONG;
 typedef int 						HRESULT;
 
+typedef unsigned long int threadID;
 
 #define TRUE 1
 #define FALSE 0
@@ -391,6 +392,9 @@ typedef struct
 	};
 
 	typedef CHandle<int, (int)-1l> HANDLE;
+
+	typedef HANDLE EVENT_HANDLE;
+	typedef pid_t THREAD_HANDLE;
 
 #endif //__cplusplus
 
