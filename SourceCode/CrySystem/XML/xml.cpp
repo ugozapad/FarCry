@@ -98,14 +98,14 @@ void CXmlNode::setAttr( const char *key,const char *value )
 void CXmlNode::setAttr( const char *key,int value )
 {
 	char str[1024];
-	itoa( value,str,10 );
+	sprintf(str, "%d", value);
 	setAttr( key,str );
 }
 
 void CXmlNode::setAttr( const char *key,unsigned int value )
 {
 	char str[1024];
-	itoa( value,str,10 );
+	sprintf(str, "%d", value);
 	setAttr( key,str );
 }
 

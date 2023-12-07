@@ -256,7 +256,7 @@ const char* CCryPak::AdjustFileName(const char *src, char *dst, unsigned nFlags,
 	string adjustedFilename(dst);
 	adaptFilenameToLinux(adjustedFilename);
 	string fileName(adjustedFilename);
-	if(getFilenameNoCase(dst, fileName))
+	if(GetFilenameNoCase(dst, fileName.c_str()))
 	{
 		//file does exist, copy the real filename
 		strcpy(dst, fileName.c_str());
@@ -276,7 +276,7 @@ const char* CCryPak::AdjustFileName(const char *src, char *dst, unsigned nFlags,
 	unsigned nLength = pEnd - dst;
 
 	if (bFoundInPak)
-		bFoundInPak=false;
+		*bFoundInPak=false;
 
 	if (nFlags & FLAGS_PATH_REAL)
 		return dst;
@@ -731,7 +731,7 @@ FILETIME CCryPak::GetModificationTime(FILE* hFile)
 		// TODO/TIME: implement retrieving FILETIME out of the real file handle
 #if defined(LINUX)
 		struct stat64 st;
-		_fstat64(fileno(hFile), &st);
+		fstat64(fileno(hFile), &st);
 #else
 		struct __stat64 st;
 		_fstat64(_fileno(hFile), &st);

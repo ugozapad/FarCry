@@ -1,10 +1,10 @@
 #pragma once
 
+#ifndef LINUX
 
-#if !defined(LINUX)
-	#include <wininet.h>
-	#include <dbghelp.h>
-#endif
+#include <wininet.h>
+#include <dbghelp.h>
+
 #include <IScriptSystem.h>
 #include <_ScriptableEx.h>
 
@@ -80,4 +80,4 @@ private:
 	CDownloadManager	*m_pParent;
 };
 
-//#endif //LINUX
+#endif //LINUX

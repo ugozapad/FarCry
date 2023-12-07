@@ -289,7 +289,7 @@ bool CDataProbe::GetDataCode( char *pBuf,int nSize,SDataProbeContext &ctx )
 		}
 	}
 	// scramble code not to look like crc or alike.
-	int tkey[4] = {2985634234,378634893,387681212,436851212};
+	unsigned int tkey[4] = {2985634234,378634893,387681212,436851212};
 	TEA_ENCODE( (unsigned int*)&nCode,(unsigned int*)&nCode,8,(unsigned int*)tkey );
 	ctx.nCode = nCode;
 	return true;
@@ -494,7 +494,7 @@ bool CDataProbe::CheckLoader( void *pFunc )
 	// if it fails, we possibly running from the not authorized loader.
 
 	// set of keys (one for farcry.exe second for dedicated server).
-	int keys[6][4] = {
+	unsigned int keys[6][4] = {
 		{1873613783,235688123,812763783,1745863682},
 		{1897178562,734896899,156436554,902793442},
 		{1178362782,223786232,371615531,90884141},
