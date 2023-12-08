@@ -772,30 +772,6 @@ extern "C"
 #pragma intrinsic(__rdtsc)
 #endif
 
-inline DWORD sCycles()
-{
-  uint L;
-#if defined(WIN32) 
-
-#if defined(WIN64)
-L = __rdtsc();
-#else
-  __asm
-  {
-    xor   eax,eax	          // Required so that VC++ realizes EAX is modified.
-      _emit 0x0F		          // RDTSC  -  Pentium+ time stamp register to EDX:EAX.
-      _emit 0x31		          // Use only 32 bits in EAX - even a Ghz cpu would have a 4+ sec period.
-      mov   [L],eax           // Save low value.
-      xor   edx,edx	          // Required so that VC++ realizes EDX is modified.
-  }
-#endif
-
-#elif defined(LINUX)
-	rdtscl( L );
-#endif
-  return L;
-}
-
 inline double sCycles2()
 {
 #if defined(WIN32) && !defined(WIN64)  
