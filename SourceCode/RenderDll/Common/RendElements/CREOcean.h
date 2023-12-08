@@ -1,7 +1,7 @@
 #ifndef _CREOCEAN_H_
 #define _CREOCEAN_H_
 
-#include "../nvTriStrip/nvTriStrip.h"
+#include "../NvTriStrip/NvTriStrip.h"
 
 struct SREOceanStats
 {

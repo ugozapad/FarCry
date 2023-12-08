@@ -8,7 +8,7 @@
 #include "MeshIdx.h"
 
 #include "float.h"
-#include "i3dengine.h"
+#include "I3DEngine.h"
 
 #include <CryCompiledFile.h>
 #include <VertexBufferSource.h>
@@ -1110,7 +1110,7 @@ bool CLeafBuffer::CreateBuffer( struct VertexBufferSource* pSource )
 	return false;
 }
 
-#include "NvTriStrip/NVTriStrip.h"
+#include "NvTriStrip/NvTriStrip.h"
 
 void CLeafBuffer::StripifyMesh(int StripType)
 {

@@ -13,9 +13,9 @@
 
 #include "RenderPCH.h"
 #include "NULL_Renderer.h"
-#include "../Common/shadow_renderer.h"
+#include "../Common/Shadow_Renderer.h"
 
-#include "I3dengine.h"
+#include "I3DEngine.h"
 
 // render depth/shadow map into texture from light source position
 void CNULLRenderer::PrepareDepthMap(ShadowMapFrustum * lof, bool make_new_tid)

@@ -4,7 +4,7 @@
 #include "RenderPCH.h"
 #include "ResFile.h"
 
-#include "lzss.h"
+#include "LZSS.H"
 
 #include <sys/stat.h>
 

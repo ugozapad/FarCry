@@ -1,7 +1,7 @@
 #include "RenderPCH.h"
 #include "RendElement.h"
 #include "CRESky.h"
-#include "i3dengine.h"
+#include "I3DEngine.h"
 
 void CRESky::mfPrepare()
 {

@@ -8,7 +8,7 @@
 =============================================================================*/
 
 #include "RenderPCH.h"
-#include "shadow_renderer.h"
+#include "Shadow_Renderer.h"
 #include <IEntityRenderState.h>
 
 #undef THIS_FILE

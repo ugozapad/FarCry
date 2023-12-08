@@ -1,8 +1,8 @@
 #include "RenderPCH.h"
 #include "RendElement.h"
 #include "CREOcean.h"
-#include "../NvTriStrip/NVTriStrip.h"
-#include "I3dengine.h"
+#include "../NvTriStrip/NvTriStrip.h"
+#include "I3DEngine.h"
 
 SREOceanStats CREOcean::m_RS;
 CREOcean *CREOcean::m_pStaticOcean = NULL;

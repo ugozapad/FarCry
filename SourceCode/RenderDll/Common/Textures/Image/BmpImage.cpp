@@ -11,7 +11,7 @@
 #include "CImage.h"
 #include "BmpImage.h"
 
-#include "SHEndian.h"
+#include "SHendian.h"
 
 //===========================================================================
 

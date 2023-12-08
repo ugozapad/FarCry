@@ -13,14 +13,14 @@
 
 #include "RenderPCH.h"
 
-#include "shadow_renderer.h"
+#include "Shadow_Renderer.h"
 #include "IStatObj.h"
-#include "I3dengine.h"
+#include "I3DEngine.h"
 #include <CREPolyMesh.h>
 
 #if defined(LINUX)
 	#include "ILog.h"
-	#include "WinBase.h"
+//	#include "WinBase.h"
 #endif
 
 #ifdef USING_CRY_MEMORY_MANAGER

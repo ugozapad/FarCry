@@ -13,7 +13,7 @@ static char THIS_FILE[] = __FILE__;
 #define EVALFUNCS_C_CPP
 
 #include "RenderPCH.h"
-#include "shadow_renderer.h"
+#include "Shadow_Renderer.h"
 #include <IEntityRenderState.h>
 
 //===========================================================================
