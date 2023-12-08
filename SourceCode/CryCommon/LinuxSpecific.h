@@ -119,6 +119,11 @@ typedef unsigned long int threadID;
 #define _A_SUBDIR (0x10)
 #define _A_HIDDEN (0x02)
 
+//////////////////////////////////////////////////////////////////////////
+// Win32 FileAttributes.
+//////////////////////////////////////////////////////////////////////////
+#define FILE_ATTRIBUTE_READONLY             0x00000001
+
 //-------------------------------------socket stuff------------------------------------------
 #define SOCKET int
 #define INVALID_SOCKET (-1)

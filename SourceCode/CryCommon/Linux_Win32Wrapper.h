@@ -5,6 +5,7 @@
 
 #define RemoveCRLF(...) //TODO: Add real function or delete RemoveCRLF from code
 
+#define _fstat64 fstat64
 #define DebugBreak() do { __asm__ volatile ("int $3"); } while(0)
 #define Int32x32To64(a, b) ((uint64)((uint64)(a)) * (uint64)((uint64)(b)))
 
@@ -39,6 +40,7 @@ extern BOOL SetFileAttributes(LPCSTR, DWORD attributes);
 extern BOOL MakeSureDirectoryPathExists(PCSTR DirPath);
 extern int _mkdir(const char *dirname);
 
+extern BOOL GetFileTime(HANDLE hFile, LPFILETIME lpCreationTime, LPFILETIME lpLastAccessTime, LPFILETIME lpLastWriteTime);
 extern uint64_t __rdtsc();
 
 extern HRESULT GetOverlappedResult(HANDLE hFile, void* lpOverlapped, LPDWORD lpNumberOfBytesTransferred, BOOL bWait);
@@ -61,6 +63,45 @@ typedef struct _MEMORYSTATUS
 
 extern void GlobalMemoryStatus(LPMEMORYSTATUS lpmem);
 
+
+typedef struct tagRECT
+{
+    LONG    left;
+    LONG    top;
+    LONG    right;
+    LONG    bottom;
+} RECT, * PRECT;
+
+typedef union _ULARGE_INTEGER
+{
+    struct
+    {
+        DWORD LowPart;
+        DWORD HighPart;
+    };
+    unsigned long long QuadPart;
+} ULARGE_INTEGER;
+
+#ifdef __cplusplus
+inline LONG CompareFileTime(const FILETIME* lpFileTime1, const FILETIME* lpFileTime2)
+#else
+static LONG CompareFileTime(const FILETIME* lpFileTime1, const FILETIME* lpFileTime2)
+#endif
+{
+    ULARGE_INTEGER u1, u2;
+    memcpy(&u1, lpFileTime1, sizeof u1);
+    memcpy(&u2, lpFileTime2, sizeof u2);
+    if (u1.QuadPart < u2.QuadPart)
+    {
+        return -1;
+    }
+    else
+    if (u1.QuadPart > u2.QuadPart)
+    {
+        return 1;
+    }
+    return 0;
+}
 
 typedef struct _SYSTEMTIME
 {
@@ -208,6 +249,10 @@ inline void SetLastError(DWORD dwErrCode) { errno = dwErrCode; }
 #define FILE_CURRENT                            1
 #define FILE_END                                    2
 #define ERROR_NO_SYSTEM_RESOURCES 1450L
+#define ERROR_INVALID_USER_BUFFER   1784L
+#define ERROR_NOT_ENOUGH_MEMORY   8L
+#define ERROR_PATH_NOT_FOUND      3L
+#define FILE_FLAG_SEQUENTIAL_SCAN 0x08000000
 
 //////////////////////////////////////////////////////////////////////////
 extern threadID GetCurrentThreadId();
