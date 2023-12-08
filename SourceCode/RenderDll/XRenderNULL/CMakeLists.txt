@@ -115,10 +115,15 @@ target_link_directories(${PROJECT_NAME} PRIVATE
     Libraries
 )
 
-set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} /NODEFAULTLIB:libcp.lib /NODEFAULTLIB:LIBC.lib")
+if (MSVC)
+    set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} /NODEFAULTLIB:libcp.lib /NODEFAULTLIB:LIBC.lib")
+    set(SYSTEM_DEPS
+        "nvDXTlib.lib"
+        "legacy_stdio_definitions.lib"
+    )
+endif()
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
     ${ARCH_LIBS}
-    nvDXTlib.lib
-    legacy_stdio_definitions.lib
+    ${SYSTEM_DEPS}
 )
