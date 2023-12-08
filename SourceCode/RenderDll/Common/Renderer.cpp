@@ -1841,7 +1841,7 @@ void CRenderer::FreeResources(int nFlags)
 {
   iLog->Log("*** Clearing render resources ***");
 
-#if defined(LINUX)
+#if 0 //defined(LINUX)
 	NotifySystemOnQuit();//tell linux that we are about to quit, on some situation it crashed and this will force a abort call in case of a crash
 #endif
 
