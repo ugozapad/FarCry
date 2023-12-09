@@ -9,7 +9,7 @@
 
 #define CRY_API
 
-#ifdef _DEBUG
+#if defined(_DEBUG) && !defined(LINUX)
 #define CRTDBG_MAP_ALLOC
 #endif //_DEBUG
 

@@ -11,7 +11,7 @@ extern "C"
 #endif
 
 #if defined(LINUX)
-	#define _stdcall
+//	#define _stdcall
 #else
 	#include "Windows.h"
 #endif

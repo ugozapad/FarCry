@@ -43,9 +43,6 @@ typedef double GLdouble;
 typedef double GLclampd;
 typedef void GLvoid;
 
-WINGDIAPI BOOL  WINAPI wglSwapBuffers(HDC hdc);
-
-
 /*************************************************************/
 
 /* Extensions */

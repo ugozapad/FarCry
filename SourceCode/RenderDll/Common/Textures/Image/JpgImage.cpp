@@ -381,7 +381,7 @@ CImageJpgFile::CImageJpgFile (byte* ptr, long filesize) : CImageFile () {
 
 void WriteJPG(byte *dat, int wdt, int hgt, char *name)
 {
-#if !defined(PS2) && !defined(WIN64) && !defined(NULL_RENDERER)
+#if !defined(PS2) && !defined(WIN64) && !defined(LINUX64) && !defined(NULL_RENDERER)
   JPEG_CORE_PROPERTIES image;
   ZeroMemory( &image, sizeof( JPEG_CORE_PROPERTIES ) );
 
