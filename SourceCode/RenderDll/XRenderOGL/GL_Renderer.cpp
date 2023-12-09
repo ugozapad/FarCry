@@ -23,7 +23,7 @@
 #undef GL_EXT
 #undef GL_PROC
 
-#include "../common/shadow_renderer.h"
+#include "../Common/Shadow_Renderer.h"
 #include "limits.h"
 
 int CGLRenderer::CV_gl_useextensions;

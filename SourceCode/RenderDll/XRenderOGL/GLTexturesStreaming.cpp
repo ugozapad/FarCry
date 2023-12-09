@@ -10,7 +10,7 @@
 #include "RenderPCH.h"
 #include "GL_Renderer.h"
 #include "GLPBuffer.h"
-#include "I3dengine.h"
+#include "I3DEngine.h"
 
 //===============================================================================
 

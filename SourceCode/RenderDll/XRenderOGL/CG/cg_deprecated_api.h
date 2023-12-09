@@ -149,7 +149,7 @@ typedef enum
 
 # define CG_PROFILE_MACRO(name, compiler_id, compiler_id_caps, compiler_opt,int_id,vertex_profile) \
    cg##name##Profile = int_id,
-# include "Cg/cg_profiles.h"
+# include "CG/cg_profiles.h"
 
   cgNProfiles,
  } cgProfileType;

@@ -18,7 +18,7 @@ static char THIS_FILE[] = __FILE__;
 TArray<CPShader *> CPShader::m_PShaders;
 CPShader *CPShader::m_CurRC;
 
-#include "nvparse/nvparse.h"
+#include "NVParse/nvparse.h"
 
 #ifdef WIN64
 #pragma warning( push )							//AMD Port

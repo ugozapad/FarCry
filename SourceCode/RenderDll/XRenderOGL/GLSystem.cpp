@@ -13,7 +13,7 @@ static char THIS_FILE[] = __FILE__;
 
 #include "RenderPCH.h"
 #include "GL_Renderer.h"
-#include "cg\cgGL.h"
+#include "CG/cgGL.h"
 #include "GLCGVProgram.h"
 #include "GLCGPShader.h"
 

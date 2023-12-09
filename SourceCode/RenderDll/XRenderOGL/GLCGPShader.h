@@ -10,8 +10,8 @@
 #ifndef __GLCGPSHADER_H__
 #define __GLCGPSHADER_H__
 
-#include "cg\cgGL.h"
-#include "nvparse/nvparse.h"
+#include "CG/cgGL.h"
+#include "NVParse/nvparse.h"
 
 #define CG_FP_CACHE_VER    3.4
 

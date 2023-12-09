@@ -109,7 +109,7 @@ typedef enum
 # define CG_DATATYPE_MACRO(name, compiler_name, enum_name, ncols, nrows) \
   enum_name ,
 
-#include "Cg/cg_datatypes.h"
+#include "CG/cg_datatypes.h"
 
  } CGtype;
 
@@ -119,7 +119,7 @@ typedef enum
                                enum_int,addressable,param_type) \
   enum_name = enum_int,
 
-#include "Cg/cg_bindlocations.h"
+#include "CG/cg_bindlocations.h"
 
   CG_UNDEFINED,
 
@@ -133,7 +133,7 @@ typedef enum
 # define CG_PROFILE_MACRO(name, compiler_id, compiler_id_caps, compiler_opt,int_id,vertex_profile) \
    CG_PROFILE_##compiler_id_caps = int_id,
   
-#include "Cg/cg_profiles.h"
+#include "CG/cg_profiles.h"
 
   CG_PROFILE_MAX = 7100,
  } CGprofile;
@@ -142,7 +142,7 @@ typedef enum
  {
 # define CG_ERROR_MACRO(code, enum_name, message) \
    enum_name = code,
-# include "Cg/cg_errors.h"
+# include "CG/cg_errors.h"
  } CGerror;
 
 //!!! PREPROCESS END
@@ -151,7 +151,7 @@ typedef enum
  {
 # define CG_ENUM_MACRO(enum_name, enum_val) \
    enum_name = enum_val,
-# include "Cg/cg_enums.h"
+# include "CG/cg_enums.h"
  } CGenum;
 
 #include <stdarg.h>

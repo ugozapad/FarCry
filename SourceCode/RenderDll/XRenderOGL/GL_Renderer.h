@@ -27,7 +27,7 @@ The GLRenderer interface Class
 
 //#include "list2.h"
 #include "Mygl.h"
-#include "Myglu.h"
+#include "MyGlu.h"
 
 #include "map"
 
@@ -38,7 +38,7 @@ The GLRenderer interface Class
 #undef GL_EXT
 #undef GL_PROC
 
-#include "cg\cgGL.h"
+#include "CG/cgGL.h"
 
 class PBuffer;
 class CPBuffer;
@@ -341,7 +341,7 @@ private:
 
 	int			m_numvidmodes;
 	DEVMODE		*m_vidmodes;			
-#endif	
+#endif
 
 	bool	m_lod_biasSupported; 
 

@@ -12,12 +12,12 @@
 
 #include "RenderPCH.h"
 #include "GL_Renderer.h"
-#include "I3dengine.h"											// USE_SHADOW_VERSION
+#include "I3DEngine.h"											// USE_SHADOW_VERSION
 
 
 ///////////////////////////////////////////////////////////////////
 //TODO: Move into renderer header
-#include "..\..\Cry3DEngine\ShadowVolumeEdge.h"
+#include "../../Cry3DEngine/ShadowVolumeEdge.h"
 
 ///////////////////////////////////////////////////////////////////
 bool CRETriMeshShadow::mfDraw(SShader *ef, SShaderPass *sfm)

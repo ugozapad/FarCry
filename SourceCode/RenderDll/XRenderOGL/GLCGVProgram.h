@@ -10,7 +10,7 @@
 #ifndef __GLCGVPROGRAM_H__
 #define __GLCGVPROGRAM_H__
 
-#include "cg\cgGL.h"
+#include "CG/cgGL.h"
 
 #define CG_VP_CACHE_VER    3.4
 

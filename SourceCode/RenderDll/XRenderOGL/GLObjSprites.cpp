@@ -17,12 +17,12 @@
 #include <I3DEngine.h>
 #include <IEntityRenderState.h>
 
-#include "../common/shadow_renderer.h"
+#include "../Common/Shadow_Renderer.h"
 #include "limits.h"
 
 #include "I3DEngine.h"
-#include "../../Cry3DEngine/Cry3denginebase.h"
-#include "../../Cry3DEngine/Terrain.h"
+#include "../../Cry3DEngine/Cry3DEngineBase.h"
+#include "../../Cry3DEngine/terrain.h"
 #include "../../Cry3DEngine/StatObj.h"
 #include "../../Cry3DEngine/ObjMan.h"
 
