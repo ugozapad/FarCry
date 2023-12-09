@@ -489,7 +489,7 @@ bool CREFlare::mfCheckVis(CCObject *obj)
   if (!obj)
     return false;
 
-  Vec3d or = obj->GetTranslation();
+  Vec3d or1 = obj->GetTranslation();
   //bool bVis = false;
   bool bSun = false;
   CGLRenderer *rd = gcpOGL;
@@ -541,7 +541,7 @@ bool CREFlare::mfCheckVis(CCObject *obj)
     if (!bSun)
     {
       float fFogEnd = rd->m_FS.m_FogEnd;
-      float fDist = (rd->m_RP.m_ViewOrg-or).Length();
+      float fDist = (rd->m_RP.m_ViewOrg-or1).Length();
       float fStartFade = fFogEnd/3.0f*2.0f;
       float fEndFade = fStartFade*1.5f;
       if (fDist > fEndFade)
@@ -557,7 +557,7 @@ bool CREFlare::mfCheckVis(CCObject *obj)
     float fDepth;
     int vp[4];
     gRenDev->GetViewport(&vp[0], &vp[1], &vp[2], &vp[3]);
-    SGLFuncs::gluProject(or.x, or.y, or.z, camMatr.GetData(), projMatr.GetData(), vp, &fsx, &fsy, &fsz);
+    SGLFuncs::gluProject(or1.x, or1.y, or1.z, camMatr.GetData(), projMatr.GetData(), vp, &fsx, &fsy, &fsz);
     obj->m_Trans2[0] = fsx;
     obj->m_Trans2[1] = fsy;
     obj->m_Trans2[2] = fsz;
@@ -653,7 +653,7 @@ bool CREFlare::mfCheckVis(CCObject *obj)
         if (pRE)
           nVizQuery = pRE->m_nOcclusionID;
         Vec3d vx0, vy0, v;
-        v = or - rd->m_prevCamera.GetPos();
+        v = or1 - rd->m_prevCamera.GetPos();
         float dist = v.Length();
         if (m_fDistSizeFactor != 1.0f)
           dist = cry_powf(dist, m_fDistSizeFactor);
@@ -672,19 +672,19 @@ bool CREFlare::mfCheckVis(CCObject *obj)
 
         glBegin(GL_QUADS);
 
-        vQuad[0] = or + vx0 + vy0;
+        vQuad[0] = or1 + vx0 + vy0;
         glTexCoord2f(0, 0);
         glVertex3fv(&vQuad[0][0]);
 
-        vQuad[1] = or + vx0 - vy0;
+        vQuad[1] = or1 + vx0 - vy0;
         glTexCoord2f(1, 0);
         glVertex3fv(&vQuad[1][0]);
 
-        vQuad[2] = or - vx0 - vy0;
+        vQuad[2] = or1 - vx0 - vy0;
         glTexCoord2f(1, 1);
         glVertex3fv(&vQuad[2][0]);
 
-        vQuad[3] = or - vx0 + vy0;
+        vQuad[3] = or1 - vx0 + vy0;
         glTexCoord2f(0, 1);
         glVertex3fv(&vQuad[3][0]);
 
@@ -982,7 +982,7 @@ void CREFlare::mfDrawFlares(SShader *ef, CFColor &col)
     
   CCObject *obj = gRenDev->m_RP.m_pCurObject;
 
-  Vec3d or = obj->GetTranslation();  
+  Vec3d or1 = obj->GetTranslation();
   if (obj->m_ObjFlags & FOB_DRSUN)
   {
     if (gRenDev->m_bHeatVision)
@@ -991,7 +991,7 @@ void CREFlare::mfDrawFlares(SShader *ef, CFColor &col)
 
   Vec3d vFromPt = gRenDev->m_RP.m_ViewOrg;
   Vec3d vViewVec = gRenDev->m_RP.m_CamVecs[0];
-  Vec3d vLightVec = or - vFromPt;
+  Vec3d vLightVec = or1 - vFromPt;
   vLightVec.Normalize();
   
   // Compute the vector and center point for the lens flare axis
@@ -1064,14 +1064,14 @@ void CREFlare::mfDrawFlares(SShader *ef, CFColor &col)
 
 void CREFlare::mfDrawCorona(SShader *ef, CFColor &col)
 {
-  Vec3d vx0, vy0, vx1, vy1, or, v, norm;
+  Vec3d vx0, vy0, vx1, vy1, or1, v, norm;
 
   if (!CRenderer::CV_r_coronas)
     return;
   
   CGLRenderer *rd = gcpOGL;
   CCObject *obj = rd->m_RP.m_pCurObject;
-  or = obj->GetTranslation();
+  or1 = obj->GetTranslation();
 
   bool bSun = false;
   if (obj->m_ObjFlags & FOB_DRSUN)
@@ -1092,7 +1092,7 @@ void CREFlare::mfDrawCorona(SShader *ef, CFColor &col)
   vy0 = rd->m_RP.m_CamVecs[1];
   vy1 = vy0;
 
-  v = or - gRenDev->m_RP.m_ViewOrg;
+  v = or1 - gRenDev->m_RP.m_ViewOrg;
   float dist = v.Length();
   float distX = dist;
   if (m_fDistSizeFactor != 1.0f)
@@ -1295,43 +1295,43 @@ void CREFlare::mfDrawCorona(SShader *ef, CFColor &col)
 
             glBegin(GL_TRIANGLE_FAN);
 
-            v = or;
+            v = or1;
             glTexCoord2f(0.5f, 0.5f);
             glVertex3fv(&v[0]);
 
-            v = or + vx0 + vy0;
+            v = or1 + vx0 + vy0;
             glTexCoord2f(0, 0);
             glVertex3fv(&v[0]);
 
-            v = or + vx0;
+            v = or1 + vx0;
             glTexCoord2f(0, 0.5f);
             glVertex3fv(&v[0]);
 
-            v = or + vx0 + vy1;
+            v = or1 + vx0 + vy1;
             glTexCoord2f(0, 1);
             glVertex3fv(&v[0]);
 
-            v = or + vy1;
+            v = or1 + vy1;
             glTexCoord2f(0.5f, 1);
             glVertex3fv(&v[0]);
 
-            v = or + vx1 + vy1;
+            v = or1 + vx1 + vy1;
             glTexCoord2f(1, 1);
             glVertex3fv(&v[0]);
 
-            v = or + vx1;
+            v = or1 + vx1;
             glTexCoord2f(1, 0.5f);
             glVertex3fv(&v[0]);
 
-            v = or + vx1 + vy0;
+            v = or1 + vx1 + vy0;
             glTexCoord2f(1, 0);
             glVertex3fv(&v[0]);
 
-            v = or + vy0;
+            v = or1 + vy0;
             glTexCoord2f(0.5f, 0);
             glVertex3fv(&v[0]);
 
-            v = or + vx0 + vy0;
+            v = or1 + vx0 + vy0;
             glTexCoord2f(0, 0);
             glVertex3fv(&v[0]);
 
@@ -1353,43 +1353,43 @@ void CREFlare::mfDrawCorona(SShader *ef, CFColor &col)
 
       glBegin(GL_TRIANGLE_FAN);
 
-      v = or;
+      v = or1;
       glTexCoord2f(0.5f, 0.5f);
       glVertex3fv(&v[0]);
 
-      v = or + vx0 + vy0;
+      v = or1 + vx0 + vy0;
       glTexCoord2f(0, 0);
       glVertex3fv(&v[0]);
 
-      v = or + vx0;
+      v = or1 + vx0;
       glTexCoord2f(0, 0.5f);
       glVertex3fv(&v[0]);
 
-      v = or + vx0 + vy1;
+      v = or1 + vx0 + vy1;
       glTexCoord2f(0, 1);
       glVertex3fv(&v[0]);
 
-      v = or + vy1;
+      v = or1 + vy1;
       glTexCoord2f(0.5f, 1);
       glVertex3fv(&v[0]);
 
-      v = or + vx1 + vy1;
+      v = or1 + vx1 + vy1;
       glTexCoord2f(1, 1);
       glVertex3fv(&v[0]);
 
-      v = or + vx1;
+      v = or1 + vx1;
       glTexCoord2f(1, 0.5f);
       glVertex3fv(&v[0]);
 
-      v = or + vx1 + vy0;
+      v = or1 + vx1 + vy0;
       glTexCoord2f(1, 0);
       glVertex3fv(&v[0]);
 
-      v = or + vy0;
+      v = or1 + vy0;
       glTexCoord2f(0.5f, 0);
       glVertex3fv(&v[0]);
 
-      v = or + vx0 + vy0;
+      v = or1 + vx0 + vy0;
       glTexCoord2f(0, 0);
       glVertex3fv(&v[0]);
 
@@ -1428,52 +1428,52 @@ void CREFlare::mfDrawCorona(SShader *ef, CFColor &col)
 
     glBegin(GL_TRIANGLE_FAN);
 
-    v = or;
+    v = or1;
     glMultiTexCoord2fARB(GL_TEXTURE0_ARB, 0.5f, 0.5f);
     glMultiTexCoord2fARB(GL_TEXTURE1_ARB, 0.5f, 0.5f);
     glVertex3fv(&v[0]);
 
-    v = or + vx0 + vy0;
+    v = or1 + vx0 + vy0;
     glMultiTexCoord2fARB(GL_TEXTURE0_ARB, 1, 1);
     glMultiTexCoord2fARB(GL_TEXTURE1_ARB, 1, 1);
     glVertex3fv(&v[0]);
 
-    v = or + vx0;
+    v = or1 + vx0;
     glMultiTexCoord2fARB(GL_TEXTURE0_ARB, 1, 0.5f);
     glMultiTexCoord2fARB(GL_TEXTURE1_ARB, 1, 0.5f);
     glVertex3fv(&v[0]);
 
-    v = or + vx0 + vy1;
+    v = or1 + vx0 + vy1;
     glMultiTexCoord2fARB(GL_TEXTURE0_ARB, 1, 0);
     glMultiTexCoord2fARB(GL_TEXTURE1_ARB, 1, 0);
     glVertex3fv(&v[0]);
 
-    v = or + vy1;
+    v = or1 + vy1;
     glMultiTexCoord2fARB(GL_TEXTURE0_ARB, 0.5f, 0);
     glMultiTexCoord2fARB(GL_TEXTURE1_ARB, 0.5f, 0);
     glVertex3fv(&v[0]);
 
-    v = or + vx1 + vy1;
+    v = or1 + vx1 + vy1;
     glMultiTexCoord2fARB(GL_TEXTURE0_ARB, 0, 0);
     glMultiTexCoord2fARB(GL_TEXTURE1_ARB, 0, 0);
     glVertex3fv(&v[0]);
 
-    v = or + vx1;
+    v = or1 + vx1;
     glMultiTexCoord2fARB(GL_TEXTURE0_ARB, 0, 0.5f);
     glMultiTexCoord2fARB(GL_TEXTURE1_ARB, 0, 0.5f);
     glVertex3fv(&v[0]);
 
-    v = or + vx1 + vy0;
+    v = or1 + vx1 + vy0;
     glMultiTexCoord2fARB(GL_TEXTURE0_ARB, 0, 1);
     glMultiTexCoord2fARB(GL_TEXTURE1_ARB, 0, 1);
     glVertex3fv(&v[0]);
 
-    v = or + vy0;
+    v = or1 + vy0;
     glMultiTexCoord2fARB(GL_TEXTURE0_ARB, 0.5f, 1);
     glMultiTexCoord2fARB(GL_TEXTURE1_ARB, 0.5f, 1);
     glVertex3fv(&v[0]);
 
-    v = or + vx0 + vy0;
+    v = or1 + vx0 + vy0;
     glMultiTexCoord2fARB(GL_TEXTURE0_ARB, 1, 1);
     glMultiTexCoord2fARB(GL_TEXTURE1_ARB, 1, 1);
     glVertex3fv(&v[0]);
