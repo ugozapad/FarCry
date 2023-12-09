@@ -9,6 +9,9 @@
 #define DebugBreak() do { __asm__ volatile ("int $3"); } while(0)
 #define Int32x32To64(a, b) ((uint64)((uint64)(a)) * (uint64)((uint64)(b)))
 
+#define CONST const
+#define DECLARE_HANDLE(name) struct name##__ { int unused; }; typedef struct name##__ *name
+
 extern HANDLE CreateFile(const char* lpFileName,DWORD dwDesiredAccess,DWORD dwShareMode,void* lpSecurityAttributes,DWORD dwCreationDisposition,DWORD dwFlagsAndAttributes,HANDLE hTemplateFile);
 extern BOOL CloseHandle(HANDLE hObject);
 extern BOOL CancelIo(HANDLE hFile);
@@ -38,8 +41,15 @@ extern DWORD SetFilePointer(
 extern DWORD GetCurrentDirectory(DWORD nBufferLength, char* lpBuffer);
 extern BOOL SetFileAttributes(LPCSTR, DWORD attributes);
 extern BOOL MakeSureDirectoryPathExists(PCSTR DirPath);
+extern BOOL SwapBuffers(HDC);
 extern int _mkdir(const char *dirname);
 
+extern BOOL SetFileTime(
+    HANDLE hFile,
+    const FILETIME *lpCreationTime,
+    const FILETIME *lpLastAccessTime,
+    const FILETIME *lpLastWriteTime
+    );
 extern BOOL GetFileTime(HANDLE hFile, LPFILETIME lpCreationTime, LPFILETIME lpLastAccessTime, LPFILETIME lpLastWriteTime);
 extern uint64_t __rdtsc();
 
@@ -250,6 +260,8 @@ inline void SetLastError(DWORD dwErrCode) { errno = dwErrCode; }
 #define FILE_END                                    2
 #define ERROR_NO_SYSTEM_RESOURCES 1450L
 #define ERROR_INVALID_USER_BUFFER   1784L
+#define ERROR_INVALID_PIXEL_FORMAT  2000L
+#define ERROR_INVALID_DATA       13L
 #define ERROR_NOT_ENOUGH_MEMORY   8L
 #define ERROR_PATH_NOT_FOUND      3L
 #define FILE_FLAG_SEQUENTIAL_SCAN 0x08000000
@@ -321,6 +333,9 @@ extern int memicmp(LPCSTR s1, LPCSTR s2, DWORD len);
 
 extern "C" char* strlwr (char* str);
 extern "C" char* strupr(char* str);
+
+extern char* _strtime(char* date);
+extern char* _strdate(char* date);
 
 #endif //__cplusplus
 

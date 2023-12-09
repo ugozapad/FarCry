@@ -44,6 +44,7 @@ inline int IsHeapValid ()
 #define _inline inline
 #define __cdecl
 #define __stdcall
+#define _stdcall
 #define __fastcall
 #define IN
 #define OUT
@@ -74,6 +75,9 @@ inline int IsHeapValid ()
 
 #define CALLBACK
 #define WINAPI
+#define WINAPIV
+#define APIENTRY
+#define TEXT
 
 #ifndef __cplusplus
 #ifndef _WCHAR_T_DEFINED
@@ -402,5 +406,13 @@ typedef struct
 	typedef pid_t THREAD_HANDLE;
 
 #endif //__cplusplus
+
+typedef void* HGLRC;
+typedef void* HDC;
+typedef void* PROC;
+typedef void* PIXELFORMATDESCRIPTOR;
+
+typedef void* DEVMODE;
+typedef void* HINSTANCE;
 
 #endif //_CRY_COMMON_LINUX_SPECIFIC_HDR_
