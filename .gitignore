@@ -1,6 +1,8 @@
 .vs
+*.user
 bin
 build
 Debug
 Debug_XBox
 Release
+cmake-build-*
