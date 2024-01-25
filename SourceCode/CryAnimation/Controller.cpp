@@ -56,7 +56,7 @@ void IController::PQLog::blendPQ (const PQLog& pqFrom, const PQLog& pqTo, float 
 // builds the matrix out of the position and orientation stored in this PQLog
 void IController::PQLog::buildMatrix(Matrix44& matDest)const
 {
-	CryQuat qRot;
+	CryQuat qRot(1.f, 0.f, 0.f, 0.f);
 	quaternionExponentOptimized(vRotLog, qRot);
 	//BuildMatrixFromQP(matDest, qRot, vPos);
 	matDest=Matrix44(qRot);

@@ -418,6 +418,8 @@ void CLog::LogStringToFile( const char *szString,bool bAdd )
 	}
 #endif
 
+	OutputDebugStringA(szTemp);
+
 	if (bAdd)
 	{
 		FILE *fp=fxopen(m_szFilename,"r+t");

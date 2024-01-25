@@ -129,6 +129,7 @@ inline bool isEqual (const CryQuat& q, const CryQuat& p)
 	return true;
 }
 
+#if 0
 __inline void quaternionExponentOptimized(const Vec3& rSrcVector, CryQuat& rDstQuat)
 {
 #if DO_ASM && defined (_CPU_X86)
@@ -147,6 +148,15 @@ __inline void quaternionExponentOptimized(const Vec3& rSrcVector, CryQuat& rDstQ
 	rDstQuat = exp(tmp);
 #endif
 }
+#else
+__inline void quaternionExponentOptimized(const Vec3& rSrcVector, CryQuat& rDstQuat)
+{
+	CryQuat tmp;
+	tmp.v = rSrcVector;
+	tmp.w = 0;
+	rDstQuat = exp(tmp);
+}
+#endif
 
 
 

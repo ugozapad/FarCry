@@ -96,5 +96,5 @@ target_include_directories(${PROJECT_NAME} PRIVATE
 )
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
-    ${SYSTEM_DEPS}
+    ${SYSTEM_DEPS} SDL2
 )

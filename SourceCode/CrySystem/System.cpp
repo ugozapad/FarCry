@@ -17,6 +17,8 @@
 //#include "ini_vars.h"
 #include "CryLibrary.h"
 
+#include <SDL.h>
+
 #ifndef _XBOX
 #ifdef WIN32
 #define WIN32_LEAN_AND_MEAN
@@ -761,6 +763,8 @@ void CSystem::UpdateScriptSink()
 		m_pScriptSink->Update(false);		// LUA Garbage collection might be called in here
 }
 
+bool g_bWindowInFocus = false;
+
 // nPauseMode: 0=normal(no pause)
 // nPauseMode: 1=menu/pause
 // nPauseMode: 2=cutscene
@@ -849,6 +853,7 @@ bool CSystem::Update( int updateFlags, int nPauseMode )
 	{
 		FRAME_PROFILER( "SysUpdate:PeekMessage",this,PROFILE_SYSTEM );
 
+#if 0
 		if (m_hWnd && ::IsWindow((HWND)m_hWnd))
 		{
 			MSG msg;
@@ -858,6 +863,36 @@ bool CSystem::Update( int updateFlags, int nPauseMode )
 				DispatchMessage(&msg);
 			}
 		}
+#else
+		SDL_Event event;
+		while (SDL_PollEvent(&event))
+		{
+			switch (event.type)
+			{
+			case SDL_QUIT: Quit(); break;
+			case SDL_WINDOWEVENT:
+			{
+				switch (event.window.type)
+				{
+				case SDL_WINDOWEVENT_SHOWN:
+				case SDL_WINDOWEVENT_RESTORED:
+				case SDL_WINDOWEVENT_MAXIMIZED:
+				case SDL_WINDOWEVENT_ENTER:
+				case SDL_WINDOWEVENT_FOCUS_GAINED:
+					g_bWindowInFocus = true;
+					break;
+
+				case SDL_WINDOWEVENT_HIDDEN:
+				case SDL_WINDOWEVENT_MINIMIZED:
+				case SDL_WINDOWEVENT_LEAVE:
+				case SDL_WINDOWEVENT_FOCUS_LOST:
+					g_bWindowInFocus = false;
+					break;
+				}
+			}break;
+			}
+		}
+#endif
   }
 #endif
 #endif
@@ -888,7 +923,9 @@ bool CSystem::Update( int updateFlags, int nPauseMode )
 #if defined(_XBOX) || defined(LINUX)
 			m_pIInput->Update(true);
 #else
-			bool bFocus = (GetFocus()==m_hWnd) || m_bEditor;
+			// bool bFocus = (GetFocus()==m_hWnd) || m_bEditor;
+			//bool bFocus = g_bWindowInFocus;
+			bool bFocus = true;
 			m_pIInput->Update(bFocus);
 #endif
 		}
