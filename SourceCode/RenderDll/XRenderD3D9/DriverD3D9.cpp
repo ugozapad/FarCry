@@ -285,6 +285,9 @@ void CD3D9Renderer::Reset (void)
   hReturn = m_pd3dDevice->BeginScene();
 }
 
+extern void Cry_GetWindowRect(SDL_Window* window, RECT* rect);
+extern void Cry_GetClientRect(SDL_Window* window, RECT* rect);
+
 bool CD3D9Renderer::ChangeResolution(int nNewWidth, int nNewHeight, int nNewColDepth, int nNewRefreshHZ, bool bFullScreen)
 {
   HRESULT hReturn;
@@ -358,11 +361,13 @@ bool CD3D9Renderer::ChangeResolution(int nNewWidth, int nNewHeight, int nNewColD
     int y = (m_deskheight-CRenderer::m_height)/2;
     int wdt = GetSystemMetrics(SM_CXDLGFRAME)*2 + CRenderer::m_width;
     int hgt = GetSystemMetrics(SM_CYCAPTION) + GetSystemMetrics(SM_CXDLGFRAME)*2 + CRenderer::m_height;
-    SetWindowPos(m_hWnd, HWND_NOTOPMOST, x, y, wdt, hgt, SWP_SHOWWINDOW);
+    //SetWindowPos(m_hWnd, HWND_NOTOPMOST, x, y, wdt, hgt, SWP_SHOWWINDOW);
+    SDL_SetWindowPosition(m_hWnd, x, y);
+    SDL_SetWindowSize(m_hWnd, wdt, hgt);
   }
   // Save window properties
-  GetWindowRect( m_hWnd, &m_rcWindowBounds );
-  GetClientRect( m_hWnd, &m_rcWindowClient );
+  Cry_GetWindowRect( m_hWnd, &m_rcWindowBounds );
+  Cry_GetClientRect( m_hWnd, &m_rcWindowClient );
 
   hReturn = m_pd3dDevice->BeginScene();
   ICryFont *pCryFont = iSystem->GetICryFont();
@@ -1783,7 +1788,7 @@ void CD3D9Renderer::ScreenShot(const char *filename)
   POINT WndP;
   WndP.x = 0;
   WndP.y = 0;
-  ClientToScreen(m_hWnd, &WndP);  
+ // ClientToScreen(m_hWnd, &WndP);  
   h = pSysDeskSurf->LockRect(&d3dlrSys, NULL, D3DLOCK_READONLY);
   if (FAILED(h))
     return;
@@ -2030,7 +2035,7 @@ void CD3D9Renderer::ReadFrameBuffer(unsigned char * pRGB, int nSizeX, int nSizeY
     POINT WndP;
     WndP.x = 0;
     WndP.y = 0;
-    ClientToScreen(m_hWnd, &WndP);  
+   // ClientToScreen(m_hWnd, &WndP);  
     hr = pSysSurf->LockRect(&d3dlrSys, NULL, 0);
     byte *src = (byte *)d3dlrSys.pBits;
     byte *dst = pRGB;

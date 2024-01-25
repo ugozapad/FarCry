@@ -13,9 +13,19 @@
 #include "D3DCGVProgram.h"
 #include "D3DCGPShader.h"
 
+#include <SDL_syswm.h>
+
 #undef THIS_FILE
 static char THIS_FILE[] = __FILE__;
 
+HWND Cry_GetHWND(SDL_Window* window)
+{
+    SDL_SysWMinfo wmInfo;
+    SDL_VERSION(&wmInfo.version);
+    SDL_GetWindowWMInfo(window, &wmInfo);
+    HWND hwnd = wmInfo.info.win.window;
+    return hwnd;
+}
 
 void CD3D9Renderer::DisplaySplash()
 {
@@ -722,6 +732,8 @@ bool CD3D9Renderer::SetWindow(int width, int height, bool fullscreen, WIN_HWND h
     {
         m_hWnd = (SDL_Window*)hWnd;
     }
+
+    return true;
 }
 
 #ifdef USE_3DC
@@ -1053,6 +1065,10 @@ bool CD3D9Renderer::Error(char *Msg, HRESULT h)
 {
   const char *str = D3DError(h);
   iLog->Log("Error: %s (%s)", Msg, str);
+
+#ifdef WIN32
+  __debugbreak();
+#endif // WIN32
 
   //UnSetRes();
 
@@ -1416,12 +1432,14 @@ HRESULT CD3D9Renderer::Initialize3DEnvironment()
       behaviorFlags |= D3DCREATE_HARDWARE_VERTEXPROCESSING | D3DCREATE_PUREDEVICE;
   }
 
+  HWND hWnd = Cry_GetHWND(m_hWnd);
+
   // Create the device
   iLog->Log("Creating D3D device (Adapter format: %s, BackBuffer format: %s, Depth format: %s)", sD3DFMT(m_D3DSettings.AdapterFormat()), sD3DFMT(m_d3dpp.BackBufferFormat), sD3DFMT(m_d3dpp.AutoDepthStencilFormat));
   if (!CV_d3d9_nvperfhud)
-    hr = m_pD3D->CreateDevice(m_D3DSettings.AdapterOrdinal(), pDeviceInfo->DevType, (HWND)m_CurrContext->m_hWnd, behaviorFlags, &m_d3dpp, &m_pd3dDevice);
+    hr = m_pD3D->CreateDevice(m_D3DSettings.AdapterOrdinal(), pDeviceInfo->DevType, hWnd, behaviorFlags, &m_d3dpp, &m_pd3dDevice);
   else
-    hr = m_pD3D->CreateDevice(m_pD3D->GetAdapterCount()-1, D3DDEVTYPE_REF, (HWND)m_CurrContext->m_hWnd, behaviorFlags & ~(D3DCREATE_PUREDEVICE), &m_d3dpp, &m_pd3dDevice);
+    hr = m_pD3D->CreateDevice(m_pD3D->GetAdapterCount()-1, D3DDEVTYPE_REF, hWnd, behaviorFlags & ~(D3DCREATE_PUREDEVICE), &m_d3dpp, &m_pd3dDevice);
 
   if( SUCCEEDED(hr) )
   {
@@ -1438,13 +1456,13 @@ HRESULT CD3D9Renderer::Initialize3DEnvironment()
         m_d3dpp.Flags |= D3DPRESENTFLAG_LOCKABLE_BACKBUFFER;
 
         // Create the device
-        hr = m_pD3D->CreateDevice(m_D3DSettings.AdapterOrdinal(), pDeviceInfo->DevType, (HWND)m_CurrContext->m_hWnd, behaviorFlags, &m_d3dpp, &m_pd3dDevice);
+        hr = m_pD3D->CreateDevice(m_D3DSettings.AdapterOrdinal(), pDeviceInfo->DevType, hWnd, behaviorFlags, &m_d3dpp, &m_pd3dDevice);
         if (FAILED(hr))
         {
           SAFE_RELEASE(m_pd3dDevice);
           Sleep(1000);
           m_d3dpp.Flags &= ~D3DPRESENTFLAG_LOCKABLE_BACKBUFFER;
-          hr = m_pD3D->CreateDevice(m_D3DSettings.AdapterOrdinal(), pDeviceInfo->DevType, (HWND)m_CurrContext->m_hWnd, behaviorFlags, &m_d3dpp, &m_pd3dDevice);
+          hr = m_pD3D->CreateDevice(m_D3DSettings.AdapterOrdinal(), pDeviceInfo->DevType, hWnd, behaviorFlags, &m_d3dpp, &m_pd3dDevice);
         }
       }
     }
@@ -1458,15 +1476,15 @@ HRESULT CD3D9Renderer::Initialize3DEnvironment()
       // the window size to 1000x600 until after the display mode has
       // changed to 1024x768, because windows cannot be larger than the
       // desktop.
-			ShowWindow(m_hWnd, SW_SHOW);
-			UpdateWindow(m_hWnd);
-
-			SetForegroundWindow(m_hWnd);
-			SetFocus(m_hWnd);
+			//ShowWindow(m_hWnd, SW_SHOW);
+			//UpdateWindow(m_hWnd);
+            //
+			//SetForegroundWindow(m_hWnd);
+			//SetFocus(m_hWnd);
 
       if(!m_bFullScreen )
       {
-        SetWindowPos(m_hWnd, HWND_NOTOPMOST, m_rcWindowBounds.left, m_rcWindowBounds.top, (m_rcWindowBounds.right-m_rcWindowBounds.left), (m_rcWindowBounds.bottom - m_rcWindowBounds.top), SWP_SHOWWINDOW);
+        //SetWindowPos(m_hWnd, HWND_NOTOPMOST, m_rcWindowBounds.left, m_rcWindowBounds.top, (m_rcWindowBounds.right-m_rcWindowBounds.left), (m_rcWindowBounds.bottom - m_rcWindowBounds.top), SWP_SHOWWINDOW);
       }
       ChangeLog();
 			DisplaySplash();
@@ -1560,6 +1578,14 @@ HRESULT CD3D9Renderer::Initialize3DEnvironment()
       // Cleanup before we try again
       Cleanup3DEnvironment();
     }
+    else
+    {
+        iLog->LogError("Failed to create DirectX 9 device. Error: %s", DXGetErrorStringA(hr));
+    }
+  }
+  else
+  {
+          iLog->LogError("Failed to create DirectX 9 device. Error: %s", DXGetErrorStringA(hr));
   }
 
   return hr;
@@ -1717,7 +1743,7 @@ void CD3D9Renderer::BuildPresentParamsFromSettings()
   m_d3dpp.MultiSampleQuality     = m_D3DSettings.MultisampleQuality();
   m_d3dpp.SwapEffect             = D3DSWAPEFFECT_DISCARD;
   m_d3dpp.EnableAutoDepthStencil = m_D3DEnum.AppUsesDepthBuffer;
-  m_d3dpp.hDeviceWindow          = m_hWnd;
+  m_d3dpp.hDeviceWindow          = Cry_GetHWND(m_hWnd);
   if( m_D3DEnum.AppUsesDepthBuffer )
   {
     if (CV_d3d9_forcesoftware)
@@ -1883,13 +1909,23 @@ HRESULT CD3D9Renderer::Reset3DEnvironment()
   return S_OK;
 }
 
+void Cry_GetWindowRect(SDL_Window* window, RECT* rect)
+{
+    SDL_GetWindowSize(window, (int*) & rect->right, (int*)&rect->bottom);
+}
+
+void Cry_GetClientRect(SDL_Window* window, RECT* rect)
+{
+    SDL_GetWindowSize(window, (int*)&rect->right, (int*)&rect->bottom);
+}
+
 bool CD3D9Renderer::ChooseDevice(void)
 {
   HRESULT hr;
 
   // Save window properties
-  GetWindowRect( m_hWnd, &m_rcWindowBounds );
-  GetClientRect( m_hWnd, &m_rcWindowClient );
+  Cry_GetWindowRect( m_hWnd, &m_rcWindowBounds );
+  Cry_GetClientRect( m_hWnd, &m_rcWindowClient );
 
   if(FAILED(hr = ChooseInitialD3DSettings()))
     return Error("Couldn't find any suitable device", hr);
@@ -2022,12 +2058,14 @@ HRESULT CD3D9Renderer::AdjustWindowForChange()
   if( !m_bFullScreen )
   {
     // Set windowed-mode style
-    SetWindowLong( m_hWnd, GWL_STYLE, m_dwWindowStyle );
+    //SetWindowLong( m_hWnd, GWL_STYLE, m_dwWindowStyle );
+      SDL_SetWindowFullscreen(m_hWnd, 0);
   }
   else
   {
     // Set fullscreen-mode style
-    SetWindowLong( m_hWnd, GWL_STYLE, WS_POPUP|WS_SYSMENU|WS_VISIBLE );
+    //SetWindowLong( m_hWnd, GWL_STYLE, WS_POPUP|WS_SYSMENU|WS_VISIBLE );
+      SDL_SetWindowFullscreen(m_hWnd, SDL_WINDOW_FULLSCREEN_DESKTOP);
   }
 
   return S_OK;

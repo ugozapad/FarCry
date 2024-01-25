@@ -5,6 +5,10 @@ if (${ARCH_TYPE} STREQUAL "x86")
     add_definitions(-DDO_ASM)
 endif()
 
+if (MSVC)
+	add_compile_options(/SAFESEH:NO)
+endif()
+
 set(SRC_FILES
     "../Common/3DUtils.cpp"
     "../Common/CRT.cpp"

@@ -38,11 +38,20 @@ BOOL APIENTRY DllMain( HANDLE hModule,
 }
 #endif //_XBOX
 
+#include <SDL_syswm.h>
+
 IInput *CreateInput( ISystem *pSystem,void* hinst, void* hwnd, bool usedinput)
 {
 	gISystem = pSystem;
 	CInput *pInput=new CInput;
-	if (!pInput->Init(pSystem,(HINSTANCE)hinst,(HWND)hwnd,usedinput))
+
+	// #TODO: properly HWND gettings, and remove 
+	SDL_SysWMinfo wmInfo;
+	SDL_VERSION(&wmInfo.version);
+	SDL_GetWindowWMInfo((SDL_Window*)hwnd, &wmInfo);
+	HWND realhwnd = wmInfo.info.win.window;
+
+	if (!pInput->Init(pSystem,(HINSTANCE)hinst, realhwnd,usedinput))
 	{
 		delete pInput;
 		return NULL;

@@ -19,4 +19,4 @@ target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/SourceCode/CryCommon
 )
 
-target_link_libraries(${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME} SDL2)
