@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------------------
-// Author: Márcio Martins
+// Author: Marcio Martins
 //
 // Purpose:
 //  - Hold a glyph bitmap and blit it to the main texture

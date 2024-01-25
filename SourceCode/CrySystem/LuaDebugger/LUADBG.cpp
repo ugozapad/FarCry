@@ -1,7 +1,7 @@
 // LUADBG.cpp : Defines the entry point for the application.
 //
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "LUADBG.h"
 #include "_TinyRegistry.h"
 #include "_TinyFileEnum.h"

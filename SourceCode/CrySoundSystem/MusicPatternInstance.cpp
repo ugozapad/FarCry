@@ -1,5 +1,5 @@
 #include "StdAfx.h"
-#include "musicpatterninstance.h"
+#include "MusicPatternInstance.h"
 #include "MusicPattern.h"
 #include "PatternDecoder.h"
 

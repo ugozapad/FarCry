@@ -30,7 +30,7 @@
 /* scanf("%ld", &z_lo); z_lo = z_lo*4L + 1L;                               */
 /*-------------------------------------------------------------------------*/
 
-#include "stdafx.h"
+#include "StdAfx.h"
 //#include <math.h>
 
 unsigned int drand_z_hi = ((0x9DC59E12) & ((1<<27)-1)); // 8456922526314162853725694434834

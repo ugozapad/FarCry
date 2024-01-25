@@ -7,14 +7,14 @@
 //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <VertexBufferSource.h>
 #include <CryCompiledFile.h>
 #include <StringUtils.h>
 #include "CryModel.h"
 #include "CryModelState.h"
 #include "MeshIdx.h"
-#include "i3dengine.h"
+#include "I3DEngine.h"
 #include "CVars.h"
 #include "VertexBufferArrayDrivers.h"
 #include "CryCharDecalManager.h"

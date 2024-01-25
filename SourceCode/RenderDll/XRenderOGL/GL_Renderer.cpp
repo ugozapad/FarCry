@@ -23,7 +23,7 @@
 #undef GL_EXT
 #undef GL_PROC
 
-#include "../common/shadow_renderer.h"
+#include "../Common/Shadow_Renderer.h"
 #include "limits.h"
 
 int CGLRenderer::CV_gl_useextensions;
@@ -708,7 +708,8 @@ void CGLRenderer::Update()
     if (fg)
     {
       fg[nC] = (byte)f;
-      Graph(fg, 0, hgt-280, wdt, 256, nC, type, "Frame Time", Col_Green, fScale);
+      CFColor col = Col_Green;
+      Graph(fg, 0, hgt-280, wdt, 256, nC, type, "Frame Time", col, fScale);
     }
     nC++;
     if (nC == wdt)

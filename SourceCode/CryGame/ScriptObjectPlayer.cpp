@@ -8,7 +8,7 @@
 //
 //////////////////////////////////////////////////////////////////////
  
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "ScriptObjectPlayer.h"
 #include "XPlayer.h"
 #include "Game.h"

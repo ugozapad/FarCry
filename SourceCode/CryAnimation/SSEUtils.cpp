@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "SSEUtils.h"
 
 namespace cpu
@@ -63,7 +63,7 @@ void detect ()
 			popfd         // replace current EFLAGS value 
 			pushfd          // get new EFLAGS 
 			pop eax         // store new EFLAGS in EAX 
-			cmp eax, ebx      // can’t toggle AC bit, processor=80386 
+			cmp eax, ebx      // can't toggle AC bit, processor=80386
 			jz label386     // jump if 80386 processor 
 			push ebx
 			popfd         // restore AC bit in EFLAGS 

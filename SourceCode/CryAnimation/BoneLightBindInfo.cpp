@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #ifdef _CRY_ANIMATION_BASE_HEADER_
 #include "CVars.h"
 #endif

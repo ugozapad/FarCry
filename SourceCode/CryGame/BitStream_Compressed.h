@@ -9,7 +9,7 @@
 #ifndef BITSTREAM_COMPRESSED_H
 #define BITSTREAM_COMPRESSED_H
 
-#include "bitstream_base.h"				// CBitStream_Base
+#include "BitStream_Base.h"				// CBitStream_Base
 
 class CBitStream_Compressed :public CBitStream_Base
 {

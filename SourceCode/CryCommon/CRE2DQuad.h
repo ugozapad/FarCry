@@ -1,7 +1,7 @@
 #ifndef _CRE2DQuad_H_
 #define _CRE2DQuad_H_
 
-#include "vertexformats.h"
+#include "VertexFormats.h"
 
 class CRE2DQuad: public CRendElement
 {

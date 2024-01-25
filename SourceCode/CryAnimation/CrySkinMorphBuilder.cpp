@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "CrySkinMorphBuilder.h"
 #include "CrySkinMorph.h"
 

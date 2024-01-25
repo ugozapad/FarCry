@@ -1,4 +1,4 @@
-#include "Stdafx.h"
+#include "StdAfx.h"
 #include "CryAnimationBase.h"
 #include "CryCharInstanceRenderParams.h"
 

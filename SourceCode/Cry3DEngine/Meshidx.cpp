@@ -13,13 +13,13 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
-#include "geom.h"
+#include "Geom.h"
 #include "CryStaticModel.h"
-#include "meshidx.h"
+#include "MeshIdx.h"
 #include "MakMatInfoFromMAT_ENTITY.h"
-#include "objman.h"
+#include "ObjMan.h"
 
 #define MAX_USHORT (65536-2)
 

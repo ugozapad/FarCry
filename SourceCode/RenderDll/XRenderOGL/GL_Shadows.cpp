@@ -14,12 +14,12 @@
 #include "RenderPCH.h"
 #include "GL_Renderer.h"
 #include <IEntityRenderState.h>
-#include "../Common/shadow_renderer.h"
+#include "../Common/Shadow_Renderer.h"
 #include "../Common/RendElements/CREScreenCommon.h"
 #include "GLCGVProgram.h"
 #include "GLCGPShader.h"
 
-#include "I3dengine.h"
+#include "I3DEngine.h"
 
 void WriteTGA8(byte *data8, int width, int height, char *filename);
 void BlurImage8(byte * pImage, int nSize, int nPassesNum);
@@ -738,7 +738,7 @@ void CGLRenderer::ConfigShadowTexgen(int Num, int rangeMap, ShadowMapFrustum * p
   }
 }
 
-//#include "nvparse/nvparse.h"
+//#include "NVParse/nvparse.h"
 
 ///////////////////////////////////////////////////////////////////
 // Render shadows on the object as first pass

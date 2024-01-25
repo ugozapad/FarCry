@@ -1,5 +1,5 @@
 #include "StdAfx.h"
-#include "bsplinevec3dpacked.h"
+#include "BSplineVec3dPacked.h"
 
 // returns the normalized knot and the base - how many cycles the knot rolled back or forth
 int PackedSplineClosedGetKnotTime(int &nKnot, int numKnots)

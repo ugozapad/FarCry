@@ -27,7 +27,7 @@ The GLRenderer interface Class
 
 //#include "list2.h"
 #include "Mygl.h"
-#include "Myglu.h"
+#include "MyGlu.h"
 
 #include "map"
 
@@ -38,7 +38,7 @@ The GLRenderer interface Class
 #undef GL_EXT
 #undef GL_PROC
 
-#include "cg\cgGL.h"
+#include "CG/cgGL.h"
 
 class PBuffer;
 class CPBuffer;
@@ -335,13 +335,13 @@ private:
   int   _wglExtensionSupported(const char *extension);
   bool CreateRContext(SRendContext *rc, WIN_HDC Glhdc, WIN_HGLRC hGLrc, int cbpp, int zbpp, int sbits, bool bAllowFSAA);
 
-#ifdef WIN32
+//#ifdef WIN32
   TArray<SRendContext *> m_RContexts;
   SRendContext *m_CurrContext;
 
 	int			m_numvidmodes;
 	DEVMODE		*m_vidmodes;			
-#endif	
+//#endif
 
 	bool	m_lod_biasSupported; 
 

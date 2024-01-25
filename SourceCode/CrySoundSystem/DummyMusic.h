@@ -1,5 +1,5 @@
 #pragma once
-#include <isound.h>
+#include <ISound.h>
 
 class CDummyMusicSystem : public IMusicSystem
 {

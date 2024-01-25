@@ -16,7 +16,7 @@
 #include "StdAfx.h"
 #include "ParticleEffect.h"
 #include "ParticleEmitter.h"
-#include "PartMan.h"
+#include "partman.h"
 #include "3DEngine.h"
 #include "ISound.h"
 

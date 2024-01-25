@@ -66,4 +66,7 @@ typedef long long						LONGLONG;
 typedef	ULONG_PTR						SIZE_T;
 typedef unsigned char				byte;
 
+#define FILE_ATTRIBUTE_DIRECTORY 0x00000010
+#define INVALID_FILE_ATTRIBUTES (-1)
+
 #endif //_CRY_COMMON_LINUX64_SPECIFIC_HDR_

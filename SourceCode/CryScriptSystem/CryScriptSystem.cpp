@@ -1,7 +1,7 @@
 // CryScriptSystem.cpp : Defines the entry point for the DLL application.
 //
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
 #if !defined(_XBOX)
 _ACCESS_POOL;

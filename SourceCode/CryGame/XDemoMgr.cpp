@@ -8,7 +8,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "XDemoMgr.h"
 #include "TimeDemoRecorder.h"
 

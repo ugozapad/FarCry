@@ -4,7 +4,7 @@
 
   Revision history:
     * Created by Honitch Andrey
-	* Modified by Márcio Martins
+    * Modified by Marcio Martins
 
 =============================================================================*/
 
@@ -15,7 +15,7 @@ static char THIS_FILE[] = __FILE__;
 #include "RenderPCH.h"
 #include "GL_Renderer.h"
 
-#include "..\..\CryFont\FBitmap.h"
+#include "../../CryFont/FBitmap.h"
 
 int CGLRenderer::FontCreateTexture(int Width, int Height, byte *pData, ETEX_Format eTF)
 {

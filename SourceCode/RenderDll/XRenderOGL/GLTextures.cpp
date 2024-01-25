@@ -10,7 +10,7 @@
 #include "RenderPCH.h"
 #include "GL_Renderer.h"
 #include "GLPBuffer.h"
-#include "I3dengine.h"
+#include "I3DEngine.h"
 #include "GLCubeMaps.h"
 #include "CryHeaders.h"
 
@@ -911,7 +911,8 @@ int SShaderTexUnit::mfSetTexture(int nt)
           case TO_ENVIRONMENT_CUBE_MAP:
             {
               SEnvTexture *cm = NULL;
-              cm = gRenDev->m_cEF.mfFindSuitableEnvCMap(rd->m_RP.m_pCurObject->GetTranslation(), true, 0, 0);
+              Vec3d Pos = rd->m_RP.m_pCurObject->GetTranslation();
+              cm = gRenDev->m_cEF.mfFindSuitableEnvCMap(Pos, true, 0, 0);
               if (cm)
                 cm->m_Tex->Set();
               else
@@ -922,7 +923,8 @@ int SShaderTexUnit::mfSetTexture(int nt)
         case TO_ENVIRONMENT_LIGHTCUBE_MAP:
           {
             SEnvTexture *cm = NULL;
-            cm = gRenDev->m_cEF.mfFindSuitableEnvLCMap(rd->m_RP.m_pCurObject->GetTranslation(), true, 0, 0);
+            Vec3d Pos = rd->m_RP.m_pCurObject->GetTranslation();
+            cm = gRenDev->m_cEF.mfFindSuitableEnvLCMap(Pos, true, 0, 0);
             if (cm)
               cm->m_Tex->Set();
             else

@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <ITimer.h>
 #include <CrySizer.h>
 #include "CrySizerImpl.h"

@@ -1,7 +1,7 @@
 #ifndef _AI_ATTRIBUTE_
 #define _AI_ATTRIBUTE_
 
-#include "aiobject.h"
+#include "AIObject.h"
 
 class CAIAttribute : public CAIObject
 {

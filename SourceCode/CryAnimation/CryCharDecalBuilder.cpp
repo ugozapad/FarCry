@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "CryGeometryInfo.h"
 #include "MathUtils.h"
 #include "CryCharDecalBuilder.h"

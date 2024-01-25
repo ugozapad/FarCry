@@ -14,7 +14,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "ScriptObjectClient.h"
 #include "XClient.h"
 #include "XClient.h"

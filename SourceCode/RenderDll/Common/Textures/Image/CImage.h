@@ -197,7 +197,7 @@ public:
 };
 
 #include "Quantize.h"
-#include "Inv_cmap.h"
+#include "inv_cmap.h"
 
 #endif
 

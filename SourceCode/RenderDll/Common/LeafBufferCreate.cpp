@@ -8,7 +8,7 @@
 #include "MeshIdx.h"
 
 #include "float.h"
-#include "i3dengine.h"
+#include "I3DEngine.h"
 
 #include <CryCompiledFile.h>
 #include <VertexBufferSource.h>
@@ -125,7 +125,7 @@ class CMeshInputProxy
 {
 
   // helper to get order for CVertexLoadHelper
-  struct NormalCompare: public std::binary_function<Vec3, Vec3, bool>
+  struct NormalCompare
   {
     bool operator() ( const Vec3 &a, const Vec3 &b ) const
     {
@@ -752,7 +752,7 @@ void CLeafBuffer::CreateBuffer( CIndexedMesh * pTriData, bool bStripifyAndShareV
 class CTriangleInputProxyLB
 {
   // helper to get order for CVertexLoadHelper
-  struct NormalCompare: public std::binary_function<Vec3, Vec3, bool>
+  struct NormalCompare
   {
     bool operator() ( const Vec3 &a, const Vec3 &b ) const
     {
@@ -1110,7 +1110,7 @@ bool CLeafBuffer::CreateBuffer( struct VertexBufferSource* pSource )
 	return false;
 }
 
-#include "NvTriStrip/NVTriStrip.h"
+#include "NvTriStrip/NvTriStrip.h"
 
 void CLeafBuffer::StripifyMesh(int StripType)
 {

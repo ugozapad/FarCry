@@ -29,6 +29,7 @@ typedef void *EVENT_HANDLE;
 #endif
 
 #if defined(WIN32) || defined(WIN64)
+#define localtime_r(a, b) (localtime_s(b, a) == 0 ? b : NULL)
 #define DEBUG_BREAK _asm { int 3 }
 #else
 #define DEBUG_BREAK
@@ -255,7 +256,10 @@ static int64 GetTicks()
 
 #if defined(LINUX)
 	#define RC_EXECUTABLE "rc"
-	#include <WinBase.h>
+//	#include <WinBase.h>
+#ifdef __cplusplus
+	#include "Linux_Win32Wrapper.h"
+#endif
 #endif
 
 #endif // _PLATFORM_H_

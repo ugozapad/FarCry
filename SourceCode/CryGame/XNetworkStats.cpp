@@ -6,8 +6,8 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
-#include "xnetworkstats.h"
+#include "StdAfx.h"
+#include "XNetworkStats.h"
 
 #define MAX_ITEMS							30
 #define MAX_SUMGRAPHELEMENTS	1000

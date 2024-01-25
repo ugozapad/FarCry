@@ -5,7 +5,7 @@
 #include <set>
 #include <string>
 
-#include "ixml.h"
+#include "IXml.h"
 
 /************************************************************************/
 /* XmlParser class, Parse xml and return root xml node if success.      */

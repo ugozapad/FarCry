@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------------------
-// Author: Márcio Martins
+// Author: Marcio Martins
 //
 // Purpose:
 //  - Make UI functions available from script as UI:Func(param)

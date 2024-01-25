@@ -13,7 +13,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
 #include "EntitySystem.h"
 
@@ -1674,7 +1674,8 @@ void CEntity::UpdatePhysics( SEntityUpdateContext &ctx )
 					pLB->InvalidateVideoBuffer();
 				}
 			}
-			if ((m_bVisible^m_bWasVisible) && (!m_bVisible || psb.wind*psb.airResistance>0))
+			//TODO: Check if replacing psb.wind with (*psb.wind) works fine here
+			if ((m_bVisible^m_bWasVisible) && (!m_bVisible || (*psb.wind) * psb.airResistance > 0))
 				m_physic->Action(&aa);
 		}
 

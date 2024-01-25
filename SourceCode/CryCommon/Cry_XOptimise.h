@@ -19,7 +19,7 @@
 # pragma once
 #endif
 
-#include "TArray.h"
+#include "Tarray.h"
 #include "platform.h"
 //========================================================================================
 

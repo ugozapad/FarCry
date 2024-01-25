@@ -9,7 +9,7 @@
 #pragma once
 #include <IAgent.h>
 
-#include "aihandler.h"
+#include "AIHandler.h"
 
 class CVehicle;
 

@@ -10,7 +10,7 @@
 //	
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h" 
+#include "StdAfx.h"
 
 #include "Game.h"
 #include "XNetwork.h"
@@ -45,6 +45,8 @@
 //#include "XPath.h"
 #include <ISound.h>
 #include <IAgent.h>
+#include <chrono>
+#include <time.h>
 
 #if !defined(LINUX)
 #	include <dbghelp.h>
@@ -273,15 +275,17 @@ bool CXGame::SaveToStream(CStream &stm, Vec3d *pos, Vec3d *angles,string sFilena
 	stm.Write(szLowerCaseStr);
 
 	// write current time and date
-	SYSTEMTIME pSystemTime;		
-	GetLocalTime(&pSystemTime);	// FIX: this should be moved to crysystem
+	auto now = std::chrono::system_clock::now();
+	std::time_t time = std::chrono::system_clock::to_time_t(now);
+	struct tm localTime;
+	localtime_r(&time, &localTime);
 
-	stm.Write((unsigned char)pSystemTime.wHour);	// hour
-	stm.Write((unsigned char)pSystemTime.wMinute);// minute
-	stm.Write((unsigned char)pSystemTime.wSecond);// second
-	stm.Write((unsigned char)pSystemTime.wDay);		// day
-	stm.Write((unsigned char)pSystemTime.wMonth);	// month
-	stm.Write((unsigned short)pSystemTime.wYear);	// year
+	stm.Write((unsigned char)localTime.tm_hour);		// hour
+	stm.Write((unsigned char)localTime.tm_min);			// minute
+	stm.Write((unsigned char)localTime.tm_sec);			// second
+	stm.Write((unsigned char)localTime.tm_mday);		// day
+	stm.Write((unsigned char)(localTime.tm_mon + 1));	// month
+	stm.Write((unsigned short)(localTime.tm_year + 1900)); // year
 
 	// save savegame name
 	stm.Write(sFilename);

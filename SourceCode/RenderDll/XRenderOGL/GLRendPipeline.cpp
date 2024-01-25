@@ -10,10 +10,10 @@
 #include "RenderPCH.h"
 #include "GL_Renderer.h"
 #include <ICryAnimation.h>
-#include "..\common\shadow_renderer.h"
+#include "../Common/Shadow_Renderer.h"
 #include "GLCGPShader.h"
 #include "GLCGVProgram.h"
-#include "I3dengine.h"
+#include "I3DEngine.h"
 #include "CryHeaders.h"
 
 //==================================================================
@@ -2731,7 +2731,7 @@ bool CGLRenderer::EF_ObjectChange(SShader *Shader, SRenderShaderResources *Res, 
   return true;
 }
 
-_declspec(align(16)) static Matrix44 sIdentityMatrix(1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1); 
+DEFINE_ALIGNED_DATA_STATIC( Matrix44, sIdentityMatrix(1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1), 16 );
 
 // Get inverted matrix of the object matrix
 // All matrices are 16 bytes alligned to speedup matrix calculations using SSE instructions
@@ -3521,7 +3521,7 @@ void CGLRenderer::EF_ResetStateShaderState()
 }
 
 
-#include "../Common/NvTriStrip/NVTriStrip.h"
+#include "../Common/NvTriStrip/NvTriStrip.h"
 
 // Used for HW effectors for rendering of tri mesh (vertex array)
 void CGLRenderer::EF_DrawIndexedMesh (int nPrimType)

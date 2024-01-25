@@ -947,7 +947,7 @@ DWORD CImageCompiler::CalcTextureMemory( const bool inbOrig ) const
 		{
 			if(g_pixelformats[iNo].bCompressed)
 			{
-				iSum+=max(1,iW/4) * max(1,iH/4) * iBpp;			// from DX SDK:  max(1,width ÷ 4)x max(1,height ÷ 4)x 8 (DXT1) or 16 (DXT2-5)
+				iSum+=max(1,iW/4) * max(1,iH/4) * iBpp;			// from DX SDK:  max(1,width / 4)x max(1,height / 4)x 8 (DXT1) or 16 (DXT2-5)
 			}
 			else
 			{

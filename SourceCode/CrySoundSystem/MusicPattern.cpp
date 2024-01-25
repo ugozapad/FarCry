@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <CrySizer.h>
 #include <ICryPak.h>
-#include "musicpattern.h"
+#include "MusicPattern.h"
 #include "PCMDecoder.h"
 #include "OGGDecoder.h"
 #include "ADPCMDecoder.h"

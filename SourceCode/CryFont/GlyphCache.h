@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------------------
-// Author: Márcio Martins
+// Author: Marcio Martins
 //
 // Purpose:
 //  - Manage and cache glyphs, retrieving them from the renderer as needed
@@ -10,20 +10,7 @@
 //-------------------------------------------------------------------------------------------------
 #pragma once
 
-
-
-#ifdef WIN64
-// Workaround for Amd64 compiler
-#include <map>
-#define hash_map map
-#else
-#if defined(LINUX)
-#include <ext/hash_map>
-#else
-#include <hash_map>
-#endif
-#endif
-
+#include <unordered_map>
 #include <vector>
 #include "GlyphBitmap.h"
 #include "FontRenderer.h"
@@ -55,8 +42,8 @@ typedef struct CCacheSlot
 } CCacheSlot;
 
 
-typedef std::hash_map<wchar_t, CCacheSlot *>			CCacheTable;
-typedef std::hash_map<wchar_t, CCacheSlot *>::iterator	CCacheTableItor;
+typedef std::unordered_map<wchar_t, CCacheSlot *>			CCacheTable;
+typedef std::unordered_map<wchar_t, CCacheSlot *>::iterator	CCacheTableItor;
 
 typedef std::vector<CCacheSlot *>						CCacheSlotList;
 typedef std::vector<CCacheSlot *>::iterator				CCacheSlotListItor;

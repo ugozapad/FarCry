@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------------------
-// Author: Márcio Martins
+// Author: Marcio Martins
 //
 // Purpose:
 //  - UI System Window and Input Manager
@@ -4853,7 +4853,7 @@ int CUISystem::ConvertToWString(wstring &szWString, IFunctionHandler *pH, int iP
 
 		pH->GetParam(iParam, iValue);
 
-		itoa(iValue, szValue, 10);
+		sprintf(szValue, "%d", iValue);
 		szString = szValue;
 	}
 
@@ -5075,4 +5075,4 @@ bool CUISystem::IsOnFocusScreen(CUIWidget *pWidget)
 	return 0;
 }
 
-//------------------------------------------------------------------------------------------------- 
+//-------------------------------------------------------------------------------------------------

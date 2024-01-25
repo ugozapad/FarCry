@@ -10,10 +10,10 @@
 //////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <Cry_Camera.h>
 #include <I3DEngine.h>
-#include "..\Cry3DEngine\ShadowVolumeEdge.h"			// IEdgeConnectivityBuilder, IEdgeDetector
+#include "../Cry3DEngine/ShadowVolumeEdge.h"			// IEdgeConnectivityBuilder, IEdgeDetector
 #include <IEdgeConnectivityBuilder.h>									// IEdgeConnectivityBuilder
 #include "IncContHeap.h"
 #include "CryModel.h"

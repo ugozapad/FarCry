@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "LuaDbgInterface.h"
 #include "LUADBG.h"
 

@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 .vs
+*.user
 bin
 build
 Debug
 Debug_XBox
 Release
-=======
 build
->>>>>>> ddd4fa5ecb269a35314b06dc1a3ef8e284eabd34
+cmake-build-*

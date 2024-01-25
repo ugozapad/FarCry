@@ -9,7 +9,7 @@
 
 #if !defined(LINUX)
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "CImage.h"
 #include "JpgImage.h"
 

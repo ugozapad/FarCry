@@ -10,7 +10,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "XSnapshot.h"
 #include "Stream.h"
 #include "XSystemBase.h"

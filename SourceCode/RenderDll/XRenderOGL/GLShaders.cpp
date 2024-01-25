@@ -9,9 +9,9 @@
 
 #include "RenderPCH.h"
 #include "GL_Renderer.h"
-#include "I3dengine.h"
+#include "I3DEngine.h"
 
-#include "nvparse/nvparse.h"
+#include "NVParse/nvparse.h"
 #include "GLCGVProgram.h"
 #include "GLCGPShader.h"
 

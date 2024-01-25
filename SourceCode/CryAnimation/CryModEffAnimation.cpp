@@ -5,7 +5,7 @@
 //  Taken over by Sergiy Migdalskiy (no previous history record here)
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 //#include "CryAnimation.h"
 #include "CryBone.h"
 #include "CryModelState.h"

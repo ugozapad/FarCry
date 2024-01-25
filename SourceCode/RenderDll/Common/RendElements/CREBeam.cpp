@@ -1,6 +1,6 @@
 #include "RenderPCH.h"
 #include "RendElement.h"
-#include "I3dengine.h"
+#include "I3DEngine.h"
 
 void CREBeam::mfPrepare(void)
 {

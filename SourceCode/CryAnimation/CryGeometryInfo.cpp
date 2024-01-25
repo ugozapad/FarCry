@@ -10,7 +10,7 @@
 //  the data structure of CGF, and supporting subclass(es)
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <I3DEngine.h>
 #include <IEdgeConnectivityBuilder.h>									// IEdgeConnectivityBuilder
 #include <StlUtils.h>

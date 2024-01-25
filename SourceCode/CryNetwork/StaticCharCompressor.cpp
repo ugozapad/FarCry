@@ -1,5 +1,5 @@
-#include "stdafx.h"
-#include "compressionhelper.h"
+#include "StdAfx.h"
+#include "CompressionHelper.h"
 
 
 CStaticCharCompressor::CStaticCharCompressor()

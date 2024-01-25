@@ -6,8 +6,8 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
-#include "bitstream_base.h"
+#include "StdAfx.h"
+#include "BitStream_Base.h"
 
 CBitStream_Base::CBitStream_Base()
 {

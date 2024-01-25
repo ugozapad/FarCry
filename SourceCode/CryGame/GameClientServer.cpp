@@ -10,7 +10,7 @@
 //	
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h" 
+#include "StdAfx.h"
 
 #include "Game.h"
 #include "XNetwork.h"
@@ -204,6 +204,6 @@ void CXGame::RefreshServerList()
 {
 	m_ServersInfos.clear();
 	if(m_pServerSnooper)
-		m_pServerSnooper->SearchForLANServers(GetCurrentTime());
+		m_pServerSnooper->SearchForLANServers(GetTickCount());
 	TRACE("Refresh for lan");
 }

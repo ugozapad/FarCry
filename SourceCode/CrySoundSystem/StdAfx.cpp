@@ -3,7 +3,7 @@
 //	stdafx.obj will contain the pre-compiled type information
 
 #pragma warning( disable:4786 ) 
-#include "stdafx.h"
+#include "StdAfx.h"
 
 
 // TODO: reference any additional headers you need in STDAFX.H

@@ -2,7 +2,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "Network.h"
 #include "ServerSlot.h"
 #include "ClientLocal.h"

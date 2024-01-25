@@ -28,7 +28,7 @@
 
 #define MAX_DETAIL_LAYERS_IN_SECTOR 7
 
-#include "basicarea.h"
+#include "BasicArea.h"
 
 struct CSectorBeachInfo
 {

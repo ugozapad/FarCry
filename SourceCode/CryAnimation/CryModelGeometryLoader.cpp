@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <StlUtils.h>
 #include <I3DEngine.h>
 

@@ -8,7 +8,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "EntityDesc.h"
 #include "ScriptTimerMgr.h"
 #include <IEntitySystem.h>

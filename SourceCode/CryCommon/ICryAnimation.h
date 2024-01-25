@@ -1237,7 +1237,7 @@ struct ICryCharManager
 	//     Flags to unload a model from memory when it's no longer being used
 	enum EModelPersistence
 	{
-		// Let the Animation System releases the model data when it’s no longer used
+		// Let the Animation System releases the model data when it's no longer used
 		nHintModelTransient  = 1, 
 		// Force the model data to stay in memory even if no character instance uses it anymore
 		nHintModelPersistent = 2, 

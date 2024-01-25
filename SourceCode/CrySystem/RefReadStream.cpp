@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "CritSection.h"
 #include "RefStreamEngine.h"
 #include "RefReadStreamProxy.h"

@@ -1,9 +1,9 @@
 #ifndef _CRIT_SECTION_CRY_SYSTEM_HDR_
 #define _CRIT_SECTION_CRY_SYSTEM_HDR_
 
-#if defined(LINUX)
-	#include "WinBase.h"
-#endif
+//#if defined(LINUX)
+//	#include "WinBase.h"
+//#endif
 
 /////////////////////////////////////////////////////////////////////////////////////
 // Safe critical section robot: when constructing, it's locking the section, when

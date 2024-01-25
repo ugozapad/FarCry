@@ -2,7 +2,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "ScriptObject.h"
 #include "ScriptSystem.h"
 #include "StackGuard.h"

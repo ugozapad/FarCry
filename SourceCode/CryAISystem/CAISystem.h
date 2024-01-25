@@ -7,8 +7,8 @@
 #include "Graph.h"
 #include <map>
 #include <string>
-#include "buildingidmanager.h"
-#include "vertexlist.h"
+#include "BuildingIDManager.h"
+#include "VertexList.h"
 
 
 

@@ -5,11 +5,11 @@
 
 #include <smartptr.h>
 
-#include <corecrt_io.h>
-
 #ifdef LINUX
-	#include <winbase.h>
+//	#include <winbase.h>
 	#include <stdint.h>
+#else
+	#include <corecrt_io.h>
 #endif
 
 // this represents one particular archive filcare

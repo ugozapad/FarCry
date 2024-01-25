@@ -515,6 +515,8 @@ template<class F> inline F min_safe(F op1,F op2) { return op1<op2 ? op1:op2; }//
 #define VALIDATOR_RANGE(member,minval,maxval)
 #define VALIDATOR_RANGE2(member,minval,maxval)
 #define VALIDATORS_END
+#define ENTITY_VALIDATE(strSource,pStructure)
+#define ENTITY_VALIDATE_ERRCODE(strSource,pStructure,iErrCode)
 #endif
 
 

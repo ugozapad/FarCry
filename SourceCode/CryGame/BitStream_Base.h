@@ -9,7 +9,7 @@
 #ifndef BITSTREAM_BASE_H
 #define BITSTREAM_BASE_H
 
-#include "ibitstream.h"
+#include "IBitStream.h"
 
 class CBitStream_Base :public IBitStream
 {

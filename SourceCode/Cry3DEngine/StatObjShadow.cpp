@@ -13,9 +13,9 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "StatObj.h"
-#include "../RenderDll/Common/shadow_renderer.h"
+#include "../RenderDll/Common/Shadow_Renderer.h"
 
 void CStatObj::PrepareShadowMaps(const Vec3d & obj_pos, ShadowMapLightSource * pLSource)
 {

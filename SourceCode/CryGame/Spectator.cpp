@@ -6,10 +6,10 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <IEntitySystem.h>
 #include "Game.h"
-#include "spectator.h"
+#include "Spectator.h"
 #include "XEntityProcessingCmd.h"
 #include "XServer.h"
 

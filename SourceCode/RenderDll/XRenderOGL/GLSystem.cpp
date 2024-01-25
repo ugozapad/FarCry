@@ -13,7 +13,7 @@ static char THIS_FILE[] = __FILE__;
 
 #include "RenderPCH.h"
 #include "GL_Renderer.h"
-#include "cg\cgGL.h"
+#include "CG/cgGL.h"
 #include "GLCGVProgram.h"
 #include "GLCGPShader.h"
 
@@ -67,8 +67,10 @@ void CGLRenderer::SetDeviceGamma(ushort *r, ushort *g, ushort *b)
   }
   if (SUPPORTS_WGL_3DFX_gamma_control)
     wglSetDeviceGammaRamp3DFX(m_CurrContext->m_hDC, gamma);
+#ifdef WIN32 // FIX_LINUX
   else
     SetDeviceGammaRamp(m_CurrContext->m_hDC, gamma);
+#endif
 }
 
 void CGLRenderer::RestoreDeviceGamma(void)
@@ -93,12 +95,14 @@ void CGLRenderer::RestoreDeviceGamma(void)
     Ramp.red[i] = Ramp.green[i] = Ramp.blue[i] = i << 8;
   }
 
+#ifdef WIN32 // FIX_LINUX
   dc = GetDC(GetDesktopWindow());
   if (SUPPORTS_WGL_3DFX_gamma_control)
     wglSetDeviceGammaRamp3DFX(dc, &Ramp);
   else
     SetDeviceGammaRamp(dc, &Ramp);
   ReleaseDC(GetDesktopWindow(), dc);
+#endif
 }
 
 
@@ -147,6 +151,7 @@ bool CGLRenderer::SetGammaDelta(const float fGamma)
 
 void CGLRenderer::FreeLibrary()
 {
+#ifdef WIN32 // FIX_LINUX
   if (m_hLibHandle)
   {
     ::FreeLibrary((HINSTANCE)m_hLibHandle);
@@ -164,10 +169,12 @@ void CGLRenderer::FreeLibrary()
   #include "GLFuncs.h"
   #undef GL_EXT
   #undef GL_PROC
+#endif
 }
 
 bool CGLRenderer::LoadLibrary()
 {
+#ifdef WIN32 // FIX_LINUX
   strcpy(m_LibName, "OpenGL32.dll");
 
   m_hLibHandle = ::LoadLibrary(m_LibName);
@@ -180,6 +187,7 @@ bool CGLRenderer::LoadLibrary()
   assert(m_hLibHandleGDI);
 
   return true;
+#endif
 }
 
 typedef const char * (WINAPI * PFNWGLGETEXTENSIONSSTRINGARBPROC) (HDC hdc);
@@ -212,10 +220,12 @@ void CGLRenderer::FindProc( void*& ProcAddress, char* Name, char* SupportName, b
 {
   if (Name[0] == 'p')
     Name = &Name[1];
+#ifdef WIN32 // FIX_LINUX
   if( !ProcAddress )
     ProcAddress = GetProcAddress( (HINSTANCE)m_hLibHandle, Name );
   if( !ProcAddress )
     ProcAddress = GetProcAddress( (HINSTANCE)m_hLibHandleGDI, Name );
+#endif
   if( !ProcAddress && Supports && AllowExt )
     ProcAddress = pwglGetProcAddress( Name );
   if( !ProcAddress )
@@ -1256,6 +1266,7 @@ int CGLRenderer::EnumDisplayFormats(TArray<SDispFormat>& Formats, bool bReset)
   int i, j;
   for (i=0; i<m_numvidmodes; i++)
   {
+#ifdef WIN32 // FIX_LINUX
     DEVMODE *m = &m_vidmodes[i];
     if (m->dmPelsWidth < 640 || m->dmPelsHeight < 480 || m->dmBitsPerPel < 15)
       continue;
@@ -1274,6 +1285,7 @@ int CGLRenderer::EnumDisplayFormats(TArray<SDispFormat>& Formats, bool bReset)
         frm.m_BPP = 32;
       Formats.AddElem(frm);
     }
+#endif
   }
   return Formats.Num();
 }
@@ -1282,6 +1294,7 @@ HWND CGLRenderer::SetMode(int x,int y,int width,int height,unsigned int cbpp, in
 {
   ///////////////////////////////////Get Desktop Settings
 
+#ifdef WIN32 // FIX_LINUX
   HWND temp = GetDesktopWindow();
   RECT trect;
 
@@ -1436,6 +1449,7 @@ HWND CGLRenderer::SetMode(int x,int y,int width,int height,unsigned int cbpp, in
     SetWindowPos(Glhwnd, HWND_NOTOPMOST, (GetSystemMetrics(SM_CXFULLSCREEN)-width)/2, (GetSystemMetrics(SM_CYFULLSCREEN)-height)/2, GetSystemMetrics(SM_CXDLGFRAME)*2 + width, GetSystemMetrics(SM_CYCAPTION) + GetSystemMetrics(SM_CXDLGFRAME)*2 + height, SWP_SHOWWINDOW);
 
   //SAFE_DELETE_ARRAY(m_vidmodes);
+#endif
 
   return Glhwnd;
 }
@@ -1471,12 +1485,14 @@ int CGLRenderer::_wglExtensionSupported(const char *extension)
 
     if (!extensions)
     {
+#ifdef WIN32 // FIX_LINUX
       HDC hdc = GetDC(0);
       if (wglGetExtensionsStringARB)
         extensions = (const GLubyte *) wglGetExtensionsStringARB(hdc);
       else
         extensions = (const GLubyte *) wglGetExtensionsStringEXT();
       ::ReleaseDC(0,hdc);
+#endif
     }
 
     // It takes a bit of care to be fool-proof about parsing the
@@ -1723,10 +1739,11 @@ exr:
   }
   else
   {
+#ifdef WIN32 // FIX_LINUX
     rc->m_hDC = GetDC((HWND)Glhwnd);
+#endif
   }
   rc->m_Glhwnd = (HWND)Glhwnd;
-  m_CurrContext = rc;
 
   // Find functions.
   SUPPORTS_GL = 1;
@@ -1759,7 +1776,7 @@ exr:
   iLog->Log("GL_VERSION: %s\n", m_VersionName);
   m_ExtensionsName = glGetString(GL_EXTENSIONS);
   iLog->LogToFile("GL_EXTENSIONS:\n");
-  char ext[8192];
+  char ext[16384];
   char *token;
   strcpy(ext, (char *)m_ExtensionsName);
   token = strtok(ext, " ");
@@ -2013,10 +2030,12 @@ exr:
 
   SetPolygonMode(R_SOLID_MODE);
 
+#ifdef WIN32 // FIX_LINUX
   ::ShowWindow(m_CurrContext->m_Glhwnd,1);
   ::UpdateWindow(m_CurrContext->m_Glhwnd);
   ::SetForegroundWindow(m_CurrContext->m_Glhwnd);
   ::SetFocus(m_CurrContext->m_Glhwnd);
+#endif
 
   SetGamma(CV_r_gamma+m_fDeltaGamma, CV_r_brightness, CV_r_contrast);
 
@@ -2054,6 +2073,7 @@ bool CGLRenderer::CreateRContext(SRendContext *rc, WIN_HDC Glhdc, WIN_HGLRC hGLr
 
   if (bAllowFSAA && m_RContexts.Num() && rc == m_RContexts[0])
   {
+#ifdef WIN32 // FIX_LINUX
     WNDCLASS wc;
     wc.style         = CS_OWNDC | CS_HREDRAW | CS_VREDRAW;
     wc.lpfnWndProc   = ::DefWindowProc;
@@ -2132,6 +2152,7 @@ bool CGLRenderer::CreateRContext(SRendContext *rc, WIN_HDC Glhdc, WIN_HGLRC hGLr
       DestroyWindow(hWnd);
       UnregisterClass("FAKE_WINDOW", m_hInst);
     }
+#endif
   }
 
   if (nFSAA && (m_Features & RFT_SUPPORTFSAA))
@@ -2187,8 +2208,10 @@ bool CGLRenderer::CreateRContext(SRendContext *rc, WIN_HDC Glhdc, WIN_HGLRC hGLr
   {
     PIXELFORMATDESCRIPTOR pfd;
     memset(&pfd, 0, sizeof(pfd));
+#ifdef WIN32 // FIX_LINUX
     DescribePixelFormat(m_CurrContext->m_hDC, pixelFormat, sizeof(PIXELFORMATDESCRIPTOR), &pfd);
     SetPixelFormat(m_CurrContext->m_hDC, pixelFormat, &pfd);
+#endif
     rc->m_PixFormat = pixelFormat;
 
     m_CurrContext->m_hRC = pwglCreateContext(m_CurrContext->m_hDC);
@@ -2287,7 +2310,9 @@ bool CGLRenderer::CreateContext(WIN_HWND hWnd, bool bAllowFSAA)
   SRendContext *rc = new SRendContext;
   m_RContexts.AddElem(rc);
   rc->m_Glhwnd = (HWND)hWnd;
+#ifdef WIN32 // FIX_LINUX
   rc->m_hDC = GetDC((HWND)hWnd);
+#endif
   rc->m_hRC = NULL;
   int cbpp = m_cbpp;
   int zbpp = m_zbpp;
@@ -2330,7 +2355,9 @@ bool CGLRenderer::DeleteContext(WIN_HWND hWnd)
 
   if (rc->m_hDC)
   {
+#ifdef WIN32 // FIX_LINUX
     ReleaseDC(rc->m_Glhwnd, rc->m_hDC);
+#endif
     rc->m_hDC = NULL;
   }
   delete rc;
@@ -2433,7 +2460,9 @@ void CGLRenderer::ShutDown(bool bReInit)
   }
   if (hWnd && !bReInit)
   {
+#ifdef WIN32 // FIX_LINUX
     DestroyWindow(hWnd);
+#endif
   }
 
   //ChangeDisplay(m_deskwidth,m_deskheight,m_deskbpp);

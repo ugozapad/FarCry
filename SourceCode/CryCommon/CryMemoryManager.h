@@ -43,10 +43,12 @@ struct CryModuleMemoryInfo
 	inline void* CryModuleReallocSize(void *ptr,size_t oldsize,size_t size)  { return CryModuleRealloc(ptr,size);}
 	inline void  CryModuleFreeSize(void *ptr,size_t size) { CryModuleFree(ptr);}
 	#include <new>
-		inline void * __cdecl operator new   (size_t  size) throw(std::bad_alloc) { return CryModuleMalloc(size); } 
-		inline void * __cdecl operator new[](size_t size) throw(std::bad_alloc) { return CryModuleMalloc(size); }; 
+		#define throw(...) //Temporary fix - See https://stackoverflow.com/a/52804461
+		inline void * __cdecl operator new   (size_t  size) throw(std::bad_alloc) { return CryModuleMalloc(size); }
+		inline void * __cdecl operator new[](size_t size) throw(std::bad_alloc) { return CryModuleMalloc(size); };
 		inline void __cdecl operator delete  (void *p) { CryModuleFree(p); };
 		inline void __cdecl operator delete[](void *p) { CryModuleFree(p); };
+		#undef throw /* reset */
 #else
 	static void* CryModuleReallocSize(void *ptr,size_t oldsize,size_t size)  { return CryModuleRealloc(ptr,size);}
 	static void  CryModuleFreeSize(void *ptr,size_t size) { CryModuleFree(ptr);}

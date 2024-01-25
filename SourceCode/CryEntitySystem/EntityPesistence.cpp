@@ -1,7 +1,7 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "Entity.h"
 #include "EntitySystem.h"
-#include <stream.h>
+#include <Stream.h>
 #include <IScriptSystem.h>
 #include <ITimer.h>
 #include <ILog.h>

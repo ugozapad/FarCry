@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------------------
-// Author: Márcio Martins
+// Author: Marcio Martins
 //
 // Purpose:
 //  - Render a glyph outline into a bitmap using FreeType 2
@@ -14,7 +14,7 @@
 #include <string>
 
 #include "GlyphBitmap.h"
-#include "FreeType2/include/FreeType/FreeType.h"
+#include "FreeType2/include/freetype/freetype.h"
 
 
 

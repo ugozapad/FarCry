@@ -14,9 +14,9 @@
 ////////////////////////////////////////////////////////////////////////////
 
 #include "RenderPCH.h"
-#include "cryheaders.h"
-#include "nvtristrip/nvtristrip.h"
-#include "serializebuffer.h"
+#include "CryHeaders.h"
+#include "NvTriStrip/NvTriStrip.h"
+#include "SerializeBuffer.h"
 #include "MakMatInfoFromMAT_ENTITY.h"
 
 CryIRGB CF2IRGB(CFColor in)

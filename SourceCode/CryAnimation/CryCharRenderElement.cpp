@@ -6,7 +6,7 @@
 //	Created by Sergiy Migdalskiy
 //
 /////////////////////////////////////////////////////////////////////////////////////////////////////
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "CryAnimationBase.h"
 #include "CryCharRenderElement.h"
 #include "CVars.h"

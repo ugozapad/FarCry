@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "XVehicle.h"
 #include <IAgent.h>
 

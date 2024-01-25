@@ -1,6 +1,6 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <TArrays.h>
-#include <ilog.h>
+#include <ILog.h>
 #include "RefStreamEngine.h"
 #include "RefReadStream.h"
 #include "RefReadStreamProxy.h"

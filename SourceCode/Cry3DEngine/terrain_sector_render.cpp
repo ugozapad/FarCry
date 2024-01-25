@@ -13,10 +13,10 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
 #include "terrain_sector.h"
-#include "objman.h"
+#include "ObjMan.h"
 #include "terrain_water.h"
  
 // draw tri strips

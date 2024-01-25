@@ -13,11 +13,11 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
-#include "3dEngine.h"
-#include "objman.h"
-#include "visareas.h"
+#include "3DEngine.h"
+#include "ObjMan.h"
+#include "VisAreas.h"
 #include "terrain_water.h"
 #include "partman.h"
 #include "DecalManager.h"
@@ -27,7 +27,7 @@
 
 #include "cbuffer.h"
 
-#include "watervolumes.h"
+#include "WaterVolumes.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////
 // RenderScene
@@ -775,7 +775,7 @@ void C3DEngine::RenderSkyBox(IShader *pSH)
         vTrans = GetViewCamera().GetPos() + 0.9f*t*(vTrans-GetViewCamera().GetPos());
       }
 
-      m_SunObject[m_pTerrain->m_nRenderStackLevel]->m_Matrix = GetTranslationMat(vTrans);
+      m_SunObject[m_pTerrain->m_nRenderStackLevel]->m_Matrix = Matrix44::GetTranslationMat(vTrans);
       m_SunObject[m_pTerrain->m_nRenderStackLevel]->m_ObjFlags |= FOB_DRSUN | FOB_TRANS_TRANSLATE;
       m_SunObject[m_pTerrain->m_nRenderStackLevel]->m_TempVars[2] = 1.0f;
       float fWaterLevel = GetWaterLevel();

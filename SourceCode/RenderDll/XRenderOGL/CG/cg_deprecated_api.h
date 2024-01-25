@@ -15,7 +15,7 @@
  * 
  * In consideration of your agreement to abide by the following terms, and 
  * subject to these terms, NVIDIA grants you a personal, non-exclusive license,
- * under NVIDIA’s copyrights in this original NVIDIA software (the "NVIDIA 
+ * under NVIDIA's copyrights in this original NVIDIA software (the "NVIDIA
  * Software"), to use, reproduce, modify and redistribute the NVIDIA 
  * Software, with or without modifications, in source and/or binary forms; 
  * provided that if you redistribute the NVIDIA Software, you must retain the 
@@ -149,7 +149,7 @@ typedef enum
 
 # define CG_PROFILE_MACRO(name, compiler_id, compiler_id_caps, compiler_opt,int_id,vertex_profile) \
    cg##name##Profile = int_id,
-# include "Cg/cg_profiles.h"
+# include "CG/cg_profiles.h"
 
   cgNProfiles,
  } cgProfileType;

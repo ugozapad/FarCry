@@ -8,7 +8,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "StringTableMgr.h"
 #include "ScriptObjectLanguage.h"
 #include "IXMLDOM.h"

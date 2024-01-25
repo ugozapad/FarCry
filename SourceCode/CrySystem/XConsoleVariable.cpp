@@ -2,7 +2,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "XConsole.h"
 #include "XConsoleVariable.h"
 #include "System.h"

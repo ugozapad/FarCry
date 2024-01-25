@@ -13,7 +13,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
 #include "StatObj.h"
 #include "MeshIdx.h"
@@ -215,7 +215,7 @@ void CStatObj::LoadLowLODs(EVertsSharing eVertsSharing,bool bLoadAdditinalInfo,b
 		sLodFileName[strlen(sLodFileName)-4]=0;
 		strcat(sLodFileName,"_lod");
 		char sLodNum[8];
-		ltoa(nLodLevel,sLodNum,10);
+		sprintf(sLodNum, "%d", nLodLevel);
 		strcat(sLodFileName,sLodNum);
 		strcat(sLodFileName,".cgf");
 

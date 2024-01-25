@@ -1,6 +1,6 @@
 #pragma once
 
-#include <SmartPtr.h>
+#include <smartptr.h>
 
 class CMusicPattern;
 struct IMusicPatternDecoderInstance;

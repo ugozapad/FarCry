@@ -14,7 +14,7 @@
  * 
  * In consideration of your agreement to abide by the following terms, and 
  * subject to these terms, NVIDIA grants you a personal, non-exclusive license,
- * under NVIDIA’s copyrights in this original NVIDIA software (the "NVIDIA 
+ * under NVIDIA's copyrights in this original NVIDIA software (the "NVIDIA
  * Software"), to use, reproduce, modify and redistribute the NVIDIA 
  * Software, with or without modifications, in source and/or binary forms; 
  * provided that if you redistribute the NVIDIA Software, you must retain the 
@@ -54,7 +54,7 @@
 
 
 
-#include "Cg/cg.h"
+#include "CG/cg.h"
 
 /* Set up for either Win32 import/export/lib. */
 #ifndef CGGLDLL_API

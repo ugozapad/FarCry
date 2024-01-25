@@ -1925,7 +1925,7 @@ template<class F,int SI,int SJ> struct Matrix44_tpl {
 		M20=0.0f;	M21=0.0f;	M22=1.0f;	M23=0.0f;
 		M30=v.x;	M31=v.y;	M32=v.z;	M33=1.0f;
 	}
-	ILINE friend Matrix44_tpl<F,4,1> GetTranslationMat( const Vec3_tpl<F>& v  ) {
+	ILINE static Matrix44_tpl<F,4,1> GetTranslationMat( const Vec3_tpl<F>& v  ) {
 		Matrix44_tpl<F,4,1> m; m.SetTranslationMat(v); return m;
 	}
 

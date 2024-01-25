@@ -3,7 +3,7 @@
 #include <ISound.h>
 #include <ISystem.h>
 #include <ICryPak.h>
-#include "pcmdecoder.h"
+#include "PCMDecoder.h"
 
 CPCMDecoder::CPCMDecoder(IMusicSystem *pMusicSystem) : m_b44KHz(true)
 {

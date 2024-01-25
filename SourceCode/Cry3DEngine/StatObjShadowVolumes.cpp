@@ -13,16 +13,16 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
 #include "StatObj.h"
-#include "meshidx.h"
+#include "MeshIdx.h"
 #include <IEdgeConnectivityBuilder.h>									// IEdgeConnectivityBuilder
 #include "StencilShadowConnectivity.h"
 #include "IndoorVolumes.h"
 #include "IndoorShadowVolumes.h"
 #include "CRETriMeshShadow.h"
-#include "3dengine.h"
+#include "3DEngine.h"
 
 ItShadowVolume * CStatObj::MakeConnectivityInfo(CIndexedMesh * pMesh, const Vec3d & vOrigin, CStatObj * pStatObj)
 {

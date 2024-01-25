@@ -10,7 +10,7 @@
 //  chunk 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "MathUtils.h"
 #include "CryBoneHierarchyLoader.h"
 #include "ChunkFileReader.h"

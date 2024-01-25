@@ -14,7 +14,7 @@ set(SRC_FILES
     "IDGenerator.cpp"
     "LipSync.cpp"
     "RandomExprLoadSink.cpp"
-    "stdafx.cpp"
+    "StdAfx.cpp"
 )
 
 add_library(${PROJECT_NAME} SHARED ${SRC_FILES})

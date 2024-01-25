@@ -1,7 +1,7 @@
 #ifndef _AI_PLAYER_
 #define _AI_PLAYER_
 
-#include "aiobject.h"
+#include "AIObject.h"
 
 class CAIPlayer :	public CAIObject
 {

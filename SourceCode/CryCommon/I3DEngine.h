@@ -30,8 +30,8 @@
 
 // !!! Do not add any headers here !!!
 #include <IProcess.h>
-#include <CryEngineDecalInfo.h> 
-#include "IStatobj.h"
+#include <CryEngineDecalInfo.h>
+#include "IStatObj.h"
 // !!! Do not add any headers here !!!
 
 struct ISystem;
@@ -45,7 +45,8 @@ struct AnimTexInfo;
 template <class T> class list2;
 
 #if defined(LINUX)
-	#include "Splash.h"
+//	#include "Splash.h"
+	#include "IRenderer.h"
 #endif
 
 
@@ -74,6 +75,7 @@ private:
 };
 
 // Specialation for vectors.
+template<>
 inline Vec3 SVariationValue<Vec3>::GetVariantValue() const
 {
 	Vec3 v;

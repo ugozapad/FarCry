@@ -15,6 +15,7 @@
 #ifndef _CRY_COMMON_LINUX_SPECIFIC_HDR_
 #define _CRY_COMMON_LINUX_SPECIFIC_HDR_
 
+#include <stdint.h>
 #include <pthread.h>
 #include <math.h>
 #include <string.h>
@@ -27,7 +28,7 @@ typedef void*								LPVOID;
 #define VOID            		void
 #define PVOID								void*
 
-#define PHYSICS_EXPORTS
+//#define PHYSICS_EXPORTS
 
 #ifdef __cplusplus
 // checks if the heap is valid in debug; in release, this function shouldn't be called
@@ -43,6 +44,7 @@ inline int IsHeapValid ()
 #define _inline inline
 #define __cdecl
 #define __stdcall
+#define _stdcall
 #define __fastcall
 #define IN
 #define OUT
@@ -73,6 +75,9 @@ inline int IsHeapValid ()
 
 #define CALLBACK
 #define WINAPI
+#define WINAPIV
+#define APIENTRY
+#define TEXT
 
 #ifndef __cplusplus
 #ifndef _WCHAR_T_DEFINED
@@ -102,6 +107,7 @@ typedef int							LONG;
 typedef unsigned int 		ULONG;
 typedef int 						HRESULT;
 
+typedef unsigned long int threadID;
 
 #define TRUE 1
 #define FALSE 0
@@ -113,6 +119,14 @@ typedef int 						HRESULT;
 #define _MAX_PATH MAX_PATH
 #endif
 
+#define _A_RDONLY (0x01)
+#define _A_SUBDIR (0x10)
+#define _A_HIDDEN (0x02)
+
+//////////////////////////////////////////////////////////////////////////
+// Win32 FileAttributes.
+//////////////////////////////////////////////////////////////////////////
+#define FILE_ATTRIBUTE_READONLY             0x00000001
 
 //-------------------------------------socket stuff------------------------------------------
 #define SOCKET int
@@ -264,6 +278,39 @@ typedef struct _SECURITY_ATTRIBUTES
     BOOL bInheritHandle;
 } SECURITY_ATTRIBUTES, *PSECURITY_ATTRIBUTES, *LPSECURITY_ATTRIBUTES;
 
+typedef struct _FILETIME {
+	DWORD dwLowDateTime;
+	DWORD dwHighDateTime;
+} FILETIME, *PFILETIME, *LPFILETIME;
+
+#pragma pack(push, 1) // Disable padding for the following structure
+
+typedef struct
+{
+	uint16_t bfType;       // File type. Should be set to 'BM'.
+	uint32_t bfSize;       // Size of the BMP file in bytes.
+	uint16_t bfReserved1;  // Reserved; set to 0.
+	uint16_t bfReserved2;  // Reserved; set to 0.
+	uint32_t bfOffBits;    // Offset from the beginning of the file to the bitmap data.
+} BITMAPFILEHEADER, *PBITMAPFILEHEADER, *LPBITMAPFILEHEADER;
+
+typedef struct
+{
+	uint32_t biSize;          // Size of the header (in bytes).
+	int32_t  biWidth;         // Width of the image (in pixels).
+	int32_t  biHeight;        // Height of the image (in pixels).
+	uint16_t biPlanes;        // Number of color planes (must be 1).
+	uint16_t biBitCount;      // Number of bits per pixel.
+	uint32_t biCompression;   // Compression type (0 for uncompressed).
+	uint32_t biSizeImage;     // Size of the image data (in bytes).
+	int32_t  biXPelsPerMeter; // Horizontal resolution (pixels per meter).
+	int32_t  biYPelsPerMeter; // Vertical resolution (pixels per meter).
+	uint32_t biClrUsed;       // Number of colors used (0 for full color images).
+	uint32_t biClrImportant;  // Number of important colors (0 when every color is important).
+} BITMAPINFOHEADER, *PBITMAPINFOHEADER, *LPBITMAPINFOHEADER;
+
+#pragma pack(pop) // Re-enable default padding settings
+
 #ifdef __cplusplus
 	static pthread_mutex_t mutex_t;
 	template<typename T>
@@ -355,6 +402,17 @@ typedef struct _SECURITY_ATTRIBUTES
 
 	typedef CHandle<int, (int)-1l> HANDLE;
 
+	typedef HANDLE EVENT_HANDLE;
+	typedef pid_t THREAD_HANDLE;
+
 #endif //__cplusplus
+
+typedef void* HGLRC;
+typedef void* HDC;
+typedef void* PROC;
+typedef void* PIXELFORMATDESCRIPTOR;
+
+typedef void* DEVMODE;
+typedef void* HINSTANCE;
 
 #endif //_CRY_COMMON_LINUX_SPECIFIC_HDR_

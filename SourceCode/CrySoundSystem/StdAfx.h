@@ -44,7 +44,7 @@
 #include <IConsole.h>
 #include <ISound.h>
 #include <ISystem.h>
-#ifdef WIN64
+#if defined(WIN64) || defined(LINUX64)
 #include <CrySound64.h>
 #else
 #include <CrySound.h>
@@ -92,7 +92,7 @@ _inline void __cdecl __CRYTEKDLL_TRACE(const char *sFormat, ... )
 #define ASSERT(x) {assert(x);}
 #else
 
-#define ASSERT(x)	{ if (!(x)) { TRACE("Assertion Failed (%s) File: \"%s\" Line: %d\n", #x, __FILE__, __LINE__); _asm { int 3 } } }
+#define ASSERT(x)	{ if (!(x)) { TRACE("Assertion Failed (%s) File: \"%s\" Line: %d\n", #x, __FILE__, __LINE__); DebugBreak(); } }
 #endif // WIN64
 
 #else

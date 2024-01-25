@@ -1,5 +1,5 @@
 #include "StdAfx.h"
-#include "randgen.h"
+#include "RandGen.h"
 
 #define M              (397)                 // a period parameter
 #define K              (0x9908B0DFU)         // a magic constant

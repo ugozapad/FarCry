@@ -201,7 +201,7 @@ public:
 		return *this;
 	}
 
-	void CStream::Debug( const char *inTxt=0 );
+	void Debug(const char *inTxt=0);
 
 	//! set a bit at the specified position in the bitstream
 	bool SetBit(size_t nPos, DWORD_PTR nValue);

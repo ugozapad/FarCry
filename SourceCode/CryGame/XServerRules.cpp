@@ -10,7 +10,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 //#include <Console.h>
 #include "ScriptObjectVector.h"
 //#include "GameDefs.h"
@@ -292,7 +292,7 @@ void CXServerRules::OnClientMsgText(EntityId sender, TextMessage &tm)
 {
 	const char *szMessageType=0;
 
-	// Modified by Márcio
+	// Modified by Marcio
 	//------------------------------------------------------------------------------------------------- 
 	// TODO:
 	// 

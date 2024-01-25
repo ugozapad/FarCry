@@ -164,11 +164,11 @@ inline FILE * fxopen(const char *file, const char *mode)
   _ConvertNameForXBox(name, file);
   return fopen(name, mode);
 #else
-#if defined(LINUX)
-	return fopen_nocase(file, mode);
-#else
+//#if defined(LINUX)
+//	return fopen_nocase(file, mode);
+//#else
   return fopen(file, mode);
-#endif //LINUX
+//#endif //LINUX
 #endif
 }
 

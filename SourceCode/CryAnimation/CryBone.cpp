@@ -9,7 +9,7 @@
 //  Single bone implementation
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <float.h>
 #include <StlUtils.h>
 #include "CryModel.h"
@@ -17,7 +17,7 @@
 #include "CryModelState.h"
 #include "ControllerManager.h"
 #include "ChunkFileReader.h"
-#include "STringUtils.h"
+#include "StringUtils.h"
 #include "CVars.h"
 
 
@@ -234,7 +234,7 @@ CryQuat CryBone::GetParentWQuat ()
 
 		//Q2M_CHANGED_BY_IVO
 		//qResult.GetMatrix(matTest);
-		matTest=GetTransposed44(Matrix33(qResult));
+		matTest = GetTransposed44(Matrix44(qResult));
 
 		for (int i = 0; i < 3; i++)
 			for (int j = 0; j < 3; ++j)

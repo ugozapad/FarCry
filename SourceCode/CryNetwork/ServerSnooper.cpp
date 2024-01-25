@@ -1,6 +1,6 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "CNP.h"
-#include "serversnooper.h"
+#include "ServerSnooper.h"
 
 #ifdef _DEBUG
 static char THIS_FILE[] = __FILE__;

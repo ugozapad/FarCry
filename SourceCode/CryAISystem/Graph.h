@@ -15,9 +15,9 @@
 #include <map>
 #include <vector>
 
-#ifdef LINUX
-#include <winbase.h>
-#endif
+//#ifdef LINUX
+//#include <winbase.h>
+//#endif
 
 #define BAI_FILE_VERSION 30
 

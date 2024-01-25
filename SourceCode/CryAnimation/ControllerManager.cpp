@@ -1,6 +1,6 @@
 // method definitions extracted from CryModel.*
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <StlUtils.h>
 #include <CryCompiledFile.h>
 #include "ControllerManager.h"

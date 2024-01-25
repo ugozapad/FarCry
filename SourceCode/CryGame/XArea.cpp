@@ -11,9 +11,9 @@
 //
 //////////////////////////////////////////////////////////////////////
  
-#include "stdafx.h"
-#include "xarea.h"
-#include "xPlayer.h"
+#include "StdAfx.h"
+#include "XArea.h"
+#include "XPlayer.h"
 #include "TagPoint.h"
 
 #ifdef _XBOX

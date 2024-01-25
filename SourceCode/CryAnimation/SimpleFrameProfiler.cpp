@@ -1,6 +1,6 @@
 #if 0 /// obsolete
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "SimpleFrameProfiler.h"
 #include "CVars.h"
 

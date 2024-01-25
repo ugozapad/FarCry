@@ -1,12 +1,12 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 
 // New version of light sources management - not used yet
 
-#include "3dEngine.h"
-#include "objman.h"
-#include "visareas.h"
+#include "3DEngine.h"
+#include "ObjMan.h"
+#include "VisAreas.h"
 
-#include "lightman.h"
+#include "LightMan.h"
 
 #ifndef PI
 #define PI 3.14159f

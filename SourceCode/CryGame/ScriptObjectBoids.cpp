@@ -13,8 +13,8 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
-#include "scriptobjectboids.h"
+#include "StdAfx.h"
+#include "ScriptObjectBoids.h"
 
 #include "ScriptObjectVector.h"
 

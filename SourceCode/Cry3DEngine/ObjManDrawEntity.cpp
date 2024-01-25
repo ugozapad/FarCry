@@ -13,17 +13,17 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
 #include "StatObj.h"
-#include "objman.h"
-#include "visareas.h"
+#include "ObjMan.h"
+#include "VisAreas.h"
 #include "terrain_sector.h"
-#include "3dengine.h"
+#include "3DEngine.h"
 #include "cbuffer.h"
-#include "3dengine.h"
-#include "cryparticlespawninfo.h"
-#include "lightman.h"
+#include "3DEngine.h"
+#include "CryParticleSpawnInfo.h"
+#include "LightMan.h"
 #include <utility>
 
 #define MAX_SHADOW_VOLUME_LEN 8.f

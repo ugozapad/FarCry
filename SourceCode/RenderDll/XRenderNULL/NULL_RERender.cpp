@@ -9,7 +9,7 @@
 
 #include "RenderPCH.h"
 #include "NULL_Renderer.h"
-#include "I3dengine.h"
+#include "I3DEngine.h"
 
 //#include "../cry3dengine/StatObj.h"
 

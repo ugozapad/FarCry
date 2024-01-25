@@ -10,7 +10,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "FFont.h"
 #include "FBitmap.h"
 #include "CryFont.h"

@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "CryCharFxTrail.h"
 #include "VertexBufferArrayDrivers.h"
 #include "CryCharInstanceRenderParams.h"

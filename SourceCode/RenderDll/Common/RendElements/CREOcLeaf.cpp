@@ -11,7 +11,7 @@
 static char THIS_FILE[] = __FILE__;
 
 #include "RenderPCH.h"
-#include "../NvTriStrip/NVTriStrip.h"
+#include "../NvTriStrip/NvTriStrip.h"
 #include <ICryAnimation.h>
 
 CREOcLeaf *CREOcLeaf::m_pLastRE;
@@ -2039,7 +2039,7 @@ void *CREOcLeaf::mfGetPointer(ESrcPointer ePT, int *Stride, int Type, ESrcPointe
   return NULL;
 }
 
-#include "../NvTriStrip/NVTriStrip.h"
+#include "../NvTriStrip/NvTriStrip.h"
 
 void CREOcLeaf::mfGetPlane(Plane& pl)
 {

@@ -11,15 +11,18 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h" 
+#include "StdAfx.h"
 #include "System.h"
 #include <time.h>
 #include "XConsole.h"
 #include <IGame.h>
 #include <IScriptSystem.h>
-#include "SystemCfg.h" 
+#include "SystemCFG.h"
 #if defined(LINUX)
 #include "ILog.h"
+#ifndef VERSION_INFO
+#define VERSION_INFO 1
+#endif
 #endif
 
 //////////////////////////////////////////////////////////////////////////

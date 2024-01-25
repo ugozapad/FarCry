@@ -13,14 +13,14 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
 #include "StatObj.h"
-#include "../RenderDll/Common/shadow_renderer.h"
+#include "../RenderDll/Common/Shadow_Renderer.h"
 #include "LMCompStructures.h"
 
 #include "MeshIdx.h"
-#include "visareas.h"
+#include "VisAreas.h"
 
 //////////////////////////////////////////////////////////////////////
 bool CStatObj::SetShaderTemplate(int nTemplate, const char *TemplName, const char *ShaderName, bool bOnlyRegister, int * pnNewTemplateId)

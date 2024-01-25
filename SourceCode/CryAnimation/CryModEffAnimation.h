@@ -17,7 +17,7 @@
 class CryModelAnimationContainer;
 //////////////////////////////////////////////////////////////////////////
 // Animation system supports playback of several animations at the same time.
-// It allows to blend for example “Walk” animation and “Reload” animation.
+// It allows to blend for example "Walk" animation and "Reload" animation.
 // CCryModEffAnimation contains current state of this layers.
 // It performs animations timing and bone animation calculations. 
 //

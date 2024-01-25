@@ -1,6 +1,6 @@
 #if !defined(LINUX)
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "RendElement.h"
 #include "CREMotionBlur.h"
 

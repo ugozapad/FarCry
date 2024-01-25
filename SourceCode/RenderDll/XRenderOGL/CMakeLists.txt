@@ -138,6 +138,7 @@ endif()
 add_library(${PROJECT_NAME} SHARED ${SRC_FILES})
 
 target_include_directories(${PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_SOURCE_DIR}/SourceCode/CryCommon
     ${CMAKE_SOURCE_DIR}/SourceCode/RenderDll
     ${CMAKE_SOURCE_DIR}/SourceCode/RenderDll/Common/Shaders
@@ -147,13 +148,18 @@ target_link_directories(${PROJECT_NAME} PRIVATE
     Libraries
 )
 
-set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} /NODEFAULTLIB:libcp.lib /NODEFAULTLIB:LIBC.lib")
+if (MSVC)
+    set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} /NODEFAULTLIB:libcp.lib /NODEFAULTLIB:LIBC.lib")
+    set(SYSTEM_DEPS
+        "nvDXTlib.lib"
+        "glu32.lib"
+        "OpenGL32.lib"
+        "cg.lib"
+        "cgGL.lib"
+    )
+endif()
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
     ${ARCH_LIBS}
-    nvDXTlib.lib
-    glu32.lib
-    OpenGL32.lib
-    cg.lib
-    cgGL.lib
+    ${SYSTEM_DEPS}
 )

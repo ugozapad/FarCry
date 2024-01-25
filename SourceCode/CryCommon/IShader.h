@@ -706,7 +706,7 @@ public:
 
 struct SSideMaterial
 {
-  SSideMaterial::SSideMaterial() 
+  SSideMaterial()
     : m_Ambient(1.0f, 1.0f, 1.0f, 1.0f),
     m_Diffuse(1.0f, 1.0f, 1.0f, 1.0f),
     m_Specular(1.0f, 1.0f, 1.0, 1.0f),

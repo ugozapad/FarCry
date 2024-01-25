@@ -11,7 +11,7 @@
 //////////////////////////////////////////////////////////////////////
 
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "Client.h"
 #include "CNP.h"
 #include "IGame.h"

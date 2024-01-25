@@ -14,7 +14,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "ScriptObjectLanguage.h"
 #include "StringTableMgr.h"
 

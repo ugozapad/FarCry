@@ -15,9 +15,9 @@
 
 #include "StdAfx.h"
 
-#include "3dEngine.h"
-#include "objman.h"
-#include "visareas.h"
+#include "3DEngine.h"
+#include "ObjMan.h"
+#include "VisAreas.h"
 #include "AABBSV.h"
 
 #include "partman.h"

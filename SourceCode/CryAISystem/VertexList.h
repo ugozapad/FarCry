@@ -1,7 +1,7 @@
 #ifndef _VERTEX_LIST_
 #define _VERTEX_LIST_
 
-#include <iagent.h>
+#include <IAgent.h>
 
 class CCryFile;
 

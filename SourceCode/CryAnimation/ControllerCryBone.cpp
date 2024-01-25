@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "Controller.h"
 #include "ControllerCryBone.h"
 #include "CryKeyInterpolation.h"

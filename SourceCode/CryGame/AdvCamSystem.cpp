@@ -6,7 +6,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <IEntitySystem.h>
 #include "Game.h"
 #include "AdvCamSystem.h"										// CAdvCamSystem

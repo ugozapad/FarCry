@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------------------
-// Author: Márcio Martins
+// Author: Marcio Martins
 //
 // Purpose:
 //  - Hold a glyph bitmap and blit it to the main texture
@@ -376,4 +376,4 @@ int CGlyphBitmap::BlitScaledTo32(unsigned char *pBuffer, int iSrcX, int iSrcY, i
 	return 1;
 }
 
-//------------------------------------------------------------------------------------------------- 
+//-------------------------------------------------------------------------------------------------

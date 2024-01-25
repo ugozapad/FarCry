@@ -10,9 +10,9 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "XSystemServer.h"
-#include <I3dengine.h>
+#include <I3DEngine.h>
 
 #include <IEntitySystem.h>
 
@@ -27,9 +27,9 @@
 #include "TagPoint.h"
 #include <IRenderer.h>
 
-#if defined(LINUX)
-	#include "WinBase.h"
-#endif
+//#if defined(LINUX)
+//	#include "WinBase.h"
+//#endif
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -815,7 +815,7 @@ void CXServer::UpdateXServerNetwork()
 {
 	FUNCTION_PROFILER( GetISystem(), PROFILE_GAME );
 	if(m_pIServer)
-		m_pIServer->Update(GetCurrentTime());
+		m_pIServer->Update(GetTickCount());
 };
 
 ///////////////////////////////////////////////
@@ -954,7 +954,7 @@ ITagPoint* CXServer::GetRandomRespawnPoint(const char *sFilter)
 		if(!count)
 		{
 			m_pGame->m_pLog->Log("CXServer::GetRandomRespawnPoint NO RESPAWN POINT[%s]",sFilter);
-			return false; // no respawn point
+			return NULL; // no respawn point
 		}
 		itr=m_vRespawnPoints.find(sFilter);
 	}

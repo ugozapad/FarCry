@@ -4,12 +4,13 @@
 // Engine clients via StartRead() API. Several Proxies can refer to the same
 // Stream (file) but perform their operations independently.
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <ISystem.h>
 #include <ILog.h>
 #include "RefStreamEngine.h"
 #include "RefReadStream.h"
 #include "RefReadStreamProxy.h"
+#include <climits>
 
 extern ISystem* g_System;
 extern CMTSafeHeap* g_pSmallHeap;

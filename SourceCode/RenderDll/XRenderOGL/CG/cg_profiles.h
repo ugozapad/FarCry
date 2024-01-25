@@ -14,7 +14,7 @@
  * 
  * In consideration of your agreement to abide by the following terms, and 
  * subject to these terms, NVIDIA grants you a personal, non-exclusive license,
- * under NVIDIA’s copyrights in this original NVIDIA software (the "NVIDIA 
+ * under NVIDIA's copyrights in this original NVIDIA software (the "NVIDIA
  * Software"), to use, reproduce, modify and redistribute the NVIDIA 
  * Software, with or without modifications, in source and/or binary forms; 
  * provided that if you redistribute the NVIDIA Software, you must retain the 
@@ -70,7 +70,7 @@
 
 #define CG_IN_PROFILES_INCLUDE
 
-#include "Cg/cgGL_profiles.h"
+#include "CG/cgGL_profiles.h"
 
 
 CG_PROFILE_MACRO(DX9Vertex11,vs_1_1,VS_1_1,"vs_1_1",6153,1)

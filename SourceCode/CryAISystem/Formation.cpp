@@ -1,5 +1,5 @@
-#include "stdafx.h"
-#include "formation.h"
+#include "StdAfx.h"
+#include "Formation.h"
 #include "AIObject.h"
 #include "CAISystem.h"
 #include <Cry_Math.h>
@@ -56,7 +56,7 @@ void CFormation::Create(FormationDescriptor & desc)
 
 		m_vPoints.push_back(pos);
 		m_vWorldPoints.push_back(pFormationDummy);
-		m_vReservations.push_back(false);
+		m_vReservations.push_back(0);
 	}
 
 }

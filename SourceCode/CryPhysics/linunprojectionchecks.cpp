@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 
 #include "utils.h"
 #include "primitives.h"
@@ -1620,7 +1620,7 @@ int cyl_cyl_lin_unprojection(unprojection_mode *pmode, const cylinder *pcyl1,int
 		n = axis[0]*(axis[0]*axis[1]) - axis[1];
 		if (n.len2()>0.0001f)
 			nlen = n.len();
-		else { // in case of degenerate n (ño-axis cylinders) mask it to point to center, not to plane
+		else { // in case of degenerate n (no-axis cylinders) mask it to point to center, not to plane
 			n = center[1]-center[0]; n -= pcyl[icyl]->axis*(n*pcyl[icyl]->axis);
 			if (n.len2()>0.0001f)
 				nlen = n.len();

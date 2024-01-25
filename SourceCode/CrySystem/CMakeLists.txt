@@ -19,9 +19,6 @@ set(SRC_FILES
     "getdxver.cpp"
     "HTTPDownloader.cpp"
     "Log.cpp"
-    "LuaDebugger/FileTree.cpp"
-    "LuaDebugger/LUADBG.cpp"
-    "LuaDebugger/LuaDbgInterface.cpp"
     "Mailer.cpp"
     "md5.c"
     "MTSafeAllocator.cpp"
@@ -82,6 +79,15 @@ set(SRC_FILES
     "zlib/zutil.c"
 )
 
+if (MSVC)
+    set(SRC_FILES ${SRC_FILES}
+        "LuaDebugger/FileTree.cpp"
+        "LuaDebugger/LUADBG.cpp"
+        "LuaDebugger/LuaDbgInterface.cpp"
+    )
+    set(SYSTEM_DEPS "wininet.lib")
+endif()
+
 add_library(${PROJECT_NAME} SHARED ${SRC_FILES})
 
 target_include_directories(${PROJECT_NAME} PRIVATE
@@ -90,5 +96,5 @@ target_include_directories(${PROJECT_NAME} PRIVATE
 )
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
-    wininet.lib
+    ${SYSTEM_DEPS}
 )

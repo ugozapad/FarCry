@@ -4,7 +4,7 @@
 #include "CryBoneDesc.h"
 
 // helper to get order for Vec3d
-struct CVec3dOrder: public std::binary_function< Vec3d, Vec3d, bool>
+struct CVec3dOrder
 {
 	bool operator() ( const Vec3d &a, const Vec3d &b ) const
 	{

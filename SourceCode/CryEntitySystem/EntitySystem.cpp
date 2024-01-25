@@ -13,7 +13,7 @@
 //////////////////////////////////////////////////////////////////////
 
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <Cry_Math.h>
 #include <list2.h>
 #include "EntitySystem.h"
@@ -26,7 +26,7 @@
 
 #include <IRenderer.h>
 
-#include <I3dengine.h>
+#include <I3DEngine.h>
 #include <ILog.h>
 #include <ITimer.h>
 #include <ISystem.h>

@@ -1,6 +1,9 @@
 project(CryPhysics)
 
-add_definitions(-D_USRDLL -DPHYSICS_EXPORTS -DENTITY_PROFILER_ENABLED)
+add_definitions(-D_USRDLL -DENTITY_PROFILER_ENABLED)
+if (MSVC)
+    add_definitions(-DPHYSICS_EXPORTS)
+endif()
 if (${ARCH_TYPE} STREQUAL "x86")
     add_definitions(-DPIII_SSE)
 endif()

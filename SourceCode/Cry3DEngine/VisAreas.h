@@ -16,7 +16,7 @@
 #ifndef VisArea_H
 #define VisArea_H
 
-#include "basicarea.h"
+#include "BasicArea.h"
 
 struct CVisArea : public CBasicArea, public IVisArea
 {

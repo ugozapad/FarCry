@@ -3,7 +3,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "CryBone.h"
 #include "CryModEffector.h"
 #include "CryModEffIKSolver.h"

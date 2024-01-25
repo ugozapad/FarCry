@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "drand.h"
 #include "MathUtils.h"
 #include "CryCharParticleManager.h"

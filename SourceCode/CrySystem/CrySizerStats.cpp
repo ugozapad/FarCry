@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "ILog.h"
 #include "ITimer.h"
 #include "ISystem.h"

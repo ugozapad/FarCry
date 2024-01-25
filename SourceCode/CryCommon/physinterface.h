@@ -15,7 +15,7 @@
 
 #if defined(LINUX)
 	#include "Stream.h"
-	#include "validator.h"
+//	#include "validator.h"
 #endif
 
 

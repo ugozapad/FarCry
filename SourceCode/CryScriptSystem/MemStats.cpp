@@ -1,6 +1,6 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "ScriptSystem.h"
-#include <crysizer.h>
+#include <CrySizer.h>
 extern "C" {
 #define LUA_PRIVATE
 #include "lua.h"

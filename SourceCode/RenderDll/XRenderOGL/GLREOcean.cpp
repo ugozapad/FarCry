@@ -9,8 +9,8 @@
 
 #include "RenderPCH.h"
 #include "GL_Renderer.h"
-#include "I3dengine.h"
-#include "../Common/NvTriStrip/NVTriStrip.h"
+#include "I3DEngine.h"
+#include "../Common/NvTriStrip/NvTriStrip.h"
 #include "GLCGVProgram.h"
 
 #undef THIS_FILE
@@ -867,12 +867,12 @@ void CREOcean::mfDrawOceanScreenLod()
   if (!vp)
     return;
   if (vp)
-    vp->mfSet(true, false);
+    vp->mfSet(true, nullptr);
 
   glDrawElements(GL_TRIANGLES, m_DWQIndices.Num(), GL_UNSIGNED_SHORT, &m_DWQIndices[0]);
 
   if (vp)
-    vp->mfSet(false, false);
+    vp->mfSet(false, nullptr);
 
   glDisableClientState(GL_VERTEX_ATTRIB_ARRAY2_NV);
   glDisableClientState(GL_VERTEX_ATTRIB_ARRAY1_NV);

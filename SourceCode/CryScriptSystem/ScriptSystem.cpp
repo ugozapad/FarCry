@@ -2,7 +2,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <string.h>
 #include <stdio.h>
 #include "ScriptSystem.h"
@@ -31,7 +31,7 @@ extern "C"
 #define new DEBUG_CLIENTBLOCK
 #endif
 
-#include "LuaCryPakIo.h"
+#include "LuaCryPakIO.h"
 
 //#ifndef WIN64 // experimental
 #define USE_RAW_CALL
@@ -217,7 +217,7 @@ int listvars(lua_State *L, int level)
 		if (lua_isnumber(L, i))
 		{
 			int n = (int)lua_tonumber(L, i);
-			itoa(n, sTemp, 10);
+			sprintf(sTemp, "%d", n);
 			OutputDebugString(sTemp);
 		}
 		else if (lua_isstring(L, i))
@@ -342,7 +342,7 @@ string& FormatPath( const string &sPath )
 			sLowerName[i] = '/';
 		i++;
 	}
-	strTemp = _strlwr(sLowerName);
+	strTemp = strlwr(sLowerName);
 	return strTemp;
 }
 

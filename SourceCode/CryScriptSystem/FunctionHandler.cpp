@@ -2,7 +2,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "FunctionHandler.h"
 #include "ScriptSystem.h"
 extern "C"{
@@ -193,7 +193,7 @@ ScriptVarType CFunctionHandler::GetParamType(int nIdx)
 		{
 			return svtObject;
 		}
-		else if (lua_isuserdata(m_pLS, nRealIdx))	// Added by Márcio
+		else if (lua_isuserdata(m_pLS, nRealIdx))	// Added by Marcio
 		{											// was missing the userdata type
 			return svtUserData;						//
 		}											//

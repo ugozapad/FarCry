@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------------------
-// Author: Márcio Martins
+// Author: Marcio Martins
 //
 // Purpose:
 //  - Create and update a texture with the most recently used glyphs
@@ -10,21 +10,8 @@
 //-------------------------------------------------------------------------------------------------
 #pragma once
 
-
-#ifdef WIN64
-// Workaround for Amd64 compiler
-#include <map>
-#define hash_map map
-#else
-#if defined(LINUX)
-#include <ext/hash_map>
-#else
-#include <hash_map>
-#endif
-#endif
-
 #include <string>
-
+#include <unordered_map>
 #include "GlyphCache.h"
 #include "GlyphBitmap.h"
 
@@ -82,8 +69,8 @@ typedef struct CTextureSlot
 typedef std::vector<CTextureSlot *>							CTextureSlotList;
 typedef std::vector<CTextureSlot *>::iterator				CTextureSlotListItor;
 
-typedef std::hash_map<wchar_t, CTextureSlot *>				CTextureSlotTable;
-typedef std::hash_map<wchar_t, CTextureSlot *>::iterator	CTextureSlotTableItor;
+typedef std::unordered_map<wchar_t, CTextureSlot *>				CTextureSlotTable;
+typedef std::unordered_map<wchar_t, CTextureSlot *>::iterator	CTextureSlotTableItor;
 
 #ifdef WIN64
 #undef GetCharWidth

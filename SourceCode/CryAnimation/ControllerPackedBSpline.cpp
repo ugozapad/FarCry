@@ -1,6 +1,6 @@
 // Implementation of Packed BSpline Controller
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "Controller.h"
 #include "ControllerPackedBSpline.h"
 

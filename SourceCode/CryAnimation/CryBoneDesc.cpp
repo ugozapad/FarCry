@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "MathUtils.h"
 #include "CryBoneDesc.h"
 #include "StringUtils.h"

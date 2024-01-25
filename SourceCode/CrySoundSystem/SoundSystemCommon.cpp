@@ -1,7 +1,7 @@
 #include "StdAfx.h"
 #include <ISystem.h>
 #include <IConsole.h>
-#include "soundsystemcommon.h"
+#include "SoundSystemCommon.h"
 
 CSoundSystemCommon::CSoundSystemCommon(ISystem* pSystem)
 {

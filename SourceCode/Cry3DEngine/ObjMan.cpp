@@ -13,17 +13,17 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
 #include "StatObj.h"
-#include "objman.h"
-#include "visareas.h"
+#include "ObjMan.h"
+#include "VisAreas.h"
 #include "terrain_sector.h"
 #include "cbuffer.h"
 #include "3DEngine.h"
-#include "meshidx.h"
-#include "watervolumes.h"
-#include "brush.h"
+#include "MeshIdx.h"
+#include "WaterVolumes.h"
+#include "Brush.h"
 #include "LMCompStructures.h"
 
 double CObjManager::m_dMakeObjectTime = 0;

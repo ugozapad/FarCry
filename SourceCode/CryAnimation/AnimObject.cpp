@@ -1,7 +1,7 @@
 #include "StdAfx.h"
 #include "AnimObject.h"
 #include "StringUtils.h"
-#include "cvars.h"
+#include "CVars.h"
 #include "DebugUtils.h"
 
 #include <I3DEngine.h>

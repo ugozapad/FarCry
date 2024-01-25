@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "CTriangulator.h"
 #include <math.h>
 #include <algorithm>

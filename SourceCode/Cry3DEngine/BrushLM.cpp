@@ -13,18 +13,18 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
 #include "StatObj.h"
-#include "objman.h"
-#include "visareas.h"
+#include "ObjMan.h"
+#include "VisAreas.h"
 #include "terrain_sector.h"
 #include "cbuffer.h"
 #include "3DEngine.h"
-#include "meshidx.h"
-#include "watervolumes.h"
+#include "MeshIdx.h"
+#include "WaterVolumes.h"
 #include "LMCompStructures.h"
-#include "brush.h"
+#include "Brush.h"
 #include "IEntitySystem.h"
 
 void CBrush::SetLightmap(RenderLMData *pLMData, float *pTexCoords, UINT iNumTexCoords, const unsigned char cucOcclIDCount, const std::vector<std::pair<EntityId, EntityId> >& aIDs)

@@ -10,7 +10,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <ISound.h>
 #include <ITimer.h>
 #include <CryCharMorphParams.h>

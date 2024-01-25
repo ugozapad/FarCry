@@ -1,6 +1,6 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <CryCompiledFile.h>
-#include <stlutils.h>
+#include <StlUtils.h>
 //#include "CryAnimation.h"
 #include "ControllerManager.h"
 #include "CryModelAnimationContainer.h"

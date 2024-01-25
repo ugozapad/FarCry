@@ -82,7 +82,7 @@ public:
 
   inline void AddDebug(const char *p__FILE__, long n__LINE__, const T & p)
   {
-#ifdef _DEBUG
+#if defined(WIN32) && defined(_DEBUG)
     if( m_nCount >= m_nAllocatedCount )
     {
       assert(&p<m_pElements || &p>=(m_pElements+m_nAllocatedCount));

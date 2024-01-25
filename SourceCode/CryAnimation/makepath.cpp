@@ -8,7 +8,7 @@
 *******************************************************************************/
 
 //ASH: Need this on xbox for pre-compiled headers.
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "makepath.h"
 /***
 *void _makepath() - build path name from components

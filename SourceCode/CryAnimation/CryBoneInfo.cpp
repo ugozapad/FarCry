@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "CryBoneInfo.h"
 #include <StlUtils.h>
 #include "ControllerManager.h"

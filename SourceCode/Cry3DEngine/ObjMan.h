@@ -17,7 +17,7 @@
 #define CObjManager_H
 
 #include "StatObj.h"
-#include "../RenderDll/Common/shadow_renderer.h"
+#include "../RenderDll/Common/Shadow_Renderer.h"
 #include "terrain_sector.h"
 
 #define   ENTITY_MAX_DIST_FACTOR 100
@@ -104,7 +104,7 @@ public:
   list2<CStatObjInst*> m_lstFarObjects[2];
 
 protected:
-	struct string_less : public std::binary_function<CStatObj*,CStatObj*,bool> 
+	struct string_less
 	{
 		bool operator()( CStatObj *s1,CStatObj *s2 ) const
 		{

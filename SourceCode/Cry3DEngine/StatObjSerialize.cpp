@@ -13,12 +13,12 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 
 #include "StatObj.h"
 #include "MeshIdx.h"
-#include "serializebuffer.h"
-#include "objman.h"
+#include "SerializeBuffer.h"
+#include "ObjMan.h"
 
 bool CStatObj::Serialize(int & nPos, uchar * pSerBuf, bool bSave, char * szFolderName)
 {

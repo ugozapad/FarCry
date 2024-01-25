@@ -9,7 +9,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #if defined LINUX
 #include <sys/io.h>
 #else
@@ -21,7 +21,7 @@
 #include "UIHud.h"
 #include "ScriptObjectRenderer.h"
 #include "PlayerSystem.h"
-#include "Xplayer.h"
+#include "XPlayer.h"
 #include "Spectator.h"
 #include "IngameDialog.h"
 #include "XSystemBase.h"
@@ -1126,7 +1126,8 @@ int CScriptObjectGame::GetLevelList (IFunctionHandler* pH)
 			for(int i = 0; i < (int)arrMissions.size(); i++)
 			{
 				static char szIndex[4];
-				pMissionObj->SetValue(itoa(i+1, szIndex, 10), arrMissions[i].c_str());
+				sprintf(szIndex, "%d", i+1);
+				pMissionObj->SetValue(szIndex, arrMissions[i].c_str());
 			}
 
 			pLevelObj->SetValue("MissionList", pMissionObj);
@@ -1889,8 +1890,8 @@ int CScriptObjectGame::GetEntitiesScreenSpace(IFunctionHandler *pH)
 
 							Matrix44 m;
 							m.SetIdentity();
-							m=GetTranslationMat(pEnt->GetPos())*m;
-							m=Matrix44::CreateRotationZYX(-pEnt->GetAngles()*gf_DEGTORAD)*m; //NOTE: angles in radians and negated 
+							m = Matrix44::GetTranslationMat(pEnt->GetPos())*m;
+							m = Matrix44::CreateRotationZYX(-pEnt->GetAngles()*gf_DEGTORAD)*m; //NOTE: angles in radians and negated
 
 
 
